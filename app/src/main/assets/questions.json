@@ -1887,7 +1887,3128 @@
     {
       "id": "ingilizce1",
       "title": "Yabancı Dil I (İngilizce)",
-      "questions": []
+      "questions": [
+        {
+          "id": "ingilizce-kaynak-15-01-001",
+          "stem": "Our baby ______ one year old.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "is",
+            "B": "am",
+            "C": "are",
+            "D": "to be",
+            "E": "be"
+          },
+          "answer": "A",
+          "answer_text": "is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 15,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-15-02-002",
+          "stem": "A: Are Mike and Tom in the room?\nB: No, they ______. They are in the park. Karşılıklı konuşmayı tamamlayan doğru seçenek\naşağıdakilerden hangisidir?",
+          "options": {
+            "A": "am",
+            "B": "is",
+            "C": "are",
+            "D": "be",
+            "E": "aren’t"
+          },
+          "answer": "E",
+          "answer_text": "aren’t",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 15,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-15-03-003",
+          "stem": "_____ am a student at Istanbul University.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "She",
+            "B": "We",
+            "C": "He",
+            "D": "I",
+            "E": "They"
+          },
+          "answer": "D",
+          "answer_text": "I",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 15,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-16-04-004",
+          "stem": "A: Where are you from?\nB: I’m from ______.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Turkish",
+            "B": "Brazilian",
+            "C": "Japan",
+            "D": "French",
+            "E": "Russian"
+          },
+          "answer": "C",
+          "answer_text": "Japan",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-16-05-005",
+          "stem": "A: What is her nationality?\nB: She is ______.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "England",
+            "B": "Iranian",
+            "C": "India",
+            "D": "South Korea",
+            "E": "Egypt"
+          },
+          "answer": "B",
+          "answer_text": "Iranian",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-16-06-006",
+          "stem": "He ……….. my teacher. His name……….. Tom",
+          "options": {
+            "A": "is/are",
+            "B": "are/is",
+            "C": "is/is",
+            "D": "are/are",
+            "E": "is/-"
+          },
+          "answer": "C",
+          "answer_text": "is/is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-16-07-007",
+          "stem": "Susan……….. ill but I……….. ill.",
+          "options": {
+            "A": "is/isn’t",
+            "B": "is/am not",
+            "C": "is/are",
+            "D": "are/are",
+            "E": "am not"
+          },
+          "answer": "B",
+          "answer_text": "is/am not",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-16-08-008",
+          "stem": "My parents……….. at home today so I……….. at home, too.",
+          "options": {
+            "A": "are/are",
+            "B": "are/am",
+            "C": "are/is",
+            "D": "is/am",
+            "E": "are"
+          },
+          "answer": "B",
+          "answer_text": "are/am",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-16-09-009",
+          "stem": "My sister ……….. at home today.. We……….. together all day.",
+          "options": {
+            "A": "is/is",
+            "B": "am/ar",
+            "C": "are/are",
+            "D": "is/are",
+            "E": "are/ –"
+          },
+          "answer": "D",
+          "answer_text": "is/are",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 16,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-17-10-010",
+          "stem": "Jennifer and her family are……….. Germany.",
+          "options": {
+            "A": "in",
+            "B": "at",
+            "C": "on",
+            "D": "from",
+            "E": "–"
+          },
+          "answer": "D",
+          "answer_text": "from",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 17,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-17-11-011",
+          "stem": "Simon……….. Italian.",
+          "options": {
+            "A": "on",
+            "B": "from",
+            "C": "at",
+            "D": "is",
+            "E": "in"
+          },
+          "answer": "D",
+          "answer_text": "is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 17,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-17-12-012",
+          "stem": "Where are you from?",
+          "options": {
+            "A": "I am British.",
+            "B": "I am from Japan.",
+            "C": "He is French.",
+            "D": "She is from Britain.",
+            "E": "I am a student."
+          },
+          "answer": "B",
+          "answer_text": "I am from Japan.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 17,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-17-13-013",
+          "stem": "What is your name?",
+          "options": {
+            "A": "My name is Jane.",
+            "B": "His name is Jack.",
+            "C": "Name is Peter.",
+            "D": "Its name is Boby.",
+            "E": "She is a housewife."
+          },
+          "answer": "A",
+          "answer_text": "My name is Jane.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 17,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-17-14-014",
+          "stem": "A: What is your phone number?B: It’s five-oh-nine-two-six-two-four.",
+          "options": {
+            "A": "508 2724",
+            "B": "5092924",
+            "C": "5902624",
+            "D": "5902426",
+            "E": "5092624"
+          },
+          "answer": "E",
+          "answer_text": "5092624",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 17,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-18-15-015",
+          "stem": "How old is your girl friend?",
+          "options": {
+            "A": "She is a student.",
+            "B": "She is girl friend.",
+            "C": "She is 23 years old.",
+            "D": "She is from Japan..",
+            "E": "She is fine."
+          },
+          "answer": "C",
+          "answer_text": "She is 23 years old.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 18,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-18-02-016",
+          "stem": "The car is………….. trees.(Araba ağaçların ARASINDA)",
+          "options": {
+            "A": "in",
+            "B": "besides",
+            "C": "in front of",
+            "D": "between",
+            "E": "behind"
+          },
+          "answer": "D",
+          "answer_text": "between",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 18,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-18-03-017",
+          "stem": "…………………..an onion on the table.",
+          "options": {
+            "A": "There is",
+            "B": "There are",
+            "C": "Is there",
+            "D": "Are there",
+            "E": "There aren’t"
+          },
+          "answer": "A",
+          "answer_text": "There is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 18,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-19-04-018",
+          "stem": "………………….apples in the basket?",
+          "options": {
+            "A": "Are there",
+            "B": "Is there",
+            "C": "There is",
+            "D": "There are",
+            "E": "There aren’t"
+          },
+          "answer": "A",
+          "answer_text": "Are there",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 19,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-19-05-019",
+          "stem": "There is a…….and a………in the bedroom.",
+          "options": {
+            "A": "bathtub/bed",
+            "B": "TV / sink",
+            "C": "bed / blanket",
+            "D": "oven/bookcase",
+            "E": "chair/cooker"
+          },
+          "answer": "C",
+          "answer_text": "bed / blanket",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 19,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-19-06-020",
+          "stem": "…………………. a pencil on my desk?",
+          "options": {
+            "A": "Is there",
+            "B": "There are",
+            "C": "Are there",
+            "D": "There isn’t",
+            "E": "There aren’t"
+          },
+          "answer": "A",
+          "answer_text": "Is there",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 19,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-19-07-021",
+          "stem": "Aşağıdakilerden hangisi çoğul halleri ile doğru verilmiştir?",
+          "options": {
+            "A": "book-bookes",
+            "B": "chair-chaires",
+            "C": "key-keies",
+            "D": "brush-brushes",
+            "E": "battery-batterys"
+          },
+          "answer": "D",
+          "answer_text": "brush-brushes",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 19,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-19-08-022",
+          "stem": "Aşağıdakilerden hangisi çoğul halleri ile doğru verilmiştir?",
+          "options": {
+            "A": "child-children",
+            "B": "man-mans",
+            "C": "woman-woman",
+            "D": "sheep-sheeps",
+            "E": "leaf-leafs"
+          },
+          "answer": "A",
+          "answer_text": "child-children",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 19,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-20-03-023",
+          "stem": "carpet – c.yatak",
+          "options": {
+            "A": "1a-2b-3c",
+            "B": "1b-2a-3c",
+            "C": "1c-2a-3c",
+            "D": "1c-2b-3a",
+            "E": "1a-2c-3b"
+          },
+          "answer": "D",
+          "answer_text": "1c-2b-3a",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 20,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-20-10-024",
+          "stem": "…………….chair is very uncomfortable.",
+          "options": {
+            "A": "This",
+            "B": "These",
+            "C": "Those",
+            "D": "There",
+            "E": "Them"
+          },
+          "answer": "A",
+          "answer_text": "This",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 20,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-20-11-025",
+          "stem": "A: What is it made of? B:…………………(CAM Bardak)",
+          "options": {
+            "A": "wool",
+            "B": "wood",
+            "C": "glass",
+            "D": "plastic",
+            "E": "cotton"
+          },
+          "answer": "C",
+          "answer_text": "glass",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 20,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-20-12-026",
+          "stem": "…………..over there are my bags.",
+          "options": {
+            "A": "This",
+            "B": "These",
+            "C": "Those",
+            "D": "There",
+            "E": "Them"
+          },
+          "answer": "C",
+          "answer_text": "Those",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 20,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-20-13-027",
+          "stem": "A: How are you?\nB: _______________Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "My name is Jessica.",
+            "B": "I’m from Italy.",
+            "C": "We are at school.",
+            "D": "Good, thanks!",
+            "E": "I’m Spanish."
+          },
+          "answer": "D",
+          "answer_text": "Good, thanks!",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 20,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-21-14-028",
+          "stem": "A: _______________________?\n    B: A-N-D-Y\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "How do you spell your name?",
+            "B": "What is your address?",
+            "C": "Where are you from?",
+            "D": "Are you Andy?",
+            "E": "How old are you?"
+          },
+          "answer": "A",
+          "answer_text": "How do you spell your name?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 21,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-21-15-029",
+          "stem": "A: I’m Luis. _______________________?\nB: Ah! She is my sister.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Are you Luis?",
+            "B": "Is she a teacher?",
+            "C": "Who is she?",
+            "D": "What is her job?",
+            "E": "How is she?"
+          },
+          "answer": "C",
+          "answer_text": "Who is she?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 21,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-21-16-030",
+          "stem": "A: _______ is your mother?\nB: She is in the kitchen.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "What",
+            "B": "How",
+            "C": "Who",
+            "D": "Where",
+            "E": "Why"
+          },
+          "answer": "D",
+          "answer_text": "Where",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 21,
+          "source_no": 16
+        },
+        {
+          "id": "ingilizce-kaynak-21-17-031",
+          "stem": "A: _______ is your job?\nB: I’m a doctor.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Who",
+            "B": "How",
+            "C": "Why",
+            "D": "Where",
+            "E": "What"
+          },
+          "answer": "E",
+          "answer_text": "What",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 21,
+          "source_no": 17
+        },
+        {
+          "id": "ingilizce-kaynak-22-01-032",
+          "stem": "He ……………. a dog. The dog……………a small house.",
+          "options": {
+            "A": "have got/has got",
+            "B": "have got/have got",
+            "C": "has got/has got",
+            "D": "has got/have got",
+            "E": "haven’t got/has got"
+          },
+          "answer": "C",
+          "answer_text": "has got/has got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 22,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-22-02-033",
+          "stem": "My father and my mother ……………. two children.",
+          "options": {
+            "A": "has got",
+            "B": "hasn’t got",
+            "C": "have got",
+            "D": "isn’t",
+            "E": "is"
+          },
+          "answer": "C",
+          "answer_text": "have got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 22,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-22-03-034",
+          "stem": "My grandma ……………. three children.",
+          "options": {
+            "A": "has got",
+            "B": "haven’t got",
+            "C": "have got",
+            "D": "is",
+            "E": "are"
+          },
+          "answer": "A",
+          "answer_text": "has got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 22,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-22-04-035",
+          "stem": "Ali’s mother……………. a big house.",
+          "options": {
+            "A": "are",
+            "B": "have got",
+            "C": "is",
+            "D": "has got",
+            "E": "haven’t got"
+          },
+          "answer": "D",
+          "answer_text": "has got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 22,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-22-05-036",
+          "stem": "You and Angela are……………. best friend. I love you!",
+          "options": {
+            "A": "you",
+            "B": "she",
+            "C": "my",
+            "D": "am",
+            "E": "they"
+          },
+          "answer": "C",
+          "answer_text": "my",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 22,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-23-06-037",
+          "stem": "It is my father’s car. It is……………. car.",
+          "options": {
+            "A": "his",
+            "B": "him",
+            "C": "my",
+            "D": "her",
+            "E": "he"
+          },
+          "answer": "A",
+          "answer_text": "his",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 23,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-23-07-038",
+          "stem": "A: What time is it?\nB: It is…………….. (06:05) Saat Altıyı Beş geçiyor",
+          "options": {
+            "A": "five past six",
+            "B": "ten to five",
+            "C": "ten o’clock.",
+            "D": "twenty to ten",
+            "E": "six to five."
+          },
+          "answer": "A",
+          "answer_text": "five past six",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 23,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-23-08-039",
+          "stem": "My father’s father is my…………..",
+          "options": {
+            "A": "father",
+            "B": "uncle",
+            "C": "grandfather",
+            "D": "grandmother",
+            "E": "aunt"
+          },
+          "answer": "C",
+          "answer_text": "grandfather",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 23,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-23-09-040",
+          "stem": "Aşağıdakilerden hangisi doğru yazılmıştır?",
+          "options": {
+            "A": "It is girls’s shoes.",
+            "B": "It is girl’s shoes",
+            "C": "This is girl shoes.",
+            "D": "This is girl of shoes.",
+            "E": "It is girl’ shoes."
+          },
+          "answer": "B",
+          "answer_text": "It is girl’s shoes",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 23,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-23-10-041",
+          "stem": "What colour is it?",
+          "options": {
+            "A": "red",
+            "B": "yellow",
+            "C": "orange",
+            "D": "green",
+            "E": "grey"
+          },
+          "answer": "C",
+          "answer_text": "orange",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 23,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-24-11-042",
+          "stem": "Hangisi bir yönüyle diğerlerinden farklıdır?",
+          "options": {
+            "A": "aunt",
+            "B": "niece",
+            "C": "grandmother",
+            "D": "uncle",
+            "E": "mother"
+          },
+          "answer": "D",
+          "answer_text": "uncle",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 24,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-24-12-043",
+          "stem": "_______ is the third month of the year.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "September",
+            "B": "July",
+            "C": "March",
+            "D": "April",
+            "E": "February"
+          },
+          "answer": "C",
+          "answer_text": "March",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 24,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-24-13-044",
+          "stem": "Tomorrow is my father’s _______ birthday.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "fifty",
+            "B": "five",
+            "C": "sixty",
+            "D": "seventy-first",
+            "E": "thirteen"
+          },
+          "answer": "D",
+          "answer_text": "seventy-first",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 24,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-24-14-045",
+          "stem": "A: What time does your lesson start?\nB: At _____________ (10.15)\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "ten o’clock",
+            "B": "a quarter past ten",
+            "C": "half past ten",
+            "D": "a quarter to ten",
+            "E": "eleven fifteen"
+          },
+          "answer": "B",
+          "answer_text": "a quarter past ten",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 24,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-24-15-046",
+          "stem": "A: How much is this bike?\nB: It is _____________ euros. (€560)\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "five hundred and sixty",
+            "B": "six hundred and fifty",
+            "C": "five hundred",
+            "D": "five hundred and sixteen",
+            "E": "five hundred and six"
+          },
+          "answer": "A",
+          "answer_text": "five hundred and sixty",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 24,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-25-16-047",
+          "stem": "Weekend days are _______ and ________.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Monday / Wednesday",
+            "B": "Sunday / Thursday",
+            "C": "Saturday / Sunday",
+            "D": "Tuesday / Friday",
+            "E": "Wednesday / Thursday"
+          },
+          "answer": "C",
+          "answer_text": "Saturday / Sunday",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 25,
+          "source_no": 16
+        },
+        {
+          "id": "ingilizce-kaynak-25-01-048",
+          "stem": "……. month of the year is November.",
+          "options": {
+            "A": "Fourth",
+            "B": "Third",
+            "C": "Fifth",
+            "D": "Eleventh",
+            "E": "Tenth"
+          },
+          "answer": "D",
+          "answer_text": "Eleventh",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 25,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-25-02-049",
+          "stem": "My favourite day is…………; it is the last day of work .",
+          "options": {
+            "A": "Friday",
+            "B": "Sunday",
+            "C": "Wednesday",
+            "D": "hursday",
+            "E": "Monday"
+          },
+          "answer": "A",
+          "answer_text": "Friday",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 25,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-25-03-050",
+          "stem": "His birthday is on…………. .",
+          "options": {
+            "A": "April",
+            "B": "Summer",
+            "C": "March",
+            "D": "25th of May",
+            "E": "September"
+          },
+          "answer": "D",
+          "answer_text": "25th of May",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 25,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-26-04-051",
+          "stem": "Ahmet is so boring; he usually………….about football.",
+          "options": {
+            "A": "talk",
+            "B": "talks",
+            "C": "is talking",
+            "D": "talked",
+            "E": "are talking"
+          },
+          "answer": "B",
+          "answer_text": "talks",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 26,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-26-05-052",
+          "stem": "We always………….fun at her parties.",
+          "options": {
+            "A": "has",
+            "B": "having",
+            "C": "have",
+            "D": "had",
+            "E": "doesn’t have"
+          },
+          "answer": "C",
+          "answer_text": "have",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 26,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-26-06-053",
+          "stem": "Mary and Sam………….. at the same computer company.",
+          "options": {
+            "A": "works",
+            "B": "work",
+            "C": "working",
+            "D": "is working",
+            "E": "to working"
+          },
+          "answer": "B",
+          "answer_text": "work",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 26,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-26-07-054",
+          "stem": "She always …………. in a pub at 7.00 p.m..",
+          "options": {
+            "A": "have lunch",
+            "B": "has lunch",
+            "C": "have breakfast",
+            "D": "has breakfast",
+            "E": "has dinner"
+          },
+          "answer": "E",
+          "answer_text": "has dinner",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 26,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-26-08-055",
+          "stem": "Herry …………at 8.00 a.m. on Saturday morning.",
+          "options": {
+            "A": "get up",
+            "B": "getting up",
+            "C": "gets up",
+            "D": "getes",
+            "E": "are getting"
+          },
+          "answer": "C",
+          "answer_text": "gets up",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 26,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-27-09-056",
+          "stem": "My mother is very tired of housework so I ……..her.",
+          "options": {
+            "A": "helps",
+            "B": "help",
+            "C": "are helping",
+            "D": "helping",
+            "E": "is helping"
+          },
+          "answer": "B",
+          "answer_text": "help",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 27,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-27-10-057",
+          "stem": "My grandparents………….. in a house outside the city.",
+          "options": {
+            "A": "lives",
+            "B": "is living",
+            "C": "live",
+            "D": "are living",
+            "E": "living"
+          },
+          "answer": "C",
+          "answer_text": "live",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 27,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-27-11-058",
+          "stem": "Cem is in his fourth year at university. So he is a _______.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "teacher",
+            "B": "freshman",
+            "C": "sophomore",
+            "D": "senior",
+            "E": "junior"
+          },
+          "answer": "D",
+          "answer_text": "senior",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 27,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-27-12-059",
+          "stem": "A: _____ you _____ to the party tonight?\nB: Yes, I am.Karşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "am / going",
+            "B": "are / going",
+            "C": "are / go",
+            "D": "be / to go",
+            "E": "am / to go"
+          },
+          "answer": "B",
+          "answer_text": "are / going",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 27,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-27-13-060",
+          "stem": "A: Dad, what is on TV?\nB: _________________\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I’m watching football.",
+            "B": "I’m talking about the economy.",
+            "C": "I’m chasing the dog.",
+            "D": "We are playing in the garden.",
+            "E": "Your mom is washing the clothes."
+          },
+          "answer": "A",
+          "answer_text": "I’m watching football.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 27,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-28-14-061",
+          "stem": "A: Where is Amy?\nB: She ___________ in her room.\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "is play",
+            "B": "are playing",
+            "C": "be playing",
+            "D": "be play",
+            "E": "is playing"
+          },
+          "answer": "E",
+          "answer_text": "is playing",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 28,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-28-15-062",
+          "stem": "A: I __________ to the cinema with you. I’m tired.\nB: No problem.\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "am coming",
+            "B": "are coming",
+            "C": "am not coming",
+            "D": "be coming",
+            "E": "to come"
+          },
+          "answer": "C",
+          "answer_text": "am not coming",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 28,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-28-01-063",
+          "stem": "Brian usually………work at 09.00.",
+          "options": {
+            "A": "start",
+            "B": "is starting",
+            "C": "starts",
+            "D": "are starting",
+            "E": "starting"
+          },
+          "answer": "C",
+          "answer_text": "starts",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 28,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-29-03-064",
+          "stem": "How often do you ……. your teeth?",
+          "options": {
+            "A": "brush",
+            "B": "clean",
+            "C": "water",
+            "D": "eat",
+            "E": "have"
+          },
+          "answer": "A",
+          "answer_text": "brush",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 29,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-29-04-065",
+          "stem": "I always ……….. at 13.00 at Hamdi Restaurant every day.",
+          "options": {
+            "A": "have breakfast",
+            "B": "have dinner",
+            "C": "have lunch",
+            "D": "have a shower",
+            "E": "have a bath"
+          },
+          "answer": "C",
+          "answer_text": "have lunch",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 29,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-29-05-066",
+          "stem": "………….she often go to the Tennis Club?",
+          "options": {
+            "A": "Does",
+            "B": "Do",
+            "C": "Don’t",
+            "D": "Are",
+            "E": "Is"
+          },
+          "answer": "A",
+          "answer_text": "Does",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 29,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-29-06-067",
+          "stem": "My parents………. in a house.They ……….. in an apartment.",
+          "options": {
+            "A": "don’t live/lives",
+            "B": "doesn’t lives/live",
+            "C": "don’t live/live",
+            "D": "doesn’t live/lives",
+            "E": "doesn’t live/live"
+          },
+          "answer": "C",
+          "answer_text": "don’t live/live",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 29,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-29-07-068",
+          "stem": "Kim:……..do you go on your vacation?John: By Plane.",
+          "options": {
+            "A": "How often",
+            "B": "What",
+            "C": "How",
+            "D": "When",
+            "E": "Where"
+          },
+          "answer": "C",
+          "answer_text": "How",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 29,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-30-08-069",
+          "stem": "Sam:………..do you do at the weekend? Tom: I go to the gym.",
+          "options": {
+            "A": "Where",
+            "B": "How often",
+            "C": "When",
+            "D": "What",
+            "E": "What time"
+          },
+          "answer": "D",
+          "answer_text": "What",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 30,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-30-09-070",
+          "stem": "My brother always………..the bill at the restaurant.",
+          "options": {
+            "A": "pays",
+            "B": "sits",
+            "C": "writes",
+            "D": "reads",
+            "E": "sees"
+          },
+          "answer": "A",
+          "answer_text": "pays",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 30,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-30-10-071",
+          "stem": "I leave work at six o’clock but my husband…………….before ten o’clock.",
+          "options": {
+            "A": "don’t finish",
+            "B": "doesn’t finishes",
+            "C": "doesn’t finish",
+            "D": "finishes",
+            "E": "don’t finishes"
+          },
+          "answer": "C",
+          "answer_text": "doesn’t finish",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 30,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-30-11-072",
+          "stem": "Does he like ______ football?\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "play",
+            "B": "to playing",
+            "C": "playing",
+            "D": "is playing",
+            "E": "be play"
+          },
+          "answer": "C",
+          "answer_text": "playing",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 30,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-30-12-073",
+          "stem": "Mr. Winslet hates ______ about politics.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "talk",
+            "B": "talking",
+            "C": "be talk",
+            "D": "to talking",
+            "E": "be talking"
+          },
+          "answer": "B",
+          "answer_text": "talking",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 30,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-31-13-074",
+          "stem": "I really love ______ History.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "studying",
+            "B": "to studying",
+            "C": "study",
+            "D": "be study",
+            "E": "to be study"
+          },
+          "answer": "A",
+          "answer_text": "studying",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 31,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-31-14-075",
+          "stem": "We are having great time ____________. Come and join us!\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "yesterday",
+            "B": "last night",
+            "C": "two days ago",
+            "D": "now",
+            "E": "last year"
+          },
+          "answer": "D",
+          "answer_text": "now",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 31,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-31-15-076",
+          "stem": "A: Marry likes reading about the human body.\nB: Is she studying _____________?A: Yes, she is.\nKarşılıklı konuşmayı tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Medicine",
+            "B": "History",
+            "C": "Economics",
+            "D": "FashionDesign",
+            "E": "Law"
+          },
+          "answer": "A",
+          "answer_text": "Medicine",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 31,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-31-01-077",
+          "stem": "A: How many cars are there? B: There is…………car",
+          "options": {
+            "A": "a",
+            "B": "an",
+            "C": "some",
+            "D": "any",
+            "E": "many"
+          },
+          "answer": "A",
+          "answer_text": "a",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 31,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-31-02-078",
+          "stem": "There isn’t …………milk in the bottle.",
+          "options": {
+            "A": "how much",
+            "B": "a little",
+            "C": "a",
+            "D": "any",
+            "E": "a few"
+          },
+          "answer": "D",
+          "answer_text": "any",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 31,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-32-03-079",
+          "stem": "We haven’t got …………cheese in the fridge.",
+          "options": {
+            "A": "a few",
+            "B": "a",
+            "C": "a little",
+            "D": "some",
+            "E": "any"
+          },
+          "answer": "E",
+          "answer_text": "any",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 32,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-32-04-080",
+          "stem": "I am very hungry. Give me …………cookies.",
+          "options": {
+            "A": "a little",
+            "B": "any",
+            "C": "some",
+            "D": "no",
+            "E": "how much"
+          },
+          "answer": "C",
+          "answer_text": "some",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 32,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-32-05-081",
+          "stem": "There is…………butter, but we haven’t got …………eggs.",
+          "options": {
+            "A": "some / any",
+            "B": "any / some",
+            "C": "a / some",
+            "D": "a / any",
+            "E": "how many/ how much"
+          },
+          "answer": "A",
+          "answer_text": "some / any",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 32,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-32-06-082",
+          "stem": "A: Have you got …………sisters?\nB: No, I haven’t got ………….’",
+          "options": {
+            "A": "a / any",
+            "B": "a / some",
+            "C": "any / some",
+            "D": "any / any",
+            "E": "some / some"
+          },
+          "answer": "D",
+          "answer_text": "any / any",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 32,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-32-07-083",
+          "stem": "There is …………oil but there is ……………… milk.",
+          "options": {
+            "A": "some / how much",
+            "B": "any / some",
+            "C": "some / any",
+            "D": "a lot of / a little",
+            "E": "a few / a little"
+          },
+          "answer": "D",
+          "answer_text": "a lot of / a little",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 32,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-33-08-084",
+          "stem": "There are…………….. apples and ……………. apple juice in the kitchen.",
+          "options": {
+            "A": "a few / a little",
+            "B": "a little/ a few",
+            "C": "how much/how many",
+            "D": "some / any",
+            "E": "a/ an"
+          },
+          "answer": "A",
+          "answer_text": "a few / a little",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 33,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-33-09-085",
+          "stem": "I eat ……….. bread and ………….. tea every morning.",
+          "options": {
+            "A": "a mug of / a cup of",
+            "B": "a kilo of / a bowl of",
+            "C": "a piece of / a plate of",
+            "D": "a slice of / a cup of",
+            "E": "a bar of / a can of"
+          },
+          "answer": "D",
+          "answer_text": "a slice of / a cup of",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 33,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-33-10-086",
+          "stem": "Simon buys ………. chocolate and ……… coke.",
+          "options": {
+            "A": "a slice of / a bunch of",
+            "B": "a box of / a package of",
+            "C": "a bar of / a can of",
+            "D": "a piece of / a plate of",
+            "E": "a mug of / a cup of"
+          },
+          "answer": "C",
+          "answer_text": "a bar of / a can of",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 33,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-33-11-087",
+          "stem": "We ________ the cinema every Saturday.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "drink",
+            "B": "take",
+            "C": "go to",
+            "D": "listen",
+            "E": "play"
+          },
+          "answer": "C",
+          "answer_text": "go to",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 33,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-33-12-088",
+          "stem": "Selim ________ a letter to her mother once a month.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "writes",
+            "B": "goes",
+            "C": "does",
+            "D": "studies",
+            "E": "talks"
+          },
+          "answer": "A",
+          "answer_text": "writes",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 33,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-34-13-089",
+          "stem": "A: Are you going to Italy this summer?\nB: Yes, but I _________ Spain.\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerdenhangisidir?",
+          "options": {
+            "A": "go",
+            "B": "know",
+            "C": "speak",
+            "D": "agree",
+            "E": "prefer"
+          },
+          "answer": "E",
+          "answer_text": "prefer",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 34,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-34-14-090",
+          "stem": "My mom ________ to work on Sunday.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "go",
+            "B": "going",
+            "C": "doesn’t go",
+            "D": "don’t go",
+            "E": "to go"
+          },
+          "answer": "C",
+          "answer_text": "doesn’t go",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 34,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-34-15-091",
+          "stem": "The first customers ________ to the shop at about 8am.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "coming",
+            "B": "come",
+            "C": "to come",
+            "D": "is coming",
+            "E": "to coming"
+          },
+          "answer": "C",
+          "answer_text": "to come",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 34,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-34-01-092",
+          "stem": "right / turn / traffic lights / at the",
+          "options": {
+            "A": "Right turn at the traffic lights.",
+            "B": "Turn at the right traffic lights.",
+            "C": "Turn right at the traffic lights.",
+            "D": "Traffic lights turn at the right.",
+            "E": "Turn the lights at the right."
+          },
+          "answer": "C",
+          "answer_text": "Turn right at the traffic lights.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 34,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-35-02-093",
+          "stem": "please / quiet / be",
+          "options": {
+            "A": "Please quiet be.",
+            "B": "Be please quiet.",
+            "C": "Please be quiet.",
+            "D": "You be quiet please",
+            "E": "Be you please quiet."
+          },
+          "answer": "C",
+          "answer_text": "Please be quiet.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 35,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-35-03-094",
+          "stem": "I ………..get on a plane.I’m afraid of planes.",
+          "options": {
+            "A": "can’t",
+            "B": "doesn’t",
+            "C": "can",
+            "D": "am not",
+            "E": "aren’t"
+          },
+          "answer": "A",
+          "answer_text": "can’t",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 35,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-35-04-095",
+          "stem": "A: ……….. I use your phone?\nB: Of course.",
+          "options": {
+            "A": "Does",
+            "B": "Am",
+            "C": "Did",
+            "D": "Do",
+            "E": "Can"
+          },
+          "answer": "E",
+          "answer_text": "Can",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 35,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-35-05-096",
+          "stem": "My parents ……….. draw very well. They are wonderful!",
+          "options": {
+            "A": "could",
+            "B": "can",
+            "C": "can’t",
+            "D": "couldn’t",
+            "E": "would"
+          },
+          "answer": "B",
+          "answer_text": "can",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 35,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-35-06-097",
+          "stem": "There is something for……..…….! Are you ready?",
+          "options": {
+            "A": "me",
+            "B": "you",
+            "C": "him",
+            "D": "them",
+            "E": "he"
+          },
+          "answer": "B",
+          "answer_text": "you",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 35,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-36-07-098",
+          "stem": "The children are playing loudly! I can’t hear……….……",
+          "options": {
+            "A": "his",
+            "B": "you",
+            "C": "my",
+            "D": "their",
+            "E": "our"
+          },
+          "answer": "B",
+          "answer_text": "you",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 36,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-36-08-099",
+          "stem": "This is my mother’s birthday, all the presents are for……….….",
+          "options": {
+            "A": "her",
+            "B": "him",
+            "C": "me",
+            "D": "you",
+            "E": "them"
+          },
+          "answer": "A",
+          "answer_text": "her",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 36,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-36-09-100",
+          "stem": "Excuse me! ………..…..is the library?",
+          "options": {
+            "A": "How",
+            "B": "What",
+            "C": "When",
+            "D": "here",
+            "E": "Who"
+          },
+          "answer": "D",
+          "answer_text": "here",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 36,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-36-10-101",
+          "stem": "Pass the White Street and turn right at……………. .",
+          "options": {
+            "A": "around school",
+            "B": "the traffic light",
+            "C": "straight ahead",
+            "D": "eft",
+            "E": "on the right"
+          },
+          "answer": "B",
+          "answer_text": "the traffic light",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 36,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-36-11-102",
+          "stem": "________ doesn’t like swimming in the sea.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I",
+            "B": "We",
+            "C": "You",
+            "D": "He",
+            "E": "They"
+          },
+          "answer": "D",
+          "answer_text": "He",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 36,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-37-12-103",
+          "stem": "________ don’t want to go shopping with you.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I",
+            "B": "She",
+            "C": "He",
+            "D": "It",
+            "E": "You"
+          },
+          "answer": "A",
+          "answer_text": "I",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 37,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-37-13-104",
+          "stem": "________ she often ________ homesick when she is away?\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Do / feel",
+            "B": "Does / feel",
+            "C": "Does / feeling",
+            "D": "Do / feeling",
+            "E": "Are / feeling"
+          },
+          "answer": "B",
+          "answer_text": "Does / feel",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 37,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-37-15-105",
+          "stem": "A: How do you go to school?\nB: _____________________\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I like my school.",
+            "B": "I study Geography at university.",
+            "C": "My sister goes to school at eleven.",
+            "D": "I do my homework at home.",
+            "E": "I go to school by bus."
+          },
+          "answer": "E",
+          "answer_text": "I go to school by bus.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 37,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-39-03-106",
+          "stem": "A: Does your son like milk?\nB: Yes, he loves it. He ______ drinks a glass of milk before he goes to school.\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "always",
+            "B": "sometimes",
+            "C": "never",
+            "D": "rarely",
+            "E": "hardly ever\nA: Oğlunuz süt sever mi?\nB: Evet sever. O….. okula gitmeden önce bir bardak süt içer\nboşluğa gelecek en uygun gelime ALWAYS= HERZAMAN"
+          },
+          "answer": "A",
+          "answer_text": "always",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 39,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-39-04-107",
+          "stem": "A: How does Mark usually go to school?\nB: ___________________________\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "He always reads about Turkish history.",
+            "B": "He usually leaves home at 8:30 in the morning.",
+            "C": "His classes never start at 3pm.",
+            "D": "He often arrives at school at 9:00.",
+            "E": "He usually walks to school because he doesn’t live far.\nMark genellikle okula NASIL gider?"
+          },
+          "answer": "E",
+          "answer_text": "He usually walks to school because he doesn’t live far.\nMark genellikle okula NASIL gider?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 39,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-40-01-108",
+          "stem": "There is ________ in the fridge.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "a little cheese",
+            "B": "five slices of bread",
+            "C": "five kilos of rice",
+            "D": "three onions",
+            "E": "a few sweets"
+          },
+          "answer": "A",
+          "answer_text": "a little cheese",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 40,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-40-02-109",
+          "stem": "A: How many ________ do you eat every day?\nB: Only one.\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "lemonade",
+            "B": "sugar",
+            "C": "soup",
+            "D": "orange juice",
+            "E": "apples"
+          },
+          "answer": "E",
+          "answer_text": "apples",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 40,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-40-03-110",
+          "stem": "I don’t drink ________ cola.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "how much",
+            "B": "how many",
+            "C": "many",
+            "D": "much",
+            "E": "a few"
+          },
+          "answer": "D",
+          "answer_text": "much",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 40,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-40-04-111",
+          "stem": "Can I have ________ sugar for my tea, please?\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "much",
+            "B": "many",
+            "C": "a kilo of",
+            "D": "a few",
+            "E": "a little"
+          },
+          "answer": "E",
+          "answer_text": "a little",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 40,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-41-05-112",
+          "stem": "I don’t have ________ money. I can’t buy this dress.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "much",
+            "B": "many",
+            "C": "a little",
+            "D": "a few",
+            "E": "how many"
+          },
+          "answer": "A",
+          "answer_text": "much",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 41,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-41-01-113",
+          "stem": "Waiter: Would you like a drink first?\nCustomer: _______________________\n\nKarşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yes. Can I have a glass of orange juice please?",
+            "B": "Sure, it is Marry.",
+            "C": "No problem.",
+            "D": "I don’t like my salad.",
+            "E": "Yes, two slices of pizza please."
+          },
+          "answer": "A",
+          "answer_text": "Yes. Can I have a glass of orange juice please?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 41,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-41-02-114",
+          "stem": "Waiter: Would you like to eat some ______?\nCustomer: No, thanks.Karşılıklı konuşmayı tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "ayran",
+            "B": "water",
+            "C": "soda",
+            "D": "sprite",
+            "E": "lasagna"
+          },
+          "answer": "E",
+          "answer_text": "lasagna",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 41,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-42-03-115",
+          "stem": "Customer: ___________________\nWaiter: Sure. Here you are. It is $14.Karşılıklı konuşmayı tamamlayan en uygun seçenek\naşağıdakilerden hangisidir?",
+          "options": {
+            "A": "What would you recommend?",
+            "B": "Have a good day!",
+            "C": "Can I have the check please?",
+            "D": "Can I get you anything?",
+            "E": "How much is a glass of lemonade?"
+          },
+          "answer": "C",
+          "answer_text": "Can I have the check please?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 42,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-42-04-116",
+          "stem": "Waiter: How is the meal? Do you like it?\nCustomer: ______________________Karşılıklı konuşmayı tamamlayan en uygun seçenek\naşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Another cola, please.",
+            "B": "It is perfect!",
+            "C": "No, I’m okay.",
+            "D": "How much is this?",
+            "E": "More water, thanks."
+          },
+          "answer": "B",
+          "answer_text": "It is perfect!",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 42,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-42-05-117",
+          "stem": "Customer: Could I have a menu, please?\nWaiter: ______________________Karşılıklı konuşmayı tamamlayan en uygun seçenek\naşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Thank you.",
+            "B": "Can I get you anything else?",
+            "C": "It is €5.",
+            "D": "Enjoy your meal.",
+            "E": "Here you are."
+          },
+          "answer": "E",
+          "answer_text": "Here you are.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 42,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-42-01-118",
+          "stem": "1. The traffic light is red now. ____________________\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Get across the road.",
+            "B": "Cross the street.",
+            "C": "Wait for the green light.",
+            "D": "Turn right into Ron Street.",
+            "E": "Turn left and it is on your right."
+          },
+          "answer": "C",
+          "answer_text": "Wait for the green light.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 42,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-43-02-119",
+          "stem": "You are in the Spanish class. ____________________\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Don’t speak German.",
+            "B": "Speak German.",
+            "C": "Be quiet, please.",
+            "D": "Open the door.",
+            "E": "Don’t listen to your friend."
+          },
+          "answer": "A",
+          "answer_text": "Don’t speak German.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 43,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-43-03-120",
+          "stem": "Go straight on and _____________ at the traffic lights.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "don’t go",
+            "B": "turn left",
+            "C": "sit down",
+            "D": "stop talking",
+            "E": "don’t look"
+          },
+          "answer": "B",
+          "answer_text": "turn left",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 43,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-43-04-121",
+          "stem": "_______________, don’t take the left turn.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Don’t move",
+            "B": "Turn left",
+            "C": "Take the left turn",
+            "D": "Don’t turn left",
+            "E": "Take the right turn"
+          },
+          "answer": "E",
+          "answer_text": "Take the right turn",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 43,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-43-05-122",
+          "stem": "_______________ when you arrive at the airport, please.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Phone me",
+            "B": "Sing a song",
+            "C": "Don’t fly",
+            "D": "Drive the car on the left",
+            "E": "Wear your dress"
+          },
+          "answer": "A",
+          "answer_text": "Phone me",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 43,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-44-01-123",
+          "stem": "Be quick please. I’m waiting for you ______ the bus stop.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "at",
+            "B": "in",
+            "C": "on",
+            "D": "to",
+            "E": "—"
+          },
+          "answer": "A",
+          "answer_text": "at",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 44,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-44-02-124",
+          "stem": "There is a little money ______ my pocket.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "the",
+            "B": "at",
+            "C": "on",
+            "D": "in",
+            "E": "to"
+          },
+          "answer": "D",
+          "answer_text": "in",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 44,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-44-03-125",
+          "stem": "I’m watching a very good film ______ TV at the moment.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "—",
+            "B": "at",
+            "C": "on",
+            "D": "in",
+            "E": "the"
+          },
+          "answer": "C",
+          "answer_text": "on",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 44,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-44-04-126",
+          "stem": "I’m going to the ______ to have breakfast. Come with me, please.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "pharmacy",
+            "B": "library",
+            "C": "hospital",
+            "D": "café",
+            "E": "cinema"
+          },
+          "answer": "D",
+          "answer_text": "café",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 44,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-44-05-127",
+          "stem": "Go to the ______ and buy a kilo of bananas and two kilos of potatoes.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "gas station",
+            "B": "mosque",
+            "C": "church",
+            "D": "museum",
+            "E": "grocery store"
+          },
+          "answer": "E",
+          "answer_text": "grocery store",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 44,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-45-01-128",
+          "stem": "1. I can’t answer this question. It is _______.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "strong",
+            "B": "full",
+            "C": "difficult",
+            "D": "cheap",
+            "E": "hot"
+          },
+          "answer": "C",
+          "answer_text": "difficult",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 45,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-45-02-129",
+          "stem": "Jane is not lazy. In fact, she is quite _______.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "wide",
+            "B": "dirty",
+            "C": "modern",
+            "D": "small",
+            "E": "hard-working"
+          },
+          "answer": "E",
+          "answer_text": "hard-working",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 45,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-45-03-130",
+          "stem": "I can’t buy this car. It is too _______.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "expensive",
+            "B": "brave",
+            "C": "beautiful",
+            "D": "cold",
+            "E": "coward"
+          },
+          "answer": "A",
+          "answer_text": "expensive",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 45,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-45-04-131",
+          "stem": "A fish ______ swim but it _______ fly.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "can / can",
+            "B": "can’t / can’t",
+            "C": "can’t / can",
+            "D": "can / can’t",
+            "E": "can’t"
+          },
+          "answer": "D",
+          "answer_text": "can / can’t",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 45,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-45-05-132",
+          "stem": "A: _______ you swim in cold water?\nB: No, I _______. I _______ only swim in warm water.Karşılıklı konuşmayı tamamlayan doğru seçenek\naşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Can / can’t / can’t",
+            "B": "Can / can’t / can",
+            "C": "Can / can / can’t",
+            "D": "Can / can / can",
+            "E": "Can’t / can’t / can’t"
+          },
+          "answer": "B",
+          "answer_text": "Can / can’t / can",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 45,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-46-01-133",
+          "stem": "January is the ________ month of the year in Turkey.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "hottest",
+            "B": "coldest",
+            "C": "shortest",
+            "D": "longest",
+            "E": "furthest"
+          },
+          "answer": "B",
+          "answer_text": "coldest",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 46,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-46-02-134",
+          "stem": "A car is ________ than a motorbike.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "drier",
+            "B": "further",
+            "C": "older",
+            "D": "more colorful",
+            "E": "more comfortable"
+          },
+          "answer": "E",
+          "answer_text": "more comfortable",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 46,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-46-03-135",
+          "stem": "Learning German is ________ learning English.\nCümleyi tamamlayan doğru seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "easiest than",
+            "B": "easier",
+            "C": "the easiest",
+            "D": "easy",
+            "E": "easier than"
+          },
+          "answer": "E",
+          "answer_text": "easier than",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 46,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-46-04-136",
+          "stem": "Edward is 10, Martin is 14, and Steve is 19 years old.\nYukarıda yer alan bilgilere göre aşağıdaki cümlelerden hangisi doğrudur?",
+          "options": {
+            "A": "Edward is the oldest of all.",
+            "B": "Martin is younger than Edward.",
+            "C": "Steve is older than Martin.",
+            "D": "Martin is the oldest of all.",
+            "E": "Steve is the youngest of all."
+          },
+          "answer": "C",
+          "answer_text": "Steve is older than Martin.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 46,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-46-05-137",
+          "stem": "He is ________ actor in the world.\nCümleyi tamamlayan en uygun seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "than famous",
+            "B": "famous than",
+            "C": "famous",
+            "D": "more famous",
+            "E": "the most famous"
+          },
+          "answer": "E",
+          "answer_text": "the most famous",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 46,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-47-01-138",
+          "stem": "There is _______ umbrella on the table.",
+          "options": {
+            "A": "an",
+            "B": "a",
+            "C": "–",
+            "D": "on",
+            "E": "over"
+          },
+          "answer": "A",
+          "answer_text": "an",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 47,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-47-02-139",
+          "stem": "He likes _______.",
+          "options": {
+            "A": "swim",
+            "B": "swims",
+            "C": "swimming",
+            "D": "to swimming",
+            "E": "to swims"
+          },
+          "answer": "C",
+          "answer_text": "swimming",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 47,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-47-03-140",
+          "stem": "A: What time is it?\nB: It is _______. (12:20)",
+          "options": {
+            "A": "It is twenty to twelve",
+            "B": "It is twelve past twenty",
+            "C": "It is twenty past twelve",
+            "D": "It is twelve to twenty",
+            "E": "It is half past twelve"
+          },
+          "answer": "C",
+          "answer_text": "It is twenty past twelve",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 47,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-48-05-141",
+          "stem": "Ada : where are you from?\nGeorge: ……………………….\nYukarıdaki sorunun cevabı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I am british.",
+            "B": "I am from japan",
+            "C": "He is french",
+            "D": "She is from britain",
+            "E": "I am a student"
+          },
+          "answer": "B",
+          "answer_text": "I am from japan",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 48,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-48-06-142",
+          "stem": "What is the sixth day of week\nYukarıdaki sorunun cevabı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Monday",
+            "B": "Sunday",
+            "C": "Thursday",
+            "D": "Tuesday",
+            "E": "Saturday"
+          },
+          "answer": "E",
+          "answer_text": "Saturday",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 48,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-48-08-143",
+          "stem": "Metin:…………..dogs fly?\nMerve: No,they………………………….\nYukarıdaki boşluklara sırasıyla gelebilecek en uygun ifadeler aşağıdakilerden hangisinde verilmiştir?",
+          "options": {
+            "A": "Are/aren’t",
+            "B": "Do/do",
+            "C": "Have/haven’t",
+            "D": "Must /mustn’t",
+            "E": "Can/can’t"
+          },
+          "answer": "E",
+          "answer_text": "Can/can’t",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 48,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-48-10-144",
+          "stem": "Our cat_______ ill. My family _______very sad today.",
+          "options": {
+            "A": "is/am",
+            "B": "is/are",
+            "C": "are/are",
+            "D": "am/are",
+            "E": "is/is"
+          },
+          "answer": "B",
+          "answer_text": "is/are",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 48,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-49-11-145",
+          "stem": "My sister always goes to bed at 22:00. She _______ goes to bed early.",
+          "options": {
+            "A": "always",
+            "B": "often",
+            "C": "usually",
+            "D": "sometimes",
+            "E": "never"
+          },
+          "answer": "E",
+          "answer_text": "never",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 49,
+          "source_no": 11
+        },
+        {
+          "id": "ingilizce-kaynak-49-13-146",
+          "stem": "She usually _______ to Europian countries on holiday.",
+          "options": {
+            "A": "travels",
+            "B": "walks",
+            "C": "runs",
+            "D": "arrives",
+            "E": "lives"
+          },
+          "answer": "A",
+          "answer_text": "travels",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 49,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-49-14-147",
+          "stem": "customer : ‘’____ ____is a hamburger and chips?\nSalesman :’’theree pounds fifty.’\nYukarıdaki soruyu aşağıdakilerden hangisi tamamlar?",
+          "options": {
+            "A": "How many",
+            "B": "How often",
+            "C": "How long",
+            "D": "How much",
+            "E": "How about"
+          },
+          "answer": "D",
+          "answer_text": "How much",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 49,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-50-17-148",
+          "stem": "I’m visiting Amsterdam _______ December.",
+          "options": {
+            "A": "in",
+            "B": "on",
+            "C": "from",
+            "D": "over",
+            "E": "at"
+          },
+          "answer": "A",
+          "answer_text": "in",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 50,
+          "source_no": 17
+        },
+        {
+          "id": "ingilizce-kaynak-50-18-149",
+          "stem": "Sally: when are you going to germany?\nTom:………december.\nYukarıdaki soruda boş bırakılan yere uygun gelen cevap aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "İn",
+            "B": "To",
+            "C": "From",
+            "D": "at",
+            "E": "Of"
+          },
+          "answer": "A",
+          "answer_text": "İn",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 50,
+          "source_no": 18
+        },
+        {
+          "id": "ingilizce-kaynak-50-21-150",
+          "stem": "İs/box/empty/there/an/?\nYukarıdaki sözcükler kullanılarak oluşturulabilecek doğru ifade aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "There is an empty box?",
+            "B": "An empty box there is?",
+            "C": "There an empty box is?",
+            "D": "İs there an empty box?",
+            "E": "İs there box an empty?"
+          },
+          "answer": "D",
+          "answer_text": "İs there an empty box?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 50,
+          "source_no": 21
+        },
+        {
+          "id": "ingilizce-kaynak-51-22-151",
+          "stem": "Ali : ’’what____this?’’\nSenem: ’’ıt’is_____umbrella.’’\nYukarıdaki boşluklara sırasıyla gelmesi gerekenler aşağıdakilerden hangisinde verilmiştir?",
+          "options": {
+            "A": "Are/a",
+            "B": "İs/a",
+            "C": "a/an",
+            "D": "İts/an",
+            "E": "His/ham"
+          },
+          "answer": "C",
+          "answer_text": "a/an",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 51,
+          "source_no": 22
+        },
+        {
+          "id": "ingilizce-kaynak-51-23-152",
+          "stem": "Teacher:______books_____there under your desk?\nStudent: there____one.\nYukarıdaki boşlukları sırasıyla tamamlayacak en uygun sözcükler aşağıdakilerden hangisinde\nverilmiştir?",
+          "options": {
+            "A": "How much/is/is",
+            "B": "How much/are/is",
+            "C": "How many/is/is",
+            "D": "What/are/is",
+            "E": "How many/are/is"
+          },
+          "answer": "E",
+          "answer_text": "How many/are/is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 51,
+          "source_no": 23
+        },
+        {
+          "id": "ingilizce-kaynak-51-24-153",
+          "stem": "What’s the weather generally like in summer?\nYukarıdaki sorunun cevabı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Cold and snowy",
+            "B": "Cold and sunny",
+            "C": "Hot and snowy",
+            "D": "Hot and sunny",
+            "E": "Hot and rainy"
+          },
+          "answer": "D",
+          "answer_text": "Hot and sunny",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 51,
+          "source_no": 24
+        },
+        {
+          "id": "ingilizce-kaynak-51-25-154",
+          "stem": "George:……..a mobile phone but\nTom :………….a mobile phone.\nYukarıdaki boşluklara sırasıyla gelmesi gerekenler aşağıdakilerden hangisinde verilmiştir?",
+          "options": {
+            "A": "Hasn’t got –has got",
+            "B": "Have got-has got",
+            "C": "Hasnt’got-have got",
+            "D": "Has got-haven’t got",
+            "E": "Have go-hasn’t go"
+          },
+          "answer": "A",
+          "answer_text": "Hasn’t got –has got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 51,
+          "source_no": 25
+        },
+        {
+          "id": "ingilizce-kaynak-51-26-155",
+          "stem": "Would you like ______ milk with your cookies?\nSoru cümlesindeki boşluğu en uygun şekilde tamamlayan kelimeyi bulunuz.",
+          "options": {
+            "A": "a",
+            "B": "some",
+            "C": "the",
+            "D": "an",
+            "E": "many"
+          },
+          "answer": "B",
+          "answer_text": "some",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 51,
+          "source_no": 26
+        },
+        {
+          "id": "ingilizce-kaynak-52-27-156",
+          "stem": "The weather _____ too hot. So, we _____ not to go to the beach yesterday.\nCümlelerdeki boşlukları tamamlayan kelimeler aşağıdakilerden hangisinde sırasıyla verilmiştir?",
+          "options": {
+            "A": "is / decided",
+            "B": "was / decide",
+            "C": "were / decided",
+            "D": "is / decide",
+            "E": "was / decided"
+          },
+          "answer": "E",
+          "answer_text": "was / decided",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 52,
+          "source_no": 27
+        },
+        {
+          "id": "ingilizce-kaynak-52-28-157",
+          "stem": "got / up / in / morning / the / she / early\nYukarıda verilen kelimelerden oluşan en anlamlı cümleyi bulunuz.",
+          "options": {
+            "A": "She the morning got up in early.",
+            "B": "She up got early in the morning.",
+            "C": "She got up early in the morning",
+            "D": "Early in the morning got up she.",
+            "E": "In the morning she got early up."
+          },
+          "answer": "C",
+          "answer_text": "She got up early in the morning",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 52,
+          "source_no": 28
+        },
+        {
+          "id": "ingilizce-kaynak-52-29-158",
+          "stem": "Where ______ you _____ for your holiday lastyear?\nCümledeki boşlukları tamamlayan kelimeler aşağıdakilerden hangisinde sırasıyla verilmiştir?",
+          "options": {
+            "A": "did / go",
+            "B": "were / go",
+            "C": "did / went",
+            "D": "do / went",
+            "E": "do / go"
+          },
+          "answer": "A",
+          "answer_text": "did / go",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 52,
+          "source_no": 29
+        },
+        {
+          "id": "ingilizce-kaynak-52-30-159",
+          "stem": "When I was a child, I ______ to be a nurse.\nCümleyi tamamlayan seçeneği bulunuz.",
+          "options": {
+            "A": "wanted",
+            "B": "not want",
+            "C": "to want",
+            "D": "Want",
+            "E": "wanting"
+          },
+          "answer": "A",
+          "answer_text": "wanted",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 52,
+          "source_no": 30
+        },
+        {
+          "id": "ingilizce-kaynak-52-01-160",
+          "stem": "A: What ___________?\nB: I’m a nurse.",
+          "options": {
+            "A": "does she do",
+            "B": "do you do",
+            "C": "are you",
+            "D": "are you doing",
+            "E": "is your name"
+          },
+          "answer": "B",
+          "answer_text": "do you do",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 52,
+          "source_no": 1
+        },
+        {
+          "id": "ingilizce-kaynak-53-02-161",
+          "stem": "A: ___________\nB: It is orange.",
+          "options": {
+            "A": "What is this?",
+            "B": "What are you eating?",
+            "C": "What colour is it?",
+            "D": "What colour are they?",
+            "E": "What do you see?"
+          },
+          "answer": "C",
+          "answer_text": "What colour is it?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 2
+        },
+        {
+          "id": "ingilizce-kaynak-53-03-162",
+          "stem": "I ___________ a nice house near the forest.",
+          "options": {
+            "A": "have got",
+            "B": "has got",
+            "C": "hasn’t got",
+            "D": "walk",
+            "E": "like"
+          },
+          "answer": "A",
+          "answer_text": "have got",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 3
+        },
+        {
+          "id": "ingilizce-kaynak-53-04-163",
+          "stem": "Paul never eats ___________.",
+          "options": {
+            "A": "milkshake",
+            "B": "juice",
+            "C": "tea",
+            "D": "bread",
+            "E": "coke"
+          },
+          "answer": "D",
+          "answer_text": "bread",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 4
+        },
+        {
+          "id": "ingilizce-kaynak-53-05-164",
+          "stem": "A: Where ___________ she?\nB: In Mongolia.",
+          "options": {
+            "A": "is",
+            "B": "are",
+            "C": "does",
+            "D": "am",
+            "E": "do"
+          },
+          "answer": "A",
+          "answer_text": "is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 5
+        },
+        {
+          "id": "ingilizce-kaynak-53-06-165",
+          "stem": "Yandaki cümleyi olumsuza çeviriniz: “Paul works for this company.”",
+          "options": {
+            "A": "Paul doesn’t work for this company.",
+            "B": "Paul don’t work for this company.",
+            "C": "Paul not works for this company.",
+            "D": "Paul isn’t working for this company.",
+            "E": "Paul not working for this company."
+          },
+          "answer": "A",
+          "answer_text": "Paul doesn’t work for this company.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 6
+        },
+        {
+          "id": "ingilizce-kaynak-53-07-166",
+          "stem": "A: How many _______ are there in a year?\nB: 12.",
+          "options": {
+            "A": "seasons",
+            "B": "days",
+            "C": "months",
+            "D": "weeks",
+            "E": "hours"
+          },
+          "answer": "C",
+          "answer_text": "months",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 53,
+          "source_no": 7
+        },
+        {
+          "id": "ingilizce-kaynak-54-08-167",
+          "stem": "I can ___________ Arabic and French.",
+          "options": {
+            "A": "count",
+            "B": "say",
+            "C": "chat",
+            "D": "talk",
+            "E": "speak"
+          },
+          "answer": "E",
+          "answer_text": "speak",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 54,
+          "source_no": 8
+        },
+        {
+          "id": "ingilizce-kaynak-54-09-168",
+          "stem": "My favorite ___________ is 2007.",
+          "options": {
+            "A": "season",
+            "B": "year",
+            "C": "month",
+            "D": "day",
+            "E": "week"
+          },
+          "answer": "B",
+          "answer_text": "year",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 54,
+          "source_no": 9
+        },
+        {
+          "id": "ingilizce-kaynak-54-10-169",
+          "stem": "Tiffany’s father is Eduardo’s uncle. Which one is correct?",
+          "options": {
+            "A": "Tiffany is Eduardo’s aunt.",
+            "B": "Eduardo is Tiffany’s uncle.",
+            "C": "Eduardo is Tiffany’s brother.",
+            "D": "Tiffany and Eduardo are cousins",
+            "E": "Tiffany is Eduardo’s niece."
+          },
+          "answer": "D",
+          "answer_text": "Tiffany and Eduardo are cousins",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 54,
+          "source_no": 10
+        },
+        {
+          "id": "ingilizce-kaynak-54-12-170",
+          "stem": "___________ name is Karla. ___________ is my friend from school.",
+          "options": {
+            "A": "His / You",
+            "B": "Your / She",
+            "C": "Her / She",
+            "D": "Its / It",
+            "E": "My / They"
+          },
+          "answer": "C",
+          "answer_text": "Her / She",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 54,
+          "source_no": 12
+        },
+        {
+          "id": "ingilizce-kaynak-55-13-171",
+          "stem": "A: ___________\nB: I start working at 8:30.",
+          "options": {
+            "A": "Where are you working?",
+            "B": "What do you do?",
+            "C": "How do you go to work?",
+            "D": "When are you working?",
+            "E": "What time do you start working?"
+          },
+          "answer": "E",
+          "answer_text": "What time do you start working?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 55,
+          "source_no": 13
+        },
+        {
+          "id": "ingilizce-kaynak-55-14-172",
+          "stem": "A: This ___________ my friend Ashton.\nB: Nice to meet you, Ashton.",
+          "options": {
+            "A": "are",
+            "B": "is",
+            "C": "–",
+            "D": "Am",
+            "E": "isn’t"
+          },
+          "answer": "B",
+          "answer_text": "is",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 55,
+          "source_no": 14
+        },
+        {
+          "id": "ingilizce-kaynak-55-15-173",
+          "stem": "A: What is ___________ favorite month?\nB: June",
+          "options": {
+            "A": "your",
+            "B": "–",
+            "C": "you",
+            "D": "yours",
+            "E": "yours’"
+          },
+          "answer": "A",
+          "answer_text": "your",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 55,
+          "source_no": 15
+        },
+        {
+          "id": "ingilizce-kaynak-55-16-174",
+          "stem": "Yandaki cümleyi olumsuza çeviriniz:\n“Nicilas cleans his car every day.”",
+          "options": {
+            "A": "Nicilas not cleans his car every day.",
+            "B": "Nicilas isn’t cleaning his car every day.",
+            "C": "Nicilas doesn’t clean his car every day.",
+            "D": "Nicilas don’t clean his car every day.",
+            "E": "Nicilas does clean his car every day."
+          },
+          "answer": "C",
+          "answer_text": "Nicilas doesn’t clean his car every day.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 55,
+          "source_no": 16
+        },
+        {
+          "id": "ingilizce-kaynak-55-17-175",
+          "stem": "Is there ___________ carpenter shop near here?",
+          "options": {
+            "A": "some",
+            "B": "a lot",
+            "C": "any",
+            "D": "the",
+            "E": "many"
+          },
+          "answer": "C",
+          "answer_text": "any",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 55,
+          "source_no": 17
+        },
+        {
+          "id": "ingilizce-kaynak-56-18-176",
+          "stem": "Give ___________ the keys, please.",
+          "options": {
+            "A": "she",
+            "B": "hers",
+            "C": "herself",
+            "D": "her’s",
+            "E": "her"
+          },
+          "answer": "E",
+          "answer_text": "her",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 18
+        },
+        {
+          "id": "ingilizce-kaynak-56-19-177",
+          "stem": "Yandaki cümleyi çoğul yapınız: “It is a nice cat.”",
+          "options": {
+            "A": "They are nice cats.",
+            "B": "There are nice cats.",
+            "C": "Here are nice cats.",
+            "D": "It is nice cats.",
+            "E": "They aren’t nice cats."
+          },
+          "answer": "A",
+          "answer_text": "They are nice cats.",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 19
+        },
+        {
+          "id": "ingilizce-kaynak-56-20-178",
+          "stem": "shouted/she/a/mouse/saw/she/because\nAşağıdakilerin hangisinde yukarıdaki sözcükler ile anlamlı bir cümle oluşturulmuştur?",
+          "options": {
+            "A": "She a mouse saw she because shouted",
+            "B": "Because a mouse saw she shouted",
+            "C": "She shouted because she saw a mouse",
+            "D": "She saw shouted because she a mouse",
+            "E": "She saw a mouse because she shouted"
+          },
+          "answer": "C",
+          "answer_text": "She shouted because she saw a mouse",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 20
+        },
+        {
+          "id": "ingilizce-kaynak-56-21-179",
+          "stem": "___________Esma at school yesterday?",
+          "options": {
+            "A": "Was",
+            "B": "Does",
+            "C": "Do",
+            "D": "Did",
+            "E": "Is"
+          },
+          "answer": "A",
+          "answer_text": "Was",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 21
+        },
+        {
+          "id": "ingilizce-kaynak-56-22-180",
+          "stem": "This is ___________ house. (Helen and Tim’s)",
+          "options": {
+            "A": "our",
+            "B": "their",
+            "C": "they",
+            "D": "his",
+            "E": "her"
+          },
+          "answer": "B",
+          "answer_text": "their",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 22
+        },
+        {
+          "id": "ingilizce-kaynak-56-23-181",
+          "stem": "Children! ___________ noise!",
+          "options": {
+            "A": "Don’t make",
+            "B": "Doesn’t",
+            "C": "Have",
+            "D": "Aren’t",
+            "E": "Are make"
+          },
+          "answer": "A",
+          "answer_text": "Don’t make",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 56,
+          "source_no": 23
+        },
+        {
+          "id": "ingilizce-kaynak-57-24-182",
+          "stem": "Aşağıdakilerden hangisi kışın dışarıda giyilmez?",
+          "options": {
+            "A": "gloves",
+            "B": "boots",
+            "C": "slippers",
+            "D": "coat",
+            "E": "trousers"
+          },
+          "answer": "C",
+          "answer_text": "slippers",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 57,
+          "source_no": 24
+        },
+        {
+          "id": "ingilizce-kaynak-57-25-183",
+          "stem": "A: ___________?\nB: Yes, sure you can.\nAşağıdakilerden hangisi yukarıdaki metnin sorusu olabilir?",
+          "options": {
+            "A": "Can I go out?",
+            "B": "I don’t go out.",
+            "C": "I’m from England.",
+            "D": "Open the window!",
+            "E": "Is it mine?"
+          },
+          "answer": "A",
+          "answer_text": "Can I go out?",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 57,
+          "source_no": 25
+        },
+        {
+          "id": "ingilizce-kaynak-57-26-184",
+          "stem": "When Sara ___________ a child, she ___________ scared of cats.",
+          "options": {
+            "A": "is/is",
+            "B": "was/is",
+            "C": "was/was",
+            "D": "did/was",
+            "E": "were/was"
+          },
+          "answer": "C",
+          "answer_text": "was/was",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 57,
+          "source_no": 26
+        },
+        {
+          "id": "ingilizce-kaynak-57-27-185",
+          "stem": "This time last year we ___________ on holiday in Antalya.",
+          "options": {
+            "A": "was",
+            "B": "go",
+            "C": "did",
+            "D": "live",
+            "E": "were"
+          },
+          "answer": "E",
+          "answer_text": "were",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 57,
+          "source_no": 27
+        },
+        {
+          "id": "ingilizce-kaynak-57-28-186",
+          "stem": "A: I got the flu.\nB: ___________",
+          "options": {
+            "A": "You should eat vegetables",
+            "B": "You should go out",
+            "C": "You should play football",
+            "D": "You should stay in bed",
+            "E": "I need some money"
+          },
+          "answer": "D",
+          "answer_text": "You should stay in bed",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 57,
+          "source_no": 28
+        },
+        {
+          "id": "ingilizce-kaynak-58-29-187",
+          "stem": "“Can you open the window?” sorusuna hangi cevap verilemez?",
+          "options": {
+            "A": "I’m sorry",
+            "B": "I don’t",
+            "C": "Sure",
+            "D": "d I can",
+            "E": "I can’t"
+          },
+          "answer": "B",
+          "answer_text": "I don’t",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 58,
+          "source_no": 29
+        },
+        {
+          "id": "ingilizce-kaynak-58-30-188",
+          "stem": "How many days are there in a week?",
+          "options": {
+            "A": "6 days",
+            "B": "7 days",
+            "C": "3 days",
+            "D": "4 days",
+            "E": "1 day"
+          },
+          "answer": "B",
+          "answer_text": "7 days",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 58,
+          "source_no": 30
+        },
+        {
+          "id": "ingilizce-kaynak-58-31-189",
+          "stem": "A: Is there ___________ milk?\nB: Yes, there is ________ in the fridge.",
+          "options": {
+            "A": "some/any",
+            "B": "some/a few",
+            "C": "any/a little",
+            "D": "some/some",
+            "E": "a little/a little"
+          },
+          "answer": "C",
+          "answer_text": "any/a little",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 58,
+          "source_no": 31
+        },
+        {
+          "id": "ingilizce-kaynak-58-32-190",
+          "stem": "A: ______ there ___________ desk?\nB: Yes, ___________ is.",
+          "options": {
+            "A": "Are/a/that",
+            "B": "Is/a/there",
+            "C": "Are/one/they",
+            "D": "Is/is/no",
+            "E": "A/are/she"
+          },
+          "answer": "A",
+          "answer_text": "Are/a/that",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 58,
+          "source_no": 32
+        },
+        {
+          "id": "ingilizce-kaynak-58-33-191",
+          "stem": "Tokat isn’t ___________ Istanbul.",
+          "options": {
+            "A": "as crowded as",
+            "B": "crowded",
+            "C": "crowded than",
+            "D": "most crowded",
+            "E": "more crowded"
+          },
+          "answer": "A",
+          "answer_text": "as crowded as",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 58,
+          "source_no": 33
+        },
+        {
+          "id": "ingilizce-kaynak-59-35-192",
+          "stem": "Happy/Funny/Easy /Busy/ ___________Hangisi karşılaştırma hali bakımından bu gruba dâhil\nedilebilir?",
+          "options": {
+            "A": "little",
+            "B": "clean",
+            "C": "heavy",
+            "D": "big",
+            "E": "thin"
+          },
+          "answer": "C",
+          "answer_text": "heavy",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 59,
+          "source_no": 35
+        },
+        {
+          "id": "ingilizce-kaynak-59-36-193",
+          "stem": "Where are you from?",
+          "options": {
+            "A": "I’m British",
+            "B": "I’m from Japan",
+            "C": "I’m 24 years old",
+            "D": "Yes, I’m",
+            "E": "No, I can’t"
+          },
+          "answer": "B",
+          "answer_text": "I’m from Japan",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 59,
+          "source_no": 36
+        },
+        {
+          "id": "ingilizce-kaynak-59-37-194",
+          "stem": "”Jennifer şu an seni dinlemiyor”cümlesinin karşılığı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Jennifer is not listen you",
+            "B": "Jennifer doesn’t listen to you",
+            "C": "Jennifer isn’t listening to you",
+            "D": "You don’t listen to Jennifer",
+            "E": "You aren’t listen Jennifer"
+          },
+          "answer": "C",
+          "answer_text": "Jennifer isn’t listening to you",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 59,
+          "source_no": 37
+        },
+        {
+          "id": "ingilizce-kaynak-59-39-195",
+          "stem": "What time ___________ she ___________?",
+          "options": {
+            "A": "does/get up",
+            "B": "does/gets up",
+            "C": "do / gets up",
+            "D": "are/get up",
+            "E": "is/gets up"
+          },
+          "answer": "A",
+          "answer_text": "does/get up",
+          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+          "source_page": 59,
+          "source_no": 39
+        }
+      ]
     },
     {
       "id": "sosyal",
