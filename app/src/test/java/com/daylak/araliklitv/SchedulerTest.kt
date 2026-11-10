@@ -25,6 +25,18 @@ class SchedulerTest {
         assertFalse(Scheduler.due(p, 1_000_001L, 17))
         assertTrue(Scheduler.due(p, 1_000_001L, 18))
     }
+    @Test fun timeoutIsUnansweredButRescheduledSoon() {
+        val timedOut = Scheduler.timeout(Progress(), 1_000_000L, 12)
+        assertEquals(1, timedOut.attempts)
+        assertEquals(0, timedOut.correct)
+        assertEquals(1, timedOut.timeouts)
+        assertEquals(18, timedOut.dueAtTurn)
+        assertTrue(Scheduler.due(timedOut, 1_000_001L, 18))
+        val answered = Scheduler.grade(timedOut, Rating.GOOD, 1_100_000L, 18)
+        assertEquals(1, answered.timeouts)
+        assertEquals(2, answered.attempts)
+        assertEquals(1, answered.correct)
+    }
     @Test fun easyAnswerIsDelayed() {
         val p=Scheduler.grade(Progress(),Rating.EASY,1_000_000L,0)
         assertTrue(p.intervalDays>=2)

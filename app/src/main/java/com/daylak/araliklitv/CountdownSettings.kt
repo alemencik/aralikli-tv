@@ -1,11 +1,12 @@
 package com.daylak.araliklitv
 
 /**
- * Countdown is optional in study mode. Expiry is only visual feedback;
- * it never grades or schedules a question as forgotten.
+ * Default is twenty seconds. A timeout is recorded separately from a wrong
+ * answer; it triggers an early repetition and automatically advances the quiz.
  */
 object CountdownSettings {
-    val choices = listOf(0, 30, 60, 90)
+    const val DEFAULT_SECONDS = 20
+    val choices = listOf(0, 20, 30, 60, 90)
     fun next(current: Int): Int {
         val index = choices.indexOf(current)
         return choices[(if (index < 0) 0 else index + 1) % choices.size]

@@ -25,7 +25,8 @@ data class Progress(
     val attempts: Int = 0,
     val correct: Int = 0,
     val learningStep: Int = 0, // 0 = long-term schedule; positive = within-session learning
-    val dueAtTurn: Int = 0
+    val dueAtTurn: Int = 0,
+    val timeouts: Int = 0
 )
 
 object QuestionLoader {

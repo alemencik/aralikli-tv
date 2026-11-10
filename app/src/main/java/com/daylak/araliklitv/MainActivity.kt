@@ -37,7 +37,7 @@ class MainActivity : Activity() {
     private val sounds: QuizSounds
         get() = soundEngine ?: QuizSounds().also { soundEngine = it }
     private var soundEnabled = true
-    private var timerSeconds = 0
+    private var timerSeconds = CountdownSettings.DEFAULT_SECONDS
     private val timerHandler = Handler(Looper.getMainLooper())
     private var timerRunning = false
     private var timerDeadlineMs = 0L
@@ -45,6 +45,7 @@ class MainActivity : Activity() {
     private var timerLabel: TextView? = null
     private var timerBar: ProgressBar? = null
     private var timerWarningPlayed = false
+    private var autoAdvanceTask: Runnable? = null
     private val timerTick = object : Runnable {
         override fun run() {
             if (!timerRunning || screen != "study" || inFeedback) return
@@ -52,9 +53,12 @@ class MainActivity : Activity() {
                 timerDeadlineMs, SystemClock.elapsedRealtime()
             )
             timerRemainingMs = remain
-            timerLabel?.text = if (remain == 0L)
-                "Süre doldu • Cevaplamaya devam edebilirsin"
-            else "Kalan süre: ${CountdownSettings.display(remain)}"
+            if (remain == 0L) {
+                timerRunning = false
+                currentQuestion?.let { showTimeout(it) }
+                return
+            }
+            timerLabel?.text = "Kalan süre: ${CountdownSettings.display(remain)}"
             timerLabel?.setTextColor(if (remain <= 10_000L)
                 Color.rgb(255, 188, 96) else ink)
             timerBar?.progress = if (timerSeconds == 0) 0
@@ -63,8 +67,7 @@ class MainActivity : Activity() {
                 timerWarningPlayed = true
                 if (soundEnabled) sounds.warning()
             }
-            if (remain > 0L) timerHandler.postDelayed(this, 250L)
-            else timerRunning = false
+            timerHandler.postDelayed(this, 250L)
         }
     }
     private var updateChecking = false
@@ -85,8 +88,8 @@ class MainActivity : Activity() {
             decks = QuestionLoader.load(json)
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
-            timerSeconds = prefs.getInt("timer_seconds", 0)
-                .takeIf { it in CountdownSettings.choices } ?: 0
+            timerSeconds = prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS)
+                .takeIf { it in CountdownSettings.choices } ?: CountdownSettings.DEFAULT_SECONDS
         } catch (e: Exception) {
             error = "Soru bankası okunamadı: ${e.message ?: "bilinmeyen hata"}"
         }
@@ -169,6 +172,8 @@ class MainActivity : Activity() {
     }
 
     private fun panel(): LinearLayout {
+        autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
+        autoAdvanceTask = null
         stopCountdown()
         val content = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
@@ -329,10 +334,32 @@ class MainActivity : Activity() {
         }
     }
 
-    private fun register(q:Question, rating:Rating) {
+    private fun showTimeout(q: Question) {
+        if (inFeedback || screen != "study" || currentQuestion?.id != q.id) return
+        inFeedback = true
+        feedbackCanAdvance = true
+        screen = "timeout"
+        register(q, Rating.AGAIN, timedOut = true)
+        if (soundEnabled) sounds.wrong()
+        val box = panel()
+        heading(box, "⏱  SÜRE DOLDU • CEVAPSIZ")
+        info(box, "20 saniye içinde cevaplanamadı. Erken tekrara alınacak.", 20f)
+        heading(box, q.stem, 25f)
+        info(box, "Doğru cevap: ${q.answer}) ${q.options[q.answer].orEmpty()}", 22f)
+        firstFocus(action(box, "Sonraki Soru") { nextQuestion() })
+        val questionId = q.id
+        val advance = Runnable {
+            if (screen == "timeout" && currentQuestion?.id == questionId) nextQuestion()
+        }
+        autoAdvanceTask = advance
+        timerHandler.postDelayed(advance, 2_500L)
+    }
+
+    private fun register(q:Question, rating:Rating, timedOut: Boolean = false) {
         val now=System.currentTimeMillis()
         val old=progress[q.id] ?: Progress()
-        progress[q.id] = Scheduler.grade(old,rating,now,turn)
+        progress[q.id] = if (timedOut) Scheduler.timeout(old, now, turn)
+            else Scheduler.grade(old, rating, now, turn)
         turn++
         saveProgress()
     }
@@ -382,10 +409,11 @@ class MainActivity : Activity() {
         screen="stats";val box=panel();heading(box,"İSTATİSTİKLER")
         decks.forEach { d ->
             val entries=d.questions.mapNotNull { progress[it.id] }
-            val attempts=entries.sumOf { it.attempts }
-            val correct=entries.sumOf { it.correct }
-            val pct= if(attempts==0) "-" else "${correct*100/attempts}%"
-            info(box,"${d.title}: ${entries.size}/${d.questions.size} görüldü  •  $pct doğru  •  ${Scheduler.dueCount(d.questions,progress,System.currentTimeMillis(),turn)} tekrar",18f)
+            val attempts = entries.sumOf { it.attempts - it.timeouts }
+            val correct = entries.sumOf { it.correct }
+            val timeouts = entries.sumOf { it.timeouts }
+            val pct = if (attempts == 0) "-" else "${correct * 100 / attempts}%"
+            info(box,"${d.title}: ${entries.size}/${d.questions.size} görüldü  •  $pct doğru  •  $timeouts süre aşımı  •  ${Scheduler.dueCount(d.questions, progress, System.currentTimeMillis(), turn)} tekrar",18f)
         }
         firstFocus(action(box,"Ana Menü") { renderHome() })
     }
@@ -445,6 +473,8 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
+        autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
+        autoAdvanceTask = null
         if (timerRunning) {
             timerRemainingMs = CountdownSettings.remainingMillis(
                 timerDeadlineMs, SystemClock.elapsedRealtime()
@@ -481,7 +511,8 @@ class MainActivity : Activity() {
                 repetitions=o.optInt("repetitions"),intervalDays=o.optInt("intervalDays"),
                 ease=o.optDouble("ease",2.5),dueAt=o.optLong("dueAt"),
                 attempts=o.optInt("attempts"),correct=o.optInt("correct"),
-                learningStep=o.optInt("learningStep"),dueAtTurn=o.optInt("dueAtTurn")
+                learningStep=o.optInt("learningStep"),dueAtTurn=o.optInt("dueAtTurn"),
+                timeouts=o.optInt("timeouts")
             )
         }
     }
@@ -493,6 +524,7 @@ class MainActivity : Activity() {
                 put("ease",p.ease);put("dueAt",p.dueAt)
                 put("attempts",p.attempts);put("correct",p.correct)
                 put("learningStep",p.learningStep);put("dueAtTurn",p.dueAtTurn)
+                put("timeouts",p.timeouts)
             })
         }
         prefs.edit().putString("progress",o.toString()).putInt("turn",turn).apply()
@@ -507,7 +539,7 @@ class MainActivity : Activity() {
     @Deprecated("Handle system back button for the Android TV remote")
     override fun onBackPressed() {
         when(screen) {
-            "study", "done", "unavailable" -> renderLessons()
+            "study", "timeout", "done", "unavailable" -> renderLessons()
             "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }

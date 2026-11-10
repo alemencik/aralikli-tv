@@ -62,6 +62,10 @@ object Scheduler {
         )
     }
 
+    /** A timeout is unanswered, not a knowledge error. Repeat it early but track separately. */
+    fun timeout(previous: Progress, now: Long, turn: Int): Progress =
+        grade(previous, Rating.AGAIN, now, turn).copy(timeouts = previous.timeouts + 1)
+
     fun due(p: Progress, now: Long, turn: Int): Boolean =
         p.attempts > 0 && if (p.learningStep > 0) {
             turn >= p.dueAtTurn || now >= p.dueAt
