@@ -2203,7 +2203,616 @@
     {
       "id": "turkce1",
       "title": "Türk Dili I",
-      "questions": []
+      "questions": [
+        {
+          "id": "turkce1-2020-vize-01",
+          "stem": "Bu dönem Türkçenin yazı dili açısından zengin olduğu bir dönemdir. Çünkü bu dönemde Karahanlı, Harezm￾Kıpçak ve Çağatay Türkçeleri olmak üzere üç yazı dili oluştuğu görülmektedir.Yukarıda bahsedilen dönem aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "İlk Türkçe",
+            "B": "Eski Türkçe",
+            "C": "Eski Anadolu Türkçesi",
+            "D": "Osmanlı Türkçesi",
+            "E": "Orta Türkçe"
+          },
+          "answer": "E",
+          "answer_text": "Orta Türkçe",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 1,
+          "source_no": 1
+        },
+        {
+          "id": "turkce1-2020-vize-02",
+          "stem": "“Dil ve toplum arasındaki ilişkiyle ilgili iki temel görüş bulunmaktadır. Birincisi, ………… yapının dile yansıtıldığı görüşü; ikincisi, …….. dil yoluyla yapılandırıldığı görüşüdür.” Yukarıdaki cümlede boş bırakılan yerlere aşağıdakilerden hangisi sırasıyla getirilmelidir?",
+          "options": {
+            "A": "Tarihi – Toplumun",
+            "B": "Ekonomik – Toplumun",
+            "C": "Bilimsel-Kültürün",
+            "D": "Toplumsal -Toplumun",
+            "E": "Bireysel-Geleneğin"
+          },
+          "answer": "D",
+          "answer_text": "Toplumsal -Toplumun",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 1,
+          "source_no": 2
+        },
+        {
+          "id": "turkce1-2020-vize-03",
+          "stem": "Türkçede art damak (kalın ünlü) ünlüsünden sonra art damak, ön damak ünlüsünden (ince ünlü) sonra ön damak ünlüsü kullanılır. Başka bir ifade ile Türkçede damak (kalınlık- incelik) uyumu vardır. Aşağıdaki sözcüklerin hangisinde bu kuralın olmadığı görülür?",
+          "options": {
+            "A": "Yoldaş",
+            "B": "Heyecan",
+            "C": "Umut",
+            "D": "Ceket",
+            "E": "Boyun"
+          },
+          "answer": "B",
+          "answer_text": "Heyecan",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 1,
+          "source_no": 3
+        },
+        {
+          "id": "turkce1-2020-vize-04",
+          "stem": "Aşağıdakilerden hangisi dile yönelik vurgulanan ortak temel ögelerden biri değildir? YENİ",
+          "options": {
+            "A": "Dil değişmeyen bir yapıdır.",
+            "B": "Dil bir sistemdir.",
+            "C": "Dil seslerden oluşur.",
+            "D": "Dil bir iletişim aracıdır.",
+            "E": "Dil bir düşünme aracıdır."
+          },
+          "answer": "A",
+          "answer_text": "Dil değişmeyen bir yapıdır.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 1,
+          "source_no": 4
+        },
+        {
+          "id": "turkce1-2020-vize-05",
+          "stem": "En çok Türkçe konuşuru olan Batı Avrupa ülkesi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Almanya",
+            "B": "Birleşik Krallık",
+            "C": "Fransa",
+            "D": "İsviçre",
+            "E": "Hollanda"
+          },
+          "answer": "A",
+          "answer_text": "Almanya",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 1,
+          "source_no": 5
+        },
+        {
+          "id": "turkce1-2020-vize-06",
+          "stem": "“Bir devletin sınırları içerisinde yönetimde, hukukta, eğitimde ve ticarette gerek sözlü gerekse yazılı iletişimde kullanılan, genellikle kanunla belirlenen dile denir. Bu dile resmî dil de denir.” Tanımdaki dil aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yazı dili",
+            "B": "Devlet dili",
+            "C": "Özel dil",
+            "D": "Lehçe",
+            "E": "Ağız"
+          },
+          "answer": "B",
+          "answer_text": "Devlet dili",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 6
+        },
+        {
+          "id": "turkce1-2020-vize-07",
+          "stem": "“…………….. ilkesine göre dil, o dili konuşan bireyin düşünme biçimlerini belirler ve bu biçimlemelere belli sınırlar getirir. ………………. ilkesine göreyse bir dilde kodlanmış olan anlamlar bir başka dilde bulunmayabilir; dolayısıyla her dil bireyin içinde yaşadığı kültürel yapılanmanın olgularını anlamlandırır. Bu şekilde anadil, bir kişinin dünyayı algılama biçimlerini koşullamaktadır.” Yukarıdaki cümlede boş bırakılan yerlere aşağıdakilerden hangisi sırasıyla getirilmelidir?",
+          "options": {
+            "A": "Dilsel Belirleyicilik – Dilsel Görecelilik",
+            "B": "Dilsel Görecelilik - Dilsel Belirleyicilik",
+            "C": "Dilsel düşünce –Dilsel bütünlük",
+            "D": "Dilbilimi-Dil bilgisi",
+            "E": "Dil ekonomisi – Tarihsel dilbilim"
+          },
+          "answer": "A",
+          "answer_text": "Dilsel Belirleyicilik – Dilsel Görecelilik",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 7
+        },
+        {
+          "id": "turkce1-2020-vize-08",
+          "stem": "“Temasta bulunan A ve B dilleri, dilin her düzleminde birbiri üzerinde etki yaratırlar. Ses bilgisi, şekil yapısı, söz dizimi ve anlam bilgisi alanlarında karşılıklı alışverişler olur. Türk dilinde esasen /j/ ses birimi yokken Farsça ve Fransızca gibi dillerden alınan kelimeler yoluyla bugün bu ses birimini taşıyan kelimeler Türkçede kullanılmaktadır: jâle, jandarma, jeton vs.”Yukarıdaki metinde hangi tür dil ödünçlemesinden bahsedilmektedir?",
+          "options": {
+            "A": "Söz varlığı ödünçlemesi",
+            "B": "Dil bilgisi ödünçlemesi",
+            "C": "Özenti ödünçlemesi",
+            "D": "Semantik ödünçleme",
+            "E": "Bilgi ödünçlemesi"
+          },
+          "answer": "C",
+          "answer_text": "Özenti ödünçlemesi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 8
+        },
+        {
+          "id": "turkce1-2020-vize-09",
+          "stem": "Tonyukuk, Kül Tigin, Bilge Kağan Anıtları Türkçenin hangi tarihî dönemine aittr?",
+          "options": {
+            "A": "Ana Türkçe",
+            "B": "Yeni Türkçe",
+            "C": "Eski Türkçe",
+            "D": "İlk Türkçe",
+            "E": "Orta Türkçe"
+          },
+          "answer": "C",
+          "answer_text": "Eski Türkçe",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 9
+        },
+        {
+          "id": "turkce1-2020-vize-10",
+          "stem": "Aşağıdakilerin hangisi deyimlerin bir özelliği değildir?",
+          "options": {
+            "A": "Çekici bir anlatım özelliği taşırlar.",
+            "B": "Kısa ve özlü ifade araçlarıdır.",
+            "C": "Genellikle gerçek anlamından ayrı bir anlam belirtir.",
+            "D": "Bir yargı bildirirler.",
+            "E": "Kalıplaşmış kelime öbekleridir."
+          },
+          "answer": "D",
+          "answer_text": "Bir yargı bildirirler.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 10
+        },
+        {
+          "id": "turkce1-2020-vize-11",
+          "stem": "Aşağıdakilerden hangisi terimlerin bir özelliği değildir?",
+          "options": {
+            "A": "Terimler, bir bilimsel kavrama tek karşılığı bulunan kelimelerdir.",
+            "B": "Terimlerin anlamları sabittir ve cümle içinde de olsa değişik anlamlarda kullanılamazlar.",
+            "C": "Terimler halkın söz varlığında yer almazlar ama halk ağzında kullanılıp da sonradan terim özelliği kazanmış kelimeler vardır.",
+            "D": "Terimlerin bildirdiği anlam yoruma açık değildir ve karşıladıkları kavramı net, açık ve kesin bir biçimde bildirirler.",
+            "E": "Bir dilde terimlerin sayısı sabittir, değişmez."
+          },
+          "answer": "E",
+          "answer_text": "Bir dilde terimlerin sayısı sabittir, değişmez.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 2,
+          "source_no": 11
+        },
+        {
+          "id": "turkce1-2020-vize-12",
+          "stem": "Bir dilin tarihinin herhangi bir kesitinde kullandığı söz varlığı o dilin ………. söz varlığını oluştururken, bir dilin günümüzde kullandığı, kullanmakta olduğu söz varlığı o dilin ……..söz varlığını oluşturmaktadır. Yukarıdaki cümlede boş bırakılan yerlere sırasıyla aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "Çekirdek-Tarihî",
+            "B": "Tarihî-Güncel",
+            "C": "Temel-Güncel",
+            "D": "Güncel-Çekirdek",
+            "E": "Tarihî-Temel"
+          },
+          "answer": "B",
+          "answer_text": "Tarihî-Güncel",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 12
+        },
+        {
+          "id": "turkce1-2020-vize-13",
+          "stem": "Altay dillerinin en fazla konuşura sahip kolunu oluşturan dil aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Moğolca",
+            "B": "Türk dili",
+            "C": "Korece",
+            "D": "Macarca",
+            "E": "Mançu-Tunguzca"
+          },
+          "answer": "B",
+          "answer_text": "Türk dili",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 13
+        },
+        {
+          "id": "turkce1-2020-vize-14",
+          "stem": "Yazıyı bulan ve bu yazı sistemiyle bize hayli metin bırakan ilk kültürdür. Bu kültürün diline ait metinlerin incelenmesi sonucu, o dile ait olmadığı bilinen kelimelerden 168 kadarının Türkçe kökenli kelime olduğu, tarihî ses denklikleriyle ortaya konmuştur. Mesela dar- kelimesinin Türkçe yar- “ikiye ayırmak”, dib kelimesinin yip “ip”, gişig’in eşik “kapı”, gud’un ud “öküz, sığır” olduğu anlaşılmıştır. Yukarıdaki metinde bahsedilen kültür aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Çin",
+            "B": "Hitit",
+            "C": "Sanskrit",
+            "D": "Akad",
+            "E": "Sümer"
+          },
+          "answer": "E",
+          "answer_text": "Sümer",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 14
+        },
+        {
+          "id": "turkce1-2020-vize-15",
+          "stem": "İlk sözlüğümüz olan Dîvânü Lugati’t Türk, Türkçenin hangi dönemine aittir?",
+          "options": {
+            "A": "Çağatay",
+            "B": "Köktürk",
+            "C": "Uygur",
+            "D": "Kıpçak",
+            "E": "Karahanlı"
+          },
+          "answer": "E",
+          "answer_text": "Karahanlı",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 15
+        },
+        {
+          "id": "turkce1-2020-vize-16",
+          "stem": "Aşağıdakilerden hangisi iletişimi engelleyen unsurlardan biri değildir?",
+          "options": {
+            "A": "Gürültü",
+            "B": "Eleştirmek",
+            "C": "Aşırı övgü",
+            "D": "Empati",
+            "E": "Alay etmek"
+          },
+          "answer": "D",
+          "answer_text": "Empati",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 16
+        },
+        {
+          "id": "turkce1-2020-vize-17",
+          "stem": "Aşağıdakilerden hangisi bir konuşma hatası değildir?",
+          "options": {
+            "A": "Mahalli söyleyişle konuşma",
+            "B": "Konuşma tür yöntem ve tekniği belirleme",
+            "C": "Konuşma amacının dışına çıkma",
+            "D": "Sığ bir söz varlığına sahip olma",
+            "E": "Konuşma sırasında gereksiz sesler çıkarma"
+          },
+          "answer": "B",
+          "answer_text": "Konuşma tür yöntem ve tekniği belirleme",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 3,
+          "source_no": 17
+        },
+        {
+          "id": "turkce1-2020-vize-18",
+          "stem": "“Dil, insanlar ve nesiller arasında en önemli iletişim ve aktarım aracı olarak toplumların varlık sebeplerinden biri olmuştur. Dil ile dünyayı algılar, düşüncelerimizi şekillendiririz. Dil bununla sınırlı kalmayıp aynı zamanda gerçekliği de şekillendirir. Ortaya çıkan gerçeklik toplumsal bir algı oluşturur ve toplumun bütün bireylerine aktarılır. Dolayısıyla dil çalışmalarında toplumun, toplumsal çalışmalarda da dilin göz ardı edilemeyeceği gerçeği ortaya çıkar. Çünkü insan olmadan dilin, dil olmadan da toplumun var olması mümkün değildir.”Yukarıdaki metinde aşağıdaki ilişkilerin hangisinden bahsedilmektedir?",
+          "options": {
+            "A": "Dil-Coğrafya ilişkisi",
+            "B": "Dil-Birey ilişkisi",
+            "C": "Dil-Ruh bilim ilişkisi",
+            "D": "Dil-Tarih ilişkisi",
+            "E": "Dil-Toplum ilişkisi"
+          },
+          "answer": "E",
+          "answer_text": "Dil-Toplum ilişkisi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 4,
+          "source_no": 18
+        },
+        {
+          "id": "turkce1-2020-vize-19",
+          "stem": "Öğretmen: Arkadaşlar, dil nedir? Elif: Dil, insanlar arasında anlaşmayı sağlayan bir araçtır. Öğretmen: Aferin Elif, çok güzel bir tanım yaptın. Bu diyaloga göre öğretmen hangi geribildirim türünü kullanmıştır?",
+          "options": {
+            "A": "Düşük kontrol",
+            "B": "Gecikmiş",
+            "C": "Yüksek kontrol",
+            "D": "Pozitif",
+            "E": "Negatif"
+          },
+          "answer": "D",
+          "answer_text": "Pozitif",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 4,
+          "source_no": 19
+        },
+        {
+          "id": "turkce1-2020-vize-20",
+          "stem": "İşaretleyerek okumada amaç, konuyu anlamaya yardımcı olacak anahtar kelime ve kavramlar ile önemli görülen yerlerin belirlenmesidir. ……….. yönteminden farkı okurun, önemli gördüğü yerleri metin üzerinde işaretlemesidir. Bu parçada boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "Not alarak okuma",
+            "B": "Göz atarak okuma",
+            "C": "Sessiz okuma",
+            "D": "Özetleyerek okuma",
+            "E": "Eleştirel okuma"
+          },
+          "answer": "A",
+          "answer_text": "Not alarak okuma",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 4,
+          "source_no": 20
+        },
+        {
+          "id": "turkce1-2020-vize-21",
+          "stem": "“Kültürel temas sonucu ortaya çıkan dil etkileşmesinin sonuçlarına ………….. denir. Zamana yayılan bu temaslar sonucunda bir dilin kelime varlığına başka dillerden alınmış kelimeler, tabirler, deyimler eklendiği gibi, dil bilgisi yapısına da eklemelerin olduğu görülür.”Yukarıdaki cümlede boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "Yazım bilgisi",
+            "B": "Biçim bilgisi",
+            "C": "Verinti",
+            "D": "Ödünçleme",
+            "E": "Sözcük"
+          },
+          "answer": "A",
+          "answer_text": "Yazım bilgisi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 4,
+          "source_no": 21
+        },
+        {
+          "id": "turkce1-2020-vize-22",
+          "stem": "“A dilinde karşılığı olan, alınması gerekmeyen kelime ve dil unsurlarının B diline alınması genellikle yüksek veya üst kabul edilen bir kültür düzeyinden daha aşağıda veya zayıf bir kültür düzeyine dil unsuru transferi şeklinde olur. Kültürel açıdan baskın, siyasi açıdan yönetici durumunda bulunan bir üst kültürü benimseme; üst kültürdeki yaşama biçimini taklit etme arzusu bu gibi alıntıların asli sebebidir.”Yukarıdaki metinde hangi tür dil ödünçlemesinden bahsedilmektedir?",
+          "options": {
+            "A": "Dil bilgisi ödünçlemesi",
+            "B": "Söz varlığı ödünçlemesi",
+            "C": "Semantik ödünçleme",
+            "D": "Bilgi ödünçlemesi",
+            "E": "Özenti ödünçlemesi"
+          },
+          "answer": "E",
+          "answer_text": "Özenti ödünçlemesi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 22
+        },
+        {
+          "id": "turkce1-2020-vize-23",
+          "stem": "1991 yılında Sovyetler Birliği’nin dağılması ile birlikte asli unsurunu Türk boy ve topluluklarının oluşturduğu Azerbaycan, Türkmenistan, Özbekistan, Kazakistan ve Kırgızistan adıyla beş Türk devleti kurulmuştur. Nüfusu göz önünde bulundurduğunuzda bu ülkelerden hangisinde Türkçe konuşur en fazladır?",
+          "options": {
+            "A": "Azerbaycan",
+            "B": "Türkmenistan ?",
+            "C": "Kırgızistan",
+            "D": "Kazakistan",
+            "E": "Özbekistan ?"
+          },
+          "answer": "E",
+          "answer_text": "Özbekistan ?",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 23
+        },
+        {
+          "id": "turkce1-2020-vize-24",
+          "stem": "Türkler İslam kültür dairesine girdikten sonra hangi dilin yoğun etkisinde kalmıştır?",
+          "options": {
+            "A": "İbranice",
+            "B": "Rusça",
+            "C": "Moğolca",
+            "D": "Arapça",
+            "E": "Çince"
+          },
+          "answer": "D",
+          "answer_text": "Arapça",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 24
+        },
+        {
+          "id": "turkce1-2020-vize-25",
+          "stem": "Aşağıdakilerden hangisi dil ödünçlemeleri arasında yer almaz?",
+          "options": {
+            "A": "Özenti ödünçlemesi",
+            "B": "Kaynak ödünçlemesi",
+            "C": "Söz varlığı ödünçlemesi",
+            "D": "Bilgi ödünçlemesi",
+            "E": "Dil bilgisi ödünçlemesi"
+          },
+          "answer": "B",
+          "answer_text": "Kaynak ödünçlemesi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 25
+        },
+        {
+          "id": "turkce1-2020-vize-26",
+          "stem": "Aşağıdakilerden hangisi dilin yapısı üzerinde derin izler bırakan unsurlardan biri değildir?",
+          "options": {
+            "A": "Komşu halklarla olan ilişkiler",
+            "B": "Nüfus yoğunluğu",
+            "C": "Üzerinde yaşanılan coğrafya",
+            "D": "Üretim-tüketim ilişkileri",
+            "E": "İklim"
+          },
+          "answer": "B",
+          "answer_text": "Nüfus yoğunluğu",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 26
+        },
+        {
+          "id": "turkce1-2020-vize-27",
+          "stem": "Altay dilleri kuramı, \"Türk, Moğol, Tunguz (Mançu dahil), Kore ve Japon dillerinin, Altay dili adı verilen, ortak bir kaynaktan geldiği görüşünü savunan bir\" nazariyedir. Buna göre aşağıdakilerden hangisi Altay dillerinin bir özelliği değildir?",
+          "options": {
+            "A": "Sayı sıfatlarından sonra gelen eklere, özel durumlar dışında, çokluk eki getirilmez.",
+            "B": "Cümle kuruluşunda özne fiilden önce ve genellikle başta, fiil ise sonda bulunur.",
+            "C": "Kelimelerde cinsiyet ayrımı yapılmaz.",
+            "D": "Kelime türetmede sadece ön ekler kullanılır.",
+            "E": "Cümle kuruluşu bakımından, söz diziminde, belirten unsur, belirtilen unsurdan önce gelir ve şekil değiştirmez."
+          },
+          "answer": "D",
+          "answer_text": "Kelime türetmede sadece ön ekler kullanılır.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 5,
+          "source_no": 27
+        },
+        {
+          "id": "turkce1-2020-vize-28",
+          "stem": "“Türk dili ile yazılı belgeler yaklaşık …… yıl öncesine, Göktürk Kağanlığı dönemine uzanır; ancak bundan önce de Türk dilinin uzun bir geçmişi olduğu komşu kültürlerin dillerinde veya belgelerinde korunmuştur.” Yukarıdaki cümlede boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "100",
+            "B": "1500",
+            "C": "750",
+            "D": "900",
+            "E": "5000"
+          },
+          "answer": "B",
+          "answer_text": "1500",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 6,
+          "source_no": 28
+        },
+        {
+          "id": "turkce1-2020-vize-29",
+          "stem": "XI. yüzyılda kaleme alınmış Türkçenin anıtsal eseri ve ilk sözlüğü Dîvânu Lügati’t Türk’te iki yüzden fazla atasözü vardır. Bunlardan bir kısmı anlamca günümüze kadar ulaşmıştır. Örneğin “Tag taga kagışmaz, kişi kişige kagışır.” (Dağ dağa kavuşmaz insan insana kavuşur) “Atası acı alma yise oglının tişi kamar.” (Babası ekşi elma yese oğlunun dişi kamaşır.) gibi. Yukarıdaki açıklamaya göre aşağıdakilerden hangisi söylenemez?",
+          "options": {
+            "A": "Ele aldıkları konular bakımından çeşitlilik gösteren atasözü örnekleri vardır.",
+            "B": "Dîvânu Lügati’t Türk’teki atasözlerinden bir kısmı anlamca Türkçenin güncel söz varlığında bulunur.",
+            "C": "Dîvânu Lügati’t Türk eski Türk atasözleri açısından önemli bir kaynaktır.",
+            "D": "Dîvânu Lügati’t Türk’te sadece toplumsal olaylarla ilgili atasözleri vardır.",
+            "E": "Atasözlerin nesilden nesile aktarılmasına bir örnektir."
+          },
+          "answer": "D",
+          "answer_text": "Dîvânu Lügati’t Türk’te sadece toplumsal olaylarla ilgili atasözleri vardır.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 6,
+          "source_no": 29
+        },
+        {
+          "id": "turkce1-2020-vize-30",
+          "stem": "“Dil ve düşünce arasındaki ilişkileri dilbilimsel bir çerçeveye taşıyarak dil, kültür, kimlik ve toplumu birlikte ele alan ………..’e göre her dil gerçekliği o dili konuşanlara kendi açısından yansıtmaktadır. Çünkü dil, toplumsal gerçekliğin sembolik bir yansımasıdır. Bu gerçeklik içinde oluşan anlamlar, en çok o gerçekliği yaşayanlar için anlamlıdır.” Yukarıdaki cümlede boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "Chomsky",
+            "B": "Sapir",
+            "C": "Saussre",
+            "D": "Ergin",
+            "E": "Hegel"
+          },
+          "answer": "B",
+          "answer_text": "Sapir",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 6,
+          "source_no": 30
+        },
+        {
+          "id": "turkce1-2020-vize-31",
+          "stem": "Dede Korkut Hikâyeleri ve Yunus Emre’nin şiirlerini okuyan birisi Türkçenin hangi dönemine ait eserleri okuduğunu söyleyecektir?",
+          "options": {
+            "A": "Osmanlı Türkçesi",
+            "B": "Karahanlıca",
+            "C": "Uygurca",
+            "D": "Çağatayca",
+            "E": "Eski Anadolu Türkçesi"
+          },
+          "answer": "E",
+          "answer_text": "Eski Anadolu Türkçesi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 6,
+          "source_no": 31
+        },
+        {
+          "id": "turkce1-2020-vize-32",
+          "stem": "Aşağıdaki atasözlerinden hangisinde mecazlı bir söyleyiş yoktur?",
+          "options": {
+            "A": "Dere geçilirken, at değiştirilmez.",
+            "B": "Sütten ağzı yanan, yoğurdu üfleyerek ye",
+            "C": "Bugünün işini yarına bırakma",
+            "D": "Sakla samanı, gelir zamanı.",
+            "E": "Komşunun tavuğu komşuya kaz görünür"
+          },
+          "answer": "C",
+          "answer_text": "Bugünün işini yarına bırakma",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 6,
+          "source_no": 32
+        },
+        {
+          "id": "turkce1-2020-vize-33",
+          "stem": "Sovyetler Birliği topraklarında daha sonra birliğin dağılmasıyla birlikte Moldovya topraklarında kullanılan…………………. ,Türkiye Türkçesi ile benzer nitelikler sergilemekte ve yaklaşık 200 bin kişi tarafından konuşulmaktadır. Yukarıdaki cümlede boş bırakılan yere aşağıdakilerden hangisi getirilmelidir?",
+          "options": {
+            "A": "Tatar Türkçesi",
+            "B": "Karaçay Türkçesi",
+            "C": "Hakas Türkçesi",
+            "D": "Gagavuz Türkçesi",
+            "E": "Horasan"
+          },
+          "answer": "D",
+          "answer_text": "Gagavuz Türkçesi",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 33
+        },
+        {
+          "id": "turkce1-2020-vize-34",
+          "stem": "İnsan hafızasının yükünü azaltır, düşüncenin işlemesine, olgunlaşmasına ve zenginleşmesine yarar. Sözü düzenler, anlatımı kuvvetlendirir. Bu parçada sözü edilen dil becerisi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Anlatma",
+            "B": "Yazma",
+            "C": "Konuşma",
+            "D": "Okuma",
+            "E": "Dinleme"
+          },
+          "answer": "B",
+          "answer_text": "Yazma",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 34
+        },
+        {
+          "id": "turkce1-2020-vize-35",
+          "stem": "Aşağıdakilerden hangisi gürültü türlerinden biri değildir?",
+          "options": {
+            "A": "Psikolojik",
+            "B": "Nöro-Fizyolojk",
+            "C": "Sosyal",
+            "D": "Fiziksel",
+            "E": "Kültürel"
+          },
+          "answer": "C",
+          "answer_text": "Sosyal",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 35
+        },
+        {
+          "id": "turkce1-2020-vize-36",
+          "stem": "İletişimin etkili bir şekilde gerçekleşebilmesi için kaynağın yerine getirmesi gereken birtakım sorumluluklar vardır. Buna göre aşağıdakilerden hangisi bu sorumluluklardan biri değildir?",
+          "options": {
+            "A": "Geri bildirimleri dönütsüz bırakmak",
+            "B": "Geri bildirimleri değerlendirmek",
+            "C": "Mesajı en iyi ve etkili olacak yolla (kanalla) alıcıya ulaştırmak",
+            "D": "Alıcıya uygun, açık ve anlaşılır mesajlar oluşturmak",
+            "E": "Geri bildirimleri doğru anlamak"
+          },
+          "answer": "A",
+          "answer_text": "Geri bildirimleri dönütsüz bırakmak",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 36
+        },
+        {
+          "id": "turkce1-2020-vize-37",
+          "stem": "Aşağıdaki cümlelerin hangisinde ikileme sıfat görevinde kullanılmıştır?",
+          "options": {
+            "A": "Koşa koşa yanına geldim.",
+            "B": "Bütün ıvır zıvırları kaldırdım.",
+            "C": "Eğri büğrü yollar bekler bizi.",
+            "D": "Çay fokur fokur kaynamıştı.",
+            "E": "Ev mev bakacak zamanım yok."
+          },
+          "answer": "C",
+          "answer_text": "Eğri büğrü yollar bekler bizi.",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 37
+        },
+        {
+          "id": "turkce1-2020-vize-38",
+          "stem": "Bu gerçeği de ………………………. gerek. Yukarıdaki cümlede boş bırakılan yere aşağıdaki deyimlerden hangisi getirilirse, deyim cümleye “hesaba katmak, dikkate almak” anlamı kazanır?",
+          "options": {
+            "A": "Gözünden kaçırsa",
+            "B": "Göz ağartmış",
+            "C": "Göz önüne almak",
+            "D": "Gözüne kestirmiş",
+            "E": "Göz ucuyla görmek"
+          },
+          "answer": "C",
+          "answer_text": "Göz önüne almak",
+          "source_file": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+          "source_page": 7,
+          "source_no": 38
+        }
+      ]
     },
     {
       "id": "ingilizce1",
