@@ -1,6 +1,8 @@
 package com.daylak.araliklitv
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -123,6 +125,7 @@ class MainActivity : Activity() {
             currentDeck = null; nextQuestion()
         }
         action(box,"İstatistikler") { renderStats() }
+        action(box,"Ders Videoları") { renderVideos() }
         action(box,if(soundEnabled) "Ses efektleri: AÇIK" else "Ses efektleri: KAPALI") {
             soundEnabled = !soundEnabled
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
@@ -242,6 +245,38 @@ class MainActivity : Activity() {
         action(box,"Ana Menü") { renderHome() }
     }
 
+    private fun openVideoLink(url: String) {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+        } catch (_: Exception) {
+            val box = panel()
+            screen = "videos"
+            heading(box, "Bağlantı açılamadı")
+            info(box, "Televizyonda tarayıcı veya YouTube uygulaması bulunmayabilir.")
+            info(box, url, 17f)
+            firstFocus(action(box, "Video Dersler") { renderVideos() })
+        }
+    }
+
+    private fun renderVideos() {
+        screen = "videos"
+        val box = panel()
+        heading(box, "VİDEO DERSLER")
+        info(box, "AUZEF ders anlatımları, üniversitenin kendi materyalleri üzerinden takip edilebilir.")
+        val first = action(box,"AUZEF Ders Materyalleri (Resmi)") {
+            openVideoLink("https://ikinciuniversite.istanbul.edu.tr/tr/content/ders-materyalleri/ders-materyalleri")
+        }
+        action(box,"AUZEF Öğrenci Sistemi (AKSİS)") {
+            openVideoLink("https://aksis.istanbul.edu.tr")
+        }
+        action(box,"Atatürk İlkeleri II - Anadolu Üniversitesi Video Ders") {
+            openVideoLink("https://www.youtube.com/watch?v=Qou2hEGopUA")
+        }
+        info(box,"Video izlemek internet bağlantısı ve uygun TV uygulaması gerektirir.",16f)
+        action(box,"Ana Menü") { renderHome() }
+        firstFocus(first)
+    }
+
     private fun renderStats() {
         screen="stats";val box=panel();heading(box,"İSTATİSTİKLER")
         decks.forEach { d ->
@@ -350,7 +385,7 @@ class MainActivity : Activity() {
     override fun onBackPressed() {
         when(screen) {
             "study", "done", "unavailable" -> renderLessons()
-            "lessons", "stats" -> renderHome()
+            "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }
     }
