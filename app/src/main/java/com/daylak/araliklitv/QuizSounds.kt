@@ -24,6 +24,11 @@ class QuizSounds {
         handler.removeCallbacks(secondTone)
         try { tones?.startTone(ToneGenerator.TONE_PROP_NACK, 260) } catch (_: RuntimeException) {}
     }
+    fun warning() {
+        handler.removeCallbacks(secondTone)
+        try { tones?.startTone(ToneGenerator.TONE_PROP_PROMPT, 120) }
+        catch (_: RuntimeException) {}
+    }
     fun release() {
         handler.removeCallbacks(secondTone)
         tones?.release()
