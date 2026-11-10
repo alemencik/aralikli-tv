@@ -223,7 +223,7 @@ class MainActivity : Activity() {
     private fun renderHome() {
         screen = "home"; currentQuestion = null; inFeedback=false; feedbackCanAdvance=false
         val box = panel()
-        heading(box, "✦  ARALIKLI TV  ✦")
+        heading(box, "KİM KPSS KAZANMAK İSTER?")
         val all = questions(null)
         val now = System.currentTimeMillis()
         info(box,"${all.count { it.isScorable }} doğrulanmış soru  •  ${Scheduler.dueCount(all,progress,now,turn)} zamanı gelen tekrar")
@@ -236,8 +236,8 @@ class MainActivity : Activity() {
         action(box,"Ders Videoları") { renderVideos() }
         val showImageReady = localShowAssets.hasStage()
         action(box,"Yarışma arka planı: " + when {
-            !showImageReady -> "Orijinal görsel bekleniyor"
-            originalThemeEnabled -> "Orijinal AÇIK"
+            !showImageReady -> "Özel görsel bekleniyor"
+            originalThemeEnabled -> "Özel arka plan AÇIK"
             else -> "Neon AÇIK"
         }) {
             originalThemeEnabled = !originalThemeEnabled

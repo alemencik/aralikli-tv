@@ -1,4 +1,11 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
-    <solid android:color="#193150"/>
-    <corners android:radius="8dp" />
-</shape>
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="0" android:startColor="#070D2C"
+                android:centerColor="#171044" android:endColor="#070D2C"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/kpss_launcher_icon"
+        android:width="116dp" android:height="116dp" android:gravity="center"/>
+</layer-list>
