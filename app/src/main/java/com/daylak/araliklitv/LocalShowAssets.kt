@@ -55,19 +55,24 @@ class LocalShowAssets(private val context: Context) {
             ?.takeIf { it.isFile && it.length() > 0L }
     }
 
-    private fun decodeScaled(file: File): Bitmap? = try {
-        val measure = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-        BitmapFactory.decodeFile(file.absolutePath, measure)
-        if (measure.outWidth <= 0 || measure.outHeight <= 0) return null
-        var sample = 1
-        while (measure.outWidth / (sample * 2) >= 1920 &&
-            measure.outHeight / (sample * 2) >= 1080) {
-            sample *= 2
+    private fun decodeScaled(file: File): Bitmap? {
+        return try {
+            val measure = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeFile(file.absolutePath, measure)
+            if (measure.outWidth <= 0 || measure.outHeight <= 0) {
+                null
+            } else {
+                var sample = 1
+                while (measure.outWidth / (sample * 2) >= 1920 &&
+                    measure.outHeight / (sample * 2) >= 1080) {
+                    sample *= 2
+                }
+                BitmapFactory.decodeFile(file.absolutePath,
+                    BitmapFactory.Options().apply { inSampleSize = sample })
+            }
+        } catch (_: Exception) {
+            null
         }
-        BitmapFactory.decodeFile(file.absolutePath,
-            BitmapFactory.Options().apply { inSampleSize = sample })
-    } catch (_: Exception) {
-        null
     }
 }
 
