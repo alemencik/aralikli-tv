@@ -1,0 +1,54 @@
+name: Publish installable Android TV APK
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Android 35 platform
+        run: |
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -maxdepth 3 -type f -name sdkmanager | sort -V | tail -n 1)"
+          test -n "$SDKMANAGER" || { echo 'Android SDK manager not installed'; exit 1; }
+          "$SDKMANAGER" --install 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.11.1'
+      - name: Validate questions
+        run: python3 tools/validate_questions.py
+      - name: Unit tests
+        run: gradle --no-daemon testDebugUnitTest
+      - name: Build debug APK
+        run: gradle --no-daemon assembleDebug
+      - name: Check APK file
+        run: test -s app/build/outputs/apk/debug/app-debug.apk
+      - name: Publish private repository GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          TAG="v0.1.0-debug"
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$APK#AralikliTV-debug.apk" --clobber
+          else
+            gh release create "$TAG" "$APK#AralikliTV-debug.apk" \
+              --target "$GITHUB_SHA" --prerelease \
+              --title "Aralikli TV 0.1.0 - Android TV test APK" \
+              --notes "Android TV test surumu. 116 soru, ders secimi, kumandayla cevaplama ve temel tekrar algoritmasi. FSRS henuz yok."
+          fi
