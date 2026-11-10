@@ -19,7 +19,7 @@ Android'in bir APK güncellemesini kabul etmesi için **aynı uygulama kimliği,
 Kurulumdan sonra yeni sürüm bulunduğunda uygulama “Güncelle” düğmesini gösterir. Android'in kurulum izinlerini kullanıcının onaylaması gerekir, arka planda sessiz kurulum yapılmaz.
 
 ## Soru bankası ve veri doğruluğu
-`app/src/main/assets/questions.json`: İlk aşamada aktarılan 116 puanlanabilir soru. PDF kaynaklarındaki cevap metni eşleşmesi kullanılmıştır; **116 sorunun tamamı insan tarafından sayfa sayfa doğrulanmamıştır.** Kaynakların doğruluğu ayrıca denetlenmelidir. Cevabı belirsiz/çelişkili olanlar aktif soru havuzuna alınmamıştır. Ayrıntı: `tools/import_report.json`.
+`app/src/main/assets/questions.json`: **389 puanlanabilir soru**. 116 ilk soru (Rapor 38 / Yerel 78) otomatik kaynak-cevap metni eşleşmesiyle, 195 İngilizce soru PDF'nin açık `Cevap:` satırlarıyla, 20 Atatürk II soru PDF'de kalın yazılmış doğru şıklarla, 58 Türk Dili I soru PDF'de kırmızı/kalın işaretlenmiş doğru şıklarla aktarılmıştır. Tüm sorular insan tarafından tek tek akademik açıdan denetlenmiş değildir. Cevabı belirsiz veya şıkları eksik olan sorular eklenmemiştir. Eski eleme raporu ilk 116 soruya aittir: `tools/import_report.json`.
 
 Öğrenme geçmişi `SharedPreferences` üzerinde tutulur. Uygulamayı kaldırmak verileri silebilir; güncelleme yaparken uygulamayı kaldırmadan yüklemek gerekir.
 
