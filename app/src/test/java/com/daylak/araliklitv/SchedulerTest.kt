@@ -15,6 +15,16 @@ class SchedulerTest {
         assertFalse(Scheduler.due(p,1_299_999L,12))
         assertTrue(Scheduler.due(p,1_300_000L,12))
     }
+    @Test fun correctGuessCountsAsCorrectButRequiresEarlyRepeat() {
+        val p = Scheduler.grade(Progress(), Rating.GUESSED, 1_000_000L, 12)
+        assertEquals(1, p.attempts)
+        assertEquals(1, p.correct)
+        assertEquals(0, p.repetitions)
+        assertEquals(1, p.learningStep)
+        assertEquals(18, p.dueAtTurn)
+        assertFalse(Scheduler.due(p, 1_000_001L, 17))
+        assertTrue(Scheduler.due(p, 1_000_001L, 18))
+    }
     @Test fun easyAnswerIsDelayed() {
         val p=Scheduler.grade(Progress(),Rating.EASY,1_000_000L,0)
         assertTrue(p.intervalDays>=2)

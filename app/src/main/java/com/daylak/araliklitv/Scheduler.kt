@@ -6,9 +6,9 @@ import kotlin.math.roundToInt
 /**
  * MVP's transparent learning-step scheduler. NOT FSRS: future versions can replace
  * this behind the same repository contract without changing question IDs.
- * A missed question is due after 5 other answers OR 5 real minutes, whichever first.
+ * A missed or guessed question is due after 5 other answers OR 5 real minutes, whichever first.
  */
-enum class Rating { AGAIN, HARD, GOOD, EASY }
+enum class Rating { AGAIN, GUESSED, HARD, GOOD, EASY }
 
 object Scheduler {
     const val DAY_MS = 86_400_000L
@@ -18,7 +18,7 @@ object Scheduler {
         val attempts = previous.attempts + 1
         val correctCount = previous.correct + if (rating != Rating.AGAIN) 1 else 0
         val base = previous.copy(attempts = attempts, correct = correctCount)
-        if (rating == Rating.AGAIN) return base.copy(
+        if (rating == Rating.AGAIN || rating == Rating.GUESSED) return base.copy(
             repetitions = 0,
             intervalDays = 0,
             ease = max(1.3, previous.ease - 0.20),
@@ -49,9 +49,9 @@ object Scheduler {
             Rating.HARD -> max(1, (step * 0.6).roundToInt())
             Rating.GOOD -> step
             Rating.EASY -> max(2, (step * 1.8).roundToInt())
-            Rating.AGAIN -> error("already handled")
+            Rating.AGAIN, Rating.GUESSED -> error("already handled")
         }
-        val easeDelta = when (rating) { Rating.HARD -> -0.1; Rating.GOOD -> 0.0; Rating.EASY -> 0.05; Rating.AGAIN -> 0.0 }
+        val easeDelta = when (rating) { Rating.HARD -> -0.1; Rating.GOOD -> 0.0; Rating.EASY -> 0.05; Rating.AGAIN, Rating.GUESSED -> 0.0 }
         return base.copy(
             repetitions = previous.repetitions + 1,
             intervalDays = interval,

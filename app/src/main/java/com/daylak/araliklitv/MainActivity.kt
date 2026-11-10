@@ -169,11 +169,12 @@ class MainActivity : Activity() {
             feedbackCanAdvance=true
             firstFocus(action(box,"Sonraki Soru") { nextQuestion() })
         } else {
-            info(box,"Nasıl hatırladın?",23f)
-            val hard=action(box,"Zorlandım") { register(q,Rating.HARD);nextQuestion() }
+            info(box,"Cevabı nasıl buldun?",23f)
+            val guessed=action(box,"Tahmin ettim") { register(q,Rating.GUESSED);nextQuestion() }
+            action(box,"Zorlandım") { register(q,Rating.HARD);nextQuestion() }
             action(box,"Biliyordum") { register(q,Rating.GOOD);nextQuestion() }
             action(box,"Çok kolaydı") { register(q,Rating.EASY);nextQuestion() }
-            firstFocus(hard)
+            firstFocus(guessed)
         }
     }
 
