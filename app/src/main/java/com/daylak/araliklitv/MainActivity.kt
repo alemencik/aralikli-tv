@@ -35,8 +35,10 @@ class MainActivity : Activity() {
     private var error: String? = null
     private var soundEngine: QuizSounds? = null
     private val sounds: QuizSounds
-        get() = soundEngine ?: QuizSounds().also { soundEngine = it }
+        get() = soundEngine ?: QuizSounds(this).also { soundEngine = it }
     private var soundEnabled = true
+    private val localShowAssets by lazy { LocalShowAssets(this) }
+    private var originalThemeEnabled = true
     private var timerSeconds = CountdownSettings.DEFAULT_SECONDS
     private val timerHandler = Handler(Looper.getMainLooper())
     private var timerRunning = false
@@ -88,6 +90,7 @@ class MainActivity : Activity() {
             decks = QuestionLoader.load(json)
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
+            originalThemeEnabled = prefs.getBoolean("original_theme_enabled", true)
             timerSeconds = prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS)
                 .takeIf { it in CountdownSettings.choices } ?: CountdownSettings.DEFAULT_SECONDS
         } catch (e: Exception) {
@@ -179,7 +182,8 @@ class MainActivity : Activity() {
             orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
         }
         val view = ScrollView(this).apply {
-            background = StageDrawable()
+            background = if (originalThemeEnabled) localShowAssets.stageBackground()
+                else StageDrawable()
             isFillViewport = true
             addView(content)
         }
@@ -230,6 +234,20 @@ class MainActivity : Activity() {
         }
         action(box,"İstatistikler") { renderStats() }
         action(box,"Ders Videoları") { renderVideos() }
+        val showImageReady = localShowAssets.hasStage()
+        action(box,"Yarışma arka planı: " + when {
+            !showImageReady -> "Orijinal görsel bekleniyor"
+            originalThemeEnabled -> "Orijinal AÇIK"
+            else -> "Neon AÇIK"
+        }) {
+            originalThemeEnabled = !originalThemeEnabled
+            prefs.edit().putBoolean("original_theme_enabled", originalThemeEnabled).apply()
+            renderHome()
+        }
+        if (!showImageReady) {
+            info(box,"Kendi sahne fotoğrafını TV'ye milyoner_stage.jpg adıyla aktar. " +
+                "Görsel yalnızca bu televizyonda saklanır.", 16f)
+        }
         action(box,"Geri sayım: ${CountdownSettings.label(timerSeconds)}") {
             timerSeconds = CountdownSettings.next(timerSeconds)
             prefs.edit().putInt("timer_seconds",timerSeconds).apply()
