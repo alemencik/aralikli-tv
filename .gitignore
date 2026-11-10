@@ -1,0 +1,29 @@
+# Android / Gradle
+.gradle/
+build/
+**/build/
+local.properties
+.idea/
+*.iml
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Python / extraction
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# PDF source material and manual exports; not redistributable by default
+*.pdf
+source-pdfs/
+*.zip
+
+# Credentials and local files
+.env
+.env.*
+*.key
+*.pem
+.DS_Store

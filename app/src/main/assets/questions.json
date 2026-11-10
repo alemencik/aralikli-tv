@@ -1,0 +1,1898 @@
+{
+  "schema": 1,
+  "decks": [
+    {
+      "id": "rapor",
+      "title": "Rapor Yazma ve Mülakat Teknikleri",
+      "questions": [
+        {
+          "id": "rapor-9e8730113a731a",
+          "stem": "Grup ya da yakın çevre (arkadaş çevresi, aile çevresi, işyeri çevresi gibi) içindeki sosyal davranışları inceler. Bir futbol takımının antrenöre ya da kulüp başkanına yaklaşımı, tepkisi ya da sevgisi, tepkinin sevgiye, saygıya dönüştürülmesi konularını inceler. Yukarıda hakkında bilgi verilen bilim dalı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Sosyal Psikoloji",
+            "B": "Psikoloji",
+            "C": "Antropoloji",
+            "D": "Biyoloji",
+            "E": "Sosyal Çalışma"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 1
+        },
+        {
+          "id": "rapor-fb426f8c4bc4f0",
+          "stem": "Bürokrasiyi sosyolojik boyutta enine boyuna irdeleyen ilk sosyolog aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "August Comte",
+            "B": "Erich Fromm",
+            "C": "Max Weber",
+            "D": "Emmanuel Kant",
+            "E": "Durkheim"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 2
+        },
+        {
+          "id": "rapor-5a61740607a508",
+          "stem": "Başarılı ve yetkin olmak isteyen bir sosyal meslek elemanının yazacağı raporlarda alan ve kapsam için aşağıdakilerden hangisi söylenebilir?",
+          "options": {
+            "A": "Kapsam geniş, alan dardır.",
+            "B": "Alan aşağıdadır, kapsam yukarıda.",
+            "C": "Alan geniş, kapsam dardır.",
+            "D": "Alanla kapsam arasında temelde bir farklılık yoktur.",
+            "E": "Alan yatay durumu, kapsam dikey durumu ifade eder."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 3
+        },
+        {
+          "id": "rapor-37b8fe2c763e4a",
+          "stem": "Kuram ve uygulamayı öğrenme konusunda aşağıdaki yöntemlerden hangisi doğrudur?",
+          "options": {
+            "A": "Önce kuram ezberlenir, uygulama kendiliğinden gelir.",
+            "B": "Kuram alanda, uygulama kitaptan öğrenilir.",
+            "C": "İkisi de alanda uygulama yaparak öğrenilir.",
+            "D": "Kuram kitaptan, uygulama alanda öğrenilir.",
+            "E": "İkisi de kitaptan öğrenilir."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 4
+        },
+        {
+          "id": "rapor-ea71a1ba8e134d",
+          "stem": "Sokak çocuklarının aile ilişkileri denildiğinde aşağıdakilerden hangisi kastedilmiştir?",
+          "options": {
+            "A": "Boyut",
+            "B": "Alan",
+            "C": "Bütünlük",
+            "D": "Mekan",
+            "E": "Kapsam"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 5
+        },
+        {
+          "id": "rapor-270a8bcd63ba0c",
+          "stem": "Bir ülkedeki yazışma, raporlama, tutanak altına alma, yazılı kuralları koyma ve yazılı emir verme gibi işlemlerin tümüne ne ad verilir?",
+          "options": {
+            "A": "Yönetim",
+            "B": "Yazılı kurallar",
+            "C": "Sözel kurallar",
+            "D": "Yaptırm",
+            "E": "Bürokrasi"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 6
+        },
+        {
+          "id": "rapor-af80089a6e7750",
+          "stem": "Sosyal hizmetlerde ana ve çocuk denildiğinde aşağıdakilerden hangisi kastedilmiştir?",
+          "options": {
+            "A": "Alan",
+            "B": "Mekan",
+            "C": "Boyut",
+            "D": "Kapsam",
+            "E": "Bütünlük"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 2,
+          "source_no": 7
+        },
+        {
+          "id": "rapor-9f26500147e48a",
+          "stem": "Beş duyu organımızın dış çevreden etkilendiği her şeyi duyu organımızdaki sinir ucuyla beyne iletmesi, beynin birikimiyle o şeyin ya da nesnenin adını öğrendikten sonra geri bildirim yaparak test etmesiyle tamamlanan devreye ne ad verilir?",
+          "options": {
+            "A": "Kaygı",
+            "B": "Zeka",
+            "C": "Zihin",
+            "D": "Algı",
+            "E": "Tasarım"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 8
+        },
+        {
+          "id": "rapor-4d13712bb173da",
+          "stem": "Bürokrasi terimi köken olarak Latincede aşağıdakilerden hangisi ile ilişkilidir?",
+          "options": {
+            "A": "Masa",
+            "B": "Cratle",
+            "C": "Bureau",
+            "D": "Keçe",
+            "E": "Burra"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 9
+        },
+        {
+          "id": "rapor-7e6e86bc20df6a",
+          "stem": "Feodal kültürle donanmış beyinlere bürokrasi en sağlam biçimde nasıl öğretilebilir?",
+          "options": {
+            "A": "Sadece beceri kazandırarak",
+            "B": "Bilgi ve beceriyi birlikte kazandırarak",
+            "C": "Ezberleterek",
+            "D": "Sadece bilgilendirerek",
+            "E": "Sürekli öğreterek"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 10
+        },
+        {
+          "id": "rapor-1476413f4173af",
+          "stem": "Aşağıdaki mülakat, sunum, rapor gibi etkinliklerle ilgili ifadelerden hangisi doğrudur?",
+          "options": {
+            "A": "Mülakat, temelde soru sorarak bilgi alma yoluyla yapılır.",
+            "B": "Rapor, sadece sözlü sunum yoluyla dinleyenlere aktarılır.",
+            "C": "Konuşma, yazılı simgeler yoluyla yapılır.",
+            "D": "Sunum yaparken mutlaka yazılı metin önceden hazırlanmış ve dağıtılmış olmalıdır.",
+            "E": "Röportaj, röportajı yapanın kendisini ve ülke koşullarını anlatmasıyla başlamalıdır."
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 11
+        },
+        {
+          "id": "rapor-08ba77037f1c3b",
+          "stem": "Bürokrasi ile siyaset arasındaki birbirine bağımlılık ilişkisinde aşağıdakilerden hangisi temel doğrudur?",
+          "options": {
+            "A": "Siyasal otorite ile bürokratik otorite birlikte kamu otoritesine bağlıdır.",
+            "B": "Bürokratik atorite siyasal otoritenin üzerindedir.",
+            "C": "Bürokrasi siyasi iradeye bağlıdır.",
+            "D": "Siyasal irade bürokrasiye bağlıdır.",
+            "E": "Siyasal ve bürokratik otorite birbirinden bağımsızdır"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 12
+        },
+        {
+          "id": "rapor-3b8224ae11308c",
+          "stem": "Kuram ve uygulama ilişkisi nasıl olmalıdır?",
+          "options": {
+            "A": "Kuram ve uygulama birbirinden kopuk olmalıdır.",
+            "B": "Kuram ve uygulama birbiriyle çatışmalıdır.",
+            "C": "Kuram ve uygulama birbirini beslemelidir.",
+            "D": "Kuram ve uygulamadan biri diğerini yönetmelidir.",
+            "E": "Kuram ve uygulama birbirinden bağımsız olmalıdır."
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 3,
+          "source_no": 13
+        },
+        {
+          "id": "rapor-3a8e9c90c35c96",
+          "stem": "Bilgiyi kavramayı ve üretmeyi kolaylaştıran iki bilim dalı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Dilbilim (Linguistics) ve Kökenbilim (Etimology)",
+            "B": "Psikoloji (Psychology) ve Etimoloji (Etimology)",
+            "C": "Gramer (Grammar) ve Antropoloji (Antropology)",
+            "D": "Sosyoloji (Soziology) ve Psikoloji (Psychology)",
+            "E": "Dilbilim (Linguistic) ve Arkeoloji (Archeology)"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 4,
+          "source_no": 15
+        },
+        {
+          "id": "rapor-ed356b8fec3179",
+          "stem": "Toplum ile ilgili olarak aşağıdaki ifadelerden hangisi daha doğrudur?",
+          "options": {
+            "A": "Toplumlar zamanla topluluğa dönüşürler.",
+            "B": "Toplumlar canlı organizmalardır; yaşarlar ve büyürler.",
+            "C": "Toplumlar bir araya gelerek toplulukları oluşturur.",
+            "D": "Topluluk ile toplum aynı anlamdadır.",
+            "E": "Toplumlar insan gibi değillerdir, yaşamaları söz konusu değildir."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 4,
+          "source_no": 16
+        },
+        {
+          "id": "rapor-4823a581966fd3",
+          "stem": "Rapor yazmak için araç-gereç kavramıyla kastedilenler aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Oturmak için gerekli malzemeler",
+            "B": "Masa mikrofonu, seyyar mikrofon, projeksiyon gibi teknik malzemeler",
+            "C": "Kütüphane gibi gerekli yerlere gidebilmek için taşıt aracı",
+            "D": "Bilgisayar, yazıcı, kağıt, zımba, delgeç, dosya gibi malzemeler",
+            "E": "Odanın havalandırma sistemi"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 4,
+          "source_no": 18
+        },
+        {
+          "id": "rapor-6fb3a076e301da",
+          "stem": "Başarılı bir rapor yazmak için aşağıdakilerden hangisi olmazsa yine de rapor yazılabilir?",
+          "options": {
+            "A": "Bedensel ve ruhsal destek",
+            "B": "Yardımcı kişiler",
+            "C": "Bilgi desteği",
+            "D": "Araç-gereç",
+            "E": "Fizik mekan"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 4,
+          "source_no": 19
+        },
+        {
+          "id": "rapor-62e20c94615ecf",
+          "stem": "İyi ve başarılı bir meslek elemanı olmak için aşağıdakilerden hangisi gereklidir?",
+          "options": {
+            "A": "Yetenekli olmak gerekir.",
+            "B": "Zaman verip iyice anlayarak okumak ve çalışmak gerekir.",
+            "C": "Uygulama önemli değil, çok okumak gerekir.",
+            "D": "Bilgileri sıkı bir biçimde ezberlemek gerekir.",
+            "E": "Sadece yoğun olarak uygulama yapmak gerekir."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 4,
+          "source_no": 20
+        },
+        {
+          "id": "rapor-ba73c271f74c5d",
+          "stem": "Özellikle insan sorunları üzerine rapor yazan bilim dalı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Zooloji",
+            "B": "Botanik",
+            "C": "Sosyal çalışma",
+            "D": "Fen bilimleri",
+            "E": "Jeoloji"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 1
+        },
+        {
+          "id": "rapor-09b3ddcf5feca6",
+          "stem": "Bürokrasi tanımını karşılayan seçenek aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Tarlada üretimin artmasıdır",
+            "B": "Sanayinin gerilemesidir",
+            "C": "Sanayinin gelişmesidir",
+            "D": "İşlerin yavaşlaması ve atıllaşmasıdır",
+            "E": "Masabaşı işlerin artmasıdır"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 2
+        },
+        {
+          "id": "rapor-8e96626fe75b85",
+          "stem": "Antropolojinin bürokrasi konusundaki çalışma alanı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Bürokrasinin insan psikolojisine etkisi",
+            "B": "Tarihteki eski toplumlarda bürokrasinin yapısı",
+            "C": "Bugünkü insan ve toplum ilişkilerinde bürokrasinin rolü",
+            "D": "Toplumsal yapıda bürokrasinin oluşumu",
+            "E": "Bürokrasinin geleceği üzerine kurgulama"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 3
+        },
+        {
+          "id": "rapor-6548c2ed0dfda6",
+          "stem": "Sosyal hizmetlerde ana ve çocuk dediğimiz zaman aşağıdakilerden hangisini kastetmiş oluruz?",
+          "options": {
+            "A": "Mekân",
+            "B": "Bütünlük",
+            "C": "Kapsam",
+            "D": "Boyut",
+            "E": "Alan"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 4
+        },
+        {
+          "id": "rapor-bde76a4378cdb4",
+          "stem": "İlk uzun ifadelerin simgelerle belirtildiği yazı türü ortalama hangi tarihlerde ortaya çıkmıştır?",
+          "options": {
+            "A": "MS 1200",
+            "B": "MÖ 2500",
+            "C": "MÖ 1800",
+            "D": "MS 750",
+            "E": "MS 250"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 5
+        },
+        {
+          "id": "rapor-75a71fb0225f0b",
+          "stem": "Türk tarihinin ilk yazılı belgeleri aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Orhun Yazıtları",
+            "B": "Divânü Lugât’it-Türk",
+            "C": "Bozkurt Efsanesi",
+            "D": "Kutadgu Bilig",
+            "E": "Dede Korkut Öyküleri"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 6
+        },
+        {
+          "id": "rapor-6310b8a504d8ce",
+          "stem": "Toplumsal kesimlerin tarihsel olarak ortaya çıkış sırası aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+          "options": {
+            "A": "Bürokrasi, toprak feodalitesi, askerler",
+            "B": "Askerler, tarımda çalışanlar, bürokrasi",
+            "C": "Toprak feodalitesi, askerler, bürokrasi",
+            "D": "Bürokrasi, askerler, feodalite",
+            "E": "Askerler, feodalite, bürokrasi"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 5,
+          "source_no": 7
+        },
+        {
+          "id": "rapor-1763ca45f7a5ee",
+          "stem": "Karşımıza çıkan kuram ve uygulama uyuşmazlığını aşabilmek için aşağıdakilerden hangisi gereklidir?",
+          "options": {
+            "A": "Kuramı bol uygulama yaparak geliştirmeliyiz.",
+            "B": "Kuramda bilgili, uygulamada becerikli aşamaya gelebilmeliyiz.",
+            "C": "Çok okumalıyız.",
+            "D": "Sürekli çalışmalıyız.",
+            "E": "Uygulamayı kitap okuyarak geliştirmeliyiz."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 6,
+          "source_no": 8
+        },
+        {
+          "id": "rapor-90e3ecc8f0f1a7",
+          "stem": "Başarılı bir rapor yazmak için aşağıdakilerden hangisi olmazsa rapor yine de yazılabilir?",
+          "options": {
+            "A": "Bilgi desteği",
+            "B": "Fizik mekan, fizik ortam",
+            "C": "Yardımcı arkadaşlar",
+            "D": "Bedensel ve ruhsal destek",
+            "E": "Araçgereç"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 6,
+          "source_no": 9
+        },
+        {
+          "id": "rapor-4ade692b890112",
+          "stem": "Yazının bulunması ile ilgili doğru süreç aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yazılar yazılmaya başlandı, ama depolanmadı.",
+            "B": "Düşünceler kayda geçti, depolandı ve iletilmeye başlandı.",
+            "C": "Yazılar kayda geçmeden depolanmaya başlandı.",
+            "D": "Yazıların iletilmesi bilgisayar döneminde başladı.",
+            "E": "Yazılar depolandı ama iletilemedi."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 6,
+          "source_no": 10
+        },
+        {
+          "id": "rapor-c56624e350b69b",
+          "stem": "Bürokrasinin kendisini gösterecek kadar oluştuğu dönem aşağıdaki dönemlerden hangisine rastlar?",
+          "options": {
+            "A": "Sanayi döneminin ortaları",
+            "B": "Feodal dönemin sonları",
+            "C": "Avcı-toplayıcı dönemin sonları",
+            "D": "Bilişim döneminin başlangıcı",
+            "E": "Feodal dönemin başları"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 6,
+          "source_no": 11
+        },
+        {
+          "id": "rapor-bcbef3f0a6130a",
+          "stem": "Konuşma yoluyla yapılan mesleki eylem aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Sohbet",
+            "B": "Örnek olay",
+            "C": "Belagat",
+            "D": "Mülakat",
+            "E": "Rapor"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 6,
+          "source_no": 13
+        },
+        {
+          "id": "rapor-40d31dd68fb71c",
+          "stem": "Tarihte bürokrasi kavramını ilk kullanan kişi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Martin Luther King",
+            "B": "Keçecizade Mahmut Efendi",
+            "C": "Albert Dawey",
+            "D": "Vincent de Gournay",
+            "E": "Bürokrat Cemal"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 7,
+          "source_no": 14
+        },
+        {
+          "id": "rapor-206f394f887af6",
+          "stem": "Bir ülkedeki yazışma, raporlama, tutanak altına alma, yazılı kuralları koyma ve yazılı emir verme gibi işlemlerin tümüne verilen genel ad aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yazılı kurallar",
+            "B": "Zapturapt",
+            "C": "Yönetim",
+            "D": "Yaptırım",
+            "E": "Bürokrasi"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 7,
+          "source_no": 15
+        },
+        {
+          "id": "rapor-8b30f0bcb7c9cf",
+          "stem": "Yazılacak raporda aşağıdakilerden hangilerinin olması öncelikle beklenir?",
+          "options": {
+            "A": "Araştırma sonuçları",
+            "B": "Sadece alan bilgileri",
+            "C": "İstatistik",
+            "D": "Alan ve kapsam bütünlüğü",
+            "E": "Sadece kapsam bilgileri"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 7,
+          "source_no": 16
+        },
+        {
+          "id": "rapor-7e94228bdae10c",
+          "stem": "Bürokrasiyi sosyolojik boyutta enine boyuna irdeleyen ilk sosyolog hangisidir?",
+          "options": {
+            "A": "Emile Durkheim",
+            "B": "Albert Dawey",
+            "C": "Karl Marx",
+            "D": "Vincent de Gournay",
+            "E": "Max Weber"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 7,
+          "source_no": 18
+        },
+        {
+          "id": "rapor-647c09aaee52cb",
+          "stem": "Aşağıdaki seçeneklerin hangisinde kavramların kronolojik sıralaması doğru olarak verilmiştir?",
+          "options": {
+            "A": "Bürokrasi, askerler, feodalite",
+            "B": "Toprak feodalitesi, askerler, bürokrasi",
+            "C": "Askerler, tarımda çalışanlar, bürokrasi",
+            "D": "Bürokrasi, toprak feodalitesi, askerler",
+            "E": "Askerler, feodalite, bürokrasi"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 7,
+          "source_no": 1
+        },
+        {
+          "id": "rapor-0f5f563e192ce7",
+          "stem": "Rapor nasıl olmamalıdır?",
+          "options": {
+            "A": "Mutlaka kısa",
+            "B": "Gereksiz bilgilerle şişirilmemiş",
+            "C": "Rapor kompakt olmalıdır.",
+            "D": "Dili kolay, anlaşılabilir ve ama düzeyli olmalı",
+            "E": "Kaynakları belirtilmiş"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 8,
+          "source_no": 2
+        },
+        {
+          "id": "rapor-6eea924b646f8f",
+          "stem": "Aşağıdakilerden hangisi raporun özellikleri arasında yer almaz?",
+          "options": {
+            "A": "Rapor nesnel bir çalışmadır.",
+            "B": "Bilgi ve belgelere dayalı olmalıdır",
+            "C": "İstatistik bilgilere dayalı olmalıdır.",
+            "D": "En az sayfa sınırı 12’dir",
+            "E": "Rapor yazılı olur."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 8,
+          "source_no": 7
+        },
+        {
+          "id": "rapor-cfd98b0cf5d51a",
+          "stem": "Sunum yapılacak salonun özellikleri arasında yer almaz?",
+          "options": {
+            "A": "Sunumlar en fazla 45-50 dakika olmalı",
+            "B": "Anlaşılır bir dille yapılmalı",
+            "C": "Loş bir ortamının olması",
+            "D": "Yazılı materyallerle desteklenmeli",
+            "E": "Dinleyenlerle yüz ve göz bağlantısı kurulmalı"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+          "source_page": 8,
+          "source_no": 9
+        }
+      ]
+    },
+    {
+      "id": "yerel",
+      "title": "Yerel Yönetimler ve Sosyal Hizmet",
+      "questions": [
+        {
+          "id": "yerel-7ff2e7a4e8889c",
+          "stem": "Sosyal politika açısından Endüstri Devrimi’nin sonuçlarından hangisi yanlıştır?",
+          "options": {
+            "A": "Üretim yapısı ve çalışma ilişkileri değişime uğramıştır.",
+            "B": "Lonca sistemi bozulmuş, çıkar birliğinden çıkar çatışmasına geçilmiştir.",
+            "C": "Endüstrileşmenin olduğu kentler, kırsal bölgelerden yoğun göç almıştır.",
+            "D": "Kadın ve çocuklar zorlu koşullarda fabrikalarda çalıştırılmıştır.",
+            "E": "Endüstri Devrimi ile birlikte çalışanların gelir düzeyi artmış, yaşam koşulları iyileşmiştir."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 2,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-a46c71a39d1511",
+          "stem": "Aşağıdakilerden hangisi yerel yönetimlerin işlevlerinden değildir?",
+          "options": {
+            "A": "Kamu hizmetinin sağlanması",
+            "B": "Kaynakların etkin dağılımı",
+            "C": "Ekonomik istikrar",
+            "D": "Desentralizasyon",
+            "E": "Gelir dağılımı"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 2,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-499a5fea41dc88",
+          "stem": "Neo-liberal politikalar ile birlikte aşağıdakilerden hangisinin gerçekleşmesi mümkün değildir?",
+          "options": {
+            "A": "Devletin müdahaleci bir işleve sahip olması",
+            "B": "Kamu harcamalarının kısılması",
+            "C": "Serbest piyasa kurallarının işlemesi",
+            "D": "Kamu aygıtının küçülmesi",
+            "E": "Özelleştirmenin yaygınlaşması"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 2,
+          "source_no": 4
+        },
+        {
+          "id": "yerel-4006aec52c7919",
+          "stem": "Kamusal hizmetin en yakın yerel birimler tarafından sunulması ilkesinin adı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Mali özerklik",
+            "B": "Adem-i Merkeziyetçilik",
+            "C": "Feodalizm",
+            "D": "Kaynakların etkin kullanımı",
+            "E": "Subsidiarity"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 2,
+          "source_no": 5
+        },
+        {
+          "id": "yerel-3a5a29790c9e02",
+          "stem": "Aşağıdakilerden hangisi küreselleşme, rekabet ve neo-liberal politikaların etkilerinden değildir?",
+          "options": {
+            "A": "Özelleştirme uygulamalarının yaygınlaşması",
+            "B": "Devletin müdahale anlayışından uzaklaşması",
+            "C": "Gelir dağılımında dengenin sağlanması",
+            "D": "işsizliğin yükselmesi",
+            "E": "Yoksulluğun artması"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 2,
+          "source_no": 6
+        },
+        {
+          "id": "yerel-68cea0ef0a363f",
+          "stem": "Aşağıdakilerden hangisi yerel yönetimlerin özelliklerinden birisi değildir?",
+          "options": {
+            "A": "Kamu aygıtının bir parçası olarak kamu hizmeti sunmaları",
+            "B": "Vergileme yetkisi de dahil olmak üzere mali anlamda belirli bir düzeyde otonomiye sahip olmaları",
+            "C": "Devlet içinde sınırları belirli bir alanda faaliyet göstermeleri",
+            "D": "Görevleri yasalarla belirlenen kamu tüzel kişileri olmaları",
+            "E": "Yöneticilerinin merkezi idare tarafından atanması"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 7
+        },
+        {
+          "id": "yerel-1a6ec1c60aea98",
+          "stem": "Türkiye’de yerel yönetimler hangi kademelerden oluşmaktadır?",
+          "options": {
+            "A": "Büyükşehir Belediyesi – Mahalle – Köy",
+            "B": "il Özel İdaresi – Belediye – Mahalle",
+            "C": "İl Özel İdaresi – Belediye – Köy",
+            "D": "İl Özel İdaresi – Büyükşehir Belediyesi – Mahalle",
+            "E": "Büyükşehir Belediyesi – İlçe Belediyesi – Mahalle"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 8
+        },
+        {
+          "id": "yerel-b0063e717e979d",
+          "stem": "Sosyal politikaların hedef kitlesi aşağıdakilerden hangisi değildir?",
+          "options": {
+            "A": "İşverenler",
+            "B": "Dezavantajlı gruplar ve bireyler",
+            "C": "Bağımlı statüde çalışanlar",
+            "D": "Kadınlar, yaşlılar, gençler ve çocuklar",
+            "E": "Muhtaç ve yoksullar"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 9
+        },
+        {
+          "id": "yerel-0c7cfd743dd447",
+          "stem": "Aşağıdakilerden hangisi dar anlamda sosyal politikaları ifade etmektedir?",
+          "options": {
+            "A": "İşçi-İşveren ilişkilerinin düzenlenmesi ve çalışma barışının sağlanması",
+            "B": "Sosyal barışın sağlanması",
+            "C": "Toplumun genel refah düzeyinin yükseltilmesi",
+            "D": "Toplumdaki tüm zayıf, güçsüz ve yoksul bireylerin korunması",
+            "E": "Adil bir gelir dağılımının sağlanması"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 10
+        },
+        {
+          "id": "yerel-303beb5b8c90ad",
+          "stem": "Bu modelde yerel yönetimlere merkezi idare tarafından nezaret edilmektedir. Yerel yönetimlerin rolü, merkezi idarece belirlenen politikaların uygulanması olup bu politikaların icrasında oldukça sınırlı bir takdir yetkisine sahiptir. Yukarıda ifade edilen merkezi idare – yerel yönetim ilişkisini tanımlayan model aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Otonom Yerel Yönetim Modeli",
+            "B": "Temsilci-Vekil Modeli",
+            "C": "Entegrasyon Modell",
+            "D": "Partnerlik Modeli",
+            "E": "Sosyal Model"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 11
+        },
+        {
+          "id": "yerel-b29e2014cf1c75",
+          "stem": "Aşağıdakilerden hangisi yerel yönetim tiplerinden degildir?",
+          "options": {
+            "A": "Yenilikçi model",
+            "B": "Ekonomik gelişme modeli",
+            "C": "Hizmetleri teşvik ederek müşteri tercihini artıran model",
+            "D": "Himaye edici model",
+            "E": "Refah devleti modeli"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 12
+        },
+        {
+          "id": "yerel-fa150ffa204856",
+          "stem": "Kamu hizmetlerinin doğrudan üretilme sorumluluğu yerel yönetimlerden alınıp hizmetlerin sağlanması ve denetlenmesi öne çıkarılmıştır. Yukarıda ifade edilen kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Subsidiarite",
+            "B": "Yerinden yönetim",
+            "C": "Merkezileşme",
+            "D": "Yetkili otorite rolü",
+            "E": "Yerellik"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 3,
+          "source_no": 13
+        },
+        {
+          "id": "yerel-bbba915525a7be",
+          "stem": "Sosyal hizmetler ile ilgili olarak aşağıdaki ifadelerden hangisi yanlıştır?",
+          "options": {
+            "A": "Daha çok çalışma hayatı dışında sosyo- ekonomik sorunlara karşı önleyici, iyileştirici ve ıslah edici hizmetlerdir.",
+            "B": "Sosyal yapının gelişmesi ve değişmesinde önemli bir role sahiptir.",
+            "C": "Sistemli ve programlı hizmetler bütünüdür.",
+            "D": "Kar ve kazanç amacı güdülerek yapılan hizmetlerdir.",
+            "E": "Tüm bireylerin insan onuruna yaraşır bir biçimde yaşamalarını sağlayacak ihtiyaçları gidermeye yönelmiş hizmetlerdir."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 4,
+          "source_no": 14
+        },
+        {
+          "id": "yerel-03a5ce5fc6912a",
+          "stem": "İlk işveren sendikası hangi ülkede kurulmuştur?",
+          "options": {
+            "A": "Fransa",
+            "B": "Almanya",
+            "C": "Hollanda",
+            "D": "Türkiye",
+            "E": "İngiltere"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 4,
+          "source_no": 15
+        },
+        {
+          "id": "yerel-57556b2d3d05ce",
+          "stem": "Aşağıdakilerden hangisi iktisadi krizin etkileri arasında sayılamaz?",
+          "options": {
+            "A": "Bütçe açıklarının artması",
+            "B": "Kamu harcamalarının azalması",
+            "C": "Sosyal yardım ve hizmetlere ihtiyaç duyan kitlenin genişlemesi",
+            "D": "Gelir dağılımının bozulması",
+            "E": "işsizliğin yükselmesi"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 4,
+          "source_no": 16
+        },
+        {
+          "id": "yerel-de79109e4d8159",
+          "stem": "Gelişmiş ülkelerdeki yeni belediyecilik anlayışına dair aşağıdakilerden hangisi söylenemez?",
+          "options": {
+            "A": "Yerel ekonomik, sosyal ve fiziki kalkınma sorumluluğu",
+            "B": "Toplumun tüm kesimlerini kapsayan bütüncül yaklaşım",
+            "C": "Hizmetlerin tümünü üreten, sunan ve dağıtan yönetim anlayışı",
+            "D": "Sorunların çözümünde insiyatif alan sosyal belediyecilik",
+            "E": "Proaktif yönetim ve sosyal ortaklar ile yönetişim"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 4,
+          "source_no": 17
+        },
+        {
+          "id": "yerel-ae360740360e51",
+          "stem": "Protestan Ahlak ile ilgili aşağıdaki ifadelerden hangisi doğrudur?",
+          "options": {
+            "A": "Yardımseverliği teşvik eder.",
+            "B": "Yoksulluğun insanların suçu olmadığını vurgular.",
+            "C": "Bireyin çok çalışmasını ve menfaatini artırmasını olumsuz değerlendirir.",
+            "D": "Yoksulluğu insanın kendi hatası olarak yorumlar.",
+            "E": "Aile ve akraba ilişkilerinin güçlenmesini hedefler."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 4,
+          "source_no": 18
+        },
+        {
+          "id": "yerel-bf2fc14c0a82a6",
+          "stem": "Devletin sosyal politikada bir aktör olması sürecinde ilk üstlendiği rol aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "İşverenlere teşvik uygulama",
+            "B": "Sendikal hakları tanıma",
+            "C": "Yasal düzenleme yapma",
+            "D": "Piyasaya müdahale etme",
+            "E": "Kamuda işçi istihdam etme"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 5,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-08b11d2290ceec",
+          "stem": "Aşağıdakilerden hangisinde yerel yönetimlerin işlevleri doğru verilmiştir?",
+          "options": {
+            "A": "Temsilde adalet-Ekonomik istikrar-Gelir dağılımı-Kamu hizmeti",
+            "B": "Demokratik katılım-Ekonomik istikrar- Gelir dağılımı-Kamu",
+            "C": "Ekonomik istikrar-Gelir dağılımı-Kamu harcaması",
+            "D": "Ekonomik istikrar-Gelir dağılımı-Kaynak dağılımı-Kamu hizmeti",
+            "E": "Kamu hizmeti-Ekonomik istikrar- Demokratik katılım"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 5,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-3622a5281092f1",
+          "stem": "Bu modelde İkinci Dünya Savaşı sonrasında eşitlik, gelir dağılımında adaletin sağlanması ve kaynakların etkin kullanılması anlayışı yerel yönetimlerin çalışmalarını biçimlendirmiş, imar, altyapı, kanalizasyon, çevre vb. hizmetlerin ötesine geçerek yerel yönetim hizmetlerinin tür ve kapsamını genişletmiştir. Yukarıda ifade edilen yerel yönetim tipi/modeli aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Himayeci model",
+            "B": "Entegrasyon modeli",
+            "C": "Yerel model",
+            "D": "Ekonomik gelişme modeli",
+            "E": "Refah devleti modeli"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 5,
+          "source_no": 3
+        },
+        {
+          "id": "yerel-3356f3c1c9646e",
+          "stem": "Endüstri Devrimi öncesinde aşağıdakilerden hangisi sosyal refah hizmetleri sağlayıcılarından değildir?",
+          "options": {
+            "A": "Mesleki birlikler",
+            "B": "Devlet",
+            "C": "Aileler",
+            "D": "Dini kurumlar",
+            "E": "Gönüllü organizasyonlar"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 5,
+          "source_no": 4
+        },
+        {
+          "id": "yerel-cc8c78ae8022fb",
+          "stem": "Endüstri Devrimi sonrası 1880-1920 yılları arası dönem için aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Fakirliğin kişinin değil sosyal koşulların bir ürünü olduğu anlayışı gelişmiştir",
+            "B": "Devletin sosyal sorunlara müdahale etmediği ve önlem almadığı bir dönemdir.",
+            "C": "Gece çalışması, kadın ve çocukların çalışması, iş süreleri ve iş güvenliği, sigorta vb. alanlarda bireysel iş hukuku gelişmiştir.",
+            "D": "Yasaklayıcı sosyal politikadan, tanımlayıcı sosyal politikaya dönüşüm yaşanmıştır.",
+            "E": "Eğitim, gelir desteği ve sosyal yardım gibi programlarla çalışan sınıf desteklenmiştir."
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 5,
+          "source_no": 5
+        },
+        {
+          "id": "yerel-ce3f7861293f5c",
+          "stem": "Yerel yönetimler Evrensel Bildirgesinde aşağıdakilerden hangisi yer almaz?",
+          "options": {
+            "A": "Yerel yönetim faaliyetleri üzerinde sadece hukukilik denetimi yapılabilir.",
+            "B": "Yerel yönetim birimleri atama yolu ile iş başına gelmektedir.",
+            "C": "Yerel yönetim birimlerinin sınırlarında değişiklikler yasayla ve yasasının izin verdiği hallerde referandum ile yapılır.",
+            "D": "Kamusal sorumluluklar, yerel yönetimin halka en yakın temel birimlerince kullanılmalıdır.",
+            "E": "Yerel yönetimlerin temel sorumlulukları ve bu sorumlulukları değiştirmeye ilişkin usul işlemleri, Anayasa’da veya yasada öngörülmelidir."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 6,
+          "source_no": 6
+        },
+        {
+          "id": "yerel-23a8f824a7286d",
+          "stem": "Aşağıdaki gelişmelerden hangisi sosyal hizmetlere duyulan ihtiyacı artırıcı nitelikte değildir?",
+          "options": {
+            "A": "Ekonomik ve sosyal koşulların ağırlaşması",
+            "B": "İşsiz sayısının artışı",
+            "C": "Boşanmış ve tek ebeveynli aile sayısının artması",
+            "D": "Nüfus içerisinde yaşlı nüfusun payının hızla yükselmesi",
+            "E": "Toplumda aile ve sosyal bağların güçlenmesi"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 6,
+          "source_no": 7
+        },
+        {
+          "id": "yerel-c8571e3ef405a9",
+          "stem": "Kamusal hizmetin en yakın yerel birimler tarafından sunulması ilkesinin adı nedir?",
+          "options": {
+            "A": "Duyarlılık",
+            "B": "Etkinlik",
+            "C": "Subsidiarity -Yerellik",
+            "D": "Mali özerklik",
+            "E": "Yönetsel özerklik"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 6,
+          "source_no": 8
+        },
+        {
+          "id": "yerel-056b96d668169f",
+          "stem": "Aşağıdakilerden hangisinde merkezi idare-yerel yönetim ilişkisi modelleri doğru verilmiştir?",
+          "options": {
+            "A": "Himaye edici-Entegrasyon",
+            "B": "Otonom yerel yönetim-Himaye edici",
+            "C": "Otonom yerel yönetim-Entegrasyon",
+            "D": "Partnerlik-Himaye edici",
+            "E": "Entegrasyon-Refah devleti"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 7,
+          "source_no": 11
+        },
+        {
+          "id": "yerel-634d3298a6fdcf",
+          "stem": "Yerel yönetimlerin ekonomik istikrar sağlayıcı işlevi için aşağıdakilerden hangisi söylenemez?",
+          "options": {
+            "A": "Birincil sorumluluk merkezi yönetimden ziyade yerel yönetimlere aittir.",
+            "B": "Birimlerinde işçi istihdam edebilirler.",
+            "C": "Bölgesel kalkınma ve işsizliğe yönelik birtakım önlemeler alabilirler.",
+            "D": "Ulusal ekonomi ve kamu harcamalarından aldıkları payın sınırlı olması bu işlevde yerel yönetimlerin yeterli olmamasına sebep olmaktadır.",
+            "E": "Ulusal ve uluslararası yatırımları bölgelerine çekebilirler"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 7,
+          "source_no": 12
+        },
+        {
+          "id": "yerel-6c6f69b99ff8cc",
+          "stem": "İlk işçi sendikası ile ilgili aşağıdakilerden hangisi doğrudur?",
+          "options": {
+            "A": "Almanya’da kurulmuştur.",
+            "B": "Hollanda’da kurulmuştur.",
+            "C": "Fransa’da kurulmuştur.",
+            "D": "İngiltere’de kurulmuştur.",
+            "E": "İsveç’te kurulmuştur."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 7,
+          "source_no": 13
+        },
+        {
+          "id": "yerel-f156e44eb97ea6",
+          "stem": "Sosyal refah kavramı ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Daha geniş ve daha genel olan sosyal politikanın bir alt kategorisidir.",
+            "B": "Belirli koşullar altında olanlara mal, hizmet ve para yardımı sağlayan kamu programlarıdır.",
+            "C": "Bireylerin bağımlılık sorunlarının çözülmesi işlevini görmektedir.",
+            "D": "Sosyal refahın uygulayıcı kurumu sadece devlettir.",
+            "E": "Gelir üretenlerden, bu gelirin bir parçasının diğerlerine transfer edilmesi sürecini ifade etmektedir"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 7,
+          "source_no": 15
+        },
+        {
+          "id": "yerel-078ad80e97828e",
+          "stem": "Aşağıdakilerden hangisinde yerel yönetim tipleri doğru verilmiştir?",
+          "options": {
+            "A": "Otonom model-Himaye edici-Temsilci vekil",
+            "B": "Himaye edici-Ekonomik gelişme-Refah devleti",
+            "C": "Ekonomik gelişme-Liberal devlet-Himaye edici",
+            "D": "Ekonomik gelişme-Otonom-Refah devleti",
+            "E": "Refah devleti-Entegrasyon-Himaye edici"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 8,
+          "source_no": 17
+        },
+        {
+          "id": "yerel-bfce0882f359e4",
+          "stem": "Sosyal politikalar açısından önemli olan Keynesyen politikaların yerine neo-liberal politikaların hakim olmasında ana sebep aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "SSCB’nin dağılması",
+            "B": "Soğuk Savaş",
+            "C": "Devlet başkanlarının neo-liberal politikaları tercih etmesi",
+            "D": "Berlin Duvarının yıkılması",
+            "E": "1973 Petrol krizlerinin küresel etkisi"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 8,
+          "source_no": 18
+        },
+        {
+          "id": "yerel-dfdc6e0e48be13",
+          "stem": "Yerel yönetim kurumları için aşağıdaki ifadelerden hangisi yanlıştır?",
+          "options": {
+            "A": "Siyasal gücün toplumda sağlıklı dağılmasını ve halkın yönetime katılmasını sağlar.",
+            "B": "Mahalli (bölgesel) nitelikteki hizmetleri yerine getirmekle görevli olan kuruluşlardır.",
+            "C": "Yerel ihtiyaçların yerinden ve daha hızlı tespit edilmesini, kamu hizmetinin doğrudan ve etkin şekilde sunulmasını sağlar.",
+            "D": "Kamu tüzel kişilikleri yoktur",
+            "E": "Yerel sınırları içinde yaşayan halkın ihtiyaçlarına yönelik hizmetler sunmakla görevlidir."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 9,
+          "source_no": 22
+        },
+        {
+          "id": "yerel-511a2d39e68a20",
+          "stem": "Sosyal hizmetler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Sosyal yapının gelişmesi ve değişmesinde önemli bir role sahiptir.",
+            "B": "Tüm bireylerin insan onuruna yaraşır bir biçimde yaşamalarını sağlayacak ihtiyaçları gidermeye yönelmiş hizmetlerdir.",
+            "C": "Daha çok çalışma hayatı dışında, sosyo- ekonomik sorunlara karşı önleyici, iyileştirici ve ıslah edici hizmetlerdir.",
+            "D": "Kâr ve kazanç amacı güdülerek yapılan hizmetlerdir.",
+            "E": "Sistemli ve programlı hizmetler bütünüdür."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 9,
+          "source_no": 23
+        },
+        {
+          "id": "yerel-7a3b27f933ea0f",
+          "stem": "Kamu hizmetlerinin doğrudan üretilme sorumluluğu yerel yönetimlerden alınıp, hizmetlerin sağlanması ve denetlenmesi görevi öne çıkarılmıştır. Yukarıda ifade edilen kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Subsidiarite",
+            "B": "Merkezileşme",
+            "C": "Yerinden yönetim",
+            "D": "Yetkili otorite rolü",
+            "E": "Yerellik"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 9,
+          "source_no": 24
+        },
+        {
+          "id": "yerel-892af868f529ca",
+          "stem": "Müdahaleci yaklaşımın bir ürünüdür. Merkezi ve yerel yönetimler arasında esnek ve pragmatik bir şekilde fonksiyonel bölümlendirmenin yapılmasını öngörür. Yukarıda ifade edilen merkezi idare-yerel yönetim modeli aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Otonom model",
+            "B": "Entegrasyon modeli",
+            "C": "Himayeci model",
+            "D": "Liberal model",
+            "E": "Temsilci-vekil modeli"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 9,
+          "source_no": 25
+        },
+        {
+          "id": "yerel-7bb87e94863ed7",
+          "stem": "Desentralizasyon kavramı aşağıdakilerden hangisini ifade etmektedir?",
+          "options": {
+            "A": "Sivilleşme",
+            "B": "Hizmetlerin alt kademe yönetim birimlerine devredilmesi",
+            "C": "Hizmetlerin merkezi idare tarafından sunulması",
+            "D": "Merkezileşme",
+            "E": "Ortaklaşa yönetim"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 9,
+          "source_no": 26
+        },
+        {
+          "id": "yerel-73a155d2198d54",
+          "stem": "Aşağıdakilerden hangisi yerel yönetimlerin özellikleri arasında değildir?",
+          "options": {
+            "A": "Vergileme yetkisi de dahil olmak üzere mali anlamda belirli bir düzeyde otonomiye sahip olması.",
+            "B": "Kamu aygıtının bir parçası olarak kamu hizmetleri sunması.",
+            "C": "Görevleri yasalarla belirlenen kamu tüzel kişi olması.",
+            "D": "Devlet içinde sınırları belirli bir alanda faaliyet göstermesi.",
+            "E": "Yöneticilerinin merkezi idare tarafından atanması."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 10,
+          "source_no": 27
+        },
+        {
+          "id": "yerel-2c93c2922838d0",
+          "stem": "Sosyal politika ve refah hizmetlerinin ilk dönemi ile ilgili aşağıdakilerinden hangisi yanlıştır?",
+          "options": {
+            "A": "Hümanist ve hayırsever duygular sosyal politikaların temel zeminini teşkil etmiştir.",
+            "B": "Karşılıklı yardımlaşma ve işbirliği ihtiyacı sosyal refah hizmetlerinin önemli bir motivasyonu olmuştur.",
+            "C": "Devlet ihtiyaçların karşılanmasında etkin bir rol oynamıştır",
+            "D": "Dini kurumlar ve geniş aile yapıları önemli bir sosyal politika kurumu işlevi görmüştür.",
+            "E": "Feodal yapının bozulması, savaş, kıtlık, sefalet ve gelir eşitsizliği sonucunda mevcut düzeni korumak adına yasalar düzenlenmiştir."
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 10,
+          "source_no": 28
+        },
+        {
+          "id": "yerel-32ad28f78a026d",
+          "stem": "Yerel yönetimlerin temel görevi belirli kamu mallarını ve hizmetlerini bu gruplara dağıtmak ve sınırları içindeki topluluğun menfaatlerini, özellikle merkezi hükûmete veya üst yönetim birimlerine karşı iyi bir şekilde temsil etmek ve korumak olarak nitelenmektedir. Yukarıda tarif edilen yerel yönetim modeli aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ekonomik gelişme modeli",
+            "B": "Hizmetleri teşvik ederek müşteri tercihini artıran model",
+            "C": "Refah devleti modeli",
+            "D": "Sosyal model",
+            "E": "Himaye edici model"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 10,
+          "source_no": 29
+        },
+        {
+          "id": "yerel-88a6cd97c36f89",
+          "stem": "Yerel yönetimlerin bugünkü işlevlerini ilk üstlendiği dönem aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Birinci Dünya Savaşı sonrası",
+            "B": "İkinci Dünya Savaşı sonrası",
+            "C": "17 ve 18 Yüzyıllar",
+            "D": "11 ve 12 Yüzyıllar",
+            "E": "1980 ve Sonrası"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 10,
+          "source_no": 30
+        },
+        {
+          "id": "yerel-90a643f6246564",
+          "stem": "Devlet dışındaki kurumların sosyal politikaların sağlanmasına katıldığı ve daha büyük rol üstlendiği, karma bir refah ekonomisine geçilmesi durumunu ifade etmektedir. Yukarıda ifade edilen kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Sosyal refah",
+            "B": "Sosyal diyalog",
+            "C": "Subsidiarite",
+            "D": "Yerellik",
+            "E": "Refah çoğulculuğu"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 10,
+          "source_no": 31
+        },
+        {
+          "id": "yerel-35617f1727fb5d",
+          "stem": "İngiltere’de refah devleti işlevlerini 1945- 1975 döneminde yerine getirenyerel yönetimleri tanımlamak için kullanılan kavram aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+          "options": {
+            "A": "Karma refah modeli",
+            "B": "Refah belediyeciliği",
+            "C": "Yerel refah devleti",
+            "D": "Merkezi refah modeli",
+            "E": "Yerinde yönetim modeli"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 11,
+          "source_no": 32
+        },
+        {
+          "id": "yerel-377a9e95a2599e",
+          "stem": "ABD’de New Deal (yeniden yapılanma) düzenlemesi aşağıdakilerden hangisinin etkisiyle uygulamaya konulmuştur?",
+          "options": {
+            "A": "II. Dünya Savaşı",
+            "B": "1973 Petrol Krizi",
+            "C": "1929 Ekonomik Buhranı",
+            "D": "Fransız İhtilali",
+            "E": "Bolşevik Devrimi"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 11,
+          "source_no": 33
+        },
+        {
+          "id": "yerel-746db5a7c07e5a",
+          "stem": "Fiziki kentsel çevrenin iyileştirilmesi, mevcut konut stokunun iyileştirilmesi, yerleşmelerde sosyal ve kültürel olanakların yaratılması, toplumsal kalkınma ve halk katılımının özendirilmesi konularına ağırlık vermektedir. Yukarıda ifade edileni kentli haklarına yer veren uluslararası belge aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Kopenhag Kriterleri",
+            "B": "Ankara Antlaşması",
+            "C": "Avrupa Sosyal Şartı",
+            "D": "Lizbon Antlaşması",
+            "E": "Avrupa Kentsel Şartı"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 12,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-5b2c77766fae98",
+          "stem": "Sosyal politikaların hedef kitlesi içinde aşağıdakilerden hangisi yoktur?",
+          "options": {
+            "A": "Muhtaç ve Yoksullar,",
+            "B": "İşverenler",
+            "C": "Kadınlar, Yaşlılar, gençler ve Çocuklar",
+            "D": "Tek Ebeveynli Aileler",
+            "E": "Bağımlı statüde çalışanlar"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 12,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-e0b884199a2699",
+          "stem": "Yerel yönetimlerin sorumluluk alanları ana başlık olarak aşağıdakilerden hangisinde doğru verilmiştir?",
+          "options": {
+            "A": "Çevresel – Finansal – Ulusal kalkınma sorumluluğu",
+            "B": "Sosyal – Ekonomik – Fiziki kalkınma sorumluluk",
+            "C": "Sosyal – Çevresel – Ulusal kalkınma sorumluluğu",
+            "D": "Finansal – Ekonomik – Sosyal kalkınma sorumluluğu",
+            "E": "Ekonomik – Sosyal – Finansal kalkınma sorumluluğu"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 12,
+          "source_no": 3
+        },
+        {
+          "id": "yerel-70ba409cb04e48",
+          "stem": "Aşağıdakilerden hangisi gelişmekte olan ülkelerde yerel yönetim hizmetleri arasında yer almaz?",
+          "options": {
+            "A": "Çevre düzenlemesi, temizliği ve aydınlatılması",
+            "B": "İtfaiye hizmeti",
+            "C": "Hastane yapımı, sağlık ve sosyal hizmetlerin sunumu",
+            "D": "Cenaze ve afet hizmetleri",
+            "E": "Su atık kanalizasyon gibi fiziki sorumlulukların yerine getirilmesi"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 13,
+          "source_no": 5
+        },
+        {
+          "id": "yerel-42fdc88cd7d34d",
+          "stem": "Katılımcılık, konsensüs odaklılık, hesap verebilirlik, şeffaflık, duyarlılık, etkinlik ve verimlilik, eşitlik ve hukuka uygunluktur Yukarıda özellikleri tarif edilen kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yönelme",
+            "B": "Yerel otorite rolü",
+            "C": "Yerindelik",
+            "D": "Yerellik",
+            "E": "Yönetişim"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 13,
+          "source_no": 7
+        },
+        {
+          "id": "yerel-02a3229c0fac54",
+          "stem": "Yerel yönetimlerin temel görevinin belirli kamu mallarını ve hizmetlerini bu gruplara dağıtmak ve sınırları içindeki topluluğun menfaatlerini, özellikle merkezi hükümete veya üst yönetim birimlerine karşı iyi bir şekilde temsil etmek ve korumak olarak nitelenmektedir. Yukarıda tarif edilen yerel yönetim modeli aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Himaye edici model",
+            "B": "Sosyalmodel",
+            "C": "Hizmetleri teşvik ederek müşteri tercihini artıran model",
+            "D": "Refah devleti modeli",
+            "E": "Ekonomik gelişme modeli"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 13,
+          "source_no": 8
+        },
+        {
+          "id": "yerel-19c456e2b5eb14",
+          "stem": "Avrupa kentsel şartı ile ilgili aşağıda verilen ifadelerden hangisi yanlıştır?",
+          "options": {
+            "A": "Amacı yerleşimlerdeki yaşam kalitesinin yükseltilmesidir.",
+            "B": "Bu belgeyi yerel yönetimler değil, hükümetler imzalamaktadır.",
+            "C": "20 maddelik deklarasyon ve 13 maddelik şart ilkelerden oluşmaktadır.",
+            "D": "Belediyeler tarafından yerine getirilmesi gereken hizmet alanları belirtilmektedir.",
+            "E": "17 – 19 Mart 1992’de Avrupa Konseyi tarafından yayınlanmıştır."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 14,
+          "source_no": 9
+        },
+        {
+          "id": "yerel-24f8964841e74f",
+          "stem": "Gelişmiş ülkelerdeki yeni belediyecilik anlayışı için aşağıdakilerden hangisi söylenemez?",
+          "options": {
+            "A": "Sorunların çözümünde inisiyatif alan sosyal belediyecilik",
+            "B": "Hizmetlerin tümünü üreten, sunan ve dağıtan yönetim anlayışı",
+            "C": "Proaktif yönetim ve sosyal ortaklar ile yönetişim",
+            "D": "Yerel ekonomik, sosyal ve fiziki kalkınma sorumluluğu,",
+            "E": "Toplumun tüm kesimlerini kapsayan bütüncül yaklaşım"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 14,
+          "source_no": 11
+        },
+        {
+          "id": "yerel-406d778ca08936",
+          "stem": "Yerel yönetimler ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Anayasa ve yasalarda görev ve yetki verilmeyen alanlarda, yerel halkın ihtiyaçları kapsamında faaliyette bulunabilir",
+            "B": "Merkezi yönetimce çizilen çerçeve içinde yerel ihtiyaç ve taleplere cevap vermeye yetkili kılınmıştır.",
+            "C": "Merkezi idarenin ülkenin tümü için geçerli olan kural ve kararlarına aykırı hareket edemezler",
+            "D": "Kuruluş ilkeleri, görev ve yetkileri gelir sistemleri yasama organı tarafından belirlenir",
+            "E": "Karar organları ve bazı durumlarda yürütme organları, yerel halk tarafından seçilmek suretiyle göreve getirilir."
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 14,
+          "source_no": 12
+        },
+        {
+          "id": "yerel-ef68a2b4910b9c",
+          "stem": "Aşağıdaki maddelerden hangisi Avrupa Kentsel Şartı’nın “Katılım, kent yönetimi ve kentsel planlama” başlıklı 12. İlkesinde yer almamaktadır?",
+          "options": {
+            "A": "Yerel yönetimler, gençlerin yerel yaşama katılımını sağlamaktadır.",
+            "B": "Kentin geleceğini etkileyen bütün büyük projelerde halkla danışmalı, halkın görüşü alınmalıdır.",
+            "C": "Kent yönetimi ve planlama, kentin kendine has özellikleri, potansiyeli, aktiviteleri, gelişme kapasitesi ve kaynaklarının nitelik ve temel özellikleri hakkında azami bilgiye dayanmalıdır",
+            "D": "Halkın yerel politik yaşama katılım yerel, siyasi ve idari yapıların bütün düzeylerinde hayata geçirilmelidir.",
+            "E": "Yerel yönetim organları merkezi idare tarafından belirlenmeli ve atanmalıdır."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 14,
+          "source_no": 13
+        },
+        {
+          "id": "yerel-fdf4e8c9160446",
+          "stem": "Yerel yönetimlerin değişim süreci ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Neo-liberal politikalar yerel yönetimlerin sosyal refah hizmetlerini daraltıcı etki yapmıştır",
+            "B": "Devletin ekonomik ve sosyal hayattaki konumu, politikaları yerel yönetimlerin değişim sürecini belirlemektedir.",
+            "C": "1945 – 1970 yılları arasında yerel yönetimler kamusal hizmetlerin ve sosyal refahın sağlanmasında etkin olmamıştır.",
+            "D": "1980’li yıllarda yeni kamu yönetimi anlayışı ile özel sektör işletmeciliği kamu sektörüne aktarılmıştır.",
+            "E": "Endüstrileşme, hızlı nüfus artışı ve kentleşme yerel yönetimlerin fonksiyonlarının tür, kapsam ve nitelik açısından artmasına yol açmıştır."
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 15,
+          "source_no": 14
+        },
+        {
+          "id": "yerel-a96622cb98d205",
+          "stem": "Sosyal Hizmetler ile ilgili olarak aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Sosyal yapının gelişmesi ve değişmesinde önemli bir role sahiptir.",
+            "B": "Tüm bireylerin insan onuruna yaraşır bir biçimde yaşamalarını sağlayacak ihtiyaçları gidermeye yönelmiş hizmetlerdir.",
+            "C": "Daha çok çalışma hayatı dışında, sosyo- ekonomik sorunlara karşı önleyici, iyileştirici ve ıslah edici hizmetlerdir.",
+            "D": "Kâr ve kazanç amacı güdülerek yapılan hizmetlerdir.",
+            "E": "Sistemli ve programlı hizmetler bütünüdür."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 15,
+          "source_no": 15
+        },
+        {
+          "id": "yerel-92e7d5486437af",
+          "stem": "Devlet dışındaki kurumların sosyal politikaların sağlanmasına katıldığı ve daha büyük rol üstlendiği karma refah ekonomisine geçilmesi durumunu ifade etmektedir. Yukarıdaki ifade edilen kavram hangisidir?",
+          "options": {
+            "A": "Sosyal refah",
+            "B": "Sosyal diyalog",
+            "C": "Subsidiarite",
+            "D": "Yerellik",
+            "E": "Refah çoğulculuğu"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 16,
+          "source_no": 18
+        },
+        {
+          "id": "yerel-135bacaf3de4f8",
+          "stem": "Yerel yönetimlerin temel görevi, belirli kamu mallarını ve hizmetlerini bu gruplara dağıtmak ve sınırları içindeki topluluğun menfaatlerini, özellikle merkezi hükümete veya üst yönetim birimlerine karşı iyi bir şekilde temsil etmek ve korumak olarak nitelenmektedir. Yukarıda tarif edilen yerel yönetim modeli aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ekonomik gelişme modeli",
+            "B": "Refah devleti modeli",
+            "C": "Sosyal etki modeli",
+            "D": "Hizmetleri teşvik ederek müşteri tercihini artıran model",
+            "E": "Himaye edici model"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 17,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-2a30edc4f18f6a",
+          "stem": "Sınırları il mülki sınırı olan ve sınırları içerisindeki ilçe belediyeleri arasında koordinasyonu sağlayan; idari ve mali özerkliğe sahip olarak kanunlarla verilen görev ve sorumluluklar yerine getiren, yetkileri kullanan; karar organı, seçmenler tarafından seçilerek oluşturulan kamu tüzel kişisidir. Yukarıda ifade edilen kurum aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Kaymakamlık",
+            "B": "Yerel Yönetim",
+            "C": "Büyükşehir Belediyesi",
+            "D": "İl Özel İdaresi",
+            "E": "İlk Kademe Belediyesi"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-14894905bac5b6",
+          "stem": "Asgari düzeyde dahi kendisini ve bakmakla yükümlü olduğu kişileri geçindirme olanağından mahrum kalmış bireylere, muhtaçlık tespitine ve kontrolüne dayalı olarak yapılan ve onları kendilerine yeterli duruma getirmek amacını taşıyan ayni ve nakdi nitelikteki geçici veya süreli, sistemli ve düzenli karşılıksız destekler olarak ifade edilebilir. Yukarıda ifade edilen kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Sosyal Hizmet",
+            "B": "Toplumsal Politika",
+            "C": "Yerel Hizmet",
+            "D": "Sosyal Politika",
+            "E": "Sosyal Yardım"
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 3
+        },
+        {
+          "id": "yerel-22c2fa4255b7ef",
+          "stem": "“Muhtaç olmadıkları halde bazı kişilerin sosyal yardım talep etmeleri ya da farklı sosyal yardım kurumlarından ayrı ayrı yardımlar alması” ifadesi sosyal yardımların hangi niteliğine işaret etmektedir?",
+          "options": {
+            "A": "Psiko-sosyal zararların olması",
+            "B": "Tasarrufları azaltması",
+            "C": "İstismara açık olması",
+            "D": "Kamu harcamalarını artırması",
+            "E": "Bütçe açıklarına sebep olması"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 4
+        },
+        {
+          "id": "yerel-9031e0fb9bbcc5",
+          "stem": "1923-1945 yıllarında ülkemizde yerel yönetimlerin gelişimi ile ilgili aşağıdakilerden hangisi söylenemez?",
+          "options": {
+            "A": "Bu dönemde nüfusun büyük bir kısmı kırsalda yaşamaktadır.",
+            "B": "1924 yılında Ankara Şehremaneti kurulmuştur.",
+            "C": "Osmanlı Devleti döneminden devralınan yönetim mirasının niteliği belirleyici olmuştur.",
+            "D": "1924 yılında Köy Kanunu kabul edilmiştir.",
+            "E": "Bu dönemde yeni bir Belediye Kanunu hazırlanamamıştır."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 5
+        },
+        {
+          "id": "yerel-41e292ab7ba265",
+          "stem": "442 sayılı Köy Kanunu ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Muhtara, merkezi idareden maaş alan bir memur rolü verilmiştir.",
+            "B": "Köylerin temel geliri “salma” olarak düzenlenmiştir.",
+            "C": "1924 yılında yayımlanmıştır.",
+            "D": "Köylerin tüzel kişiliği düzenlenmemiştir.",
+            "E": "Köy işleri, köylünün işleri olarak sayılmış ve muhtar ve ihtiyar meclisinin görevi ise bu işleri yapmak ve yaptırmak olarak belirlenmiştir."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 6
+        },
+        {
+          "id": "yerel-fd3fcaa25587d4",
+          "stem": "Aşağıdakilerden hangisi sosyal hizmetlerin temel özellikleri arasında sayılamaz?",
+          "options": {
+            "A": "Bireylerin kişisel talep ve tercihlerinden ziyade ilgili kuruluşlar tarafından önceden saptanmış ilke ve kriterlere göre sunulması",
+            "B": "Çalışma hayatı dışında ortaya çıkan sosyo-ekonomik sorunlara çözümler üretmek için tasarlanması",
+            "C": "Kâr amacıyla yapılması ve kuruluşlara gelir sağlaması",
+            "D": "Toplumun tamamına yönelik hizmetler olma özelliği taşıması",
+            "E": "Devlet ve sivil toplum kuruluşlarının ortak çabası ile sağlanması"
+          },
+          "answer": "C",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 18,
+          "source_no": 7
+        },
+        {
+          "id": "yerel-92db44961284ba",
+          "stem": "Aşağıdakilerden hangisi yönetişim ilkesini ifade etmez?",
+          "options": {
+            "A": "Katılımcılık",
+            "B": "Monopol",
+            "C": "Etkinlik ve verimlilik",
+            "D": "İşbirliği",
+            "E": "Hesap verebilirlik"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 19,
+          "source_no": 8
+        },
+        {
+          "id": "yerel-f37893899198ff",
+          "stem": "1994 yerel seçimlerinin yerel yönetimler açısından önemi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yerel yönetimlerin gelirlerinin azalmasına sebep olmuştur.",
+            "B": "Ülke siyasi istikrarsızlığa sürüklenmiştir.",
+            "C": "Yeni belediyeler kurulmuştur.",
+            "D": "Sosyal belediyecilik ilk kez uygulanmaya başlanmıştır.",
+            "E": "Merkezileşme yaşanmıştır."
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 19,
+          "source_no": 10
+        },
+        {
+          "id": "yerel-9659701f271c66",
+          "stem": "Aşağıdakilerin hangisi belediyelerin sosyal yardım hizmetleri sunmasının avantajlarından biri değildir?",
+          "options": {
+            "A": "Bürokrasi ve kırtasiyeciliğin daha az olması",
+            "B": "Sosyal yardımları sürekli değil, dönemsel olarak sunmaları",
+            "C": "Politika ve programların uygulama başarısının yüksekliği",
+            "D": "Denetim ve koordinasyon kolaylığı",
+            "E": "Belediyelerin seçilmiş ve halka en yakın yönetim birimi olmaları"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 19,
+          "source_no": 12
+        },
+        {
+          "id": "yerel-4b3eea9d4343f6",
+          "stem": "Sosyal refah kavramı ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Sosyal refahın uygulayıcı kurumu sadece devlettir.",
+            "B": "Gelir üretenlerden, bu gelirin bir parçasının diğerlerine transfer edilmesi sürecini ifade etmektedir.",
+            "C": "Belirli koşullar altında olanlara mal, hizmet ve para yardımı sağlayan kamu programlarıdır.",
+            "D": "Daha geniş ve daha genel olan sosyal politikanın bir alt kategorisidir.",
+            "E": "Bireylerin bağımlılık sorunlarının çözülmesi işlevini görmektedir."
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 19,
+          "source_no": 13
+        },
+        {
+          "id": "yerel-536cb62ac7e975",
+          "stem": "Yerel yönetimlerin eğitim faaliyetleri ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Örgün eğitim sistemi içinde İl Özel İdareleri belediyelere göre daha aktif durumdadır.",
+            "B": "Yerel yönetimler yaygın eğitim/yetişkin eğitimi alanında yasal olarak faaliyet gerçekleştirebilmektedir.",
+            "C": "Yaygın eğitim/yetişkin eğitimi uygulayan belediyelerin sayısı oldukça azdır.",
+            "D": "Yaygın eğitim ve kültürel işlevler bakımından belediyelerin İl Özel İdarelerine göre daha geniş yetki ve sorumluluklar üstlendiği ve daha aktif olduğu söylenebilir.",
+            "E": "Örgün eğitim sistemi bütünüyle yerel idarenin kontrolündedir."
+          },
+          "answer": "E",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 19,
+          "source_no": 14
+        },
+        {
+          "id": "yerel-9d6fa598c77ea2",
+          "stem": "Yoksulluk yasaları ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "1601 tarihli yasa, yoksullukla mücadele önlemlerini uygulama yükümlülüğünü yerel yönetimlere vermiştir.",
+            "B": "Almanya’da uygulanmıştır.",
+            "C": "1601 tarihli yasada: çalışabilecek durumda olan fakirlerin hafif işlerde çalışması zorunluluğu, çalışmayı reddedenlerin hapsedilmesi ve diğer vatandaşlanın bunlara yardım etmesinin yasaklanması düzenlenmiştir.",
+            "D": "1300’lü yıllardan 1800’lü yıllara kadar birçok yasa yapılmıştır.",
+            "E": "1601 tarihli yasa, yoksulluğu hafifletmekten daha çok hâkim sınıfların dilencilik şikâyetlerini ortadan kaldırılmayı amaçlamıştır."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 17
+        },
+        {
+          "id": "yerel-a4f0be384fb47b",
+          "stem": "Aşağıdakilerden hangisi Türkiye’de belediyelerin sağlık alanındaki yaygın hizmetlerinden birisi değildir?",
+          "options": {
+            "A": "Evde sağlık hizmeti",
+            "B": "Yaşlı bakım hizmeti",
+            "C": "Sağlık taraması hizmeti",
+            "D": "Hastane hizmeti",
+            "E": "Evde bakım hizmeti"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 18
+        },
+        {
+          "id": "yerel-a7c96c1285df8c",
+          "stem": "“Sosyal yardımlar, yararlanan kişilerde tembelliğe ve bağımlılığa yol açmaktadır” iddiasının literatürdeki karşılığı olan kavram aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Sosyal yardım tüketiciliği",
+            "B": "İsraf",
+            "C": "Suistimal",
+            "D": "Sömürü",
+            "E": "Damgalanma"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 19
+        },
+        {
+          "id": "yerel-28fb728938a0bb",
+          "stem": "Bu kurumların eğitim alanındaki görevleri ilk ve orta öğretim kurumlarına arsa temini, binalarının yapım, bakım ve onarımı ile diğer ihtiyaçlarının karşılanmasına İlişkin hizmetler olarak belirtilmiştir. Yukarıdaki eğitim faaliyetlerine ilişkin yasada görev verilen yerel yönetim birimi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "İl Özel İdaresi",
+            "B": "Belediye",
+            "C": "İlk Kademe Belediyesi",
+            "D": "Büyükşehir Belediyesi",
+            "E": "Valilik"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 20
+        },
+        {
+          "id": "yerel-bd88e6d909123d",
+          "stem": "Yerel yönetimlerin sorumluluk alanları ana başlık olarak aşağıdakilerden hangisinde doğru olarak verilmiştir?",
+          "options": {
+            "A": "Sosyal – Ekonomik – Fiziki kalkınma sorumluluğu",
+            "B": "Ekonomik – Sosyal – Finansal kalkınma sorumluluğu",
+            "C": "Çevresel – Finansal Ulusal kalkınma sorumluluğu",
+            "D": "Sosyal – Çevresel – Ulusal kalkınma sorumluluğu",
+            "E": "Finansal – Ekonomik – Sosyal kalkınma sorumluluğu"
+          },
+          "answer": "A",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-02810a7db20eca",
+          "stem": "1946-1980 dönemi yerel yönetimlerin gelişimi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "1961 Anayasası yönetim sistemini merkezi ve yerel yönetim olarak ikiye ayırmış ve yerel yönetimleri daha özerk ve daha güçlü hale getirecek anayasal bir çerçeve belirlemiştir.",
+            "B": "1961 anayasası yerel yönetimlerin özerkliğini düzenlemiştir.",
+            "C": "Hızlı bir nüfus artışı ve göç hareketleri yaşanmıştır.",
+            "D": "1960-1980 döneminde Türk belediyecilik hareketinde demokratikleşmeye ve özerkleşmeye yönelik eğilimler de ortaya çıkmaya başlamıştır.",
+            "E": "Belediyelerin merkezi hükümete karşı görev alanını genişlettiği tek sosyal görev, konut alanındaki toplu konut girişimleri olmuştur."
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 20,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-acfab845bc4e27",
+          "stem": "Aşağıdakilerden hangisi sosyal yardımların olumlu etkilerindendir?",
+          "options": {
+            "A": "Ayrı ayrı kurumlardan sosyal yardım alabilmeleri",
+            "B": "Bireylere çalışma ihtiyacı duymadan gelir elde etme imkanı vermesi",
+            "C": "Bireylerin yardım almak için muhtaçlık durumunu belgelemeleri ve ilgili makamdan onay alarak kayıt ettirmeleri",
+            "D": "Sosyal güvenlik sistemindeki boşlukları tamamlayıcı olması",
+            "E": "Bireylerin sosyal yardım tüketiciliğine sevk etmesi"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 21,
+          "source_no": 3
+        },
+        {
+          "id": "yerel-be9ad88414a72c",
+          "stem": "-Bu dönemde ülke nüfusu hızla artmaya başlamış, hızlı göç ve plansız bir kentleşme süreci yaşanmaya başlanmıştır. -Belediye sayısı yaklaşık 3 kat, belediye sınırları içinde yaşayanların sayısı yaklaşık 5 kat artmıştır -Yeterli kaynak ve personel olmayışı hizmetlerin merkezileşmesine sebep olmuştur. - İller Bankası oluşturulmuş, Belediye Gelirleri Kanunu çıkarılmıştır. -Anayasal düzenlemeler yapılmıştır. Yukarıda bilgileri verilen dönem aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "1923 – 1945 dönemi",
+            "B": "1923 – 1930 dönemi",
+            "C": "1980 – 2000 dönemi",
+            "D": "1946 – 1980 dönemi",
+            "E": "2000 ve sonrası dönem"
+          },
+          "answer": "D",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 22,
+          "source_no": 1
+        },
+        {
+          "id": "yerel-cd956f09f5ac5e",
+          "stem": "Yerel yönetimlerin bugünkü işlevleri ile ilk görüldüğü dönem aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "I. Dünya Savaşı sonrası",
+            "B": "11. ve 12. yüzyıllar",
+            "C": "II. Dünya Savaşı sonrası",
+            "D": "1980 ve sonrası",
+            "E": "17. ve 18. yüzyıllar"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 22,
+          "source_no": 2
+        },
+        {
+          "id": "yerel-cece20bea7b17e",
+          "stem": "Aşağıdakilerden hangisi Türkiye’de sunulan sosyal hizmet türlerinden biri değildir?",
+          "options": {
+            "A": "Huzurevleri",
+            "B": "Polis Evleri",
+            "C": "Çocuk ve Gençlik Merkezleri",
+            "D": "Kadın ve Çocuk Sığınma Hizmetleri",
+            "E": "Fizik Tedavi ve Rehabilitasyon Merkezleri"
+          },
+          "answer": "B",
+          "answer_text": null,
+          "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+          "source_page": 23,
+          "source_no": 6
+        }
+      ]
+    },
+    {
+      "id": "ataturk1",
+      "title": "Atatürk İlkeleri ve İnkılap Tarihi I",
+      "questions": []
+    },
+    {
+      "id": "ataturk2",
+      "title": "Atatürk İlkeleri ve İnkılap Tarihi II",
+      "questions": []
+    },
+    {
+      "id": "turkce1",
+      "title": "Türk Dili I",
+      "questions": []
+    },
+    {
+      "id": "ingilizce1",
+      "title": "Yabancı Dil I (İngilizce)",
+      "questions": []
+    },
+    {
+      "id": "sosyal",
+      "title": "Sosyal Hizmet Kuramları",
+      "questions": []
+    }
+  ]
+}

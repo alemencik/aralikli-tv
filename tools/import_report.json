@@ -1,0 +1,251 @@
+{
+  "scanned_files": [
+    {
+      "filename": "659d8ed7-dbb0-49ca-94a0-306efe29113f.pdf",
+      "pages": 2,
+      "text_chars": 8423,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "ATATÜRK İLKELERİ VE İNKILAP TARİHİ I.pdf",
+      "pages": 2,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+      "pages": 22,
+      "text_chars": 45692,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+      "pages": 43,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET VİZE.pdf",
+      "pages": 18,
+      "text_chars": 26704,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+      "pages": 25,
+      "text_chars": 65206,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+      "pages": 2,
+      "text_chars": 4533,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ VİZE 2022.pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "SOSYAL HİZMET KURAMLARI VİZE 2022.pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "TÜRK DİLİ 1 TÜM YILLAR VİZE.pdf",
+      "pages": 13,
+      "text_chars": 22624,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "YEREL YÖNETİMLER VE SOSYAL HİZMET VİZE 2022.pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "Yabancı Dil 1 ( İngilizce ) AUZEF (Kopya).PDF",
+      "pages": 60,
+      "text_chars": 57659,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
+      "pages": 60,
+      "text_chars": 57659,
+      "has_selectable_text": true
+    },
+    {
+      "filename": "Yabancı Dil 1 2022 Güz Ara Sınav (Kopya).pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "Yabancı Dil 1 2022 Güz Ara Sınav.pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    },
+    {
+      "filename": "türk dili 1 güz.pdf",
+      "pages": 3,
+      "text_chars": 0,
+      "has_selectable_text": false
+    }
+  ],
+  "duplicates": [
+    [
+      "Yabancı Dil 1 ( İngilizce ) AUZEF (Kopya).PDF",
+      "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF"
+    ],
+    [
+      "Yabancı Dil 1 2022 Güz Ara Sınav (Kopya).pdf",
+      "Yabancı Dil 1 2022 Güz Ara Sınav.pdf"
+    ]
+  ],
+  "source_decks": [
+    {
+      "title": "Rapor Yazma ve Mülakat Teknikleri",
+      "source_file": "AUZEF RAPOR YAZMA VE MÜLAKAT TEKNİKLERİ.pdf",
+      "candidate_answered": 45,
+      "selected_scorable": 38,
+      "duplicates_merged": 5,
+      "conflicting_stems": 1,
+      "rejected_fragments": 5,
+      "rejected_samples": [
+        {
+          "source_page": 3,
+          "source_no": 14,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Uzun ifadelerin ilk kez simgelerle belirtildiği yazı ne zaman ortaya çıkmıştır?"
+        },
+        {
+          "source_page": 8,
+          "source_no": 4,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Bir mesleğin terminolojisini oluşturan sözcüklere ne ad verilir?"
+        },
+        {
+          "source_page": 8,
+          "source_no": 6,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Sunumun en temel, olmazsa olmaz, birinci özelliği aşağıdakilerden hangisidir?"
+        },
+        {
+          "source_page": 9,
+          "source_no": 11,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "“İki Kişi arasında herhangi bir konuda gerçekleştirilen, bazen önemli kısımları veya tamamı – daha sonra yarar"
+        },
+        {
+          "source_page": 9,
+          "source_no": 12,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Beş duyu organımızın dış çevreden etkilendiği her şeyi duyu organımızdaki sinir ucuyla beyne iletilmesi, Beyni"
+        }
+      ]
+    },
+    {
+      "title": "Yerel Yönetimler ve Sosyal Hizmet",
+      "source_file": "AUZEF YEREL YÖNETİMLER VE SOSYAL HİZMET.pdf",
+      "candidate_answered": 107,
+      "selected_scorable": 78,
+      "duplicates_merged": 13,
+      "conflicting_stems": 6,
+      "rejected_fragments": 4,
+      "rejected_samples": [
+        {
+          "source_page": 13,
+          "source_no": 4,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Yerel yönetimlerin fonksiyonları arasında eğitim, sağlık, konut, sosyal yardım ve sosyal hizmetler ile kişisel"
+        },
+        {
+          "source_page": 21,
+          "source_no": 5,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Kamu hizmetlerinin doğrudan üretilme sorumluluğu yerel yönetimlerden alınıp hizmetlerin sağlanması ve denetlen"
+        },
+        {
+          "source_page": 21,
+          "source_no": 6,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Devlet dışındaki kurumların sosyal politikaların sağlanmasına katıldığı ve daha büyük rol üstlendiği karma ref"
+        },
+        {
+          "source_page": 21,
+          "source_no": 7,
+          "reason": "incomplete_options_or_answer_mismatch",
+          "excerpt": "Yerel yönetimlerin temel görevinin belirli kamu mallarını ve hizmetlerini bu gruplara dağıtmak ve sınırları iç"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "type": "conflicting_source_answers",
+      "question": "Sorgulama, eleştirme ile bilimsel anlamda araştırma hangi öğrenme modelinde başlamıştır?",
+      "source_pages": [
+        4,
+        7
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "Aşağıdakilerden hangisi “refah çoğulculuğu” kavramını ifade etmektedir?",
+      "source_pages": [
+        2,
+        6
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "1970’li yıllar için aşağıdakilerden hangisi söylenemez?",
+      "source_pages": [
+        4,
+        14
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "Aşağıdakilerden hangisi yerel yönetimlerde fonksiyonel değişime yol açan etkenlerden biri değildir?",
+      "source_pages": [
+        5,
+        13,
+        23
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "Aşağıdakilerden hangisi yeni kamu yönetiminin temel prensipleri arasında sayılamaz?",
+      "source_pages": [
+        7,
+        15,
+        20,
+        22
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "Neo liberal politikaların yerel yönetimler üzerindeki etkisini aşağıdaki ifadelerden hangisi özetlemektedir?",
+      "source_pages": [
+        8,
+        21,
+        23
+      ]
+    },
+    {
+      "type": "conflicting_source_answers",
+      "question": "İktisadi krizler-sosyal politika ilişkisi bağlamında aşağıdakilerden hangisi yanlıştır?",
+      "source_pages": [
+        8,
+        19
+      ]
+    }
+  ],
+  "review_needed": []
+}
