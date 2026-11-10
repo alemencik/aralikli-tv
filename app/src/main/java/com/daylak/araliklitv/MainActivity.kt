@@ -59,7 +59,7 @@ class MainActivity : Activity() {
             orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
         }
         val view = ScrollView(this).apply {
-            setBackgroundColor(background)
+            setBackgroundColor(this@MainActivity.background)
             isFillViewport = true
             addView(content)
         }
@@ -144,7 +144,7 @@ class MainActivity : Activity() {
         val box=panel()
         heading(box,"${currentDeck?.title ?: "Günlük Tekrar"}",26f)
         val p=progress[question.id]
-        info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  ${question.source_file.orEmpty()} / s.${question.sourcePage}",16f)
+        info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  ${question.sourceFile.orEmpty()} / s.${question.sourcePage}",16f)
         heading(box,question.stem,27f)
         var first:Button?=null
         question.options.forEach { (letter,option) ->
