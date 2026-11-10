@@ -343,7 +343,7 @@ class MainActivity : Activity() {
         if (soundEnabled) sounds.wrong()
         val box = panel()
         heading(box, "⏱  SÜRE DOLDU • CEVAPSIZ")
-        info(box, "20 saniye içinde cevaplanamadı. Erken tekrara alınacak.", 20f)
+        info(box, "$timerSeconds saniye içinde cevaplanamadı. Erken tekrara alınacak.", 20f)
         heading(box, q.stem, 25f)
         info(box, "Doğru cevap: ${q.answer}) ${q.options[q.answer].orEmpty()}", 22f)
         firstFocus(action(box, "Sonraki Soru") { nextQuestion() })
