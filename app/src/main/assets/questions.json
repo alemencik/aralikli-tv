@@ -1877,7 +1877,328 @@
     {
       "id": "ataturk2",
       "title": "Atatürk İlkeleri ve İnkılap Tarihi II",
-      "questions": []
+      "questions": [
+        {
+          "id": "ataturk2-2026-vize-01",
+          "stem": "Mustafa Kemal Atatürk 1905 yılında hangi okuldan mezun olmuştur?",
+          "options": {
+            "A": "Mekteb-i Harbiye",
+            "B": "Mekteb-i Tıbbiye",
+            "C": "Maarif Mektebi",
+            "D": "Mühendishane-i Berrî-i Hümâyun",
+            "E": "Mühendishane-i Bahrî-i Hümâyun"
+          },
+          "answer": "A",
+          "answer_text": "Mekteb-i Harbiye",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 1
+        },
+        {
+          "id": "ataturk2-2026-vize-02",
+          "stem": "Aşağıdakilerden hangisi 5 Kasım 1925 tarihinde Ankara'da açılan mektebin adıdır?",
+          "options": {
+            "A": "Tıp Mektebi",
+            "B": "Enderun Mektebi",
+            "C": "Hukuk Mektebi",
+            "D": "Edebiyat Mektebi",
+            "E": "Halk Mektepleri"
+          },
+          "answer": "C",
+          "answer_text": "Hukuk Mektebi",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 2
+        },
+        {
+          "id": "ataturk2-2026-vize-03",
+          "stem": "II. TBMM'nin açılmasının ardından hükûmet başkanı olarak aşağıdaki isimlerden hangisi seçilmiştir?",
+          "options": {
+            "A": "Ali Fethi Okyar",
+            "B": "Kazım Karabekir",
+            "C": "İsmet İnönü",
+            "D": "Refet Bele",
+            "E": "Rauf Orbay"
+          },
+          "answer": "A",
+          "answer_text": "Ali Fethi Okyar",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 3
+        },
+        {
+          "id": "ataturk2-2026-vize-04",
+          "stem": "1851 yılında kaleme alınan “Kavâid­i Osmaniye” adlı eserin yazarı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ahmet Cevdet Paşa",
+            "B": "Namık Kemal",
+            "C": "Şinasi",
+            "D": "Ali Suavi",
+            "E": "Recaizade Mahmut Ekrem"
+          },
+          "answer": "A",
+          "answer_text": "Ahmet Cevdet Paşa",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 4
+        },
+        {
+          "id": "ataturk2-2026-vize-05",
+          "stem": "Saltanatın kaldırılmasının ardından TBMM adına İstanbul'a gönderilerek şehrin yönetimini devralan komutan aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Refet Bele",
+            "B": "Fevzi Çakmak",
+            "C": "İsmet İnönü",
+            "D": "Kazım Karabekir",
+            "E": "Ali Fuat Cebesoy"
+          },
+          "answer": "A",
+          "answer_text": "Refet Bele",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 5
+        },
+        {
+          "id": "ataturk2-2026-vize-06",
+          "stem": "I. Şeyh Sait İsyanı II. İzmir Suikastı III. Menemen Olayı IV. Takrir-i Sükûn Yasası Yukarıdaki olaylar hangi kronolojik sıra ile gerçekleşmiştir?",
+          "options": {
+            "A": "II-I-III-IV",
+            "B": "III-I-II-IV",
+            "C": "I-II-III-IV",
+            "D": "IV-II-I-III",
+            "E": "I-IV-II-III"
+          },
+          "answer": "E",
+          "answer_text": "I-IV-II-III",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 6
+        },
+        {
+          "id": "ataturk2-2026-vize-07",
+          "stem": "Hint Hilafet Komitesi üyeleri Emir Ali Han ile Ağa Han Cumhurbaşkanı Mustafa Kemal Paşa ile İsmet Paşa’ya hilafetin korunması için birer mektup göndermiştir. Aşağıdakilerden hangisi bu mektupların yayımlandığı gazetelerden biridir?",
+          "options": {
+            "A": "Son Posta",
+            "B": "Vatan",
+            "C": "Tanin",
+            "D": "Cumhuriyet",
+            "E": "Vakit"
+          },
+          "answer": "C",
+          "answer_text": "Tanin",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 7
+        },
+        {
+          "id": "ataturk2-2026-vize-08",
+          "stem": "Türkiye'nin Avrupa Birliği'ne üyelik süreci aşağıdaki antlaşmalardan hangisinin imzalanmasıyla başlamıştır?",
+          "options": {
+            "A": "İstanbul Antlaşması",
+            "B": "Paris Antlaşması",
+            "C": "Ankara Antlaşması",
+            "D": "Londra Antlaşması",
+            "E": "Bükreş Antlaşması"
+          },
+          "answer": "C",
+          "answer_text": "Ankara Antlaşması",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 8
+        },
+        {
+          "id": "ataturk2-2026-vize-09",
+          "stem": "Aşağıdakilerden hangisi II. Meşrutiyet döneminde yardım toplamak, kadın haklarını savunmak ve eğitimlerini sağlamak amacıyla teşkil edilen kadın cemiyetlerinden biri değildir?",
+          "options": {
+            "A": "İttihat ve Terakki Kadınlar Şubesi",
+            "B": "Osmanlı Hanımlar Cemiyeti",
+            "C": "Cemiyet-i Akvam",
+            "D": "Cemiyet-i İmdadiye",
+            "E": "Teali-i Nisvan Cemiyeti"
+          },
+          "answer": "C",
+          "answer_text": "Cemiyet-i Akvam",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 9
+        },
+        {
+          "id": "ataturk2-2026-vize-10",
+          "stem": "25 Kasım 1925 tarihinde çıkarılan Şapka Kanunu'na TBMM'de karşı çıkan tek milletvekili aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ali Fethi Okyar",
+            "B": "Reşit Galip",
+            "C": "İzzettin Çalışlar",
+            "D": "Refik Saydam",
+            "E": "Nurettin Paşa (Sakallı)"
+          },
+          "answer": "E",
+          "answer_text": "Nurettin Paşa (Sakallı)",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 10
+        },
+        {
+          "id": "ataturk2-2026-vize-11",
+          "stem": "Darülfünun bünyesinde İlahiyat Fakültesinin açılması aşağıdaki kanunlardan hangisi ile gerçekleşmiştir?",
+          "options": {
+            "A": "Ceza Kanunu",
+            "B": "Medeni Kanun",
+            "C": "Belediye Kanunu",
+            "D": "Tevhid-i Tedrisat Kanunu",
+            "E": "Harf İnkılabı Kanunu"
+          },
+          "answer": "D",
+          "answer_text": "Tevhid-i Tedrisat Kanunu",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 11
+        },
+        {
+          "id": "ataturk2-2026-vize-12",
+          "stem": "1926 yılında kabul edilen Türk Medeni Kanunu aşağıdaki ülkelerden hangisinin kanunu örnek alınarak hazırlanmıştır?",
+          "options": {
+            "A": "Almanya",
+            "B": "İtalya",
+            "C": "İngiltere",
+            "D": "İsviçre",
+            "E": "Fransa"
+          },
+          "answer": "D",
+          "answer_text": "İsviçre",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 1,
+          "source_no": 12
+        },
+        {
+          "id": "ataturk2-2026-vize-13",
+          "stem": "Tevhid­i Tedrisat Kanunu (Öğretimin Birleştirilmesi Yasası) hangi tarihte kabul edilmiştir?",
+          "options": {
+            "A": "3 Mart 1926",
+            "B": "3 Mart 1925",
+            "C": "3 Mart 1923",
+            "D": "3 Mart 1922",
+            "E": "3 Mart 1924"
+          },
+          "answer": "E",
+          "answer_text": "3 Mart 1924",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 13
+        },
+        {
+          "id": "ataturk2-2026-vize-14",
+          "stem": "Saltanatın kaldırılmasının ardından 4 Kasım günü istifa eden son Osmanlı hükûmeti aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ali Rıza Paşa Hükûmeti",
+            "B": "Damat Ferit Paşa Hükûmeti",
+            "C": "Ahmet İzzet Paşa Hükûmeti",
+            "D": "Salih Paşa Hükûmeti",
+            "E": "Tevfik Paşa Hükûmeti"
+          },
+          "answer": "E",
+          "answer_text": "Tevfik Paşa Hükûmeti",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 14
+        },
+        {
+          "id": "ataturk2-2026-vize-15",
+          "stem": "Maarif Vekâleti tarafından 11 Şubat 1929’da haftalık olarak çıkarılan derginin adı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Millet",
+            "B": "Halk",
+            "C": "İnkılap",
+            "D": "Terakki",
+            "E": "Teceddüd"
+          },
+          "answer": "B",
+          "answer_text": "Halk",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 15
+        },
+        {
+          "id": "ataturk2-2026-vize-16",
+          "stem": "3 Mart 1924 tarihli ve 429 sayılı Kanun’un 5. maddesi gereğince Türkiye'deki cami, mescit, tekke ve zaviyelerin idaresi ve buralarda çalışanların tayin ve azilleri aşağıdaki kurumlardan hangisine bırakılmıştır?",
+          "options": {
+            "A": "Dışişleri Bakanlığı",
+            "B": "Diyanet İşleri Başkanlığı",
+            "C": "İçişleri Bakanlığı",
+            "D": "Türk Kızılayı",
+            "E": "Millî Eğitim Bakanlığı"
+          },
+          "answer": "B",
+          "answer_text": "Diyanet İşleri Başkanlığı",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 16
+        },
+        {
+          "id": "ataturk2-2026-vize-17",
+          "stem": "Aşağıdaki kanunlardan hangisi ile Türkiye Cumhuriyeti’nde laik ve ulusal eğitimin temelleri atılmıştır?",
+          "options": {
+            "A": "Teşvik-i Sanayi Kanunu",
+            "B": "Takrir-i Sükun Kanunu",
+            "C": "Millî Korunma Kanunu",
+            "D": "Tevhid-i Tedrisat Kanunu",
+            "E": "Çiftçiyi Topraklandırma Kanunu"
+          },
+          "answer": "D",
+          "answer_text": "Tevhid-i Tedrisat Kanunu",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 17
+        },
+        {
+          "id": "ataturk2-2026-vize-18",
+          "stem": "Aşağıdakilerden hangisi Türk İnkılabı'nın niteliklerinden biri değildir?",
+          "options": {
+            "A": "Millî Hâkimiyet",
+            "B": "Adem-i merkeziyetçilik",
+            "C": "Bağımsızlık",
+            "D": "Çağdaşlık",
+            "E": "Akılcılık"
+          },
+          "answer": "B",
+          "answer_text": "Adem-i merkeziyetçilik",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 18
+        },
+        {
+          "id": "ataturk2-2026-vize-19",
+          "stem": "Aşağıdakilerden hangisi Fransız İhtilali ile ortaya çıkan kavramlardan biri değildir?",
+          "options": {
+            "A": "Liberalizm",
+            "B": "Sosyalizm",
+            "C": "Milliyetçilik",
+            "D": "Hürriyet",
+            "E": "Eşitlik"
+          },
+          "answer": "B",
+          "answer_text": "Sosyalizm",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 19
+        },
+        {
+          "id": "ataturk2-2026-vize-20",
+          "stem": "Şapka Kanunu'nun uygulanmasında hükûmet tarafından aşağıdaki kanunlardan hangisinin olağanüstü yetkileri kullanılmıştır?",
+          "options": {
+            "A": "Ceza Kanunu",
+            "B": "Hıyanet-i Vataniye Kanunu",
+            "C": "Medeni Kanun",
+            "D": "Takrir-i Sükun Kanunu",
+            "E": "Ticaret Kanunu"
+          },
+          "answer": "D",
+          "answer_text": "Takrir-i Sükun Kanunu",
+          "source_file": "Atatürk İlkeleri ve İnkılap Tarihi II 2026 Vize.pdf",
+          "source_page": 2,
+          "source_no": 20
+        }
+      ]
     },
     {
       "id": "turkce1",
