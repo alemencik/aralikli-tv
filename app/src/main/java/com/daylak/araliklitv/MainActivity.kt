@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.os.SystemClock
 import android.view.KeyEvent
 import android.view.View
 import android.graphics.Color
@@ -11,6 +14,7 @@ import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.StateListDrawable
 import android.widget.Button
+import android.widget.ProgressBar
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
@@ -33,6 +37,36 @@ class MainActivity : Activity() {
     private val sounds: QuizSounds
         get() = soundEngine ?: QuizSounds().also { soundEngine = it }
     private var soundEnabled = true
+    private var timerSeconds = 0
+    private val timerHandler = Handler(Looper.getMainLooper())
+    private var timerRunning = false
+    private var timerDeadlineMs = 0L
+    private var timerRemainingMs = 0L
+    private var timerLabel: TextView? = null
+    private var timerBar: ProgressBar? = null
+    private var timerWarningPlayed = false
+    private val timerTick = object : Runnable {
+        override fun run() {
+            if (!timerRunning || screen != "study" || inFeedback) return
+            val remain = CountdownSettings.remainingMillis(
+                timerDeadlineMs, SystemClock.elapsedRealtime()
+            )
+            timerRemainingMs = remain
+            timerLabel?.text = if (remain == 0L)
+                "Süre doldu • Cevaplamaya devam edebilirsin"
+            else "Kalan süre: ${CountdownSettings.display(remain)}"
+            timerLabel?.setTextColor(if (remain <= 10_000L)
+                Color.rgb(255, 188, 96) else ink)
+            timerBar?.progress = if (timerSeconds == 0) 0
+                else ((remain * 1000L) / (timerSeconds * 1000L)).toInt()
+            if (remain in 1L..10_000L && !timerWarningPlayed) {
+                timerWarningPlayed = true
+                if (soundEnabled) sounds.warning()
+            }
+            if (remain > 0L) timerHandler.postDelayed(this, 250L)
+            else timerRunning = false
+        }
+    }
     private var updateChecking = false
     private var updateInstalling = false
     private var availableUpdate: UpdateRelease? = null
@@ -51,6 +85,8 @@ class MainActivity : Activity() {
             decks = QuestionLoader.load(json)
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
+            timerSeconds = prefs.getInt("timer_seconds", 0)
+                .takeIf { it in CountdownSettings.choices } ?: 0
         } catch (e: Exception) {
             error = "Soru bankası okunamadı: ${e.message ?: "bilinmeyen hata"}"
         }
@@ -70,7 +106,70 @@ class MainActivity : Activity() {
             shape(Color.rgb(33,83,165), Color.rgb(255,211,103)))
         addState(intArrayOf(), shape(Color.rgb(13,30,94), Color.rgb(53,147,230)))
     }
+    private fun stopCountdown() {
+        timerRunning = false
+        timerHandler.removeCallbacks(timerTick)
+        timerDeadlineMs = 0L
+        timerRemainingMs = 0L
+        timerLabel = null
+        timerBar = null
+    }
+
+    private fun startCountdown(box: LinearLayout) {
+        if (timerSeconds == 0) return
+        timerWarningPlayed = false
+        val label = TextView(this).apply {
+            textSize = 22f
+            setTextColor(ink)
+            setPadding(0, px(4), 0, px(8))
+        }
+        box.addView(label)
+        val bar = ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal).apply {
+            max = 1000
+            progress = 1000
+            progressTintList = ColorStateList.valueOf(Color.rgb(46, 209, 255))
+            progressBackgroundTintList = ColorStateList.valueOf(Color.rgb(30, 43, 103))
+        }
+        box.addView(bar, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, px(10)
+        ).apply { bottomMargin = px(16) })
+        timerLabel = label
+        timerBar = bar
+        timerRemainingMs = timerSeconds * 1000L
+        timerDeadlineMs = SystemClock.elapsedRealtime() + timerRemainingMs
+        timerRunning = true
+        timerHandler.post(timerTick)
+    }
+
+    private fun optionButtons(box: LinearLayout, question: Question): Button? {
+        // Five real PDF choices become A+B, C+D, and full-width E.
+        // Never invent a missing option for a four-choice source.
+        var first: Button? = null
+        for (pair in question.options.entries.chunked(2)) {
+            val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
+            box.addView(row, LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+            ))
+            for ((letter, choice) in pair) {
+                val button = action(row, "$letter) $choice") {
+                    showFeedback(question, letter)
+                }
+                if (pair.size == 2) {
+                    val params = button.layoutParams as LinearLayout.LayoutParams
+                    params.width = 0
+                    params.weight = 1f
+                    params.marginEnd = px(7)
+                    button.layoutParams = params
+                }
+                if (first == null) first = button
+            }
+        }
+        return first
+    }
+
     private fun panel(): LinearLayout {
+        stopCountdown()
         val content = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
         }
@@ -126,6 +225,11 @@ class MainActivity : Activity() {
         }
         action(box,"İstatistikler") { renderStats() }
         action(box,"Ders Videoları") { renderVideos() }
+        action(box,"Geri sayım: ${CountdownSettings.label(timerSeconds)}") {
+            timerSeconds = CountdownSettings.next(timerSeconds)
+            prefs.edit().putInt("timer_seconds",timerSeconds).apply()
+            renderHome()
+        }
         action(box,if(soundEnabled) "Ses efektleri: AÇIK" else "Ses efektleri: KAPALI") {
             soundEnabled = !soundEnabled
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
@@ -178,11 +282,8 @@ class MainActivity : Activity() {
         val p=progress[question.id]
         info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  ${question.sourceFile.orEmpty()} / s.${question.sourcePage}",16f)
         heading(box,question.stem,27f)
-        var first:Button?=null
-        question.options.forEach { (letter,option) ->
-            val b=action(box,"$letter) $option") { showFeedback(question,letter) }
-            if (first==null) first=b
-        }
+        startCountdown(box)
+        val first = optionButtons(box, question)
         action(box,"Derslere Dön") { renderLessons() }
         firstFocus(first)
     }
@@ -343,7 +444,29 @@ class MainActivity : Activity() {
         }.start()
     }
 
+    override fun onPause() {
+        if (timerRunning) {
+            timerRemainingMs = CountdownSettings.remainingMillis(
+                timerDeadlineMs, SystemClock.elapsedRealtime()
+            )
+            timerRunning = false
+            timerHandler.removeCallbacks(timerTick)
+        }
+        super.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (screen == "study" && !inFeedback && timerSeconds > 0 &&
+            timerRemainingMs > 0L && timerLabel != null && !timerRunning) {
+            timerDeadlineMs = SystemClock.elapsedRealtime() + timerRemainingMs
+            timerRunning = true
+            timerHandler.post(timerTick)
+        }
+    }
+
     override fun onDestroy() {
+        stopCountdown()
         soundEngine?.release()
         super.onDestroy()
     }
