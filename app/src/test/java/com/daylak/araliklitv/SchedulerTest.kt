@@ -6,9 +6,14 @@ import org.junit.Test
 class SchedulerTest {
     @Test fun wrongAnswerIsScheduledSoon() {
         val p=Scheduler.grade(Progress(),Rating.AGAIN,1_000_000L,12)
-        assertEquals(17,p.dueAtTurn)
-        assertFalse(Scheduler.due(p,1_000_001L,16))
-        assertTrue(Scheduler.due(p,1_000_001L,17))
+        assertEquals(18,p.dueAtTurn)
+        assertFalse(Scheduler.due(p,1_000_001L,17))
+        assertTrue(Scheduler.due(p,1_000_001L,18))
+    }
+    @Test fun wrongAnswerIsDueAfterFiveMinutes() {
+        val p=Scheduler.grade(Progress(),Rating.AGAIN,1_000_000L,12)
+        assertFalse(Scheduler.due(p,1_299_999L,12))
+        assertTrue(Scheduler.due(p,1_300_000L,12))
     }
     @Test fun easyAnswerIsDelayed() {
         val p=Scheduler.grade(Progress(),Rating.EASY,1_000_000L,0)
