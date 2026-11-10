@@ -27,6 +27,14 @@ class MainActivity : Activity() {
     private var feedbackCanAdvance = false
     private var screen = "home"
     private var error: String? = null
+    private var soundEngine: QuizSounds? = null
+    private val sounds: QuizSounds
+        get() = soundEngine ?: QuizSounds().also { soundEngine = it }
+    private var soundEnabled = true
+    private var updateChecking = false
+    private var updateInstalling = false
+    private var availableUpdate: UpdateRelease? = null
+    private var updateMessage: String? = null
 
     private val background = Color.rgb(13, 22, 35)
     private val ink = Color.rgb(241, 245, 249)
@@ -40,26 +48,32 @@ class MainActivity : Activity() {
             val json = assets.open("questions.json").bufferedReader(Charsets.UTF_8).use { it.readText() }
             decks = QuestionLoader.load(json)
             loadProgress()
+            soundEnabled = prefs.getBoolean("sound_enabled", true)
         } catch (e: Exception) {
             error = "Soru bankası okunamadı: ${e.message ?: "bilinmeyen hata"}"
         }
         renderHome()
+        checkUpdates(false)
     }
 
     private fun px(dp: Int): Int = (resources.displayMetrics.density * dp).toInt()
-    private fun shape(color: Int, outline: Int): GradientDrawable = GradientDrawable().apply {
-        setColor(color); cornerRadius = px(12).toFloat(); setStroke(px(2), outline)
-    }
+    private fun shape(color: Int, outline: Int): GradientDrawable =
+        GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+            intArrayOf(color, Color.rgb(9, 17, 61))).apply {
+            cornerRadius = px(18).toFloat()
+            setStroke(px(3), outline)
+        }
     private fun buttonBg(): StateListDrawable = StateListDrawable().apply {
-        addState(intArrayOf(android.R.attr.state_focused), shape(accent, Color.WHITE))
-        addState(intArrayOf(), shape(Color.rgb(27,43,62), Color.rgb(65,83,105)))
+        addState(intArrayOf(android.R.attr.state_focused),
+            shape(Color.rgb(33,83,165), Color.rgb(255,211,103)))
+        addState(intArrayOf(), shape(Color.rgb(13,30,94), Color.rgb(53,147,230)))
     }
     private fun panel(): LinearLayout {
         val content = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
         }
         val view = ScrollView(this).apply {
-            setBackgroundColor(this@MainActivity.background)
+            background = StageDrawable()
             isFillViewport = true
             addView(content)
         }
@@ -69,6 +83,7 @@ class MainActivity : Activity() {
     private fun heading(box: LinearLayout, text: String, size: Float = 32f) {
         box.addView(TextView(this).apply {
             this.text = text; setTextColor(ink); textSize = size
+            setShadowLayer(8f, 0f, 0f, Color.rgb(25, 75, 170))
             setPadding(0,0,0,px(15))
         })
     }
@@ -98,7 +113,7 @@ class MainActivity : Activity() {
     private fun renderHome() {
         screen = "home"; currentQuestion = null; inFeedback=false; feedbackCanAdvance=false
         val box = panel()
-        heading(box, "ARALIKLI TV")
+        heading(box, "✦  ARALIKLI TV  ✦")
         val all = questions(null)
         val now = System.currentTimeMillis()
         info(box,"${all.count { it.isScorable }} doğrulanmış soru  •  ${Scheduler.dueCount(all,progress,now,turn)} zamanı gelen tekrar")
@@ -108,7 +123,21 @@ class MainActivity : Activity() {
             currentDeck = null; nextQuestion()
         }
         action(box,"İstatistikler") { renderStats() }
-        info(box,"Cevap anahtarı bulunmayan dersler listede görünür, ancak yanlış değerlendirme yapılmaz.",16f)
+        action(box,if(soundEnabled) "Ses efektleri: AÇIK" else "Ses efektleri: KAPALI") {
+            soundEnabled = !soundEnabled
+            prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
+            renderHome()
+        }
+        if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
+        updateMessage?.let { info(box, it, 18f) }
+        availableUpdate?.let { release ->
+            action(box, "Güncelle: v${release.version}") { installUpdate(release) }
+        }
+        if (!updateChecking && !updateInstalling) {
+            action(box,"Güncellemeleri Kontrol Et") { checkUpdates(true) }
+        }
+        if (updateInstalling) info(box, "APK indiriliyor ve doğrulanıyor...", 18f)
+        info(box,"Doğrulanmamış cevap anahtarı olan sorular puanlanmaz.",16f)
         firstFocus(primary)
     }
 
@@ -160,7 +189,25 @@ class MainActivity : Activity() {
         inFeedback=true
         val right=(selected==q.answer)
         val box=panel()
-        heading(box,if (right) "DOĞRU CEVAP" else "YANLIŞ CEVAP")
+        if (soundEnabled) {
+            if (right) sounds.correct() else sounds.wrong()
+        }
+        val banner = TextView(this).apply {
+            text = if(right) "✓  DOĞRU CEVAP!" else "✕  YANLIŞ CEVAP"
+            textSize = 32f
+            setTextColor(if(right) Color.rgb(116,255,155) else Color.rgb(255,119,133))
+            setBackground(shape(
+                if (right) Color.rgb(6,73,42) else Color.rgb(105,27,56),
+                if (right) Color.rgb(64,255,148) else Color.rgb(255,98,120)
+            ))
+            setPadding(px(26),px(22),px(26),px(22))
+        }
+        box.addView(banner)
+        banner.animate().scaleX(1.035f).scaleY(1.035f).setDuration(170L)
+            .withEndAction { banner.animate().scaleX(1f).scaleY(1f).setDuration(170L).start() }
+            .start()
+        info(box, if (right) "Başardın! Hatırlama seviyeni seç." else
+            "Bu soru kısa süre sonra tekrar karşına gelecek.", 19f)
         heading(box,q.stem,25f)
         info(box,"İşaretlediğin: $selected) ${q.options[selected] ?: ""}",21f)
         info(box,"Doğru: ${q.answer}) ${q.options[q.answer] ?: ""}",22f)
@@ -205,6 +252,65 @@ class MainActivity : Activity() {
             info(box,"${d.title}: ${entries.size}/${d.questions.size} görüldü  •  $pct doğru  •  ${Scheduler.dueCount(d.questions,progress,System.currentTimeMillis(),turn)} tekrar",18f)
         }
         firstFocus(action(box,"Ana Menü") { renderHome() })
+    }
+
+
+    private fun checkUpdates(manual: Boolean) {
+        if (updateChecking) return
+        updateChecking = true
+        if (manual) updateMessage = "GitHub sürümleri kontrol ediliyor..."
+        if (screen == "home") renderHome()
+        Thread {
+            var found: UpdateRelease? = null
+            var problem: String? = null
+            try {
+                val version = packageManager.getPackageInfo(packageName,0).versionName ?: "0.0.0"
+                found = AppUpdater.findUpdate(version)
+            } catch (e: Exception) { problem = e.message ?: "Bağlantı hatası" }
+            runOnUiThread {
+                updateChecking = false
+                availableUpdate = found
+                updateMessage = when {
+                    problem != null -> "Güncelleme kontrol edilemedi: $problem"
+                    found != null -> "Yeni sürüm bulundu: v${found.version}"
+                    manual -> "Uygulama güncel."
+                    else -> null
+                }
+                if (screen == "home") renderHome()
+            }
+        }.start()
+    }
+
+    private fun installUpdate(release: UpdateRelease) {
+        if (updateInstalling) return
+        updateInstalling = true
+        updateMessage = "APK indiriliyor..."
+        renderHome()
+        Thread {
+            var apk: java.io.File? = null
+            var problem: String? = null
+            try { apk = AppUpdater.download(this, release) }
+            catch (e: Exception) { problem = e.message ?: "İndirme başarısız" }
+            runOnUiThread {
+                updateInstalling = false
+                if (apk != null) {
+                    try {
+                        val opened = AppUpdater.install(this, apk)
+                        updateMessage = if (opened)
+                            "Android kurulum ekranında güncellemeyi onayla."
+                        else "Yükleme iznini verip Güncelle seçeneğine yeniden bas."
+                    } catch (e: Exception) {
+                        updateMessage = "Kurulum başlatılamadı: ${e.message}"
+                    }
+                } else updateMessage = "Güncelleme başarısız: $problem"
+                if (screen == "home") renderHome()
+            }
+        }.start()
+    }
+
+    override fun onDestroy() {
+        soundEngine?.release()
+        super.onDestroy()
     }
 
     private fun loadProgress() {
