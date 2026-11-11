@@ -42,8 +42,8 @@ def validate(path: Path):
             if not isinstance(q.get('stem'), str) or not q['stem'].strip():
                 errors.append(f'{context}: empty stem')
             opts = q.get('options')
-            if not isinstance(opts, dict) or list(opts.keys()) != ['A', 'B', 'C', 'D', 'E']:
-                errors.append(f'{context}: options must be A..E in order')
+            if not isinstance(opts, dict) or list(opts.keys()) not in [['A', 'B', 'C', 'D'], ['A', 'B', 'C', 'D', 'E']]:
+                errors.append(f'{context}: options must be A..D or A..E in order')
             elif any(not isinstance(v, str) or not v.strip() for v in opts.values()):
                 errors.append(f'{context}: empty option')
             if not isinstance(q.get('answer'), str) or q['answer'] not in 'ABCDE':

@@ -1906,6 +1906,23 @@
           "source_no": 2
         },
         {
+          "id": "ataturk1-g7203-003",
+          "stem": "Osmanlı’da ilk defa Tanzimat devrinde 1846’da kurulan Darülfünun kurumu, hangi alanda faaliyet göstermiştir?",
+          "options": {
+            "A": "Okul öncesi eğitim",
+            "B": "Askerî eğitim",
+            "C": "Dinî eğitim",
+            "D": "Sanat eğitimi",
+            "E": "Yükseköğretim"
+          },
+          "answer": "E",
+          "answer_text": "Yükseköğretim",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 3,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
           "id": "ataturk1-g7203-004",
           "stem": "Büyük Taarruz’dan sonra Yunan ordusu hangi tarihte Güney Marmara’yı tahliye etmiştir?",
           "options": {
@@ -1970,6 +1987,108 @@
           "source_no": 7
         },
         {
+          "id": "ataturk1-g7203-008",
+          "stem": "1915 yılında çıkarılan Sevk ve İskân Kanunu’na neden olan en önemli hadise aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Van’da çıkan Ermeni isyanı",
+            "B": "II. Abdülhamit döneminde yaşanan isyanlar",
+            "C": "Yeniköy Antlaşması’nın imzalanması",
+            "D": "1909 Adana Olayları",
+            "E": "Berlin Antlaşması’nın imzalanması"
+          },
+          "answer": "A",
+          "answer_text": "Van’da çıkan Ermeni isyanı",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 8,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-009",
+          "stem": "Rum Pontos Cemiyeti’nin amacı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "İstanbul ve Doğu Trakya’yı Yunanistan’a bağlamak",
+            "B": "Doğu vilayetlerini Ermenistan’a katmak",
+            "C": "İnebolu’dan Batum’a kadar bölgede bir devlet kurmak",
+            "D": "Batı Anadolu’yu Yunanistan’a bağlamak",
+            "E": "Çukurova bölgesini Ermenistan’a katmak"
+          },
+          "answer": "C",
+          "answer_text": "İnebolu’dan Batum’a kadar bölgede bir devlet kurmak",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 9,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-010",
+          "stem": "Sivas Kongresi Beyannamesi’nin azınlıklar maddesi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Azınlıklar her türlü haklara sahip olacak ve bağımsızlıklarını kazanacaklardır.",
+            "B": "Ülkedeki azınlıklar, civar ülkelerdeki Müslüman azınlıklar hangi haklara sahip olurlarsa o kadar hakka sahip olacaklardır.",
+            "C": "Azınlıklar eşit hukuka sahip olacaktır. Ancak, siyasi hakimiyet ve sosyal dengeyi bozacak ayrıcalıklar verilmeyecektir.",
+            "D": "Azınlıklara hiçbir hak verilmeyecek ve dinî ibadetleri kısıtlanacaktır.",
+            "E": "Azınlıklar kesinlikle ülke dışına çıkarılacak ve vatandaşlıktan çıkarılacaklardır."
+          },
+          "answer": "C",
+          "answer_text": "Azınlıklar eşit hukuka sahip olacaktır. Ancak, siyasi hakimiyet ve sosyal dengeyi bozacak ayrıcalıklar verilmeyecektir.",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 10,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-011",
+          "stem": "Sakarya Meydan Muharebesi öncesinde “Hedef Ankara” diyen Yunan kralı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Papandreau",
+            "B": "Mitçotakis",
+            "C": "Trikopis",
+            "D": "Venizelos",
+            "E": "Konstantin"
+          },
+          "answer": "E",
+          "answer_text": "Konstantin",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 11,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-012",
+          "stem": "Sivas Kongresi’nden sonra hangi cemiyetler birleştirilmiştir?",
+          "options": {
+            "A": "İngiliz Muhipler Cemiyetleri",
+            "B": "Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyetleri",
+            "C": "Sivas ve Erzurum Müdafaa-i Hukuk Cemiyetleri",
+            "D": "Redd-i İlhak Cemiyetleri",
+            "E": "Kilikyalılar Cemiyetleri"
+          },
+          "answer": "B",
+          "answer_text": "Anadolu ve Rumeli Müdafaa-i Hukuk Cemiyetleri",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 12,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-013",
+          "stem": "Aşağıdakilerden hangisi en kısa süreli Osmanlı meclisidir?",
+          "options": {
+            "A": "1912 Meclisi",
+            "B": "1914 Meclisi",
+            "C": "1877 Meclisi",
+            "D": "1908 Meclisi",
+            "E": "1919 Meclisi"
+          },
+          "answer": "E",
+          "answer_text": "1919 Meclisi",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 13,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
           "id": "ataturk1-g7203-014",
           "stem": "II. Londra Konferansı’nda “Şimdi sözü Türkiye’nin gerçek temsilcisine bırakıyorum.” diyen kişi aşağıdakilerden hangisidir?",
           "options": {
@@ -1984,6 +2103,91 @@
           "source_file": "02-ataturk-I.pdf",
           "source_page": 2,
           "source_no": 14
+        },
+        {
+          "id": "ataturk1-g7203-015",
+          "stem": "İttihat ve Terakki Cemiyeti’nin 1907 yılındaki kongresi ile ilgili aşağıdakilerden hangisi yanlıştır?",
+          "options": {
+            "A": "Kongreye Ermeni Taşnaksutyun Cemiyeti de katılmıştır.",
+            "B": "Paris’te toplanmıştır.",
+            "C": "İttihat ve Terakki Cemiyeti ikiye bölünmüştür.",
+            "D": "Abdülhamit’i tahttan indirme kararı alınmıştır.",
+            "E": "İttihat ve Terakki’nin ikinci kongresidir."
+          },
+          "answer": "C",
+          "answer_text": "İttihat ve Terakki Cemiyeti ikiye bölünmüştür.",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 15,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-016",
+          "stem": "Rusya, Doğu Anadolu’da Birinci Dünya Savaşı’nda işgal ettiği bölgelerden çekilmeyi aşağıdaki antlaşmalardan hangisi ile kabul etmiştir?",
+          "options": {
+            "A": "Brest-Litovsk Antlaşması",
+            "B": "Paris Antlaşması",
+            "C": "Sykes-Picot Antlaşması",
+            "D": "Erzincan Antlaşması",
+            "E": "İstanbul Antlaşması"
+          },
+          "answer": "A",
+          "answer_text": "Brest-Litovsk Antlaşması",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 16,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-017",
+          "stem": "Anadolu Kadınları Müdafaa-i Vatan Cemiyeti aşağıdaki şehirlerin hangisinde kurulmuştur?",
+          "options": {
+            "A": "Maraş",
+            "B": "İstanbul",
+            "C": "Sivas",
+            "D": "Erzurum",
+            "E": "Kayseri"
+          },
+          "answer": "C",
+          "answer_text": "Sivas",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 17,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-018",
+          "stem": "Osmanlı Devleti 1877-78 Rus Savaşı’ndan mağlup ayrılınca 1878’de önce Ayastefanos, ardından Berlin Antlaşması’nı imzaladı. Osmanlı’nın bu zor döneminden yararlanan ve Rusya’ya karşı destek vadeden İngiltere, Akdeniz’deki hangi stratejik Türk adasına geçici olmak kaydıyla yerleşmiştir?",
+          "options": {
+            "A": "Kıbrıs",
+            "B": "Rodos ve Oniki Ada",
+            "C": "Sakız",
+            "D": "Girit",
+            "E": "Malta"
+          },
+          "answer": "A",
+          "answer_text": "Kıbrıs",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 18,
+          "answer_provenance": "independent_historical_crosscheck"
+        },
+        {
+          "id": "ataturk1-g7203-019",
+          "stem": "Millî Mücadele sırasında İtilaf Devletleri bünyesinde yer alan hangi ülke askerî yardımda bulunmuştur?",
+          "options": {
+            "A": "ABD",
+            "B": "Yunanistan",
+            "C": "Japonya",
+            "D": "İtalya",
+            "E": "İngiltere"
+          },
+          "answer": "D",
+          "answer_text": "İtalya",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 19,
+          "answer_provenance": "independent_historical_crosscheck"
         },
         {
           "id": "ataturk1-g7203-020",
