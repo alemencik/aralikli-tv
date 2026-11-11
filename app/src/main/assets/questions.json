@@ -4112,22 +4112,6 @@
           "source_no": 9
         },
         {
-          "id": "ingilizce-kaynak-23-10-041",
-          "stem": "What colour is it?",
-          "options": {
-            "A": "red",
-            "B": "yellow",
-            "C": "orange",
-            "D": "green",
-            "E": "grey"
-          },
-          "answer": "C",
-          "answer_text": "orange",
-          "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
-          "source_page": 23,
-          "source_no": 10
-        },
-        {
           "id": "ingilizce-kaynak-24-11-042",
           "stem": "Hangisi bir yönüyle diğerlerinden farklıdır?",
           "options": {
