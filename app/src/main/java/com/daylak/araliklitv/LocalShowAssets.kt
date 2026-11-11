@@ -13,6 +13,12 @@ import android.graphics.RectF
 import android.graphics.drawable.Drawable
 import java.io.File
 
+internal enum class StageBackgroundMode(val label: String) {
+    ATHENS("Atina Okulu"),
+    LOCAL("TV’deki özel görsel"),
+    NEON("Neon")
+}
+
 /**
  * The optional stage image is supplied locally by the user.
  *
@@ -23,6 +29,9 @@ class LocalShowAssets(private val context: Context) {
     private var cachedFilePath: String? = null
     private var cachedModified: Long = -1L
     private var cachedBitmap: Bitmap? = null
+    private val bundledStage by lazy {
+        BitmapFactory.decodeResource(context.resources, R.drawable.stage_school_of_athens)
+    }
 
     fun assetsDirectory(): File? = context.getExternalFilesDir(null)
 
@@ -35,15 +44,23 @@ class LocalShowAssets(private val context: Context) {
 
     fun hasStage(): Boolean = stageFile() != null
 
-    fun stageBackground(): Drawable {
-        val file = stageFile() ?: return StageDrawable()
+    internal fun stageBackground(mode: StageBackgroundMode): Drawable = when (mode) {
+        StageBackgroundMode.ATHENS -> athensBackground()
+        StageBackgroundMode.LOCAL -> localBackground()
+        StageBackgroundMode.NEON -> StageDrawable()
+    }
+
+    private fun athensBackground(): Drawable = bundledStage?.let(::UserStageDrawable) ?: StageDrawable()
+
+    private fun localBackground(): Drawable {
+        val file = stageFile() ?: return athensBackground()
         val path = file.absolutePath
         if (path != cachedFilePath || file.lastModified() != cachedModified) {
             cachedFilePath = path
             cachedModified = file.lastModified()
             cachedBitmap = decodeScaled(file)
         }
-        val image = cachedBitmap ?: return StageDrawable()
+        val image = cachedBitmap ?: return athensBackground()
         return UserStageDrawable(image)
     }
 
@@ -68,7 +85,7 @@ class LocalShowAssets(private val context: Context) {
     }
 }
 
-/** A genuine user-supplied photo with a dark tint to keep five answers readable. */
+/** Center-cropped stage artwork, shaded for legibility behind the quiz. */
 private class UserStageDrawable(private val image: Bitmap) : Drawable() {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.FILTER_BITMAP_FLAG)
     override fun draw(canvas: Canvas) {

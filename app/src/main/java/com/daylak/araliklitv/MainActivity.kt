@@ -54,7 +54,7 @@ class MainActivity : Activity() {
     private var manualFeedbackAdvance = false
     private var takeawayLine: StudyLine? = null
     private val localShowAssets by lazy { LocalShowAssets(this) }
-    private var originalThemeEnabled = true
+    private var stageMode = StageBackgroundMode.ATHENS
     private var timerSeconds = CountdownSettings.DEFAULT_SECONDS
     private val timerHandler = Handler(Looper.getMainLooper())
     private var timerRunning = false
@@ -62,7 +62,6 @@ class MainActivity : Activity() {
     private var timerRemainingMs = 0L
     private var timerLabel: TextView? = null
     private var timerBar: ProgressBar? = null
-    private var timerWarningPlayed = false
     private var autoAdvanceTask: Runnable? = null
     private val studyButtons = linkedMapOf<String, Button>()
     private var studyFooter: LinearLayout? = null
@@ -111,10 +110,6 @@ class MainActivity : Activity() {
                 Color.rgb(255, 188, 96) else ink)
             timerBar?.progress = if (timerSeconds == 0) 0
                 else ((remain * 1000L) / (timerSeconds * 1000L)).toInt()
-            if (remain in 1L..10_000L && !timerWarningPlayed) {
-                timerWarningPlayed = true
-                if (soundEnabled) sounds.warning()
-            }
             timerHandler.postDelayed(this, 250L)
         }
     }
@@ -140,7 +135,11 @@ class MainActivity : Activity() {
             questionVoiceEnabled = prefs.getBoolean("question_voice", true)
             takeawayEnabled = prefs.getBoolean("takeaway_visible", true)
             takeawayVoiceEnabled = prefs.getBoolean("takeaway_voice", true)
-            originalThemeEnabled = prefs.getBoolean("original_theme_enabled", true)
+            val previousStage = if (prefs.getBoolean("original_theme_enabled", true))
+                StageBackgroundMode.ATHENS else StageBackgroundMode.NEON
+            stageMode = StageBackgroundMode.entries.firstOrNull {
+                it.name == prefs.getString("stage_background", null)
+            } ?: previousStage
             // Preserve an explicit "off" setting; migrate previous 20/30/60/90s to 50s.
             timerSeconds = if (prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS) == 0)
                 0 else CountdownSettings.DEFAULT_SECONDS
@@ -189,7 +188,6 @@ class MainActivity : Activity() {
 
     private fun startCountdown(header: LinearLayout) {
         if (timerSeconds == 0) return
-        timerWarningPlayed = false
         val label = TextView(this).apply {
             text = CountdownSettings.display(timerSeconds * 1000L)
             textSize = scaledSp(23f)
@@ -291,14 +289,13 @@ class MainActivity : Activity() {
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
-        soundEngine?.stopBackground()
+        soundEngine?.release()
         stopAnswerCountdown()
         studyFooter = null
 
         val outer = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            background = if (originalThemeEnabled) localShowAssets.stageBackground()
-                else StageDrawable()
+            background = localShowAssets.stageBackground(stageMode)
             setPadding(px(24), px(12), px(24), px(12))
         }
         val timerRow = LinearLayout(this).apply {
@@ -377,7 +374,6 @@ class MainActivity : Activity() {
     }
 
     private fun playStudyPrompt(question: Question) {
-        if (soundEnabled) sounds.startQuestionMusic(quiet = questionVoiceEnabled)
         if (questionVoiceEnabled) speak(StudyText.question(question.stem, isEnglish(question)))
     }
 
@@ -389,7 +385,7 @@ class MainActivity : Activity() {
         studyViewport = null
         takeawayCard = null
         stopAnswerCountdown()
-        soundEngine?.stopBackground()
+        soundEngine?.release()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
@@ -401,7 +397,7 @@ class MainActivity : Activity() {
         }
         val view = ScrollView(this).apply {
             background = if (useStage) {
-                if (originalThemeEnabled) localShowAssets.stageBackground() else StageDrawable()
+                localShowAssets.stageBackground(stageMode)
             } else {
                 GradientDrawable(GradientDrawable.Orientation.TL_BR,
                     intArrayOf(Color.rgb(14, 24, 43), Color.rgb(6, 11, 24)))
@@ -538,18 +534,12 @@ class MainActivity : Activity() {
         toggle("Hap bilgiyi seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it }
         info(box, "Seslendirme TV’de yüklü Türkçe ve İngilizce sesleri kullanır.", 16f)
         val showImageReady = localShowAssets.hasStage()
-        action(box,"Yarışma arka planı: " + when {
-            !showImageReady -> "Özel görsel bekleniyor"
-            originalThemeEnabled -> "Özel arka plan AÇIK"
-            else -> "Neon AÇIK"
-        }) {
-            originalThemeEnabled = !originalThemeEnabled
-            prefs.edit().putBoolean("original_theme_enabled", originalThemeEnabled).apply()
+        val stageChoices = StageBackgroundMode.entries.filter { it != StageBackgroundMode.LOCAL || showImageReady }
+        val activeStage = stageMode.takeIf { it in stageChoices } ?: StageBackgroundMode.ATHENS
+        action(box, "Yarışma arka planı · ${activeStage.label}") {
+            stageMode = stageChoices[(stageChoices.indexOf(activeStage) + 1) % stageChoices.size]
+            prefs.edit().putString("stage_background", stageMode.name).apply()
             renderSettings()
-        }
-        if (!showImageReady) {
-            info(box,"Kendi sahne fotoğrafını TV'ye milyoner_stage.jpg adıyla aktar. " +
-                "Görsel yalnızca bu televizyonda saklanır.", 16f)
         }
         action(box,"Geri sayım: ${CountdownSettings.label(timerSeconds)}") {
             timerSeconds = CountdownSettings.next(timerSeconds)
@@ -663,7 +653,6 @@ class MainActivity : Activity() {
      */
     private fun revealAnswer(q: Question, selected: String?) {
         if (q.id != currentQuestion?.id || (screen != "feedback" && screen != "timeout")) return
-        soundEngine?.stopBackground()
         studyButtons.forEach { (letter, button) ->
             button.animate().cancel()
             button.scaleX = 1f
@@ -674,7 +663,7 @@ class MainActivity : Activity() {
             if (highlight != AnswerHighlight.NORMAL) flashRevealedOption(button)
         }
         val correct = selected != null && selected == q.answer
-        if (soundEnabled) {
+        if (soundEnabled && selected != null) {
             if (correct) sounds.correct() else sounds.wrong()
         }
         val answer = q.answer?.let(q.options::get)
@@ -733,7 +722,6 @@ class MainActivity : Activity() {
                 background = buttonBg()
                 setPadding(px(13), px(8), px(13), px(8))
                 setOnClickListener {
-                    if (soundEnabled) sounds.press()
                     register(q, rating)
                     nextQuestion()
                 }
@@ -770,8 +758,6 @@ class MainActivity : Activity() {
             timerLabel?.visibility = View.INVISIBLE
             stopCountdown()
             studySpeech?.stop()
-            soundEngine?.stopBackground()
-            if (soundEnabled) sounds.tension()
             AnswerCountdown(letter, SystemClock.elapsedRealtime())
         } else {
             if (letter == active.choice || active.remainingMs(now) == 0L) return
@@ -779,7 +765,6 @@ class MainActivity : Activity() {
             answerCounters[active.choice]?.visibility = View.GONE
             active.select(letter, now)
         }
-        if (soundEnabled) sounds.press()
         answerCountdown = countdown
         val fill = ClipDrawable(
             shape(Color.rgb(161, 94, 11), Color.rgb(255, 221, 78)),
@@ -830,7 +815,6 @@ class MainActivity : Activity() {
         timerHandler.removeCallbacks(timerTick)
         timerLabel?.visibility = View.INVISIBLE
         studySpeech?.stop()
-        soundEngine?.stopBackground()
         studyButtons.values.forEach { it.isEnabled = false; it.isFocusable = false }
         register(q, Rating.AGAIN, timedOut = true)
         revealAnswer(q, null)
@@ -1038,7 +1022,6 @@ class MainActivity : Activity() {
         val pausedAt = answerCountdownPausedAt
         val countdown = answerCountdown
         if (pausedAt != null && countdown != null) {
-            if (soundEnabled) sounds.tension()
             val pausedFor = SystemClock.elapsedRealtime() - pausedAt
             answerCountdown = countdown.copy(startedAtMs = countdown.startedAtMs + pausedFor)
             answerCountdownPausedAt = null
