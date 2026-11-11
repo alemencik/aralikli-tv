@@ -1,9 +1,17 @@
 package com.daylak.araliklitv
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class AnswerFeedbackTest {
+    @Test fun revealDelayAlwaysBetweenThreeAndFiveSeconds() {
+        val random = kotlin.random.Random(42)
+        val samples = (0 until 1000).map { RevealDelay.millis(random) }
+        assertTrue(samples.all { it in 3_000L..5_000L })
+        assertTrue(samples.distinct().size > 50)
+    }
+
     @Test fun wrongAnswerHighlightsWrongRedAndCorrectGreen() {
         assertEquals(AnswerHighlight.WRONG, AnswerFeedback.highlight("A", "C", "A"))
         assertEquals(AnswerHighlight.CORRECT, AnswerFeedback.highlight("C", "C", "A"))

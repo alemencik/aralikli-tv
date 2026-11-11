@@ -10,3 +10,9 @@ object AnswerFeedback {
         else -> AnswerHighlight.NORMAL
     }
 }
+
+/** Randomized reveal latency; inclusive 3,000..5,000 milliseconds. */
+object RevealDelay {
+    fun millis(random: kotlin.random.Random = kotlin.random.Random.Default): Long =
+        random.nextLong(3_000L, 5_001L)
+}

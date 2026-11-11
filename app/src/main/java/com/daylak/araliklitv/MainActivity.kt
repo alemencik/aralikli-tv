@@ -544,7 +544,7 @@ class MainActivity : Activity() {
             Color.rgb(117, 76, 14), Color.rgb(255, 222, 101)
         )
         if (soundEnabled) sounds.press()
-        // Delayed reveal avoids a harsh, immediate full-screen change.
+        // Each answer stays selected for a random 3–5 seconds before reveal.
         pendingSelection = selected
         pendingReveal = true
         val reveal = Runnable {
@@ -553,7 +553,7 @@ class MainActivity : Activity() {
             revealAnswer(q, selected)
         }
         autoAdvanceTask = reveal
-        timerHandler.postDelayed(reveal, 1100L)
+        timerHandler.postDelayed(reveal, RevealDelay.millis())
     }
 
     private fun showTimeout(q: Question) {
