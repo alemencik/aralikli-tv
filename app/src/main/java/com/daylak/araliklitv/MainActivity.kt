@@ -10,6 +10,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.RelativeSizeSpan
+import android.text.style.ForegroundColorSpan
 import android.view.KeyEvent
 import android.view.View
 import android.view.Gravity
@@ -514,78 +518,117 @@ class MainActivity : Activity() {
         })
     }
 
-    private fun renderSettings() {
+    private data class MenuTile(val title: String, val detail: String = "", val select: () -> Unit)
+
+    private fun menuGrid(box: LinearLayout, tiles: List<MenuTile>, focusTitle: String? = null) {
+        val columns = 3
+        val palette = intArrayOf(0xff184d9e.toInt(), 0xff10645c.toInt(), 0xff62408e.toInt())
+        var first: Button? = null
+        var restored: Button? = null
+        tiles.chunked(columns).forEachIndexed { rowIndex, entries ->
+            val row = tileRow(box)
+            entries.forEachIndexed { column, tile ->
+                val color = palette[(column + rowIndex) % palette.size]
+                val button = Button(this).apply {
+                    isAllCaps = false
+                    textSize = scaledSp(22f)
+                    typeface = Typeface.DEFAULT_BOLD
+                    gravity = Gravity.CENTER
+                    setTextColor(Color.WHITE)
+                    setPadding(px(13), px(12), px(13), px(12))
+                    background = StateListDrawable().apply {
+                        addState(intArrayOf(android.R.attr.state_pressed), shape(color, Color.WHITE))
+                        addState(intArrayOf(android.R.attr.state_focused), shape(color, Color.rgb(123, 234, 255)))
+                        addState(intArrayOf(), shape(color, Color.rgb(65, 96, 132)))
+                    }
+                    text = SpannableStringBuilder(tile.title).apply {
+                        if (tile.detail.isNotEmpty()) {
+                            append("\n")
+                            val start = length
+                            append(tile.detail)
+                            setSpan(RelativeSizeSpan(0.78f), start, length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                            setSpan(ForegroundColorSpan(Color.rgb(192, 218, 247)),
+                                start, length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                        }
+                    }
+                    setOnClickListener { tile.select() }
+                }
+                row.addView(button, LinearLayout.LayoutParams(0, px(112), 1f).apply { marginEnd = px(10) })
+                if (first == null) first = button
+                if (tile.title == focusTitle) restored = button
+            }
+            repeat(columns - entries.size) {
+                row.addView(View(this), LinearLayout.LayoutParams(0, 1, 1f).apply { marginEnd = px(10) })
+            }
+        }
+        firstFocus(restored ?: first)
+    }
+
+    private fun renderSettings(focusTitle: String? = null) {
         screen = "settings"
         val box = panel(useStage = false)
-        heading(box, "Ayarlar")
-        fun toggle(label: String, key: String, enabled: Boolean, apply: (Boolean) -> Unit): Button {
-            return action(box, "$label: ${if (enabled) "Açık" else "Kapalı"}") {
-                val newValue = !enabled
-                apply(newValue)
-                prefs.edit().putBoolean(key, newValue).apply()
-                renderSettings()
-                window.decorView.findViewWithTag<Button>(key)?.requestFocus()
-            }.apply { tag = key }
-        }
-        val first = toggle("Soru seslendirmesi", "question_voice", questionVoiceEnabled) {
-            questionVoiceEnabled = it
-        }
-        toggle("Hap bilgiyi göster", "takeaway_visible", takeawayEnabled) { takeawayEnabled = it }
-        toggle("Hap bilgiyi seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it }
-        info(box, "Seslendirme TV’de yüklü Türkçe ve İngilizce sesleri kullanır.", 16f)
+        heading(box, "Ayarlar", 36f)
+        if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
+        else if (updateInstalling) info(box, "APK indiriliyor ve doğrulanıyor...", 18f)
+        else updateMessage?.let { info(box, it, 18f) }
+
+        fun toggle(label: String, key: String, enabled: Boolean, change: (Boolean) -> Unit) =
+            MenuTile(label, if (enabled) "Açık" else "Kapalı") {
+                change(!enabled)
+                prefs.edit().putBoolean(key, !enabled).apply()
+                renderSettings(label)
+            }
         val showImageReady = localShowAssets.hasStage()
         val stageChoices = StageBackgroundMode.entries.filter { it != StageBackgroundMode.LOCAL || showImageReady }
         val activeStage = stageMode.takeIf { it in stageChoices } ?: StageBackgroundMode.ATHENS
-        action(box, "Yarışma arka planı · ${activeStage.label}") {
-            stageMode = stageChoices[(stageChoices.indexOf(activeStage) + 1) % stageChoices.size]
-            prefs.edit().putString("stage_background", stageMode.name).apply()
-            renderSettings()
+        val tiles = buildList {
+            add(toggle("Soru seslendirmesi", "question_voice", questionVoiceEnabled) { questionVoiceEnabled = it })
+            add(toggle("Hap bilgiyi göster", "takeaway_visible", takeawayEnabled) { takeawayEnabled = it })
+            add(toggle("Hap bilgiyi seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it })
+            add(toggle("Ses efektleri", "sound_enabled", soundEnabled) { soundEnabled = it })
+            add(MenuTile("Yarışma arka planı", activeStage.label) {
+                stageMode = stageChoices[(stageChoices.indexOf(activeStage) + 1) % stageChoices.size]
+                prefs.edit().putString("stage_background", stageMode.name).apply()
+                renderSettings("Yarışma arka planı")
+            })
+            add(MenuTile("Geri sayım", CountdownSettings.label(timerSeconds)) {
+                timerSeconds = CountdownSettings.next(timerSeconds)
+                prefs.edit().putInt("timer_seconds", timerSeconds).apply()
+                renderSettings("Geri sayım")
+            })
+            availableUpdate?.let { release ->
+                if (!updateInstalling) add(MenuTile("Güncelle", "v${release.version}") { installUpdate(release) })
+            }
+            if (!updateChecking && !updateInstalling) {
+                add(MenuTile("Güncellemeleri kontrol et") { checkUpdates(true) })
+            }
+            add(MenuTile("Ana Menü") { renderHome(focusSettings = true) })
         }
-        action(box,"Geri sayım: ${CountdownSettings.label(timerSeconds)}") {
-            timerSeconds = CountdownSettings.next(timerSeconds)
-            prefs.edit().putInt("timer_seconds",timerSeconds).apply()
-            renderSettings()
-        }
-        action(box,if(soundEnabled) "Ses efektleri: AÇIK" else "Ses efektleri: KAPALI") {
-            soundEnabled = !soundEnabled
-            prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
-            renderSettings()
-        }
-        if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
-        updateMessage?.let { info(box, it, 18f) }
-        availableUpdate?.let { release ->
-            action(box, "Güncelle: v${release.version}") { installUpdate(release) }
-        }
-        if (!updateChecking && !updateInstalling) {
-            action(box,"Güncellemeleri Kontrol Et") { checkUpdates(true) }
-        }
-        if (updateInstalling) info(box, "APK indiriliyor ve doğrulanıyor...", 18f)
-        action(box, "Ana Menü") { renderHome(focusSettings = true) }
-        firstFocus(first)
+        menuGrid(box, tiles, focusTitle)
     }
 
     private fun renderLessons() {
-        screen = "lessons"; currentQuestion = null; inFeedback=false;feedbackCanAdvance=false
-        val box = panel(); heading(box,"DERSLERİM")
-        info(box,"Öğrenmeye başlamak için kumandanın OK tuşunu kullan.")
-        var first: Button? = null
-        decks.forEach { deck ->
+        screen = "lessons"; currentQuestion = null; inFeedback = false; feedbackCanAdvance = false
+        val box = panel(useStage = false)
+        heading(box, "Derslerim", 36f)
+        val now = System.currentTimeMillis()
+        val tiles = decks.map { deck ->
             val count = deck.questions.count { it.isScorable }
-            val due = Scheduler.dueCount(deck.questions,progress,System.currentTimeMillis(),turn)
-            val title = if (count==0) "${deck.title}  •  Cevap anahtarı bekleniyor"
-                        else "${deck.title}  •  $count soru / $due tekrar"
-            val b = action(box,title) {
-                if (count==0) {
-                    val notice=panel();screen="unavailable"
-                    heading(notice,deck.title)
-                    info(notice,"Bu dersin soruları alındı, ancak otomatik değerlendirmeye uygun doğrulanmış cevap anahtarı henüz eklenmedi.")
-                    firstFocus(action(notice,"Derslere Dön") { renderLessons() })
-                } else { currentDeck=deck; nextQuestion() }
+            val due = Scheduler.dueCount(deck.questions, progress, now, turn)
+            MenuTile(deck.title, if (count == 0) "Cevap anahtarı bekleniyor" else "$count soru · $due tekrar") {
+                if (count == 0) {
+                    screen = "unavailable"
+                    val notice = panel(useStage = false)
+                    heading(notice, deck.title)
+                    info(notice, "Bu dersin doğrulanmış cevap anahtarı henüz eklenmedi.")
+                    menuGrid(notice, listOf(MenuTile("Derslere dön") { renderLessons() }))
+                } else {
+                    currentDeck = deck
+                    nextQuestion()
+                }
             }
-            if (first==null) first=b
         }
-        action(box,"Ana Menü") { renderHome() }
-        firstFocus(first)
+        menuGrid(box, tiles + MenuTile("Ana Menü") { renderHome() }, currentDeck?.title)
     }
 
     private fun nextQuestion() {
@@ -831,11 +874,13 @@ class MainActivity : Activity() {
 
     private fun renderDone() {
         screen="done"; currentQuestion=null
-        val box=panel()
-        heading(box,"ŞİMDİLİK TAMAMLANDI")
-        info(box,"Yeni soru veya zamanı gelen tekrar kalmadı. Zamanı gelmemiş soruları erkenden tekrarlamıyoruz.")
-        firstFocus(action(box,"Dersler") { renderLessons() })
-        action(box,"Ana Menü") { renderHome() }
+        val box = panel(useStage = false)
+        heading(box, "Şimdilik tamamlandı")
+        info(box, "Yeni soru veya zamanı gelen tekrar kalmadı.")
+        menuGrid(box, listOf(
+            MenuTile("Dersler") { renderLessons() },
+            MenuTile("Ana Menü") { renderHome() }
+        ))
     }
 
     private fun installTvBrowser() {
@@ -845,11 +890,11 @@ class MainActivity : Activity() {
         } catch (_: Exception) {
             // Some Android TV boxes ship without the Play Store.
             screen = "video-help"
-            val box = panel()
-            heading(box, "TV TARAYICISI KURULUMU")
+            val box = panel(useStage = false)
+            heading(box, "TV Tarayıcısı Kurulumu")
             info(box, "Google Play Store uygulamasını açıp TV Bro ara ve yükle.")
             info(box, "Google Play Store yoksa bilgisayarından TV Bro'nun resmî GitHub sürümünü kurabilirsin.")
-            firstFocus(action(box, "Video Derslere Dön") { renderVideos() })
+            menuGrid(box, listOf(MenuTile("Video Derslere Dön") { renderVideos() }))
         }
     }
 
@@ -859,13 +904,15 @@ class MainActivity : Activity() {
         } catch (_: Exception) {
             // A stock Android TV installation may have no app handling HTTPS links.
             screen = "video-help"
-            val box = panel()
-            heading(box, "BAĞLANTI AÇILAMADI")
+            val box = panel(useStage = false)
+            heading(box, "Bağlantı Açılamadı")
             info(box, "Bu bağlantıyı açacak uygulama bulunamadı. TV Bro, kumandayla kullanılabilen bir TV tarayıcısıdır.")
             info(box, "TV Bro'yu yükledikten sonra bu menüden ders bağlantısını yeniden aç.")
             info(box, url, 17f)
-            firstFocus(action(box, "TV Bro'yu Google Play'den Yükle") { installTvBrowser() })
-            action(box, "Video Derslere Dön") { renderVideos() }
+            menuGrid(box, listOf(
+                MenuTile("TV Bro'yu Yükle", "Google Play") { installTvBrowser() },
+                MenuTile("Video Derslere Dön") { renderVideos() }
+            ))
         }
     }
 
@@ -884,57 +931,64 @@ class MainActivity : Activity() {
     private fun renderVideoCourse(deck: Deck) {
         screen = "video-course"
         selectedVideoDeckId = deck.id
-        val box = panel()
-        heading(box, deck.title.uppercase())
+        val box = panel(useStage = false)
+        heading(box, deck.title)
         val videos = VideoCatalog.forDeck(deck.id)
-        info(box, if (videos.isEmpty())
-            "Bu ders için erişilebilir, doğrudan açılabilen bir video doğrulanamadı."
-        else
-            "Aşağıdaki bağımsız eğitim videoları resmî AUZEF ders kaydı değildir. Bir video seçip OK'a bas.")
-        var first: Button? = null
-        videos.forEach { video ->
-            val button = action(box, video.title) { openYouTubeLesson(video.youtubeId) }
-            if (first == null) first = button
-        }
-        if (videos.isEmpty()) {
-            first = action(box, "Resmî AUZEF Öğrenci Sistemi (giriş gerekir)") {
+        val tiles = if (videos.isEmpty()) {
+            info(box, "Bu ders için doğrudan açılabilen bir video doğrulanamadı.")
+            listOf(MenuTile("Resmî AUZEF Öğrenci Sistemi", "Giriş gerekir") {
                 openVideoLink("https://aksis.istanbul.edu.tr")
-            }
+            })
+        } else {
+            info(box, "Bağımsız eğitim videoları", 17f)
+            videos.map { video -> MenuTile(video.title, "YouTube") { openYouTubeLesson(video.youtubeId) } }
         }
-        action(box, "Ders Videolarına Dön") { renderVideos() }
-        firstFocus(first)
+        menuGrid(box, tiles + MenuTile("Ders Videolarına Dön") { renderVideos() })
     }
 
     private fun renderVideos() {
         screen = "videos"
+        val box = panel(useStage = false)
+        heading(box, "Ders Videoları", 36f)
+        val tiles = decks.map { deck ->
+            val count = VideoCatalog.forDeck(deck.id).size
+            MenuTile(deck.title, if (count == 0) "Video bulunamadı" else "$count video") {
+                renderVideoCourse(deck)
+            }
+        } + listOf(
+            MenuTile("TV Bro", "Tarayıcı yükle") { installTvBrowser() },
+            MenuTile("Ana Menü") { renderHome() }
+        )
+        menuGrid(box, tiles, decks.firstOrNull { it.id == selectedVideoDeckId }?.title)
         selectedVideoDeckId = null
-        val box = panel()
-        heading(box, "DERS VİDEOLARI")
-        info(box, "Dersini seç. Genel site yerine doğrudan video bağlantıları listelenir.")
-        var first: Button? = null
-        decks.forEach { deck ->
-            val videoCount = VideoCatalog.forDeck(deck.id).size
-            val button = action(box,
-                "${deck.title}  •  " + if (videoCount == 0) "Video bulunamadı" else "$videoCount video"
-            ) { renderVideoCourse(deck) }
-            if (first == null) first = button
-        }
-        action(box, "TV Tarayıcısı Yükle (TV Bro)") { installTvBrowser() }
-        action(box, "Ana Menü") { renderHome() }
-        firstFocus(first)
     }
 
     private fun renderStats() {
-        screen="stats";val box=panel();heading(box,"İSTATİSTİKLER")
-        decks.forEach { d ->
-            val entries=d.questions.mapNotNull { progress[it.id] }
-            val attempts = entries.sumOf { it.attempts - it.timeouts }
-            val correct = entries.sumOf { it.correct }
-            val timeouts = entries.sumOf { it.timeouts }
-            val pct = if (attempts == 0) "-" else "${correct * 100 / attempts}%"
-            info(box,"${d.title}: ${entries.size}/${d.questions.size} görüldü  •  $pct doğru  •  $timeouts süre aşımı  •  ${Scheduler.dueCount(d.questions, progress, System.currentTimeMillis(), turn)} tekrar",18f)
+        screen = "stats"
+        val box = panel(useStage = false)
+        heading(box, "İstatistikler", 36f)
+        val tiles = decks.map { deck ->
+            val seen = deck.questions.count { progress.containsKey(it.id) }
+            MenuTile(deck.title, "$seen / ${deck.questions.size} soru görüldü") { renderDeckStats(deck) }
         }
-        firstFocus(action(box,"Ana Menü") { renderHome() })
+        menuGrid(box, tiles + MenuTile("Ana Menü") { renderHome() })
+    }
+
+    private fun renderDeckStats(deck: Deck) {
+        screen = "deck-stats"
+        val box = panel(useStage = false)
+        heading(box, deck.title)
+        val entries = deck.questions.mapNotNull { progress[it.id] }
+        val attempts = entries.sumOf { it.attempts - it.timeouts }
+        val correct = entries.sumOf { it.correct }
+        val timeouts = entries.sumOf { it.timeouts }
+        val pct = if (attempts == 0) "—" else "%${correct * 100 / attempts}"
+        val due = Scheduler.dueCount(deck.questions, progress, System.currentTimeMillis(), turn)
+        info(box, "${entries.size} / ${deck.questions.size} soru görüldü   ·   $pct doğru   ·   $timeouts süre aşımı   ·   $due tekrar")
+        menuGrid(box, listOf(
+            MenuTile("İstatistiklere dön") { renderStats() },
+            MenuTile("Ana Menü") { renderHome() }
+        ))
     }
 
     private fun checkUpdates(manual: Boolean) {
@@ -1100,6 +1154,7 @@ class MainActivity : Activity() {
             }
             "video-course" -> renderVideos()
             "settings" -> renderHome(focusSettings = true)
+            "deck-stats" -> renderStats()
             "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }
