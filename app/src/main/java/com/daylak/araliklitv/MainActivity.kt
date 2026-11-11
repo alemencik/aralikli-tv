@@ -10,6 +10,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.AbsoluteSizeSpan
+import android.text.style.ForegroundColorSpan
 import android.view.KeyEvent
 import android.view.View
 import android.view.Gravity
@@ -36,6 +40,7 @@ class MainActivity : Activity() {
     private val prefs by lazy { getSharedPreferences("aralikli_progress_v1", MODE_PRIVATE) }
     private var turn = 0
     private var currentDeck: Deck? = null
+    private var lessonSlideIndex = 0
     private var currentQuestion: Question? = null
     private var inFeedback = false
     private var feedbackCanAdvance = false
@@ -575,27 +580,112 @@ class MainActivity : Activity() {
     }
 
     private fun renderLessons() {
-        screen = "lessons"; currentQuestion = null; inFeedback=false;feedbackCanAdvance=false
-        val box = panel(); heading(box,"DERSLERİM")
-        info(box,"Öğrenmeye başlamak için kumandanın OK tuşunu kullan.")
-        var first: Button? = null
-        decks.forEach { deck ->
-            val count = deck.questions.count { it.isScorable }
-            val due = Scheduler.dueCount(deck.questions,progress,System.currentTimeMillis(),turn)
-            val title = if (count==0) "${deck.title}  •  Cevap anahtarı bekleniyor"
-                        else "${deck.title}  •  $count soru / $due tekrar"
-            val b = action(box,title) {
-                if (count==0) {
-                    val notice=panel();screen="unavailable"
-                    heading(notice,deck.title)
-                    info(notice,"Bu dersin soruları alındı, ancak otomatik değerlendirmeye uygun doğrulanmış cevap anahtarı henüz eklenmedi.")
-                    firstFocus(action(notice,"Derslere Dön") { renderLessons() })
-                } else { currentDeck=deck; nextQuestion() }
+        screen = "lessons"
+        currentQuestion = null
+        inFeedback = false
+        feedbackCanAdvance = false
+        val box = panel(useStage = false)
+        box.gravity = Gravity.CENTER
+        heading(box, "Derslerim", 40f)
+
+        var card: Button? = null
+        if (decks.isEmpty()) {
+            info(box, error ?: "Gösterilecek ders yok.")
+        } else {
+            val row = tileRow(box).apply { gravity = Gravity.CENTER_VERTICAL }
+            fun arrow(symbol: String) = TextView(this).apply {
+                text = symbol
+                textSize = scaledSp(46f)
+                setTextColor(ink)
+                gravity = Gravity.CENTER
+                importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+                row.addView(this, LinearLayout.LayoutParams(px(74), LinearLayout.LayoutParams.WRAP_CONTENT))
             }
-            if (first==null) first=b
+
+            arrow("‹")
+            val slide = Button(this).apply {
+                id = View.generateViewId()
+                isAllCaps = false
+                textSize = scaledSp(35f)
+                typeface = Typeface.DEFAULT_BOLD
+                gravity = Gravity.CENTER
+                setTextColor(Color.WHITE)
+                setPadding(px(34), px(22), px(34), px(22))
+                minimumHeight = px(185)
+                background = buttonBg()
+                row.addView(this, LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f))
+                setOnClickListener { openLesson(decks[lessonSlideIndex]) }
+            }
+            arrow("›")
+            val position = TextView(this).apply {
+                textSize = scaledSp(18f)
+                setTextColor(muted)
+                gravity = Gravity.CENTER
+                setPadding(0, px(18), 0, px(8))
+            }
+            box.addView(position)
+
+            fun showSlide(direction: Int) {
+                val deck = decks[lessonSlideIndex]
+                val count = deck.questions.count { it.isScorable }
+                val due = Scheduler.dueCount(deck.questions, progress, System.currentTimeMillis(), turn)
+                val detail = if (count == 0) "Cevap anahtarı bekleniyor" else "$count soru  ·  $due tekrar"
+                slide.text = SpannableStringBuilder(deck.title).append("\n\n").apply {
+                    val start = length
+                    append(detail)
+                    setSpan(AbsoluteSizeSpan((scaledSp(20f) * resources.displayMetrics.scaledDensity).toInt()),
+                        start, length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                    setSpan(ForegroundColorSpan(Color.rgb(190, 223, 248)),
+                        start, length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                }
+                position.text = "${lessonSlideIndex + 1} / ${decks.size}"
+                if (direction != 0) {
+                    slide.animate().cancel()
+                    slide.translationX = (direction * px(24)).toFloat()
+                    slide.alpha = 0.6f
+                    slide.animate().translationX(0f).alpha(1f).setDuration(170L).start()
+                }
+            }
+
+            lessonSlideIndex = lessonSlideIndex.coerceIn(decks.indices)
+            showSlide(0)
+            slide.setOnKeyListener { _, key, event ->
+                val direction = when (key) {
+                    KeyEvent.KEYCODE_DPAD_LEFT -> -1
+                    KeyEvent.KEYCODE_DPAD_RIGHT -> 1
+                    else -> return@setOnKeyListener false
+                }
+                if (event.action == KeyEvent.ACTION_DOWN && decks.size > 1) {
+                    lessonSlideIndex = (lessonSlideIndex + direction + decks.size) % decks.size
+                    showSlide(direction)
+                }
+                true
+            }
+            card = slide
         }
-        action(box,"Ana Menü") { renderHome() }
-        firstFocus(first)
+        val home = action(box, "Ana Menü") { renderHome() }.apply {
+            id = View.generateViewId()
+            layoutParams = (layoutParams as LinearLayout.LayoutParams).apply {
+                width = LinearLayout.LayoutParams.WRAP_CONTENT
+                gravity = Gravity.CENTER_HORIZONTAL
+            }
+        }
+        card?.nextFocusDownId = home.id
+        card?.let { home.nextFocusUpId = it.id }
+        firstFocus(card ?: home)
+    }
+
+    private fun openLesson(deck: Deck) {
+        if (deck.questions.none { it.isScorable }) {
+            screen = "unavailable"
+            val notice = panel()
+            heading(notice, deck.title)
+            info(notice, "Bu dersin doğrulanmış cevap anahtarı henüz eklenmedi.")
+            firstFocus(action(notice, "Derslere Dön") { renderLessons() })
+        } else {
+            currentDeck = deck
+            nextQuestion()
+        }
     }
 
     private fun nextQuestion() {
