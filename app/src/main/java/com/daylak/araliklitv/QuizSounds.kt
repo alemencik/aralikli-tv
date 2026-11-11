@@ -15,7 +15,7 @@ class QuizSounds(context: Context) {
     private var background: MediaPlayer? = null
     private var effect: MediaPlayer? = null
 
-    fun startQuestionMusic() = playBackground(Cue.AMBIENCE, 0.42f)
+    fun startQuestionMusic(quiet: Boolean) = playBackground(Cue.AMBIENCE, if (quiet) 0.18f else 0.42f)
 
     fun stopBackground() {
         background?.release()
