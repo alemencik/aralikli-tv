@@ -14,8 +14,9 @@ internal object StudyText {
         "(?i)\\s*(?:Cümleyi tamamlayan|Karşılıklı konuşmayı tamamlayan|Boş bırakılan yere)"
     )
     private val turkishWording = Regex(
-        "[çğıöşüÇĞİÖŞÜ]|\\b(hangisi|hangisidir|cümle|boşluk|ne|değildir)\\b", RegexOption.IGNORE_CASE
+        "[çğıöşüÇĞİÖŞÜ]|(?i:\\b(?:hangisi|hangisidir|cümle|boşluk|değildir)\\b)"
     )
+    private val repeatedSpaces = Regex("[ \\t]{2,}")
 
     private val yearQuestion = Regex(
         "^(.+?) (?:kaç yılında|hangi yılda) ([^?]+)\\?$", RegexOption.IGNORE_CASE
@@ -28,7 +29,8 @@ internal object StudyText {
         val prompt = if (englishDeck) englishInstruction.split(stem, limit = 2).first()
             else stem
         val english = englishDeck && !turkishWording.containsMatchIn(prompt)
-        return StudyLine(blank.replace(prompt.trim(), if (english) " blank " else " boşluk "), english)
+        val spoken = blank.replace(prompt.trim(), if (english) " blank " else " boşluk ")
+        return StudyLine(repeatedSpaces.replace(spoken, " ").trim(), english)
     }
 
     fun takeaway(stem: String, answer: String, englishDeck: Boolean): StudyLine {
