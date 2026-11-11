@@ -83,6 +83,7 @@ class MainActivity : Activity() {
             timerHandler.postDelayed(this, 250L)
         }
     }
+    private var selectedVideoDeckId: String? = null
     private var updateChecking = false
     private var updateInstalling = false
     private var availableUpdate: UpdateRelease? = null
@@ -692,22 +693,57 @@ class MainActivity : Activity() {
         }
     }
 
+
+    /** Open a selected YouTube video, not a generic course website.
+     *  Prefer a native TV YouTube player; fall back to the exact watch URL.
+     */
+    private fun openYouTubeLesson(videoId: String) {
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:$videoId")))
+        } catch (_: Exception) {
+            openVideoLink("https://www.youtube.com/watch?v=$videoId")
+        }
+    }
+
+    private fun renderVideoCourse(deck: Deck) {
+        screen = "video-course"
+        selectedVideoDeckId = deck.id
+        val box = panel()
+        heading(box, deck.title.uppercase())
+        val videos = VideoCatalog.forDeck(deck.id)
+        info(box, if (videos.isEmpty())
+            "Bu ders için erişilebilir, doğrudan açılabilen bir video doğrulanamadı."
+        else
+            "Aşağıdaki bağımsız eğitim videoları resmî AUZEF ders kaydı değildir. Bir video seçip OK'a bas.")
+        var first: Button? = null
+        videos.forEach { video ->
+            val button = action(box, video.title) { openYouTubeLesson(video.youtubeId) }
+            if (first == null) first = button
+        }
+        if (videos.isEmpty()) {
+            first = action(box, "Resmî AUZEF Öğrenci Sistemi (giriş gerekir)") {
+                openVideoLink("https://aksis.istanbul.edu.tr")
+            }
+        }
+        action(box, "Ders Videolarına Dön") { renderVideos() }
+        firstFocus(first)
+    }
+
     private fun renderVideos() {
         screen = "videos"
+        selectedVideoDeckId = null
         val box = panel()
-        heading(box, "VİDEO DERSLER")
-        info(box, "AUZEF ders anlatımları, üniversitenin kendi materyalleri üzerinden takip edilebilir.")
-        val first = action(box, "AUZEF Ders Materyalleri (Resmi)") {
-            openVideoLink("https://ikinciuniversite.istanbul.edu.tr/tr/content/ders-materyalleri/ders-materyalleri")
-        }
-        action(box, "AUZEF Öğrenci Sistemi (AKSİS)") {
-            openVideoLink("https://aksis.istanbul.edu.tr")
-        }
-        action(box, "Atatürk İlkeleri II - Anadolu Üniversitesi Video Ders") {
-            openVideoLink("https://www.youtube.com/watch?v=Qou2hEGopUA")
+        heading(box, "DERS VİDEOLARI")
+        info(box, "Dersini seç. Genel site yerine doğrudan video bağlantıları listelenir.")
+        var first: Button? = null
+        decks.forEach { deck ->
+            val videoCount = VideoCatalog.forDeck(deck.id).size
+            val button = action(box,
+                "${deck.title}  •  " + if (videoCount == 0) "Video bulunamadı" else "$videoCount video"
+            ) { renderVideoCourse(deck) }
+            if (first == null) first = button
         }
         action(box, "TV Tarayıcısı Yükle (TV Bro)") { installTvBrowser() }
-        info(box, "Ders bağlantıları internet ister. Üniversite siteleri giriş yapmanı isteyebilir.", 16f)
         action(box, "Ana Menü") { renderHome() }
         firstFocus(first)
     }
@@ -873,7 +909,11 @@ class MainActivity : Activity() {
     override fun onBackPressed() {
         when(screen) {
             "study", "feedback", "timeout", "done", "unavailable" -> renderLessons()
-            "video-help" -> renderVideos()
+            "video-help" -> {
+                val deck = decks.firstOrNull { it.id == selectedVideoDeckId }
+                if (deck == null) renderVideos() else renderVideoCourse(deck)
+            }
+            "video-course" -> renderVideos()
             "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }
