@@ -50,6 +50,10 @@ class MainActivity : Activity() {
     private var timerBar: ProgressBar? = null
     private var timerWarningPlayed = false
     private var autoAdvanceTask: Runnable? = null
+    private val studyButtons = linkedMapOf<String, Button>()
+    private var studyFooter: LinearLayout? = null
+    private var pendingSelection: String? = null
+    private var pendingReveal = false
     private val timerTick = object : Runnable {
         override fun run() {
             if (!timerRunning || screen != "study" || inFeedback) return
@@ -124,6 +128,8 @@ class MainActivity : Activity() {
             setStroke(px(3), Color.rgb(221, 177, 85))
         }
     private fun buttonBg(): StateListDrawable = StateListDrawable().apply {
+        addState(intArrayOf(android.R.attr.state_pressed),
+            shape(Color.rgb(105,72,19), Color.rgb(255,226,116)))
         addState(intArrayOf(android.R.attr.state_focused),
             shape(Color.rgb(33,83,165), Color.rgb(255,211,103)))
         addState(intArrayOf(), shape(Color.rgb(13,30,94), Color.rgb(53,147,230)))
@@ -169,6 +175,7 @@ class MainActivity : Activity() {
      */
     private fun studyOptionButtons(box: LinearLayout, question: Question): Button? {
         var first: Button? = null
+        studyButtons.clear()
         val longest = question.options.values.maxOfOrNull { it.length } ?: 0
         val total = question.options.values.sumOf { it.length }
         val answerFont = StudyLayoutRules.answerSp(longest, total)
@@ -191,7 +198,12 @@ class MainActivity : Activity() {
                 minimumHeight = minHeight
                 setPadding(px(22), px(12), px(18), px(12))
                 setOnClickListener { showFeedback(question, letter) }
+                setOnFocusChangeListener { view, focused ->
+                    view.animate().scaleX(if (focused) 1.008f else 1f)
+                        .scaleY(if (focused) 1.008f else 1f).setDuration(120L).start()
+                }
             }
+            studyButtons[letter] = button
             box.addView(button, LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
@@ -210,6 +222,9 @@ class MainActivity : Activity() {
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
+        pendingSelection = null
+        pendingReveal = false
+        studyFooter = null
 
         val outer = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
@@ -240,6 +255,16 @@ class MainActivity : Activity() {
         outer.addView(viewport, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
         ))
+        val footer = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = Gravity.CENTER
+            visibility = View.GONE
+        }
+        outer.addView(footer, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { topMargin = px(10) })
+        studyFooter = footer
         setContentView(outer)
 
         // Avoid source filenames, "Yeni soru" and page labels in the quiz.
@@ -424,213 +449,124 @@ class MainActivity : Activity() {
         }
     }
 
-    private fun feedbackChoiceButton(
-        box: LinearLayout, letter: String, option: String,
-        question: Question, selected: String?, fontSize: Float
-    ) {
-        val highlight = AnswerFeedback.highlight(letter, question.answer, selected)
-        val height = resources.displayMetrics.heightPixels
-        val button = Button(this).apply {
-            text = letter + ")  " + option
-            isAllCaps = false
-            textSize = scaledSp(fontSize)
-            typeface = Typeface.DEFAULT_BOLD
-            includeFontPadding = false
-            setTextColor(Color.WHITE)
-            background = resultShape(highlight)
-            gravity = Gravity.CENTER_VERTICAL or Gravity.START
-            minHeight = (height * 0.077f).toInt().coerceAtLeast(px(44))
-            minimumHeight = minHeight
-            isSingleLine = false
-            maxLines = Int.MAX_VALUE
-            ellipsize = null
-            setHorizontallyScrolling(false)
-            isFocusable = false
-            isClickable = false
-            setPadding(px(21), px(8), px(16), px(8))
-        }
-        box.addView(button, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        ).apply { bottomMargin = px(7) })
-    }
-
-    private fun ratingButton(
-        row: LinearLayout, label: String, choice: Rating, question: Question
-    ): Button {
-        val button = Button(this).apply {
-            text = label
-            isAllCaps = false
-            textSize = scaledSp(18f)
-            typeface = Typeface.DEFAULT_BOLD
-            gravity = Gravity.CENTER
-            includeFontPadding = false
-            minHeight = px(51)
-            minimumHeight = px(51)
-            setTextColor(Color.WHITE)
-            background = buttonBg()
-            setPadding(px(8), px(7), px(8), px(7))
-            setOnClickListener {
-                register(question, choice)
-                nextQuestion()
+    /**
+     * User selection stays gold before the correct option turns green.
+     * Wrong selections turn red, while all other options keep their blue style.
+     * No second result page and no redundant answer labels.
+     */
+    private fun revealAnswer(q: Question, selected: String?) {
+        if (q.id != currentQuestion?.id || (screen != "feedback" && screen != "timeout")) return
+        pendingReveal = false
+        pendingSelection = null
+        studyButtons.forEach { (letter, button) ->
+            val h = AnswerFeedback.highlight(letter, q.answer, selected)
+            button.background = resultShape(h)
+            if (h != AnswerHighlight.NORMAL) {
+                button.alpha = 0.48f
+                button.animate().alpha(1f).setDuration(400L).start()
             }
         }
-        row.addView(button, LinearLayout.LayoutParams(0,
-            LinearLayout.LayoutParams.WRAP_CONTENT, 1f
-        ).apply {
-            marginStart = px(5)
-            marginEnd = px(5)
-            bottomMargin = px(6)
-        })
-        return button
+        val correct = selected != null && selected == q.answer
+        if (soundEnabled) {
+            if (correct) sounds.correct() else sounds.wrong()
+        }
+        if (correct) {
+            showSimpleRatings(q)
+        } else {
+            // Wrong or timed-out questions are already placed in the early-repeat queue.
+            feedbackCanAdvance = true
+            val next = Runnable {
+                if (currentQuestion?.id == q.id &&
+                    (screen == "feedback" || screen == "timeout")) nextQuestion()
+            }
+            autoAdvanceTask = next
+            timerHandler.postDelayed(next, 2300L)
+        }
     }
 
-    private fun renderFeedbackQuestion(question: Question, selected: String?) {
-        autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
-        autoAdvanceTask = null
-        stopCountdown()
-        val timedOut = selected == null
-        val right = selected != null && selected == question.answer
-        val h = resources.displayMetrics.heightPixels
-        val outer = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            background = if (originalThemeEnabled) localShowAssets.stageBackground()
-                else StageDrawable()
-            setPadding(px(22), px(11), px(22), px(11))
-        }
-
-        val status = TextView(this).apply {
-            text = when {
-                timedOut -> "SÜRE DOLDU"
-                right -> "✓  DOĞRU"
-                else -> "✕  YANLIŞ"
-            }
-            textSize = scaledSp(24f)
-            typeface = Typeface.DEFAULT_BOLD
-            setTextColor(Color.WHITE)
-            gravity = Gravity.CENTER
-            includeFontPadding = false
-            background = resultShape(when {
-                timedOut -> AnswerHighlight.NORMAL
-                right -> AnswerHighlight.CORRECT
-                else -> AnswerHighlight.WRONG
-            })
-            setPadding(px(9), px(8), px(9), px(8))
-        }
-        outer.addView(status, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        ).apply { bottomMargin = px(9) })
-
-        val viewport = ScrollView(this).apply {
-            isFillViewport = true
-            isFocusable = false
-            isSmoothScrollingEnabled = true
-            clipToPadding = false
-        }
-        val body = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER_VERTICAL
-            setPadding(px(4), px(2), px(4), px(2))
-        }
-        viewport.addView(body)
-        outer.addView(viewport, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
-        ))
-        setContentView(outer)
-
-        val questionCard = TextView(this).apply {
-            text = question.stem
-            textSize = scaledSp(StudyLayoutRules.questionSp(question.stem.length)
-                .coerceAtMost(26f))
-            typeface = Typeface.DEFAULT_BOLD
-            setTextColor(Color.WHITE)
-            gravity = Gravity.CENTER
-            includeFontPadding = false
-            setLineSpacing(px(2).toFloat(), 1.03f)
-            minHeight = (h * 0.14f).toInt()
-            setPadding(px(20), px(12), px(20), px(12))
-            background = questionBg()
-        }
-        body.addView(questionCard, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        ).apply { bottomMargin = px(11) })
-
-        val longest = question.options.values.maxOfOrNull { it.length } ?: 0
-        val total = question.options.values.sumOf { it.length }
-        val size = StudyLayoutRules.answerSp(longest, total).coerceAtMost(22f)
-        for ((letter, option) in question.options) {
-            feedbackChoiceButton(body, letter, option, question, selected, size)
-        }
-
-        if (right) {
-            val prompt = TextView(this).apply {
-                text = "Cevabı nasıl buldun?"
+    private fun showSimpleRatings(q: Question) {
+        val footer = studyFooter ?: return
+        footer.removeAllViews()
+        footer.visibility = View.VISIBLE
+        fun addRating(label: String, rating: Rating): Button {
+            val button = Button(this).apply {
+                text = label
+                isAllCaps = false
                 textSize = scaledSp(20f)
                 typeface = Typeface.DEFAULT_BOLD
-                setTextColor(Color.WHITE)
                 gravity = Gravity.CENTER
                 includeFontPadding = false
-                setPadding(0, px(5), 0, px(8))
-            }
-            body.addView(prompt)
-            val row1 = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
-            val row2 = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
-            body.addView(row1)
-            body.addView(row2)
-            val first = ratingButton(row1, "Tahmin ettim", Rating.GUESSED, question)
-            ratingButton(row1, "Zorlandım", Rating.HARD, question)
-            ratingButton(row2, "Biliyordum", Rating.GOOD, question)
-            ratingButton(row2, "Çok kolaydı", Rating.EASY, question)
-            first.requestFocus()
-        } else {
-            val next = Button(this).apply {
-                text = if (timedOut) "Sonraki soru" else "Sonraki soru"
-                textSize = scaledSp(21f)
-                typeface = Typeface.DEFAULT_BOLD
-                isAllCaps = false
-                background = buttonBg()
+                minHeight = px(58)
+                minimumHeight = px(58)
                 setTextColor(Color.WHITE)
-                minHeight = px(55)
-                minimumHeight = px(55)
-                setOnClickListener { nextQuestion() }
+                background = buttonBg()
+                setPadding(px(13), px(8), px(13), px(8))
+                setOnClickListener {
+                    if (soundEnabled) sounds.press()
+                    register(q, rating)
+                    nextQuestion()
+                }
+                setOnFocusChangeListener { v, focused ->
+                    v.animate().scaleX(if(focused) 1.015f else 1f)
+                        .scaleY(if(focused) 1.015f else 1f)
+                        .setDuration(130L).start()
+                }
             }
-            body.addView(next, LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            ).apply { topMargin = px(10) })
-            next.requestFocus()
+            footer.addView(button, LinearLayout.LayoutParams(
+                0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f
+            ).apply {
+                marginStart = px(6)
+                marginEnd = px(6)
+            })
+            return button
         }
+        val first = addRating("Salladım", Rating.GUESSED)
+        // EASY places a known question into the day-based repetition schedule,
+        // but never deletes it from the bank.
+        addRating("Biliyordum", Rating.EASY)
+        first.requestFocus()
     }
 
-    private fun showFeedback(q: Question,selected: String) {
+    private fun showFeedback(q: Question, selected: String) {
         if (inFeedback || q.id != currentQuestion?.id) return
         inFeedback = true
         screen = "feedback"
-        val right = selected == q.answer
-        feedbackCanAdvance = !right
-        if (!right) register(q, Rating.AGAIN)
-        if (soundEnabled) {
-            if (right) sounds.correct() else sounds.wrong()
+        feedbackCanAdvance = false
+        timerRunning = false
+        timerHandler.removeCallbacks(timerTick)
+        timerLabel?.visibility = View.INVISIBLE
+        studyButtons.values.forEach {
+            it.isEnabled = false
+            it.isFocusable = false
+            it.animate().scaleX(1f).scaleY(1f).setDuration(100L).start()
         }
-        renderFeedbackQuestion(q, selected)
+        studyButtons[selected]?.background = shape(
+            Color.rgb(117, 76, 14), Color.rgb(255, 222, 101)
+        )
+        if (soundEnabled) sounds.press()
+        // Delayed reveal avoids a harsh, immediate full-screen change.
+        pendingSelection = selected
+        pendingReveal = true
+        val reveal = Runnable {
+            if (screen != "feedback" || currentQuestion?.id != q.id) return@Runnable
+            if (selected != q.answer) register(q, Rating.AGAIN)
+            revealAnswer(q, selected)
+        }
+        autoAdvanceTask = reveal
+        timerHandler.postDelayed(reveal, 1100L)
     }
 
     private fun showTimeout(q: Question) {
         if (inFeedback || screen != "study" || currentQuestion?.id != q.id) return
         inFeedback = true
-        feedbackCanAdvance = true
         screen = "timeout"
+        feedbackCanAdvance = false
+        timerRunning = false
+        timerHandler.removeCallbacks(timerTick)
+        timerLabel?.visibility = View.INVISIBLE
+        studyButtons.values.forEach { it.isEnabled = false; it.isFocusable = false }
         register(q, Rating.AGAIN, timedOut = true)
-        if (soundEnabled) sounds.wrong()
-        renderFeedbackQuestion(q, null)
-        val id = q.id
-        val advance = Runnable {
-            if (screen == "timeout" && currentQuestion?.id == id) nextQuestion()
-        }
-        autoAdvanceTask = advance
-        timerHandler.postDelayed(advance, 2_500L)
+        revealAnswer(q, null)
     }
 
     private fun register(q:Question, rating:Rating, timedOut: Boolean = false) {
@@ -751,6 +687,8 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
+        // Only the countdown is paused; an already chosen answer must still
+        // reveal when the user returns from another Android TV app.
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         if (timerRunning) {
@@ -765,6 +703,24 @@ class MainActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
+        if (screen == "feedback" && pendingReveal) {
+            val q = currentQuestion
+            val selected = pendingSelection
+            if (q != null && selected != null) {
+                if (selected != q.answer) register(q, Rating.AGAIN)
+                revealAnswer(q, selected)
+            }
+        } else if ((screen == "feedback" || screen == "timeout") &&
+            inFeedback && feedbackCanAdvance) {
+            currentQuestion?.let { q ->
+                autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
+                val next = Runnable {
+                    if (currentQuestion?.id == q.id && inFeedback) nextQuestion()
+                }
+                autoAdvanceTask = next
+                timerHandler.postDelayed(next, 1600L)
+            }
+        }
         if (screen == "study" && !inFeedback && timerSeconds > 0 &&
             timerRemainingMs > 0L && timerLabel != null && !timerRunning) {
             timerDeadlineMs = SystemClock.elapsedRealtime() + timerRemainingMs

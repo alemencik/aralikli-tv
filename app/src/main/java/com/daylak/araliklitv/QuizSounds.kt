@@ -43,6 +43,12 @@ class QuizSounds(context: Context) {
         }
     }
 
+    fun press() {
+        handler.removeCallbacks(secondTone)
+        if (playLocal("milyoner_select.mp3")) return
+        try { tones?.startTone(ToneGenerator.TONE_PROP_BEEP, 95) }
+        catch (_: RuntimeException) {}
+    }
     fun correct() {
         handler.removeCallbacks(secondTone)
         if (playLocal("milyoner_correct.mp3")) return
