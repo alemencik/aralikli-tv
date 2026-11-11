@@ -14,8 +14,7 @@ import android.graphics.drawable.Drawable
 import java.io.File
 
 /**
- * Original TV-show images and sound effects are supplied ONLY by the user,
- * locally on their TV. No copyrighted binary asset is committed to GitHub.
+ * The optional stage image is supplied locally by the user.
  *
  * Put milyoner_stage.jpg (or .png) in:
  * /sdcard/Android/data/com.daylak.araliklitv/files/
@@ -46,15 +45,6 @@ class LocalShowAssets(private val context: Context) {
         }
         val image = cachedBitmap ?: return StageDrawable()
         return UserStageDrawable(image)
-    }
-
-    fun soundFile(name: String): File? {
-        if (name !in setOf("milyoner_correct.mp3", "milyoner_wrong.mp3",
-                "milyoner_warning.mp3", "milyoner_select.mp3",
-                "milyoner_suspense.mp3", "milyoner_bed_a.mp3",
-                "milyoner_bed_b.mp3", "milyoner_lock.mp3")) return null
-        return assetsDirectory()?.let { File(it, name) }
-            ?.takeIf { it.isFile && it.length() > 0L }
     }
 
     private fun decodeScaled(file: File): Bitmap? {
