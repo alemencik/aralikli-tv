@@ -18,13 +18,6 @@ internal object StudyText {
     )
     private val repeatedSpaces = Regex("[ \\t]{2,}")
 
-    private val yearQuestion = Regex(
-        "^(.+?) (?:kaç yılında|hangi yılda) ([^?]+)\\?$", RegexOption.IGNORE_CASE
-    )
-    private val identifyingQuestion = Regex(
-        "^([^?!]+?) aşağıdakilerden hangisidir\\?$", RegexOption.IGNORE_CASE
-    )
-
     fun question(stem: String, englishDeck: Boolean): StudyLine {
         val prompt = if (englishDeck) englishInstruction.split(stem, limit = 2).first()
             else stem
@@ -36,36 +29,6 @@ internal object StudyText {
     fun option(index: Int, text: String, englishDeck: Boolean): StudyLine {
         val english = englishDeck && !turkishWording.containsMatchIn(text)
         return StudyLine("${'A' + index}. ${text.trim()}", english)
-    }
-
-    fun takeaway(stem: String, answer: String, englishDeck: Boolean): StudyLine {
-        val prompt = if (englishDeck) englishInstruction.split(stem, limit = 2).first().trim() else stem.trim()
-        val blanks = blank.findAll(prompt).count()
-        val answers = if (blanks == 1) listOf(answer.trim())
-            else answer.split(Regex("\\s*(?:/|\\s[-–]\\s)\\s*")).map(String::trim)
-        if (blanks > 0 && blanks == answers.size && answers.none(String::isBlank)) {
-            val replacements = answers.iterator()
-            val completed = blank.replace(prompt) { replacements.next() }
-            return StudyLine(completed, englishDeck && !turkishWording.containsMatchIn(completed))
-        }
-        val choice = answer.trim()
-        val english = englishDeck && !turkishWording.containsMatchIn(prompt + " " + choice)
-        if (!englishDeck && choice.matches(Regex("[0-9]{4}"))) {
-            yearQuestion.matchEntire(prompt)?.let { match ->
-                val (subject, verb) = match.destructured
-                return StudyLine("$subject $choice yılında $verb.")
-            }
-        }
-        if (!englishDeck && choice.length <= 90 && !choice.endsWith('.') &&
-            choice.none { it == '?' || it == '!' || it == '\n' } &&
-            !choice.equals("Hepsi", ignoreCase = true) && !choice.equals("Hiçbiri", ignoreCase = true)) {
-            identifyingQuestion.matchEntire(prompt)?.let { match ->
-                val subject = match.groupValues[1]
-                return StudyLine("$subject $choice.")
-            }
-        }
-        val caption = if (english) "Correct answer." else "Doğru cevap."
-        return StudyLine("$caption $choice", english)
     }
 }
 
@@ -96,16 +59,23 @@ internal class StudySpeech(context: Context) {
             else -> return
         }
         engine.stop()
-        engine.setSpeechRate(1.35f)
+        engine.setSpeechRate(1.12f)
         val voices = engine.voices.orEmpty().filter { !it.isNetworkConnectionRequired }
+        var hasQueuedSpeech = false
         lines.forEachIndexed { index, line ->
             val locale = if (line.english) Locale.US else Locale.forLanguageTag("tr-TR")
             val voice = voices.filter { it.locale.language == locale.language }
                 .maxByOrNull { if (it.locale.country == locale.country) it.quality + 1000 else it.quality }
                 ?: return@forEachIndexed
             if (engine.setVoice(voice) == TextToSpeech.SUCCESS) {
-                engine.speak(line.text.take(TextToSpeech.getMaxSpeechInputLength()), TextToSpeech.QUEUE_ADD,
-                    null, "study-$index")
+                if (hasQueuedSpeech) {
+                    engine.playSilentUtterance(200L, TextToSpeech.QUEUE_ADD, "study-gap-$index")
+                }
+                val queued = engine.speak(
+                    line.text.take(TextToSpeech.getMaxSpeechInputLength()),
+                    TextToSpeech.QUEUE_ADD, null, "study-$index"
+                )
+                if (queued == TextToSpeech.SUCCESS) hasQueuedSpeech = true
             }
         }
     }
