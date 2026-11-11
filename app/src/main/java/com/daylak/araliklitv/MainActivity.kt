@@ -661,16 +661,34 @@ class MainActivity : Activity() {
         action(box,"Ana Menü") { renderHome() }
     }
 
+    private fun installTvBrowser() {
+        val storeUrl = Uri.parse("market://details?id=com.phlox.tvwebbrowser")
+        try {
+            startActivity(Intent(Intent.ACTION_VIEW, storeUrl))
+        } catch (_: Exception) {
+            // Some Android TV boxes ship without the Play Store.
+            screen = "video-help"
+            val box = panel()
+            heading(box, "TV TARAYICISI KURULUMU")
+            info(box, "Google Play Store uygulamasını açıp TV Bro ara ve yükle.")
+            info(box, "Google Play Store yoksa bilgisayarından TV Bro'nun resmî GitHub sürümünü kurabilirsin.")
+            firstFocus(action(box, "Video Derslere Dön") { renderVideos() })
+        }
+    }
+
     private fun openVideoLink(url: String) {
         try {
             startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
         } catch (_: Exception) {
+            // A stock Android TV installation may have no app handling HTTPS links.
+            screen = "video-help"
             val box = panel()
-            screen = "videos"
-            heading(box, "Bağlantı açılamadı")
-            info(box, "Televizyonda tarayıcı veya YouTube uygulaması bulunmayabilir.")
+            heading(box, "BAĞLANTI AÇILAMADI")
+            info(box, "Bu bağlantıyı açacak uygulama bulunamadı. TV Bro, kumandayla kullanılabilen bir TV tarayıcısıdır.")
+            info(box, "TV Bro'yu yükledikten sonra bu menüden ders bağlantısını yeniden aç.")
             info(box, url, 17f)
-            firstFocus(action(box, "Video Dersler") { renderVideos() })
+            firstFocus(action(box, "TV Bro'yu Google Play'den Yükle") { installTvBrowser() })
+            action(box, "Video Derslere Dön") { renderVideos() }
         }
     }
 
@@ -679,17 +697,18 @@ class MainActivity : Activity() {
         val box = panel()
         heading(box, "VİDEO DERSLER")
         info(box, "AUZEF ders anlatımları, üniversitenin kendi materyalleri üzerinden takip edilebilir.")
-        val first = action(box,"AUZEF Ders Materyalleri (Resmi)") {
+        val first = action(box, "AUZEF Ders Materyalleri (Resmi)") {
             openVideoLink("https://ikinciuniversite.istanbul.edu.tr/tr/content/ders-materyalleri/ders-materyalleri")
         }
-        action(box,"AUZEF Öğrenci Sistemi (AKSİS)") {
+        action(box, "AUZEF Öğrenci Sistemi (AKSİS)") {
             openVideoLink("https://aksis.istanbul.edu.tr")
         }
-        action(box,"Atatürk İlkeleri II - Anadolu Üniversitesi Video Ders") {
+        action(box, "Atatürk İlkeleri II - Anadolu Üniversitesi Video Ders") {
             openVideoLink("https://www.youtube.com/watch?v=Qou2hEGopUA")
         }
-        info(box,"Video izlemek internet bağlantısı ve uygun TV uygulaması gerektirir.",16f)
-        action(box,"Ana Menü") { renderHome() }
+        action(box, "TV Tarayıcısı Yükle (TV Bro)") { installTvBrowser() }
+        info(box, "Ders bağlantıları internet ister. Üniversite siteleri giriş yapmanı isteyebilir.", 16f)
+        action(box, "Ana Menü") { renderHome() }
         firstFocus(first)
     }
 
@@ -854,6 +873,7 @@ class MainActivity : Activity() {
     override fun onBackPressed() {
         when(screen) {
             "study", "feedback", "timeout", "done", "unavailable" -> renderLessons()
+            "video-help" -> renderVideos()
             "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }
