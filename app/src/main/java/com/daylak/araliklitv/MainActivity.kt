@@ -16,9 +16,12 @@ import android.view.Gravity
 import android.graphics.Typeface
 import android.graphics.Color
 import android.content.res.ColorStateList
+import android.graphics.drawable.ClipDrawable
 import android.graphics.drawable.GradientDrawable
+import android.graphics.drawable.LayerDrawable
 import android.graphics.drawable.StateListDrawable
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.ProgressBar
 import android.widget.LinearLayout
 import android.widget.ScrollView
@@ -55,9 +58,33 @@ class MainActivity : Activity() {
     private var autoAdvanceTask: Runnable? = null
     private val studyButtons = linkedMapOf<String, Button>()
     private var studyFooter: LinearLayout? = null
-    private var pendingSelection: String? = null
-    private var pendingReveal = false
-    private var selectionPulse: AnimatorSet? = null
+    private val optionOrder = mutableMapOf<String, List<String>>()
+    private val answerCounters = mutableMapOf<String, TextView>()
+    private var answerCountdown: AnswerCountdown? = null
+    private var answerCountdownPausedAt: Long? = null
+    private var countdownFill: ClipDrawable? = null
+    private val answerCountdownTick = object : Runnable {
+        override fun run() {
+            val countdown = answerCountdown ?: return
+            val question = currentQuestion ?: return
+            val now = SystemClock.elapsedRealtime()
+            val remaining = countdown.remainingMs(now)
+            if (remaining > 0L) {
+                drawAnswerCountdown(countdown, remaining)
+                timerHandler.postDelayed(this, minOf(remaining, 32L))
+                return
+            }
+            lockAnswerCountdown(countdown)
+            val untilReveal = countdown.untilRevealMs(now)
+            if (untilReveal > 0L) {
+                timerHandler.postDelayed(this, untilReveal)
+                return
+            }
+            stopAnswerCountdown()
+            if (countdown.choice != question.answer) register(question, Rating.AGAIN)
+            revealAnswer(question, countdown.choice)
+        }
+    }
     private val answerFlashes = mutableListOf<AnimatorSet>()
     private val timerTick = object : Runnable {
         override fun run() {
@@ -182,13 +209,17 @@ class MainActivity : Activity() {
     private fun studyOptionButtons(box: LinearLayout, question: Question): Button? {
         var first: Button? = null
         studyButtons.clear()
+        answerCounters.clear()
+        val order = shuffledOptions(question.options.keys, optionOrder[question.id])
+        optionOrder[question.id] = order
         val longest = question.options.values.maxOfOrNull { it.length } ?: 0
         val total = question.options.values.sumOf { it.length }
         val answerFont = StudyLayoutRules.answerSp(longest, total)
         val h = resources.displayMetrics.heightPixels
-        for ((letter, choice) in question.options) {
+        for ((index, letter) in order.withIndex()) {
+            val choice = question.options.getValue(letter)
             val button = Button(this).apply {
-                text = "$letter)  $choice"
+                text = "${'A' + index})  $choice"
                 isAllCaps = false
                 textSize = scaledSp(answerFont)
                 typeface = Typeface.DEFAULT_BOLD
@@ -202,15 +233,32 @@ class MainActivity : Activity() {
                 setHorizontallyScrolling(false)
                 minHeight = (h * 0.095f).toInt().coerceAtLeast(px(48))
                 minimumHeight = minHeight
-                setPadding(px(22), px(12), px(18), px(12))
-                setOnClickListener { showFeedback(question, letter) }
+                setPaddingRelative(px(22), px(12), px(57), px(12))
+                setOnClickListener { selectAnswer(question, letter) }
                 setOnFocusChangeListener { view, focused ->
                     view.animate().scaleX(if (focused) 1.008f else 1f)
                         .scaleY(if (focused) 1.008f else 1f).setDuration(120L).start()
                 }
             }
             studyButtons[letter] = button
-            box.addView(button, LinearLayout.LayoutParams(
+            val counter = TextView(this).apply {
+                visibility = View.GONE
+                setTextColor(Color.WHITE)
+                textSize = scaledSp(23f)
+                typeface = Typeface.DEFAULT_BOLD
+                importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO
+            }
+            answerCounters[letter] = counter
+            val row = FrameLayout(this).apply {
+                addView(button, FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT
+                ))
+                addView(counter, FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT,
+                    Gravity.END or Gravity.CENTER_VERTICAL
+                ).apply { marginEnd = px(24) })
+            }
+            box.addView(row, LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
             ).apply { bottomMargin = px(9) })
@@ -230,8 +278,7 @@ class MainActivity : Activity() {
         autoAdvanceTask = null
         stopCountdown()
         soundEngine?.stopBackground()
-        pendingSelection = null
-        pendingReveal = false
+        stopAnswerCountdown()
         studyFooter = null
 
         val outer = LinearLayout(this).apply {
@@ -299,6 +346,7 @@ class MainActivity : Activity() {
     }
 
     private fun panel(): LinearLayout {
+        stopAnswerCountdown()
         soundEngine?.stopBackground()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
@@ -460,34 +508,8 @@ class MainActivity : Activity() {
     }
 
     private fun clearOptionAnimations() {
-        selectionPulse?.cancel()
-        selectionPulse = null
         answerFlashes.forEach { it.cancel() }
         answerFlashes.clear()
-    }
-
-    /** Steady amber selection with a subtle halo while the show suspense runs. */
-    private fun pulseLockedOption(button: Button) {
-        selectionPulse?.cancel()
-        val blink = ObjectAnimator.ofFloat(button, View.ALPHA, 1f, 0.93f).apply {
-            duration = 680L
-            repeatCount = ValueAnimator.INFINITE
-            repeatMode = ValueAnimator.REVERSE
-        }
-        val growX = ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.008f).apply {
-            duration = 680L
-            repeatCount = ValueAnimator.INFINITE
-            repeatMode = ValueAnimator.REVERSE
-        }
-        val growY = ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.008f).apply {
-            duration = 680L
-            repeatCount = ValueAnimator.INFINITE
-            repeatMode = ValueAnimator.REVERSE
-        }
-        selectionPulse = AnimatorSet().apply {
-            playTogether(blink, growX, growY)
-            start()
-        }
     }
 
     /** Two bright color pulses, ending on the correct final color. */
@@ -521,10 +543,6 @@ class MainActivity : Activity() {
      */
     private fun revealAnswer(q: Question, selected: String?) {
         if (q.id != currentQuestion?.id || (screen != "feedback" && screen != "timeout")) return
-        pendingReveal = false
-        pendingSelection = null
-        selectionPulse?.cancel()
-        selectionPulse = null
         soundEngine?.stopBackground()
         studyButtons.forEach { (letter, button) ->
             button.animate().cancel()
@@ -596,43 +614,66 @@ class MainActivity : Activity() {
         first.requestFocus()
     }
 
-    private fun showFeedback(q: Question, selected: String) {
-        if (inFeedback || q.id != currentQuestion?.id) return
-        inFeedback = true
-        screen = "feedback"
-        feedbackCanAdvance = false
-        timerRunning = false
-        timerHandler.removeCallbacks(timerTick)
-        timerLabel?.visibility = View.INVISIBLE
+    private fun selectAnswer(question: Question, letter: String) {
+        if (question.id != currentQuestion?.id) return
+        val now = SystemClock.elapsedRealtime()
+        val active = answerCountdown
+        val countdown = if (active == null) {
+            if (inFeedback || screen != "study") return
+            inFeedback = true
+            screen = "feedback"
+            feedbackCanAdvance = false
+            timerLabel?.visibility = View.INVISIBLE
+            stopCountdown()
+            soundEngine?.stopBackground()
+            if (soundEnabled) sounds.tension()
+            AnswerCountdown(letter, SystemClock.elapsedRealtime())
+        } else {
+            if (letter == active.choice || active.remainingMs(now) == 0L) return
+            studyButtons[active.choice]?.background = buttonBg()
+            answerCounters[active.choice]?.visibility = View.GONE
+            active.select(letter, now)
+        }
+        if (soundEnabled) sounds.press()
+        answerCountdown = countdown
+        val fill = ClipDrawable(
+            shape(Color.rgb(161, 94, 11), Color.rgb(255, 221, 78)),
+            Gravity.LEFT, ClipDrawable.HORIZONTAL
+        )
+        countdownFill = fill
+        studyButtons[letter]?.background = LayerDrawable(arrayOf(
+            shape(Color.rgb(69, 43, 19), Color.rgb(255, 221, 78)),
+            fill
+        ))
+        timerHandler.removeCallbacks(answerCountdownTick)
+        answerCountdownTick.run()
+    }
+
+    private fun drawAnswerCountdown(countdown: AnswerCountdown, remaining: Long) {
+        countdownFill?.level = (remaining * 10_000L / AnswerCountdown.DURATION_MS).toInt()
+        answerCounters[countdown.choice]?.apply {
+            text = ((remaining + 999L) / 1000L).toString()
+            visibility = View.VISIBLE
+        }
+    }
+
+    private fun lockAnswerCountdown(countdown: AnswerCountdown) {
+        countdownFill?.level = 0
+        answerCounters[countdown.choice]?.visibility = View.GONE
         studyButtons.values.forEach {
-            it.isEnabled = false
-            it.isFocusable = false
             it.animate().cancel()
             it.scaleX = 1f
             it.scaleY = 1f
-            it.alpha = 0.72f
+            it.isEnabled = false
+            it.isFocusable = false
         }
-        studyButtons[selected]?.let { locked ->
-            locked.alpha = 1f
-            locked.background = shape(Color.rgb(149, 87, 15), Color.rgb(255, 221, 78))
-            pulseLockedOption(locked)
-        }
-        val suspenseMs = RevealDelay.millis()
-        soundEngine?.stopBackground()
-        if (soundEnabled) {
-            sounds.press()
-            sounds.tension()
-        }
-        // Selection stays orange and pulses for a random 3–5 seconds.
-        pendingSelection = selected
-        pendingReveal = true
-        val reveal = Runnable {
-            if (screen != "feedback" || currentQuestion?.id != q.id) return@Runnable
-            if (selected != q.answer) register(q, Rating.AGAIN)
-            revealAnswer(q, selected)
-        }
-        autoAdvanceTask = reveal
-        timerHandler.postDelayed(reveal, suspenseMs)
+    }
+
+    private fun stopAnswerCountdown() {
+        timerHandler.removeCallbacks(answerCountdownTick)
+        answerCountdown = null
+        answerCountdownPausedAt = null
+        countdownFill = null
     }
 
     private fun showTimeout(q: Question) {
@@ -820,13 +861,13 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
-        selectionPulse?.cancel()
-        selectionPulse = null
         answerFlashes.forEach { it.cancel() }
         answerFlashes.clear()
         soundEngine?.release()
-        // Only the countdown is paused; an already chosen answer must still
-        // reveal when the user returns from another Android TV app.
+        if (answerCountdown != null) {
+            answerCountdownPausedAt = SystemClock.elapsedRealtime()
+            timerHandler.removeCallbacks(answerCountdownTick)
+        }
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         if (timerRunning) {
@@ -844,13 +885,14 @@ class MainActivity : Activity() {
         if (screen == "study" && !inFeedback && soundEnabled) {
             sounds.startQuestionMusic()
         }
-        if (screen == "feedback" && pendingReveal) {
-            val q = currentQuestion
-            val selected = pendingSelection
-            if (q != null && selected != null) {
-                if (selected != q.answer) register(q, Rating.AGAIN)
-                revealAnswer(q, selected)
-            }
+        val pausedAt = answerCountdownPausedAt
+        val countdown = answerCountdown
+        if (pausedAt != null && countdown != null) {
+            if (soundEnabled) sounds.tension()
+            val pausedFor = SystemClock.elapsedRealtime() - pausedAt
+            answerCountdown = countdown.copy(startedAtMs = countdown.startedAtMs + pausedFor)
+            answerCountdownPausedAt = null
+            answerCountdownTick.run()
         } else if ((screen == "feedback" || screen == "timeout") &&
             inFeedback && feedbackCanAdvance) {
             currentQuestion?.let { q ->
@@ -873,6 +915,8 @@ class MainActivity : Activity() {
     override fun onDestroy() {
         clearOptionAnimations()
         stopCountdown()
+        stopAnswerCountdown()
+        autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         soundEngine?.release()
         super.onDestroy()
     }
