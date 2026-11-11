@@ -1,15 +1,28 @@
 package com.daylak.araliklitv
 
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
+import org.junit.Assert.assertNotEquals
 import org.junit.Test
 
 class AnswerFeedbackTest {
-    @Test fun revealDelayAlwaysBetweenThreeAndFiveSeconds() {
-        val random = kotlin.random.Random(42)
-        val samples = (0 until 1000).map { RevealDelay.millis(random) }
-        assertTrue(samples.all { it in 3_000L..5_000L })
-        assertTrue(samples.distinct().size > 50)
+    @Test fun answerCanChangeUntilCountdownEndsWithoutResettingTheClock() {
+        val first = AnswerCountdown("A", 100L)
+        val updated = first.select("C", 4099L)
+        assertEquals("C", updated.choice)
+        assertEquals(1L, updated.remainingMs(4099L))
+        assertEquals("C", updated.select("D", 4100L).choice)
+        assertEquals(0L, updated.remainingMs(4100L))
+        assertEquals(1100L, updated.untilRevealMs(4100L))
+        assertEquals(1L, updated.untilRevealMs(5199L))
+        assertEquals(0L, updated.untilRevealMs(5200L))
+    }
+
+    @Test fun optionOrderChangesEvenIfTheRandomShuffleRepeats() {
+        val letters = linkedSetOf("A", "B", "C", "D")
+        val previous = shuffledOptions(letters, null, kotlin.random.Random(42))
+        val next = shuffledOptions(letters, previous, kotlin.random.Random(42))
+        assertEquals(letters, next.toSet())
+        assertNotEquals(previous, next)
     }
 
     @Test fun wrongAnswerHighlightsWrongRedAndCorrectGreen() {
