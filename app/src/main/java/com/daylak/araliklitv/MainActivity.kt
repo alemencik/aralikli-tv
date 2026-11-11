@@ -9,6 +9,8 @@ import android.os.Looper
 import android.os.SystemClock
 import android.view.KeyEvent
 import android.view.View
+import android.view.Gravity
+import android.graphics.Typeface
 import android.graphics.Color
 import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
@@ -60,7 +62,7 @@ class MainActivity : Activity() {
                 currentQuestion?.let { showTimeout(it) }
                 return
             }
-            timerLabel?.text = "Kalan süre: ${CountdownSettings.display(remain)}"
+            timerLabel?.text = CountdownSettings.display(remain)
             timerLabel?.setTextColor(if (remain <= 10_000L)
                 Color.rgb(255, 188, 96) else ink)
             timerBar?.progress = if (timerSeconds == 0) 0
@@ -128,62 +130,131 @@ class MainActivity : Activity() {
         timerBar = null
     }
 
-    private fun startCountdown(box: LinearLayout) {
+    private fun startCountdown(header: LinearLayout) {
         if (timerSeconds == 0) return
         timerWarningPlayed = false
         val label = TextView(this).apply {
-            textSize = scaledSp(20f)
+            text = CountdownSettings.display(timerSeconds * 1000L)
+            textSize = scaledSp(23f)
+            typeface = Typeface.DEFAULT_BOLD
+            gravity = Gravity.CENTER
             includeFontPadding = false
             setTextColor(ink)
-            setPadding(0, px(4), 0, px(8))
+            background = shape(Color.rgb(10, 28, 76), Color.rgb(44, 191, 238))
+            setPadding(px(22), px(9), px(22), px(9))
+            contentDescription = "Kalan süre"
         }
-        box.addView(label)
-        val bar = ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal).apply {
-            max = 1000
-            progress = 1000
-            progressTintList = ColorStateList.valueOf(Color.rgb(46, 209, 255))
-            progressBackgroundTintList = ColorStateList.valueOf(Color.rgb(30, 43, 103))
-        }
-        box.addView(bar, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT, px(10)
-        ).apply { bottomMargin = px(8) })
+        header.addView(label, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT
+        ))
         timerLabel = label
-        timerBar = bar
+        timerBar = null
         timerRemainingMs = timerSeconds * 1000L
         timerDeadlineMs = SystemClock.elapsedRealtime() + timerRemainingMs
         timerRunning = true
         timerHandler.post(timerTick)
     }
 
-    private fun optionButtons(box: LinearLayout, question: Question): Button? {
-        // Five real PDF choices become A+B, C+D, and full-width E.
-        // Never invent a missing option for a four-choice source.
+    /**
+     * Only five independent, full-width buttons; no side-by-side layout.
+     * Button height follows wrapped content, so long options never overlap.
+     * D-pad focus automatically scrolls the question viewport when necessary.
+     */
+    private fun studyOptionButtons(box: LinearLayout, question: Question): Button? {
         var first: Button? = null
-        val dense = question.options.values.any { it.length > 95 } ||
-            question.options.values.sumOf { it.length } > 300
-        for (pair in question.options.entries.chunked(2)) {
-            val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
-            box.addView(row, LinearLayout.LayoutParams(
+        val longest = question.options.values.maxOfOrNull { it.length } ?: 0
+        val total = question.options.values.sumOf { it.length }
+        val answerFont = StudyLayoutRules.answerSp(longest, total)
+        val h = resources.displayMetrics.heightPixels
+        for ((letter, choice) in question.options) {
+            val button = Button(this).apply {
+                text = "$letter)  $choice"
+                isAllCaps = false
+                textSize = scaledSp(answerFont)
+                typeface = Typeface.DEFAULT_BOLD
+                setTextColor(Color.WHITE)
+                background = buttonBg()
+                gravity = Gravity.CENTER_VERTICAL or Gravity.START
+                includeFontPadding = false
+                isSingleLine = false
+                maxLines = Int.MAX_VALUE
+                ellipsize = null
+                setHorizontallyScrolling(false)
+                minHeight = (h * 0.095f).toInt().coerceAtLeast(px(48))
+                minimumHeight = minHeight
+                setPadding(px(22), px(12), px(18), px(12))
+                setOnClickListener { showFeedback(question, letter) }
+            }
+            box.addView(button, LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
-            ))
-            for ((letter, choice) in pair) {
-                val button = action(row, "$letter) $choice") {
-                    showFeedback(question, letter)
-                }
-                if (dense) button.textSize = scaledSp(16f)
-                // Leave full option text available; never truncate a possible answer.
-                if (pair.size == 2) {
-                    val params = button.layoutParams as LinearLayout.LayoutParams
-                    params.width = 0
-                    params.weight = 1f
-                    params.marginEnd = px(7)
-                    button.layoutParams = params
-                }
-                if (first == null) first = button
-            }
+            ).apply { bottomMargin = px(9) })
+            if (first == null) first = button
         }
         return first
+    }
+
+    /**
+     * Study-only fullscreen view: timer at top, question and five buttons
+     * naturally spread over available TV height. On unusually long questions
+     * the whole content scrolls rather than clipping answer text.
+     */
+    private fun renderStudyQuestion(question: Question) {
+        autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
+        autoAdvanceTask = null
+        stopCountdown()
+
+        val outer = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            background = if (originalThemeEnabled) localShowAssets.stageBackground()
+                else StageDrawable()
+            setPadding(px(24), px(12), px(24), px(12))
+        }
+        val timerRow = LinearLayout(this).apply {
+            gravity = Gravity.END or Gravity.CENTER_VERTICAL
+            orientation = LinearLayout.HORIZONTAL
+        }
+        outer.addView(timerRow, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { bottomMargin = px(6) })
+        val viewport = ScrollView(this).apply {
+            isFillViewport = true
+            isFocusable = false
+            isSmoothScrollingEnabled = true
+            clipToPadding = false
+        }
+        val body = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            gravity = Gravity.CENTER_VERTICAL
+            setPadding(px(4), px(3), px(4), px(3))
+        }
+        viewport.addView(body)
+        outer.addView(viewport, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
+        ))
+        setContentView(outer)
+
+        // Avoid source filenames, "Yeni soru" and page labels in the quiz.
+        val questionCard = TextView(this).apply {
+            text = question.stem
+            textSize = scaledSp(StudyLayoutRules.questionSp(question.stem.length))
+            typeface = Typeface.DEFAULT_BOLD
+            setTextColor(Color.WHITE)
+            gravity = Gravity.CENTER
+            includeFontPadding = false
+            setLineSpacing(px(3).toFloat(), 1.05f)
+            setPadding(px(20), px(16), px(20), px(16))
+            minHeight = (resources.displayMetrics.heightPixels * 0.18f).toInt()
+            background = shape(Color.rgb(9, 24, 66), Color.rgb(38, 155, 247))
+        }
+        body.addView(questionCard, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { bottomMargin = px(18) })
+        val first = studyOptionButtons(body, question)
+        startCountdown(timerRow)
+        first?.requestFocus()
     }
 
     private fun panel(): LinearLayout {
@@ -322,15 +393,7 @@ class MainActivity : Activity() {
         val question=Scheduler.pick(questions(currentDeck),progress,System.currentTimeMillis(),turn)
         if (question==null) { renderDone();return }
         currentQuestion=question
-        val box=panel()
-        heading(box,"${currentDeck?.title ?: "Günlük Tekrar"}",26f)
-        val p=progress[question.id]
-        info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  Sayfa ${question.sourcePage}",16f)
-        heading(box,question.stem,if (question.stem.length > 170) 20f else 25f)
-        startCountdown(box)
-        val first = optionButtons(box, question)
-        action(box,"Derslere Dön") { renderLessons() }
-        firstFocus(first)
+        renderStudyQuestion(question)
     }
 
     private fun showFeedback(q: Question,selected: String) {
