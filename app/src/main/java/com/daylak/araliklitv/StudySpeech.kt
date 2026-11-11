@@ -33,6 +33,11 @@ internal object StudyText {
         return StudyLine(repeatedSpaces.replace(spoken, " ").trim(), english)
     }
 
+    fun option(index: Int, text: String, englishDeck: Boolean): StudyLine {
+        val english = englishDeck && !turkishWording.containsMatchIn(text)
+        return StudyLine("${'A' + index}. ${text.trim()}", english)
+    }
+
     fun takeaway(stem: String, answer: String, englishDeck: Boolean): StudyLine {
         val prompt = if (englishDeck) englishInstruction.split(stem, limit = 2).first().trim() else stem.trim()
         val blanks = blank.findAll(prompt).count()
@@ -67,7 +72,7 @@ internal object StudyText {
 internal class StudySpeech(context: Context) {
     private val main = Handler(Looper.getMainLooper())
     private var status: Int? = null
-    private var pending: StudyLine? = null
+    private var pending: List<StudyLine>? = null
     private var closed = false
     private val engine = TextToSpeech(context.applicationContext) { result ->
         main.post {
@@ -79,23 +84,30 @@ internal class StudySpeech(context: Context) {
         }
     }
 
-    fun speak(line: StudyLine) {
+    fun speak(line: StudyLine) = speak(listOf(line))
+
+    fun speak(lines: List<StudyLine>) {
         when (status) {
             null -> {
-                pending = line
+                pending = lines
                 return
             }
             TextToSpeech.SUCCESS -> Unit
             else -> return
         }
-        val locale = if (line.english) Locale.US else Locale.forLanguageTag("tr-TR")
-        val voice = engine.voices.orEmpty()
-            .filter { !it.isNetworkConnectionRequired && it.locale.language == locale.language }
-            .maxByOrNull { if (it.locale.country == locale.country) it.quality + 1000 else it.quality }
-            ?: return
-        if (engine.setVoice(voice) != TextToSpeech.SUCCESS) return
-        engine.speak(line.text.take(TextToSpeech.getMaxSpeechInputLength()), TextToSpeech.QUEUE_FLUSH,
-            null, "study")
+        engine.stop()
+        engine.setSpeechRate(1.35f)
+        val voices = engine.voices.orEmpty().filter { !it.isNetworkConnectionRequired }
+        lines.forEachIndexed { index, line ->
+            val locale = if (line.english) Locale.US else Locale.forLanguageTag("tr-TR")
+            val voice = voices.filter { it.locale.language == locale.language }
+                .maxByOrNull { if (it.locale.country == locale.country) it.quality + 1000 else it.quality }
+                ?: return@forEachIndexed
+            if (engine.setVoice(voice) == TextToSpeech.SUCCESS) {
+                engine.speak(line.text.take(TextToSpeech.getMaxSpeechInputLength()), TextToSpeech.QUEUE_ADD,
+                    null, "study-$index")
+            }
+        }
     }
 
     fun stop() {

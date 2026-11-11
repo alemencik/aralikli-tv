@@ -57,6 +57,11 @@ class MainActivity : Activity() {
     private var studyViewport: ScrollView? = null
     private var manualFeedbackAdvance = false
     private var takeawayLine: StudyLine? = null
+    private val englishExplanations by lazy {
+        assets.open("english_explanations.json").bufferedReader(Charsets.UTF_8).use {
+            JSONObject(it.readText())
+        }
+    }
     private val localShowAssets by lazy { LocalShowAssets(this) }
     private var stageMode = StageBackgroundMode.ATHENS
     private var timerSeconds = CountdownSettings.DEFAULT_SECONDS
@@ -378,7 +383,15 @@ class MainActivity : Activity() {
     }
 
     private fun playStudyPrompt(question: Question) {
-        if (questionVoiceEnabled) speak(StudyText.question(question.stem, isEnglish(question)))
+        if (!questionVoiceEnabled) return
+        val english = isEnglish(question)
+        val prompt = StudyText.question(question.stem, english)
+        val options = studyButtons.keys.mapIndexed { index, key ->
+            val text = question.options.getValue(key)
+            StudyText.option(index, text, english)
+        }
+        val speech = studySpeech ?: StudySpeech(this).also { studySpeech = it }
+        speech.speak(listOf(prompt) + options)
     }
 
     private fun isEnglish(question: Question): Boolean =
@@ -710,9 +723,15 @@ class MainActivity : Activity() {
             if (correct) sounds.correct() else sounds.wrong()
         }
         val answer = q.answer?.let(q.options::get)
-        val line = answer?.let { StudyText.takeaway(q.stem, it, isEnglish(q)) }
+        val english = isEnglish(q)
+        val line = if (english) {
+            englishExplanations.optString(q.id).takeIf(String::isNotBlank)?.let { StudyLine(it) }
+        } else {
+            answer?.let { StudyText.takeaway(q.stem, it, false) }
+        }
+        val showTakeaway = takeawayEnabled && !english && line != null
         takeawayLine = line
-        if (line != null && takeawayEnabled) {
+        if (showTakeaway && line != null) {
             takeawayCard?.apply {
                 text = "Hap bilgi\n${line.text}"
                 visibility = View.VISIBLE
@@ -723,7 +742,7 @@ class MainActivity : Activity() {
             showSimpleRatings(q)
         } else {
             feedbackCanAdvance = true
-            manualFeedbackAdvance = line != null && (takeawayEnabled || takeawayVoiceEnabled)
+            manualFeedbackAdvance = line != null && (showTakeaway || takeawayVoiceEnabled)
             if (manualFeedbackAdvance) {
                 studyFooter?.let { footer ->
                     footer.visibility = View.VISIBLE
@@ -738,7 +757,7 @@ class MainActivity : Activity() {
                 timerHandler.postDelayed(next, 2300L)
             }
         }
-        if (line != null && takeawayEnabled) {
+        if (showTakeaway) {
             studyViewport?.let { viewport ->
                 viewport.post {
                     if (currentQuestion?.id == q.id) viewport.smoothScrollTo(0, viewport.getChildAt(0).height)
