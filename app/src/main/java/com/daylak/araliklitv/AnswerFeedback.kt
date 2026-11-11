@@ -11,8 +11,25 @@ object AnswerFeedback {
     }
 }
 
-/** Randomized reveal latency; inclusive 3,000..5,000 milliseconds. */
-object RevealDelay {
-    fun millis(random: kotlin.random.Random = kotlin.random.Random.Default): Long =
-        random.nextLong(3_000L, 5_001L)
+internal data class AnswerCountdown(val choice: String, val startedAtMs: Long) {
+    fun remainingMs(now: Long) = CountdownSettings.remainingMillis(startedAtMs + DURATION_MS, now)
+    fun untilRevealMs(now: Long) =
+        CountdownSettings.remainingMillis(startedAtMs + DURATION_MS + REVEAL_DELAY_MS, now)
+
+    fun select(letter: String, now: Long): AnswerCountdown =
+        if (remainingMs(now) > 0L) copy(choice = letter) else this
+
+    companion object {
+        const val DURATION_MS = 4000L
+        const val REVEAL_DELAY_MS = 1100L
+    }
+}
+
+internal fun shuffledOptions(
+    letters: Set<String>,
+    previous: List<String>?,
+    random: kotlin.random.Random = kotlin.random.Random.Default
+): List<String> {
+    val order = letters.shuffled(random)
+    return if (order.size > 1 && order == previous) order.drop(1) + order.first() else order
 }
