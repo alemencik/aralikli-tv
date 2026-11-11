@@ -3492,7 +3492,7 @@
         },
         {
           "id": "ingilizce-kaynak-20-03-023",
-          "stem": "carpet – c.yatak",
+          "stem": "Aşağıdaki kelimelerin hangisi anlamlarıyla doğru eşleşmedir?\n1.bed – a.halı\n2.bookcase – b.kitaplık\n3.carpet – c.yatak",
           "options": {
             "A": "1a-2b-3c",
             "B": "1b-2a-3c",
@@ -3504,7 +3504,7 @@
           "answer_text": "1c-2b-3a",
           "source_file": "Yabancı Dil 1 ( İngilizce ) AUZEF.PDF",
           "source_page": 20,
-          "source_no": 3
+          "source_no": 9
         },
         {
           "id": "ingilizce-kaynak-20-10-024",
