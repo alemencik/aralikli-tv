@@ -1,27 +1,8 @@
-# TV'ye özel ses efektleri
+# Doğru ve yanlış cevap efektleri
 
-Aşağıdaki dosyalar APK'ye veya genel erişime açık GitHub deposuna eklenmez.
-Yalnızca kullanma hakkına sahip olduğunuz ses kayıtlarını TV'deki uygulama klasörüne kopyalayın:
+- Doğru cevap: Kenney Interface Sounds paketinden `confirmation_002.wav`.
+- Yanlış cevap: Aynı paketten `error_006.wav`.
 
-```
-/sdcard/Android/data/com.daylak.araliklitv/files/milyoner_select.mp3
-/sdcard/Android/data/com.daylak.araliklitv/files/milyoner_suspense.mp3
-/sdcard/Android/data/com.daylak.araliklitv/files/milyoner_correct.mp3
-/sdcard/Android/data/com.daylak.araliklitv/files/milyoner_wrong.mp3
-```
+Paket [Kenney](https://kenney.nl/assets/interface-sounds) tarafından [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) ile yayımlandı. APK'deki WAV dosyaları [Calinou'nun WAV sürümünden](https://github.com/Calinou/kenney-interface-sounds/tree/4596a49eaf5a533948d49a47467f606bcdea70ff/addons/kenney_interface_sounds) alındı.
 
-- select: şık seçildiğinde bir kez.
-- suspense: rastgele 3–5 saniyelik bekleme süresinde döngü halinde; cevap açıklandığında kesilir.
-- correct: yeşil doğru cevap gösterildiğinde.
-- wrong: yanlış seçilen şık kırmızıya ve doğru şık yeşile döndüğünde.
-
-Kendi bilgisayarınızdan yüklemek için:
-
-```bash
-adb push milyoner_select.mp3 /sdcard/Android/data/com.daylak.araliklitv/files/milyoner_select.mp3
-adb push milyoner_suspense.mp3 /sdcard/Android/data/com.daylak.araliklitv/files/milyoner_suspense.mp3
-adb push milyoner_correct.mp3 /sdcard/Android/data/com.daylak.araliklitv/files/milyoner_correct.mp3
-adb push milyoner_wrong.mp3 /sdcard/Android/data/com.daylak.araliklitv/files/milyoner_wrong.mp3
-```
-
-Bunlar yoksa uygulama yerleşik özgün tonları kullanır.
+Efektler cevap açıklandığında çalar ve çevrimdışı çalışır. Ayarlar ekranından ses efektleri kapatılabilir. Soru ve hap bilgi seslendirmesi ayrı ayarlanır.
