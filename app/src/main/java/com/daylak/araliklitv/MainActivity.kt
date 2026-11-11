@@ -159,6 +159,8 @@ class MainActivity : Activity() {
         // Five real PDF choices become A+B, C+D, and full-width E.
         // Never invent a missing option for a four-choice source.
         var first: Button? = null
+        val dense = question.options.values.any { it.length > 95 } ||
+            question.options.values.sumOf { it.length } > 300
         for (pair in question.options.entries.chunked(2)) {
             val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
             box.addView(row, LinearLayout.LayoutParams(
@@ -169,6 +171,8 @@ class MainActivity : Activity() {
                 val button = action(row, "$letter) $choice") {
                     showFeedback(question, letter)
                 }
+                if (dense) button.textSize = scaledSp(16f)
+                // Leave full option text available; never truncate a possible answer.
                 if (pair.size == 2) {
                     val params = button.layoutParams as LinearLayout.LayoutParams
                     params.width = 0
@@ -322,7 +326,7 @@ class MainActivity : Activity() {
         heading(box,"${currentDeck?.title ?: "Günlük Tekrar"}",26f)
         val p=progress[question.id]
         info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  Sayfa ${question.sourcePage}",16f)
-        heading(box,question.stem,25f)
+        heading(box,question.stem,if (question.stem.length > 170) 20f else 25f)
         startCountdown(box)
         val first = optionButtons(box, question)
         action(box,"Derslere Dön") { renderLessons() }
