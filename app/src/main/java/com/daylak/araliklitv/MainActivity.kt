@@ -236,6 +236,7 @@ class MainActivity : Activity() {
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
+        soundEngine?.stopQuestionMusic()
         pendingSelection = null
         pendingReveal = false
         studyFooter = null
@@ -301,9 +302,11 @@ class MainActivity : Activity() {
         val first = studyOptionButtons(body, question)
         startCountdown(timerRow)
         first?.requestFocus()
+        if (soundEnabled) sounds.startQuestionMusic(turn)
     }
 
     private fun panel(): LinearLayout {
+        soundEngine?.stopQuestionMusic()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
@@ -627,6 +630,7 @@ class MainActivity : Activity() {
             pulseLockedOption(locked)
         }
         val suspenseMs = RevealDelay.millis()
+        soundEngine?.stopQuestionMusic()
         if (soundEnabled) {
             sounds.press()
             sounds.tension(suspenseMs)
@@ -651,6 +655,7 @@ class MainActivity : Activity() {
         timerRunning = false
         timerHandler.removeCallbacks(timerTick)
         timerLabel?.visibility = View.INVISIBLE
+        soundEngine?.stopQuestionMusic()
         studyButtons.values.forEach { it.isEnabled = false; it.isFocusable = false }
         register(q, Rating.AGAIN, timedOut = true)
         revealAnswer(q, null)
@@ -859,6 +864,7 @@ class MainActivity : Activity() {
         answerFlashes.forEach { it.cancel() }
         answerFlashes.clear()
         soundEngine?.stopTension()
+        soundEngine?.stopQuestionMusic()
         // Only the countdown is paused; an already chosen answer must still
         // reveal when the user returns from another Android TV app.
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
@@ -875,6 +881,9 @@ class MainActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
+        if (screen == "study" && !inFeedback && soundEnabled) {
+            sounds.startQuestionMusic(turn)
+        }
         if (screen == "feedback" && pendingReveal) {
             val q = currentQuestion
             val selected = pendingSelection

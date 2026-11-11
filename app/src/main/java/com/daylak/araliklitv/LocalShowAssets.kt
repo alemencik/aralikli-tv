@@ -51,7 +51,8 @@ class LocalShowAssets(private val context: Context) {
     fun soundFile(name: String): File? {
         if (name !in setOf("milyoner_correct.mp3", "milyoner_wrong.mp3",
                 "milyoner_warning.mp3", "milyoner_select.mp3",
-                "milyoner_suspense.mp3")) return null
+                "milyoner_suspense.mp3", "milyoner_bed_a.mp3",
+                "milyoner_bed_b.mp3", "milyoner_lock.mp3")) return null
         return assetsDirectory()?.let { File(it, name) }
             ?.takeIf { it.isFile && it.length() > 0L }
     }
