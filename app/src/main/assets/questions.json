@@ -6900,6 +6900,2425 @@
           "source_file": "09-sosyal-vize2022.pdf",
           "source_page": 3,
           "source_no": 20
+        },
+        {
+          "id": "sosyal-43p-p02-q001",
+          "stem": "Genel Sistem Teorisi’nin “negatif entropi” kavramına karşılık gelen açıklama aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Açık sistem içerisinde yer alan alt sistemlerin görev ve sorumlulukları önceden bilinmektedir.",
+            "B": "Sistemin işlevselliğini korumak için kendisini yenileyerek varlığını sürdürebilmesidir.",
+            "C": "Sistem içerisinde yer alan her bir alt sistemin kendine göre az ya da çok işlevleri söz konusudur.",
+            "D": "Daha teknik düzeyde, bir sistemin çevresiyle ya da üst sistemlerle olan girdi ve çıktı değişim sürecinin “olumlu dengesidir.”",
+            "E": "Pratik açıdan, bir sistemin sağlığı ya da refaha olarak düşünülebilir."
+          },
+          "answer": "B",
+          "answer_text": "Sistemin işlevselliğini korumak için kendisini yenileyerek varlığını sürdürebilmesidir.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 2,
+          "source_no": 1,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p02-q002",
+          "stem": "Aşağıdakilerden hangisi çağdaş varoluşçu yaklaşımın temel kuramcıları arasında yer almaz?",
+          "options": {
+            "A": "Eric Berne",
+            "B": "Rollo May",
+            "C": "Viktor Frankl",
+            "D": "James Bugental",
+            "E": "Irvin Yalom"
+          },
+          "answer": "A",
+          "answer_text": "Eric Berne",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 2,
+          "source_no": 2,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p02-q003",
+          "stem": "Aşağıdakilerden hangisi psikanalitik kuramda yer alan'içgüdülerin ortak özelliklerinden biri değildir?",
+          "options": {
+            "A": "Kaynak",
+            "B": "İtici güç",
+            "C": "Nesne",
+            "D": "Amaç",
+            "E": "İşlem"
+          },
+          "answer": "E",
+          "answer_text": "İşlem",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 2,
+          "source_no": 3,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p02-q005",
+          "stem": "Aşağıdakilerden hangisi görev merkezli yaklaşımın sorunu inceleme ve belirleme aşamalarından biri değildir?",
+          "options": {
+            "A": "Müracaatçı sorununun'çözümünü yalmz başına'yapmalı ve dışarıdan herhangi bir-destek almamalıdır.",
+            "B": "Müracaatçının öncelikle çözülmesini istediği .sorunlar'dikkate alınmalı'veşmüracantçının farkında olmadiğı diğer sorunlarına yönelik farkındalıkları\"artırılmalı",
+            "C": "Müracaatçı için ana sorunun ne olduğu noktasında ortak bir görüş sağlanmalı fo) izl",
+            "D": "Müracaatçı ile sosyal hizmet uzmanının, ortak karar vererek çözülebilecek sorunları belirlemeleri ve müracaatçının bunu kabul etmesi gerekir.",
+            "E": "Müracaatçı ile birlikte uzman, çözülmesi mümkün olan'ya da olmayan sorunları tekrar tekrar gözden geçirmeli"
+          },
+          "answer": "A",
+          "answer_text": "Müracaatçı sorununun'çözümünü yalmz başına'yapmalı ve dışarıdan herhangi bir-destek almamalıdır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 2,
+          "source_no": 5,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p03-q006",
+          "stem": "Aşağıdakilerden hangisi varoluşçuyaklaşımda sosyal hizmet uzmanın müracâatçıyı anlamak için yapması gerekenlerden biri değildir?",
+          "options": {
+            "A": "Mevcut durumun gerçek dünya olduğu ve herhangi bir çarpıtmanın olmadığının algılanması",
+            "B": "Mevcut durumu “dünyadaki varoluşun çarpıtılması” şeklinde algılanması",
+            "C": "Müracaatçının bütün değerlendirmelerinin anlam.analizlerinin yapılması",
+            "D": "Müracaatçıya ilişkin bilgilerin belirli bir sistem içerisinde değerlendirilmesi",
+            "E": "Müracaatçının anlattıklarının kişinin kendi otantik gerçekliliği içerisinde dikkate alınması"
+          },
+          "answer": "A",
+          "answer_text": "Mevcut durumun gerçek dünya olduğu ve herhangi bir çarpıtmanın olmadığının algılanması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 3,
+          "source_no": 6,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p03-q007",
+          "stem": "Aşağıdakilerden hangisi görev merkezli yaklaşımın temel özelliklerinden biri değildir?",
+          "options": {
+            "A": "Bütünleştirici yapı",
+            "B": "İşbirliği ilişkisi ve katılım",
+            "C": "Tamamen uzun süreli planlama",
+            "D": "Self-determinasyon ve güçlendirme",
+            "E": "Sistemler ve.bağlamlar vurgusu"
+          },
+          "answer": "C",
+          "answer_text": "Tamamen uzun süreli planlama",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 3,
+          "source_no": 7,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p04-q008",
+          "stem": "Güçlendirme yaklaşımı hangi'mesleki düzeylerde uygulanir?",
+          "options": {
+            "A": "Mezzo, makro",
+            "B": "Mezzo",
+            "C": "Mikro",
+            "D": "Mikro, mezzo, makro",
+            "E": "Makro"
+          },
+          "answer": "D",
+          "answer_text": "Mikro, mezzo, makro",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 4,
+          "source_no": 8,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p04-q009",
+          "stem": "Aşağıdakilerden hangisi transaksiyonel analize göre bireylerin oyun oynama nedenleri arasında yer almaz?",
+          "options": {
+            "A": "Sahip olunan duygu, düşünce, eylemler sistemini ve yerine konulan bir duygununun sürdürülmesi içi",
+            "B": "Temas-iletileri\"almak-için",
+            "C": "Tahminler yapmamak için",
+            "D": "Zamanı yapılandırmak için",
+            "E": "Ebeveyn emirlerini ve yaşam senaryolârını onaylamak için"
+          },
+          "answer": "C",
+          "answer_text": "Tahminler yapmamak için",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 4,
+          "source_no": 9,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p04-q010",
+          "stem": "Aşağıdakilerden hangisi egonun özelliklerinden biri değildir?",
+          "options": {
+            "A": "İç dünya ile çalışır.",
+            "B": "Manevi değerlere önem verir",
+            "C": "İd ve süper ego arasında arabulucu görevi vardır.",
+            "D": "Mantıklı ve gerçekçi fikirler ortaya koymaya çalışır",
+            "E": "Dış dünya ile çalışır."
+          },
+          "answer": "B",
+          "answer_text": "Manevi değerlere önem verir",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 4,
+          "source_no": 10,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p06-q016",
+          "stem": "Aşağıdakilerden hangisi transaksiyoneldeki üç tip ego durumunu içermektedir?",
+          "options": {
+            "A": "Ebeveyn, yetişkin ve çocuk ego",
+            "B": "Ebeveyn, yaşlı ve çocuk ego",
+            "C": "Yetişkin, yaşlı ve çocuk ego",
+            "D": "Çocuk, ergen ve yetişkin ego",
+            "E": "Yaşlı, ebeveyn ve yetişkin ego"
+          },
+          "answer": "A",
+          "answer_text": "Ebeveyn, yetişkin ve çocuk ego",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 6,
+          "source_no": 16,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p06-q017",
+          "stem": "Aşağıdakilerden hangisi (vâroluşçu yaklaşımın) dasein tarzlarından biridir?",
+          "options": {
+            "A": "Ego",
+            "B": "İd",
+            "C": "Eros",
+            "D": "Süperego",
+            "E": "Eingenwelth"
+          },
+          "answer": "E",
+          "answer_text": "Eingenwelth",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 6,
+          "source_no": 17,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p06-q019",
+          "stem": "Aşağıdakilerden hangisi “Birey ile çevre arasındaki iletişimin gerçekleştiği esas noktadır.” tanımlamasını kapsamaktadır?",
+          "options": {
+            "A": "İşlemler",
+            "B": "Arayüz",
+            "C": "Başa çıkma",
+            "D": "Enerji",
+            "E": "Karşılıklı bağımlılık"
+          },
+          "answer": "B",
+          "answer_text": "Arayüz",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 6,
+          "source_no": 19,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p07-q002",
+          "stem": "Aşağıdakilerden hangisi güçlendirme ilkelerinden birisi değildir?",
+          "options": {
+            "A": "Her birey ve toplumun güçlü yanları vardır.",
+            "B": "Karşılaşılan travma ve istismar zararlı olup, herhangi bir yararı yoktur.",
+            "C": "Bireyin büyüme kapasitesi ve değişimi gelişime açıktır.",
+            "D": "Müracaatçılara en iyi hizmet onlarla işbirliği yapılarak verilir.",
+            "E": "Her ortam kaynaklarla doludur."
+          },
+          "answer": "B",
+          "answer_text": "Karşılaşılan travma ve istismar zararlı olup, herhangi bir yararı yoktur.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 7,
+          "source_no": 2,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p07-q003",
+          "stem": "Aşağıdakilerden hangisi güçlendirme sürecinde sosyal hizmet uzmanının görevlerinden birisi. değildir?",
+          "options": {
+            "A": "Müracaatçılara yönelik olumsuz damgaları ortadan kaldırmak için çalışmak",
+            "B": "Müracaatçıların farkındalık-düzeylerini artırmak:",
+            "C": "Müracaatçıların olumsuz düşünce kalıplarını değiştirmelerine yardımcı olmak",
+            "D": ")Miracaatgya inanmak ve giivenmek",
+            "E": "Müracaatçı hakkında en dogru kararı onun adına biz vermeliyiz;"
+          },
+          "answer": "E",
+          "answer_text": "Müracaatçı hakkında en dogru kararı onun adına biz vermeliyiz;",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 7,
+          "source_no": 3,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p08-q004",
+          "stem": "1930”lu yıllardan itibaren güçlendirme yaklaşımı sosyal hizmet alanında kullanılmaya başlanmıştır. Cevap: Yanlışi Doğrusu 1960 Olacak 5-Güçlendirme yaklaşımı hangi yaklaşımlarla birlikte kullanılmaktadır?",
+          "options": {
+            "A": "Transaksiyonel Analiz",
+            "B": "Sistem Yaklaşımı",
+            "C": "Ekolojik Yaklaşım",
+            "D": "Transaksiyonel Analiz ve Sistem Yaklaşımı",
+            "E": "Sistem ve Ekolojik Yaklaşım"
+          },
+          "answer": "E",
+          "answer_text": "Sistem ve Ekolojik Yaklaşım",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 8,
+          "source_no": 4,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p08-q007",
+          "stem": "Aşağıdakilerden hangisi Varoluşçu Yaklaşımın kavramlarından değildir?",
+          "options": {
+            "A": "İnsanın;kendi:farkındalığını kavrayabilme yeteneği,",
+            "B": "“Özgürlük” ve “Sorumluluk”,",
+            "C": "Kişinin kendi kimliğini oluşturma ve başkalarıyla anlamlı ilişkiler kurabilme yeteneği,",
+            "D": "“Amaç”, “Anlam”, “Değer” ve “Hedefler” in oldüğu gibi Kabul edilmesi",
+            "E": "Ölüm ve yok olmanın bilincine varılmasıdır."
+          },
+          "answer": "D",
+          "answer_text": "“Amaç”, “Anlam”, “Değer” ve “Hedefler” in oldüğu gibi Kabul edilmesi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 8,
+          "source_no": 7,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p09-q013",
+          "stem": "Aşağıdakilerden hangisi Görev Merkezli Yaklaşım'ın kurucularındandır?",
+          "options": {
+            "A": "Irvin Yalom",
+            "B": "W.Reid ve L. Epstein",
+            "C": "Martin Buber",
+            "D": "Eric Berne",
+            "E": "Viktor Frankl"
+          },
+          "answer": "B",
+          "answer_text": "W.Reid ve L. Epstein",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 9,
+          "source_no": 13,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p09-q015",
+          "stem": "Aşağıdakilerden hangisi Gérev Merkezli Yaklaşım'ın müdahale-süresini kapsar?",
+          "options": {
+            "A": "3-5 ay, 5-8 görüşme",
+            "B": "4-8 ay, 4-10 görüşme",
+            "C": "5-10 ay, 6-12 görüşme",
+            "D": "3-7 ay, 6-10 görüşme",
+            "E": "2-4 ay, 6-12 görüşme"
+          },
+          "answer": "E",
+          "answer_text": "2-4 ay, 6-12 görüşme",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 9,
+          "source_no": 15,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p09-q017",
+          "stem": "Hangisi Sistem Kuramının 1960'larda genel kabul görmesinin gerekçeleri arasında değildir?",
+          "options": {
+            "A": "Sosyal hizmette yaklaşım modellerinin sorgulanmaya başladığı görülmektedir.",
+            "B": "Müracaatçının sorunlarını kendi iç dinamiklerine bağlı olarak çözümlenebileceği gerçeğinin ortaya çıkması",
+            "C": "Müracaatçının sorunlarının yalnızca kendi iç dinamiklerine bağlı olarak çözülemeyeceği",
+            "D": "işinin psişik özellikleri kadar çevresel faktörlerinde önemli olduğu anlaşılmaya başlanmıştır."
+          },
+          "answer": "A",
+          "answer_text": "Sosyal hizmette yaklaşım modellerinin sorgulanmaya başladığı görülmektedir.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 9,
+          "source_no": 17,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p10-q020",
+          "stem": "Hangisi Güçlendirme sürecinde sosyal hizmet uzmanının görevleri arasında yer almaz?",
+          "options": {
+            "A": "Müracaatçılar hakkında neyin dogru ya da yanlış olduğuna karar vermek",
+            "B": "Müracaatçılara yönelik birey; aile, grup ve toplumdaki olumsuz damgaları ortadan kaldırmak için çalışmak,",
+            "C": "Müracaatçıların farkındalık düzeylerini artırarak aile, grup ve toplumdaki mevcut kaynakları kullanmalarını sağlamak,",
+            "D": "Müracaatçıların olumsuz düşünce kalıplarını değiştirmelerine yardımcı olarak, kendilerinin güçl nlerini görmelerini ve yaşamlarına müdahale etmelerini sağlamak,"
+          },
+          "answer": "A",
+          "answer_text": "Müracaatçılar hakkında neyin dogru ya da yanlış olduğuna karar vermek",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 10,
+          "source_no": 20,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p10-q022",
+          "stem": "Hangisi Psikanalitik Kuramın temel Varsayimlarindan birisi değildir?",
+          "options": {
+            "A": "Ego(Benlik) — Savunma Mekanizmaları",
+            "B": ", Güçlendirme Modeli",
+            "C": "Topografik Model: Biling, Bilinçaltı ve Bilinçdışı",
+            "D": "Yapısal Model: İd, Ego, Süperego"
+          },
+          "answer": "B",
+          "answer_text": ", Güçlendirme Modeli",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 10,
+          "source_no": 22,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p10-q023",
+          "stem": "Hangisi Psikanalitik Kuramın kurucusudur?",
+          "options": {
+            "A": "Ludwing Von Bertalanffy",
+            "B": "Gregory Bateson",
+            "C": "Sigmund Freud",
+            "D": "Ronald Laing"
+          },
+          "answer": "C",
+          "answer_text": "Sigmund Freud",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 10,
+          "source_no": 23,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p10-q024",
+          "stem": "Hangisi Psikanalitik Kuram/’da yer alan iç güdülerin ortak özelliklerinden birisi değildir?",
+          "options": {
+            "A": "İşlem",
+            "B": "Amaç",
+            "C": "Nesne",
+            "D": "İtici güç"
+          },
+          "answer": "A",
+          "answer_text": "İşlem",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 10,
+          "source_no": 24,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p10-q026",
+          "stem": "Hangisi Transaksiyonel Analiz’in kurucusudur?",
+          "options": {
+            "A": "Ludwing Von Bertalanffy",
+            "B": "Gregory Bateson",
+            "C": "Sigmund Freud",
+            "D": "Eric/Berne"
+          },
+          "answer": "D",
+          "answer_text": "Eric/Berne",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 10,
+          "source_no": 26,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q028",
+          "stem": "Hangisi Transaksiyonel Analiz için söylenemez?",
+          "options": {
+            "A": "Transaksiyonel Analiz'in temel bir varsayımı; *’ Ben iyiyim-ben iyi değilim”? yaşam pozisyonu şeklinde ifade edilen durumudur:",
+            "B": "Transaksiyonel Analiz kişilik, kişiler arası ilişkiler, iletişim, gelişim, yaşam, psikopatoloji, psikoterapi gibi çok geniş bir yelpaze üzerinde insan davranışını açıklayan bir yaklaşımdır.",
+            "C": "Transaksiyonel Analiz'in amacı, Yetişkinin “Ebeveyn” ve “Çocuğu” ne zaman serbest bırakacağına, ne zaman yönetici olacağına karar verme yeteneğini veya sosyal kontrol kazandırmaktır.",
+            "D": "Bu yaklaşımda “insanlar iyidir” (people-are OKEY) varsayımı, sen ve ben ikimiz insan olarak saygıya layığız, değerliyiz ve onurlu varlıklarız anlamındadır."
+          },
+          "answer": "A",
+          "answer_text": "Transaksiyonel Analiz'in temel bir varsayımı; *’ Ben iyiyim-ben iyi değilim”? yaşam pozisyonu şeklinde ifade edilen durumudur:",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 28,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q029",
+          "stem": "Hangisi Transaksiyonel Analiz’in dört yaşam pozisyonu arasında yer almaz?",
+          "options": {
+            "A": "Bemiyidegilim-Sen iyisin.",
+            "B": "Ben iyi değilim-Sen de iyi değilsin",
+            "C": "Ben iyiyim-Sen iyi değilsin.",
+            "D": "Ben iyiyim-Ben iyi değilim"
+          },
+          "answer": "D",
+          "answer_text": "Ben iyiyim-Ben iyi değilim",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 29,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q030",
+          "stem": "Hangisi Transaksiyonel Analiz'de.kullanılan Ego durumudur?",
+          "options": {
+            "A": "Ebeveyn Ego-Durumu",
+            "B": "Çocuk Ego Durumu",
+            "C": "Yetişkin Ego Durumu",
+            "D": "Yaşlılık Ego Durumu"
+          },
+          "answer": "C",
+          "answer_text": "Yetişkin Ego Durumu",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 30,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q031",
+          "stem": "Hangisi Transaksiyonel Analiz’e göre, bireylerin oyun oynama nedenleri arasında yer almaz?",
+          "options": {
+            "A": "Zamanı yapılandırmak için",
+            "B": "Tahminler yapmamak",
+            "C": "Temas iletileri almak için",
+            "D": "Sahip olunan,duygu,düşünce,eylemler sistemini ve yerine koyulan bir duygunun sürdürülebilmesi için"
+          },
+          "answer": "B",
+          "answer_text": "Tahminler yapmamak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 31,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q032",
+          "stem": "Transaksiyonel Analize göre kavramlardan hangisi zamanı yapılandırmada kullanılmaz?",
+          "options": {
+            "A": "Sosyal Oyunlar",
+            "B": "Geri Çekilme",
+            "C": "Psikolojik Oyunlar",
+            "D": "Vakit Geçirme"
+          },
+          "answer": "A",
+          "answer_text": "Sosyal Oyunlar",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 32,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q033",
+          "stem": "Hangisi Görev Merkezli Yaklaşım”da sosyal hizmet uzmanının, mesleki uygulamayı gerçekleştirirken dikkate alması gereken inceliklerden değildir?",
+          "options": {
+            "A": "Doğruluk",
+            "B": "Kapsam",
+            "C": "Sonlandırma",
+            "D": "Tutarlılık"
+          },
+          "answer": "C",
+          "answer_text": "Sonlandırma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 33,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p11-q034",
+          "stem": "Hangisi Görev Merkezli Yaklaşım”ın-başlangıç'müdahale-aşaması içerisinde yer almaz?",
+          "options": {
+            "A": "Havale/başvuru nedeninin tartışılması",
+            "B": ",Müracaatçınındile”getirdiği hedef problem yebaglamin incelenmesi",
+            "C": "Süreye ilişkin sınır konmaması ve'müracaatçının özgür.Bırakılması",
+            "D": "Dışsal görevlerin belirlenmesi ve uygulama planının yapılması."
+          },
+          "answer": "C",
+          "answer_text": "Süreye ilişkin sınır konmaması ve'müracaatçının özgür.Bırakılması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 11,
+          "source_no": 34,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q035",
+          "stem": "Hangisi Görev Merkezli Yaklaşım'ın'orta dönem müdahale aşamalarından birisi değildir?",
+          "options": {
+            "A": "Probleme odaklanma",
+            "B": "Oturum içi görevler",
+            "C": "Dışsal görevleri planlama",
+            "D": "Dışsal görevlerden uzak durmak"
+          },
+          "answer": "D",
+          "answer_text": "Dışsal görevlerden uzak durmak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 35,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q036",
+          "stem": "Hangisi Görev Merkezli Yaklaşım'ın kurucularındandır?",
+          "options": {
+            "A": "William J.Reid ve Laura Epstein",
+            "B": "Martin Buber",
+            "C": "Eric Berne",
+            "D": "Irvin Yalom"
+          },
+          "answer": "A",
+          "answer_text": "William J.Reid ve Laura Epstein",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 36,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q037",
+          "stem": "Hangisi Görev Merkezli Yaklaşımın sorunu inceleme ve belirleme aşamalarından birisi değildir?",
+          "options": {
+            "A": "Müracaatçı ile sosyal hizmet uzmanının, ortak karar vererek çözülebilecek sorunları belirlemeleri ve müracaatçının bunu kabul etmesi gerekir,",
+            "B": "Müracaatçriçin ana sorunumne olduğu'noktasında ortak'bir görüş sağlanmalı,",
+            "C": "Müracaatçı sorununun çözümünü yalnız başına yapmalı ve disaridan herhangi bir destek almamalıdır.",
+            "D": "Müracaatçı ile birlikte uzman, çözülmesi mümkün olan ya da olmayan sorunları tekrar tekrar gözden geçirmeli"
+          },
+          "answer": "C",
+          "answer_text": "Müracaatçı sorununun çözümünü yalnız başına yapmalı ve disaridan herhangi bir destek almamalıdır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 37,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q038",
+          "stem": "Hangisi Görev Merkezli Yaklaşım için söylenemez?",
+          "options": {
+            "A": "Tedavi süresi yaklaşık 8 seansi içer mektedir:",
+            "B": "1920'li yıllarda ortaya çıkan kısa süreli psikoanalitik uygulamaların etkisi ile ortaya çıkmıştır.",
+            "C": "Tedavi öncellikle başvuranın sorun olarak gördi problemler üzerinde odaklanır.",
+            "D": "Her iki model de danışanın belirli hedefler geliştirmelerine ve bunları başarmalarına yardımcı olmayı amaçlar."
+          },
+          "answer": "B",
+          "answer_text": "1920'li yıllarda ortaya çıkan kısa süreli psikoanalitik uygulamaların etkisi ile ortaya çıkmıştır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 38,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q039",
+          "stem": "Hangisi Varoluşçu Terapinin özelliklerinden biri değildir?",
+          "options": {
+            "A": "Bireysel özgürlüğün önündeki engellerle mücadele etmek",
+            "B": "Yaşamı Anlamlı Görmek",
+            "C": "Kaygı ve suçlulukla mücadele etmek",
+            "D": "Ölüm korkusuyla yüzleşmek"
+          },
+          "answer": "B",
+          "answer_text": "Yaşamı Anlamlı Görmek",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 39,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p12-q040",
+          "stem": "Hangisi Varoluşçu Terapi süreci içerisinde yer almaz?",
+          "options": {
+            "A": "Kendi sorumluluğunun farkında olarak yaşama cesareti kazanmanın",
+            "B": "Anlamlı bir yaşam için araştırma ve mücadelenin",
+            "C": "Bireysel ve insani değerleri keşfetmenin",
+            "D": "İnsan olarak yabancılaşmayla yüzleşmek"
+          },
+          "answer": "D",
+          "answer_text": "İnsan olarak yabancılaşmayla yüzleşmek",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 12,
+          "source_no": 40,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q042",
+          "stem": "Hangisi Çağdaş Varoluşçu Yaklaşımın temel kuramcıları arasında yer almaz?",
+          "options": {
+            "A": "Eric Berne",
+            "B": "Viktor Frank",
+            "C": "Rollo May",
+            "D": "Irvin Yalom"
+          },
+          "answer": "A",
+          "answer_text": "Eric Berne",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 42,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q043",
+          "stem": "Hangisi fallik ödipal dönemin özelliklerinden birisidir?",
+          "options": {
+            "A": "Bu aşamada çocuk sosyal yaşama girmeye ve sosyalleşmeye başlar.",
+            "B": "Bu döneminde çocuk, zihinsel olarak bütün enerjisini okuma yazmaya, sosyal kuralları öğrenmeye ve toplumun bir bireyi olmaya yöneltmiştir.",
+            "C": "Oedipus Kompleksi söz konusudur.",
+            "D": "Bu dönemde çocuklar sağlıklı cinsel kimlik algısı oluşturmaya ve kendi cinsiyetindekilerle oyunlar oynamaya başlarlar."
+          },
+          "answer": "C",
+          "answer_text": "Oedipus Kompleksi söz konusudur.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 43,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q044",
+          "stem": "Hangisi Mezzo Sistem içerisinde yer almaz?",
+          "options": {
+            "A": "Komşuları",
+            "B": "Kitleiletişim-araçları",
+            "C": "Eğitim",
+            "D": "Arkadaş Grupları"
+          },
+          "answer": "D",
+          "answer_text": "Arkadaş Grupları",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 44,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q045",
+          "stem": "Hangisi Ekzo Sistem içerisinde yer almaz?",
+          "options": {
+            "A": "Yakın Arkadaşlar",
+            "B": "Sosyal servisler",
+            "C": "Yerel yönetimler",
+            "D": "Medya"
+          },
+          "answer": "A",
+          "answer_text": "Yakın Arkadaşlar",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 45,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q046",
+          "stem": "Hangisi insanların sosyal bir varlık olarak içerisinde yer aldığı doğal sistemlerden değildir?",
+          "options": {
+            "A": "Komşuluk",
+            "B": "meslektaş",
+            "C": "İşyerinde Statü",
+            "D": "İş arkadaşlığı"
+          },
+          "answer": "C",
+          "answer_text": "İşyerinde Statü",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 46,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p13-q047",
+          "stem": "Hangisi insanların sosyal bir yarlık olarak içerisinde yer aldığı formel (resmi) sistemlerden değildir?",
+          "options": {
+            "A": "Kamu Örgütleri",
+            "B": "Baro",
+            "C": "Odalar birliği",
+            "D": "Vakıf"
+          },
+          "answer": "A",
+          "answer_text": "Kamu Örgütleri",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 13,
+          "source_no": 47,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p14-q050",
+          "stem": "Hangisi gizil (Latent) dönemin özelliklerinden birisi değildir?",
+          "options": {
+            "A": "Bu aşamada çocuk sosyal yaşama girmeye ve sosyalleşmeye başlar.",
+            "B": "Çevreye yönelik merakını artırmıştır.",
+            "C": "Elektra Kompleksi söz konusudur",
+            "D": "Benimsemekte oldukları rolleri pekiştirmeye hatta karşı cinsle alay etmeye başlarlar."
+          },
+          "answer": "C",
+          "answer_text": "Elektra Kompleksi söz konusudur",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 14,
+          "source_no": 50,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p14-q051",
+          "stem": "Birey ve durumu karşılıklı ilişki içinde bir bütün olarak ele almaya yardımcı olan kuram?",
+          "options": {
+            "A": "Açık Sistem",
+            "B": "Sistem Kuramı",
+            "C": "Kapalı Sistem",
+            "D": "Denge Durumu"
+          },
+          "answer": "B",
+          "answer_text": "Sistem Kuramı",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 14,
+          "source_no": 51,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p14-q011",
+          "stem": "Bu yaklaşımda insanlar tedaviye aktif olarak katılabilirler. lll-Bireyin sorununu en kestirme yoldan çözmesine yardım eder. Verilen özellikler hangi yaklaşıma aittir?",
+          "options": {
+            "A": "Temel Varsayımlar",
+            "B": "Zamanı Yapılandırma",
+            "C": "Transaksiyonel Analiz",
+            "D": "Tamamlayıcı Transaksiyonlar"
+          },
+          "answer": "C",
+          "answer_text": "Transaksiyonel Analiz",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 14,
+          "source_no": 11,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p14-q055",
+          "stem": "Açlık, susuzluk, cinsellik gibi insan yaşamının sürekliliği için içgüdülerin çalışmasını sağlayan enerji türüne Freud ne vermektedir?",
+          "options": {
+            "A": "Ölüm İçgüdüleri",
+            "B": "Libido",
+            "C": "Topografik.Model",
+            "D": "Bilinç"
+          },
+          "answer": "B",
+          "answer_text": "Libido",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 14,
+          "source_no": 55,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p14-q056",
+          "stem": "İnsanşörgüt veya toplumların kendi'yaşamları'üzerinde kontrol yetisine sahip olabilmesi olarak tanımlanan yaklaşım?",
+          "options": {
+            "A": ", Güçlendirme Perspektifi.",
+            "B": "Plastiklik (Şekil Verilebilirlik)",
+            "C": "Güçlendirme Yaklaşımı OFAC) izl",
+            "D": "İletişim ve İşbirliği"
+          },
+          "answer": "C",
+          "answer_text": "Güçlendirme Yaklaşımı OFAC) izl",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 14,
+          "source_no": 56,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p15-q057",
+          "stem": "Hangisi Gestalt Yaklaşımında tanımlanan temas türlerinden biri değildir?",
+          "options": {
+            "A": "İçe alma",
+            "B": "Kendine döndürme",
+            "C": "İç içe geçme",
+            "D": "İçe Kapanma"
+          },
+          "answer": "D",
+          "answer_text": "İçe Kapanma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 15,
+          "source_no": 57,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p15-q058",
+          "stem": "Aşağıdakilerden hangisi kapalı sisteme-örnektir?",
+          "options": {
+            "A": "Eğitim kurumları",
+            "B": "İnsan",
+            "C": "Cezaevleri",
+            "D": "Hastaneler"
+          },
+          "answer": "C",
+          "answer_text": "Cezaevleri",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 15,
+          "source_no": 58,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p15-q062",
+          "stem": "Aşağıdakilerden hangisi sitem yaklaşımındaki açık sistemin özellikleri arasında değildir?",
+          "options": {
+            "A": "Kendine özgü yapısı vardır",
+            "B": "Her sistemin bir işlevi (fonksiyonu) vardır.",
+            "C": "Benzerlik göstermeme özelliği vardır",
+            "D": "Destekleme özelliği vardır"
+          },
+          "answer": "C",
+          "answer_text": "Benzerlik göstermeme özelliği vardır",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 15,
+          "source_no": 62,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p15-q064",
+          "stem": "Aşağıdakilerden hangisi Varoluşçu Terapi süreci içinde yer almaz?",
+          "options": {
+            "A": "Ölüm korkusunu inkâr etmek.",
+            "B": "Kendi sorumluluğunun farkında olarak yaşama cesareti kazanmanın",
+            "C": "Anlamlı bir yaşam için araştırma ve mücadelenin",
+            "D": "Bireysel ve insani-degerleri keşfetmenin"
+          },
+          "answer": "A",
+          "answer_text": "Ölüm korkusunu inkâr etmek.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 15,
+          "source_no": 64,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p16-q066",
+          "stem": "Aşağıdakilerden hangisi Ekolojik yaklaşımın sosyal hizmet alanında kullanımını sağlamıştır?",
+          "options": {
+            "A": "Ludwing Von Bertalanffy",
+            "B": "A. G. Tansleyin",
+            "C": "Carel Germain",
+            "D": "Sigmund Freud"
+          },
+          "answer": "C",
+          "answer_text": "Carel Germain",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 16,
+          "source_no": 66,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p16-q067",
+          "stem": "Aşağıdakilerden hangisi Güçlendirme perspektifi ilkelerinden birisi değildir?",
+          "options": {
+            "A": "Her birey, grup, aile ve toplumun güçlü yanları vardır.",
+            "B": "Karşılaşılan travma ve istismar zararlıdır ve hiçbir yararı yoktur.",
+            "C": "Birey, grup ve toplulukların büyüme ve değişimlerinin üst sınırlarının gelişime açık olduğu gerçeğinden hareket edilir.",
+            "D": "Müracaatçılara en iyi hizmeti onlarla işbirliği yaparak verebiliriz."
+          },
+          "answer": "B",
+          "answer_text": "Karşılaşılan travma ve istismar zararlıdır ve hiçbir yararı yoktur.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 16,
+          "source_no": 67,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p16-q068",
+          "stem": "Asagidakilerden hangisi Ekolojik yaklaşımı davranış bilimlerisalanında:kullanmaya başlamıştır?",
+          "options": {
+            "A": "Von Bertalanffy",
+            "B": "A.G. Tansleyin",
+            "C": "Ludwing Von Bertalanffy",
+            "D": "Roger Barker"
+          },
+          "answer": "D",
+          "answer_text": "Roger Barker",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 16,
+          "source_no": 68,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p16-q069",
+          "stem": "Aşağıdakilerden hangisi Görev merkezli modelin uygulama alanlarından birisi değildir?",
+          "options": {
+            "A": "Yönetim sorunları",
+            "B": "Probleme odaklanma",
+            "C": "Oturum içi görevler",
+            "D": "Dışsal görevleri planlama"
+          },
+          "answer": "A",
+          "answer_text": "Yönetim sorunları",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 16,
+          "source_no": 69,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p16-q070",
+          "stem": "Aşağıdakilerden hangisi sitem yaklaşımındaki kapalı sistemin özellikleri arasında değildir?",
+          "options": {
+            "A": "Sınırları katı ve esnek olmayan bir yapı söz konusudur,",
+            "B": "Sınırlar geçişken ve esnek",
+            "C": "Çevresiyle ve diğer sistemlerle ilişki içerisinde değildir.",
+            "D": "Çevreden herhangi bir girdi ya da çıktı elde etmeleri söz konusu değildir."
+          },
+          "answer": "B",
+          "answer_text": "Sınırlar geçişken ve esnek",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 16,
+          "source_no": 70,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q074",
+          "stem": "Güçlendirme yaklaşımı hangi yaklaşımlarla birlikte kullanılmaktadır?",
+          "options": {
+            "A": "Perspektif ve esneklik",
+            "B": "Sistem ve Ekolojik yaklaşım",
+            "C": "Itici etki yapıcı ve biçimlendirici",
+            "D": "Ekonomik krizler ve savaşlar Vize -2015"
+          },
+          "answer": "B",
+          "answer_text": "Sistem ve Ekolojik yaklaşım",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 74,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q075",
+          "stem": "Aşağıdakilerden hangisi Varoluşçu yaklaşımın sevgi kavramının dört bileşeninden birisi değildir?",
+          "options": {
+            "A": "Umwelt",
+            "B": "Cinsellik",
+            "C": "Eros",
+            "D": "Mithwelt"
+          },
+          "answer": "D",
+          "answer_text": "Mithwelt",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 75,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q076",
+          "stem": "Aşağıdakilerden hangisi Güçlendirme yaklaşımında kullanılan kavramlardan değildir?",
+          "options": {
+            "A": "Umut",
+            "B": "Esneklik",
+            "C": "Plastiklik",
+            "D": "Çıktı"
+          },
+          "answer": "D",
+          "answer_text": "Çıktı",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 76,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q077",
+          "stem": "Güçlendirme yaklaşımı hangi mesleki düzeylerde uygulanır?",
+          "options": {
+            "A": "Mikro, Mezzö, makro",
+            "B": "Mikro, Mezzo,Ekzo",
+            "C": "Mezzo, makro,ekzo",
+            "D": "Id,ego.mezzo-makro"
+          },
+          "answer": "A",
+          "answer_text": "Mikro, Mezzö, makro",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 77,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q078",
+          "stem": "Aşağıdakilerden hangisi Mezzo sistem igerisinde yer almaz?",
+          "options": {
+            "A": "Kitle iletişim araçları",
+            "B": "Eğitimi",
+            "C": "Arkadaş grubu",
+            "D": "Sosyal hizmet kurumları"
+          },
+          "answer": "C",
+          "answer_text": "Arkadaş grubu",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 78,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q079",
+          "stem": "Aşağıdakilerden hangisi Görev merkezli yaklaşımın temel özelliklerinden birisi değildir?",
+          "options": {
+            "A": "Müracaatçının Belirlediği Sorunlara Odaklanma",
+            "B": "Burada ve Şimdi” Odağı",
+            "C": "Tamamen uzun süreli planlâma",
+            "D": "Elf-Determinasyon ve Güçlendirme"
+          },
+          "answer": "C",
+          "answer_text": "Tamamen uzun süreli planlâma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 79,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q080",
+          "stem": "Aşağıdakilerden hangisi feminist kuramlardan değildir?",
+          "options": {
+            "A": "Ekofeminizm",
+            "B": "Varoluşçu",
+            "C": "Liberal",
+            "D": "Sosyal Feminist"
+          },
+          "answer": "D",
+          "answer_text": "Sosyal Feminist",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 80,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p17-q082",
+          "stem": "Tranksiyonel analiz’ in kurucusu kimdir?",
+          "options": {
+            "A": ", A Layman’s Guide",
+            "B": "Eric berne",
+            "C": "Ludwing Von Bertalanffy",
+            "D": "Roger Barker"
+          },
+          "answer": "B",
+          "answer_text": "Eric berne",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 17,
+          "source_no": 82,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q083",
+          "stem": "Feminizm kelimesi ilk defa aşağıdakilerden hangisi tarafından kullanılmıştır?",
+          "options": {
+            "A": "Marie Le Jars de Gourney",
+            "B": "Charles fourier",
+            "C": "Mary Wollstonecraft",
+            "D": "A Layman’s Guide"
+          },
+          "answer": "B",
+          "answer_text": "Charles fourier",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 83,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q084",
+          "stem": "Asagidakilerden hangisi durumsal krizlerden biri degildir?",
+          "options": {
+            "A": "Deprem ve sel",
+            "B": "Anne ve babanın boşanması",
+            "C": "Çocuğun okula başlaması",
+            "D": "Yakınlardan birinin ani kaybı"
+          },
+          "answer": "C",
+          "answer_text": "Çocuğun okula başlaması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 84,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q085",
+          "stem": "Aşağıdakilerden hangisi bilişsel-davranışsal terapi? de kullanılan bilişsel tekniklerden biri değildir?",
+          "options": {
+            "A": "Olumsuz düşünceleri belirleme",
+            "B": "Taklit",
+            "C": "Diisiincedekiinang ve duygu derecesini degerlendirin",
+            "D": "Olumsuz düşünceyi tasnif edin"
+          },
+          "answer": "B",
+          "answer_text": "Taklit",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 85,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q086",
+          "stem": "Aşağıdakilerden hangisi bilişsel davrânışsal yaklaşımı? nin kurucusudur?",
+          "options": {
+            "A": "D. Meichenbaum",
+            "B": "Charles fourier",
+            "C": "Mary Wollstonecraft",
+            "D": "Aaron T. Beck ve Albert Ellis"
+          },
+          "answer": "D",
+          "answer_text": "Aaron T. Beck ve Albert Ellis",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 86,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q087",
+          "stem": "Aşağıdakilerden hangisi gestalt yaklaşımı? nın kurucusudur?",
+          "options": {
+            "A": "Fritz perls",
+            "B": "Max Wertheimer",
+            "C": "Kurt Koffka",
+            "D": "Wolfgang Kohler"
+          },
+          "answer": "A",
+          "answer_text": "Fritz perls",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 87,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p18-q089",
+          "stem": "Görev merkezli yaklaşımın kurucularındandır?",
+          "options": {
+            "A": "Irvin Yalom",
+            "B": "W.Reid ve L. Epstein",
+            "C": "Martin Buber",
+            "D": "Eric Berne"
+          },
+          "answer": "B",
+          "answer_text": "W.Reid ve L. Epstein",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 18,
+          "source_no": 89,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p19-q001",
+          "stem": "Aşağıdakilerden hangisi açık sistemlerin başlıca özellikleri arasında yer almaz?",
+          "options": {
+            "A": "Kendine özgü yapısı vardır",
+            "B": "Her sistemin bir işlevi (fonksiyonu) vardır",
+            "C": "Değişim özelliği",
+            "D": "Desteklememe özelliği",
+            "E": "Benzerlik gösterme"
+          },
+          "answer": "D",
+          "answer_text": "Desteklememe özelliği",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 19,
+          "source_no": 1,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p19-q004",
+          "stem": "Aşağıdakilerden hangisi Bilişsel Davranışsal Terapi’de kullanılan davranışsal tekniklerden biri değildir?",
+          "options": {
+            "A": "Aktivite listelemesi",
+            "B": "Kabul",
+            "C": "Taklit",
+            "D": "Davranışsal prova",
+            "E": "Relakzasyon eğitimi"
+          },
+          "answer": "B",
+          "answer_text": "Kabul",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 19,
+          "source_no": 4,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p20-q007",
+          "stem": "Aşağıdakilerden hangisi Berne'nin ifade ettiği dört tür yaşam pozisyonundan birisi değildir?",
+          "options": {
+            "A": "Ben iyi değilim-Sen iyisin.",
+            "B": "Ben iyiyim- Ben iyi değilim",
+            "C": "Ben iyi degilim-Sen de iyi değilsin",
+            "D": "Ben iyiyim-Sen iyi değilsin.",
+            "E": "Ben iyiyim-Sen de iyisin."
+          },
+          "answer": "B",
+          "answer_text": "Ben iyiyim- Ben iyi değilim",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 20,
+          "source_no": 7,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p20-q008",
+          "stem": "Aşağıdakilerden hangisi transaksiyonel türlerindendir?",
+          "options": {
+            "A": "Açık-Kapalı-Gizil",
+            "B": "Tamamlayıcı-Kapalı- Gizil",
+            "C": "Gizli -Tamamlayıcı- Açık",
+            "D": "Açık-Kapalı-Gizli",
+            "E": "Tamamlayıcı- Açık- Kapalı"
+          },
+          "answer": "B",
+          "answer_text": "Tamamlayıcı-Kapalı- Gizil",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 20,
+          "source_no": 8,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p20-q010",
+          "stem": "Heidegger’e göre “insan “varlığın çobanı,” varlıktan bir örnek, bir eş baskıdır.” “Yalnızca insan gerçekten burada olandır, gerçek var olandır.”-ifadeleri-aşağıdaki kavramlardan hangisi ile açıklanır?",
+          "options": {
+            "A": "Filia",
+            "B": "Agape",
+            "C": "Ölüm",
+            "D": "Dasein",
+            "E": "Hiçbiri"
+          },
+          "answer": "D",
+          "answer_text": "Dasein",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 20,
+          "source_no": 10,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p21-q014",
+          "stem": "Aşağıdakilerden hangisi Görev Merkezli Yaklaşım'ın orta dönem müdahale aşamalarından birisi değildir?",
+          "options": {
+            "A": "Problem ve görevlerin gözden geçirilmesi",
+            "B": "Diğer problemler için neler yapılabileceğinin tartışılması",
+            "C": "Var olan engellerin belirlenmesi ve ortadan kaldırılması",
+            "D": "Probleme odaklanma",
+            "E": "Dışsal görevleri planlama"
+          },
+          "answer": "B",
+          "answer_text": "Diğer problemler için neler yapılabileceğinin tartışılması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 21,
+          "source_no": 14,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p21-q018",
+          "stem": "Aşağıdakilerden-hangisi Yapısal Sosyal Hizmet?in.amaçlarından bi",
+          "options": {
+            "A": "Politik.ve bireysel. konuları bağdaştırmak",
+            "B": "Hak savunuculuğu ve sosyal adaleti gerçekleştirmek",
+            "C": "Kolektif bilinç-oluşturmak",
+            "D": "Bireysel sorunların çözümü için klinik uygulamalar yapmak eyPsikososyal sorunların anlaşılmasında'yapıyranaliz etmek"
+          },
+          "answer": "D",
+          "answer_text": "Bireysel sorunların çözümü için klinik uygulamalar yapmak eyPsikososyal sorunların anlaşılmasında'yapıyranaliz etmek",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 21,
+          "source_no": 18,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p22-q021",
+          "stem": "Aşağıdaki kuranıcılardan hangisi “Stres Aşılama” kavramını geliştirmiştir?",
+          "options": {
+            "A": "Edward C. Tolman",
+            "B": "Aaron Beck",
+            "C": "Albert Ellis",
+            "D": "Donald Meichenbaum",
+            "E": "John B. Watson"
+          },
+          "answer": "D",
+          "answer_text": "Donald Meichenbaum",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 22,
+          "source_no": 21,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p22-q022",
+          "stem": "Aşağıdakilerden hangisi gelişim krizlerinin yaklaşık olarak ortaya çıkma süresidir?",
+          "options": {
+            "A": "6 haftaya kadar değişen sürelerde ortaya çıkarlar",
+            "B": "3 haftâya kadar",
+            "C": "2 haftaya kadar",
+            "D": "8 haftaya kadar",
+            "E": "10 haftaya kadar"
+          },
+          "answer": "A",
+          "answer_text": "6 haftaya kadar değişen sürelerde ortaya çıkarlar",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 22,
+          "source_no": 22,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p22-q023",
+          "stem": "Aşağıdakilerden hangisi Krize Midahalenin temel ilkelerinden birisi değildir?",
+          "options": {
+            "A": "Acil müdahale",
+            "B": "Müracaatçıyı krizin sebepleri ve muhtemel sonuçları hakkında bilgilendirmek",
+            "C": "Müracaatçıyı destekleme",
+            "D": "Krize müdahalenin odak noktası soru Sormadan gözlem yapmak ve müracaatçının konuşmasını beklemektir",
+            "E": "Pragmatizm ve eklektizm"
+          },
+          "answer": "D",
+          "answer_text": "Krize müdahalenin odak noktası soru Sormadan gözlem yapmak ve müracaatçının konuşmasını beklemektir",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 22,
+          "source_no": 23,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p23-q001",
+          "stem": "Aşağıdakilerden hangisi gerçeklik terapisinde kullanılan tekniklerden değildir?",
+          "options": {
+            "A": "Ustaca Soru Sorma",
+            "B": "Kişisel Gelişim İçin Kendi Kendine Yardım",
+            "C": "Mizah ya da Espri",
+            "D": "Paradoksal Teknikler",
+            "E": "Uyum Dengesi"
+          },
+          "answer": "E",
+          "answer_text": "Uyum Dengesi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 23,
+          "source_no": 1,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p23-q002",
+          "stem": "Kişinin gerçekliliğini artırabilmesi için aşağıdakilerden hangisini yapmaması gerekir?",
+          "options": {
+            "A": "Yeni yaşantılara açık olmak",
+            "B": "Kendine güvenmek",
+            "C": "Değerlendirmeyi içsel kaynağında yapmak",
+            "D": "Duygularını başkalarıyla paylaşmamak",
+            "E": "Gelişimi devam ettirmeye istekli olmak FINAL 2016"
+          },
+          "answer": "D",
+          "answer_text": "Duygularını başkalarıyla paylaşmamak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 23,
+          "source_no": 2,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p23-q003",
+          "stem": "Aşağıdakilerden hangisi Yapısal Sosyal Hizmet'in amaçlarından birisi değildir?",
+          "options": {
+            "A": "Politik ve bireysel konuları bağdaştırmak",
+            "B": "Hak savunuculuğu ve sosyal adaleti gerçekleştirmek",
+            "C": "Kolektif bilinç oluşturmak",
+            "D": "Bireysel-sorunların çözümü-için-klinik uygulamalar yapmak",
+            "E": "Psikososyal sorunların anlaşılmasında yapıyı analiz etmek FİNAL-2016"
+          },
+          "answer": "D",
+          "answer_text": "Bireysel-sorunların çözümü-için-klinik uygulamalar yapmak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 23,
+          "source_no": 3,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p23-q005",
+          "stem": "Aşağıdakilerden hangisi Bilissel- Davranışsal Terapi’de kullanilan davranissal tekniklerden biri değildir?",
+          "options": {
+            "A": "Aktivite listelemesi",
+            "B": "Kabul",
+            "C": "Taklit",
+            "D": "Davranışsal prova",
+            "E": "Relakzasyon eğitimi"
+          },
+          "answer": "B",
+          "answer_text": "Kabul",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 23,
+          "source_no": 5,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p24-q008",
+          "stem": "Aşağıdakilerden hangisi Krize Müdahalenin temel ilkelerinden birisi değildir?",
+          "options": {
+            "A": "Acil müdahale",
+            "B": "Müracaatçıyı krizin sebepleri ve muhtemel sonuçları hakkında bilgilendirmek",
+            "C": "Müracaatçıyı destekleme",
+            "D": "Krize müdahalenin odak noktası soru sormadan gözlem yapmak ve müracaatçının konuşmasını beklemektir",
+            "E": "Pragmatizm ve eklektizm VİZE-2016"
+          },
+          "answer": "D",
+          "answer_text": "Krize müdahalenin odak noktası soru sormadan gözlem yapmak ve müracaatçının konuşmasını beklemektir",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 24,
+          "source_no": 8,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p24-q011",
+          "stem": "Yapısal sosyal hizmetin amaçlarından değildir?",
+          "options": {
+            "A": "Yapısal Sosyal Hizmet; bir rehber, teknik olarak çözümleme, uygulama olarak da kuramsal niteliktedir.",
+            "B": "Bireyse sorunların çözümü için klinik uygulamalar yapmak",
+            "C": "Kaynak ve güç dağılımına vurgu yaparak, bireysel sorunların çözümünde sosyal yapıyı baz alır",
+            "D": "Analizi sonucunda ise; müdahale sisteminde stratejilerini sosyal adalet ve hak savunuculuğu üzerine kurmaktadır."
+          },
+          "answer": "B",
+          "answer_text": "Bireyse sorunların çözümü için klinik uygulamalar yapmak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 24,
+          "source_no": 11,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p24-q013",
+          "stem": "Hangisi stress“aşılama' kavramını geliştirmiştir?",
+          "options": {
+            "A": "Donald Meichenbaum",
+            "B": "Edward C. Tolman",
+            "C": "Aaron Beck",
+            "D": "Albert Ellis"
+          },
+          "answer": "A",
+          "answer_text": "Donald Meichenbaum",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 24,
+          "source_no": 13,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p25-q016",
+          "stem": "Aşağıdakilerden hangisi gerçeklik.terapisinin uygulama alanlarından değildir ?",
+          "options": {
+            "A": "Çocuk yunaları",
+            "B": "Huzurevleri",
+            "C": "Okullar",
+            "D": "Hastaneler",
+            "E": "Akıl Hastaneleri"
+          },
+          "answer": "E",
+          "answer_text": "Akıl Hastaneleri",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 25,
+          "source_no": 16,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p25-q017",
+          "stem": "Yapısal sosyal hizmeti ekolojik yaklaşımdan ayıran en-önemli özellik aşağıdakilerden hamgisidir ?",
+          "options": {
+            "A": "Ekolojik yaklaşım bireyin yakın ilişkide bulunduğu aile,arkadas grubu,mahalle,iş yaşamı gibi çevreyi değerlendirir.",
+            "B": "Yapısalcı yaklaşım bireyin içinde yaşadığı tarihsel,kültürel yapıya vurgu yapmaktadır.",
+            "C": "Yapısal yaklaşımda çevre vurgusu vardır",
+            "D": "Ekolojik yaklaşımda çevre vurgusu vardır.",
+            "E": "Hiçbiri"
+          },
+          "answer": "B",
+          "answer_text": "Yapısalcı yaklaşım bireyin içinde yaşadığı tarihsel,kültürel yapıya vurgu yapmaktadır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 25,
+          "source_no": 17,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p25-q018",
+          "stem": "Hangisi Gestalt temas biçimlerinden değildir ?",
+          "options": {
+            "A": "Duyarsızlaşma",
+            "B": "Mizah",
+            "C": "Saptırma ve",
+            "D": "Kendini seyretmedir."
+          },
+          "answer": "B",
+          "answer_text": "Mizah",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 25,
+          "source_no": 18,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p26-q021",
+          "stem": "Hangisi bilişsel terapi temel ilkelerinden değildir?",
+          "options": {
+            "A": "İnsanlar, çevreden daha çok zihinsel algısinda oluşturduğu çevre algılamasına göre tepki verir.",
+            "B": "Öğrenme insanlarda bilişsel işlevler sayesinde gerçekleşir.",
+            "C": "Düşünmeden vazgeçme",
+            "D": "Kişinin duygu, düşünce ve davranışları karşılıklı ilişki içerisinde olup, hiçbirinin diğerine oranla bir üstünlüğü yoktur."
+          },
+          "answer": "C",
+          "answer_text": "Düşünmeden vazgeçme",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 26,
+          "source_no": 21,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p26-q022",
+          "stem": "Hangisi organizmanın sahip olduğu tüm kapasiteleri onu devam ettirecek şekilde geliştirerek doğuştan gelen eğilimdir ?",
+          "options": {
+            "A": "İnsanın Doğası Görüşü",
+            "B": "Yaşantı",
+            "C": "Benlik ve-Benlik Kavramı",
+            "D": "Kendini Gerçekleştirme Eğilimi"
+          },
+          "answer": "D",
+          "answer_text": "Kendini Gerçekleştirme Eğilimi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 26,
+          "source_no": 22,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p26-q025",
+          "stem": "Kişinin gerçekliliğini artırabilmesi için aşağıdakilerden hangis",
+          "options": {
+            "A": "Yeni yaşantılara açık olmak",
+            "B": "Kendine güvenmek",
+            "C": "Değerlendirmeyi içsel kaynağında yapmak",
+            "D": "Duygularını başkalarıyla paylaşmamak",
+            "E": ".Gelişimi.devam-ettirmeye istekli.olmak FİNAL -2016"
+          },
+          "answer": "D",
+          "answer_text": "Duygularını başkalarıyla paylaşmamak",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 26,
+          "source_no": 25,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p27-q001",
+          "stem": "Hangisi davranışçı ve bilişsel terapinin ortak özelliklerindendir?",
+          "options": {
+            "A": "Danışan ve terapist arasında ortak iş birliğine dayalı bir ilişki vardır.",
+            "B": "Psikolojik sorunların temeli çoğunlukla bilişsel süreçlerdeki sorunlardan ka;",
+            "C": "Danışanın duygu ve düşüncelerinde değişim sağlanabilmesi için dânışanın düşünce süreçleri üzerine odaklanması gerekmektedir.",
+            "D": "Hedef bir problem üzerine odaklanilarak sınırlı bir süre ve plan dahilinde müdahale edilmesi gerekmektedir.",
+            "E": "Hepsi"
+          },
+          "answer": "E",
+          "answer_text": "Hepsi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 27,
+          "source_no": 1,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p27-q004",
+          "stem": "ABDde 1913”te yayınladığı “Davranışçı Manifesto” olarak da ifadelendirilen yazısında psikolojinin zihinsel fenomenler ve içe bakış gibi somut olarak gözlemlenemeyen olgulara yer vermemesi gerektiğini ve doğal bilimlerin saf ve deneysel bir dalı olması gerektiğini ileri sürmüştür?",
+          "options": {
+            "A": "Bukowski",
+            "B": "John Watson",
+            "C": "Bulgakov",
+            "D": "Hemingway"
+          },
+          "answer": "B",
+          "answer_text": "John Watson",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 27,
+          "source_no": 4,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p27-q005",
+          "stem": "İnsan davranışını etkileyen en önemli etkenin çevre olduğunu ifade ederek “Bana bir düzine sağlıklı bebek verin, kendi özel davranışçı yöntemlerimle onları yetiştirerek, başka bir yere gereksinim duymaksızın onları doktor, avukat, sanatçı, esnaf hatta dilenci veya hırsız yapabilirim” demiştir. Bunu söyleyen kimdir?",
+          "options": {
+            "A": "Titmus",
+            "B": "Bergman",
+            "C": "Watson",
+            "D": "Dante"
+          },
+          "answer": "C",
+          "answer_text": "Watson",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 27,
+          "source_no": 5,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p28-q007",
+          "stem": "Kişi korktuğu ya da rahatsızlık duyduğu uyaranlarla yavaş ve aşamalı olarak yüzleştirilmesi yöntemiyle fobinin etkisinin azaltılmasını ya da ortadan kaldırılmasını amaçlamaktadır?",
+          "options": {
+            "A": "Paradigma",
+            "B": "Sistematik duyarsızlaştırma",
+            "C": "Darwinizm",
+            "D": "Yalıtım uzlaşması"
+          },
+          "answer": "B",
+          "answer_text": "Sistematik duyarsızlaştırma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 28,
+          "source_no": 7,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p28-q009",
+          "stem": "“İnsanları rahatsiz eden şeyler değil onlara verdikleri anlamlardır.” sözü kime aittir?",
+          "options": {
+            "A": "Polanski",
+            "B": "Irvin Yalom",
+            "C": "Marks",
+            "D": "Epiktesos"
+          },
+          "answer": "D",
+          "answer_text": "Epiktesos",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 28,
+          "source_no": 9,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p28-q010",
+          "stem": "1955 yılında hümanistik, felsefi ve davranışçı terapileri birleştirerek akılcı-duygusal terapiyi günümüzdeki adıyla Akılcı Duygüsal Davranışçı Terapi (ADDT) oluşturmuştur. Bilşsel Davranışçı Terapinin büyük babası olarakda bilinmektedir?",
+          "options": {
+            "A": "Molier",
+            "B": "Aroon Jung",
+            "C": "Albert Ellis",
+            "D": "Franz Kafka"
+          },
+          "answer": "C",
+          "answer_text": "Albert Ellis",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 28,
+          "source_no": 10,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p28-q012",
+          "stem": "Aşağıdakilerden hangisi Lindemann'ın kriz durumuyla ilgili kişisel reaksiyon tarifinden birisi değildir?",
+          "options": {
+            "A": "Somatik sıkıntı",
+            "B": "Davranış kalıplarının korunması",
+            "C": "Ölen kişinin görüntüsü ile meşgul olma",
+            "D": "Suçluluk",
+            "E": ".Düşmanca-tepkiler"
+          },
+          "answer": "B",
+          "answer_text": "Davranış kalıplarının korunması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 28,
+          "source_no": 12,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q014",
+          "stem": "1940'larda Fritz Perls ve eşi Laura tarafından geliştirilen, bireyin çevresiyle ilişkisini dikkate alan Varoluşçu-Fenomeolojik bir.kuramın adı nedir?",
+          "options": {
+            "A": "Ontoloji",
+            "B": "Gestalt yaklaşımı",
+            "C": "Hipnoz",
+            "D": "Psikanaliz"
+          },
+          "answer": "B",
+          "answer_text": "Gestalt yaklaşımı",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 14,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q015",
+          "stem": "Freud'un Psikanalitik Kuramından etkilenmiş olmakla birlikte; bu kurama birçok açıdan eleştiride bulunan kuramcı kimdir?",
+          "options": {
+            "A": "Kant",
+            "B": "Hegel",
+            "C": "Machiavelli",
+            "D": "Fritz Perls"
+          },
+          "answer": "D",
+          "answer_text": "Fritz Perls",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 15,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q016",
+          "stem": "“Tüm evrenin yaratıcı bir değişim süreci içinde olduğu” ve “her canlının kendi yapısına bağlı olarak ve bir bütünlük içinde işlevde bulunduğu” fikrinden etkilenerek kuramında kullanan kimdir?",
+          "options": {
+            "A": "Fritz Perls",
+            "B": "Gustay Jung",
+            "C": "Alfred Adler",
+            "D": "Victor Frankl"
+          },
+          "answer": "A",
+          "answer_text": "Fritz Perls",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 16,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q017",
+          "stem": "Drama ile psikolojiyi birleştiren ve psiko dramanin.Kurucusu bilim insanımmadı nedir?",
+          "options": {
+            "A": "Moreno",
+            "B": "Alberto",
+            "C": "Kant",
+            "D": "Sinatra"
+          },
+          "answer": "A",
+          "answer_text": "Moreno",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 17,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q018",
+          "stem": "Gestalt kuramının gerek gelişim süreci, gerekse içeriğine bakıldığında 3 bakış açısının etkin olduğu görülmektedir. Hangisi bunlardan'değildir?",
+          "options": {
+            "A": "Psikanaliz",
+            "B": "Varoluşçu bakış açısı",
+            "C": "Fenomenolojik bakış açısı",
+            "D": "Bütüncül bakış açısı"
+          },
+          "answer": "A",
+          "answer_text": "Psikanaliz",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 18,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p29-q019",
+          "stem": "İnsanın özgür olduğu ve kişisel tercihlerinden ve eylemlerinden kendisinin sorumlu olduğu varsayımına dayanır?",
+          "options": {
+            "A": "Marksizim",
+            "B": "Psikoterapi",
+            "C": "Kuantum fiziği",
+            "D": "Varoluşçu yaklaşım"
+          },
+          "answer": "D",
+          "answer_text": "Varoluşçu yaklaşım",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 29,
+          "source_no": 19,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p30-q022",
+          "stem": "Kirkegaard ve Nietzsche tarafından ortaya konan insan olmanın subjektif deneyimi 20. yüzyılda hangi kuramcının fenomenolojik varoluşçuluk kavramını ortaya çıkarmıştır?",
+          "options": {
+            "A": "Pavese",
+            "B": "Martin Heiddeger",
+            "C": "Sartre",
+            "D": "Dante"
+          },
+          "answer": "B",
+          "answer_text": "Martin Heiddeger",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 30,
+          "source_no": 22,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p30-q023",
+          "stem": "Gestaltçı kuramın temel ilkelerinden birisidir. Doğa “bağdaşım” ve “birleşim” içerisinde olan biri bütündür?",
+          "options": {
+            "A": "Eingwel",
+            "B": "Bütüncül bakış açısı (Holism)",
+            "C": "Umwelth",
+            "D": "Sosyalizm"
+          },
+          "answer": "B",
+          "answer_text": "Bütüncül bakış açısı (Holism)",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 30,
+          "source_no": 23,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p30-q024",
+          "stem": "Alan kuramykime-aittir?",
+          "options": {
+            "A": "Sartre",
+            "B": "Kurt Lewin",
+            "C": "Machiavelli",
+            "D": "Dante"
+          },
+          "answer": "B",
+          "answer_text": "Kurt Lewin",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 30,
+          "source_no": 24,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p30-q025",
+          "stem": "Gestalt -yaklasimina göre “simdiki-zaman” kuramın-en önemli kavramlarindan birisidir. Hangi kuramcılara göre “güç, içinde bulunulan zamandadir” görüşünü ileri sürmüşlerdir?",
+          "options": {
+            "A": "Dante-Marx",
+            "B": "Darwin-Sartre",
+            "C": "Hegel-Kant",
+            "D": "E.Polser-Polster"
+          },
+          "answer": "D",
+          "answer_text": "E.Polser-Polster",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 30,
+          "source_no": 25,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p30-q026",
+          "stem": "Vücudunun bazı bölgelerinde “aşırı gerilme”, “vücudu kapalı tutma”, “derin nefes almama”, “konuşurken göz temasından kaçınma”, “duygularını sınırlama”, “duygularını bastırma” ve “kısık sesle konuşma” gibi durumlarda kendisini gösteren kavram hangisidir?",
+          "options": {
+            "A": "Sistem teorisi",
+            "B": "Ekolojik yaklaşım",
+            "C": "Traksiyonel analiz",
+            "D": "Enerji ve enerji engelleri"
+          },
+          "answer": "D",
+          "answer_text": "Enerji ve enerji engelleri",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 30,
+          "source_no": 26,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p31-q029",
+          "stem": "Psikoterapideki insancıl hareketin baslatilmasi ve geliştirilmesi yönündeki araştırmalara öncülük eden kuramcı kimdir?",
+          "options": {
+            "A": "Sartre",
+            "B": "Piaget",
+            "C": "Carl Rogers",
+            "D": "Darwin"
+          },
+          "answer": "C",
+          "answer_text": "Carl Rogers",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 31,
+          "source_no": 29,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p31-q031",
+          "stem": "Bilişsel Davranışçı terapinin ortaya çıkışı milattan sonra 100 yıllarında Anadolu'da Frigya bölgesinde köle olarak yaşama başlayan ..... a dayanmaktadır?",
+          "options": {
+            "A": "aristo",
+            "B": "epiktesos",
+            "C": "platon",
+            "D": "sokrate"
+          },
+          "answer": "B",
+          "answer_text": "epiktesos",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 31,
+          "source_no": 31,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p31-q034",
+          "stem": "Kadınların bütün enerjilerinin bağımlı kılındıkları erkekleri baştan çıkarmaya yöneltilmiş olması, kadınların her anlamda gelişimini engelleyecegini savunan kuramcı kimdir?",
+          "options": {
+            "A": "irvin yalom",
+            "B": "Gliman",
+            "C": "Cervantes",
+            "D": "horkheimer"
+          },
+          "answer": "B",
+          "answer_text": "Gliman",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 31,
+          "source_no": 34,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p31-q035",
+          "stem": "Kadınları aşağı cins olarak algılayan bir dine bağlılığı hoş görmeyen ve kabul etmeyen kuramcılar kimlerdir?",
+          "options": {
+            "A": "Elizabeth C. Stanton ve Matilda Joslyn Gage",
+            "B": "Sartre",
+            "C": "Camus",
+            "D": ", Kant."
+          },
+          "answer": "A",
+          "answer_text": "Elizabeth C. Stanton ve Matilda Joslyn Gage",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 31,
+          "source_no": 35,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p33-q045",
+          "stem": "Aşağıdakilerden hangisi “Stres Aşılama” kavramını geliştirmiştir?",
+          "options": {
+            "A": "Edward C.Tolman",
+            "B": "Aaron Beck",
+            "C": "Albert Ellis",
+            "D": "Meichenbaum",
+            "E": "John Watson"
+          },
+          "answer": "D",
+          "answer_text": "Meichenbaum",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 33,
+          "source_no": 45,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p34-q002",
+          "stem": "Asagidakilerden hangisi Genel sistem teorisinin kurucusudur?",
+          "options": {
+            "A": "Sigmund Freud",
+            "B": "Aristotales",
+            "C": "Ludwing Von Bertalanffy",
+            "D": "Gregory Bateson"
+          },
+          "answer": "C",
+          "answer_text": "Ludwing Von Bertalanffy",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 34,
+          "source_no": 2,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p36-q016",
+          "stem": "Aşağıdakilerden hangisi durumsal krizlerden biri değildir?",
+          "options": {
+            "A": "Deprem ve sel",
+            "B": "Anne ve babanın boşanması",
+            "C": "Yakınlardan birisinin ani kaybi",
+            "D": "Hastalık",
+            "E": "Çocuğun okula başlaması"
+          },
+          "answer": "E",
+          "answer_text": "Çocuğun okula başlaması",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 36,
+          "source_no": 16,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p36-q018",
+          "stem": "Feminizm kelimesi ilk defa aşağıdakilerden hangisi.tarafindan kullanılmıştır?",
+          "options": {
+            "A": "Mary Wollstonecraft",
+            "B": "Benjamin Franklin",
+            "C": "Karl Marx",
+            "D": "Simon de Beauvoir"
+          },
+          "answer": "A",
+          "answer_text": "Mary Wollstonecraft",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 36,
+          "source_no": 18,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p37-q022",
+          "stem": "Feminizmin ortaya çıkışı aşağıdakilerden hangisi ile yakından ilişkilidir?",
+          "options": {
+            "A": "Sanayi devrimi",
+            "B": "Psikoloji ve sosyolojiye",
+            "C": "Sosyal politikaya",
+            "D": "Kadın özgürlüğü",
+            "E": "Hiçbiri"
+          },
+          "answer": "D",
+          "answer_text": "Kadın özgürlüğü",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 37,
+          "source_no": 22,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p37-q023",
+          "stem": "Aşağıdakilerden hangisi Yapısalcılığın temel ilkelerinden değildir?",
+          "options": {
+            "A": "Değişmezlik",
+            "B": "Anti-tarihselcilik (tarihsel nedensizlik)",
+            "C": "Anti-hümanizm ve öznelsizlik",
+            "D": "Bağlanmama",
+            "E": "Toplumun ideolojik yapısı"
+          },
+          "answer": "E",
+          "answer_text": "Toplumun ideolojik yapısı",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 37,
+          "source_no": 23,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p37-q024",
+          "stem": "Aşağıdakilerden hangisi Yapısalcılığın genel özelliklerinden birisi değildir?",
+          "options": {
+            "A": "Yapısalcılığın bütüncüllük anlayışına göre; yapı, onu oluşturan ögelerin basit bir toplamı değildir.",
+            "B": "Yapısalcılıkgerçekliği; şeyler ve toplumsal olgular-temelindedir:",
+            "C": "Yapısal dönüşüm düşüncesine göre; yapılar durgun değildir, dinamiktir. Yeni ögelerin yapıya girip değişmesi, belli Kurallar ve yasalar tarafindan belirlenir.",
+            "D": "Yapısalcılığımöz-düzenleme kavramına gör&; yapının kendi içsel işleyiş yasa-ve kuralları vardır: Tüm bu yasa ve kurallar kendi içlerinde birbiriyle ilişkilidir.",
+            "E": "Yapısalcılık gerçekliği, şeyler ve toplumsal olgular temelinde değil, ögeler arasındaki ilişkilere dayanarak açıklar."
+          },
+          "answer": "B",
+          "answer_text": "Yapısalcılıkgerçekliği; şeyler ve toplumsal olgular-temelindedir:",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 37,
+          "source_no": 24,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p37-q025",
+          "stem": "Aşağıdakilerinden hangisi birey merkezli yaklaşımın temel kavramlarından birisi değildir?",
+          "options": {
+            "A": "Yaşantı",
+            "B": "Algı ve Farkındalık",
+            "C": "Topografik Model",
+            "D": "Benlik ve Benlik Kavramı",
+            "E": "Kaygı ve Savunma"
+          },
+          "answer": "C",
+          "answer_text": "Topografik Model",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 37,
+          "source_no": 25,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p37-q026",
+          "stem": "Aşağıdaki kuramcılardan hangisi “Stres Aşılama” kavramını geliştirmiştir?",
+          "options": {
+            "A": "Edward C. Tolman",
+            "B": "Aaron Beck",
+            "C": "Albert Ellis",
+            "D": "Meichenbaum",
+            "E": "John B. Watson"
+          },
+          "answer": "D",
+          "answer_text": "Meichenbaum",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 37,
+          "source_no": 26,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q029",
+          "stem": "Kriz hoş bir durum olmasa da yaşam döngüsünün ve normal yaşamın bir parçası olarak, gelişim ve değişim için gereklidir. Bu bakış açına göre, kriz durumları bir patoloji değildir. Bu durum psikiyatrik yardımdan daha cok psikolojik destek saglaması şeklinde tedavi edilmelidir diyen kuramcı kimdir?",
+          "options": {
+            "A": "Tolstoy",
+            "B": "ingman",
+            "C": "Brockopp",
+            "D": "sartre"
+          },
+          "answer": "C",
+          "answer_text": "Brockopp",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 29,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q030",
+          "stem": "krize maruz kalan kişilerin psikiyatrik servis ya da kliniklerden daha çok toplumda, günlük yaşam içerisinde ve kişinin kendi doğal ortamında tedavisinin sağlanması gerekmektedir sözü kime aittir?",
+          "options": {
+            "A": "marx",
+            "B": "freud",
+            "C": "selingman",
+            "D": "Caplan"
+          },
+          "answer": "D",
+          "answer_text": "Caplan",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 30,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q032",
+          "stem": "Hangisi davranışsal tekniklerden değildir?",
+          "options": {
+            "A": "Kendini ödüllendirme",
+            "B": "Genelleme",
+            "C": "Davranışsal hedefler",
+            "D": "Uyarıcı-tepki hiyerarşisi",
+            "E": "Girişkenlik eğitimi"
+          },
+          "answer": "B",
+          "answer_text": "Genelleme",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 32,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q033",
+          "stem": "1955 yılında hümanistik, felsefi ve davranışçı terapileri birleştirerek akılcı-duygusal terapiyi günümüzdeki adıyla Akılcı Duygusal Davranışçı Terapi (ADDT)’yi kim oluşturmuştur?",
+          "options": {
+            "A": "aroon jung",
+            "B": "molier",
+            "C": "franz kafka",
+            "D": "albert ellis"
+          },
+          "answer": "D",
+          "answer_text": "albert ellis",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 33,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q034",
+          "stem": "Bireyin dünyayı algılaması ve yorumlamasının, önemli ölçüde onun duygu ve davranışlarını belirlediği yönündeki kuramsal yaklaşım yer almaktadır?",
+          "options": {
+            "A": "bilişsel terapi",
+            "B": ".kaotik terapi.",
+            "C": "görev yaklasim",
+            "D": "sistem"
+          },
+          "answer": "A",
+          "answer_text": "bilişsel terapi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 34,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p38-q035",
+          "stem": "Gerek Davranışçı gerekse Bilişsel Yaklaşım alanında yapılan ayrı ayrı çalışmalar, 1980'lerde ortak bir'yaklaşımla'“BilişsekDavranışçı Yaklaşım” hangi alandarortaya'cikmiştir?",
+          "options": {
+            "A": "patoloji",
+            "B": "görev yaklaşımı",
+            "C": "psikoterapi",
+            "D": "dağıtım kuramı"
+          },
+          "answer": "C",
+          "answer_text": "psikoterapi",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 38,
+          "source_no": 35,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q036",
+          "stem": "Aşağıdakilerden hangisi Bilşsel Terapi’nin temel ilkelerinden birisi değildir?",
+          "options": {
+            "A": "Risk alma",
+            "B": "Aşırı Genelleme",
+            "C": "Seçici soyutlama",
+            "D": "Keyfi çıkarımlar"
+          },
+          "answer": "A",
+          "answer_text": "Risk alma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 36,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q038",
+          "stem": "Gestalt Ekolü için hangisi söylenemez?",
+          "options": {
+            "A": "Ankara'da da 2000 yılında bir gestalt terapi merkezi kurulmuştur.",
+            "B": "“Gestalt”-Almanca”bir'kelime-olup, anlamı “biçim”. ya da “sekil” anlamınagelmektedir.",
+            "C": "1910 yıllarında Frederick Peris ile eşi Laura Posner Pers tarafından geliştirilmiştir.",
+            "D": "Gestalt terapi tekniği tüm Avrupa'da 400 civarında terapi merkezi kurulmuştur."
+          },
+          "answer": "C",
+          "answer_text": "1910 yıllarında Frederick Peris ile eşi Laura Posner Pers tarafından geliştirilmiştir.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 38,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q039",
+          "stem": "Hangisi stres-aşılama Kavramını geliştirmiştir?",
+          "options": {
+            "A": "Albert Ellis",
+            "B": "Donald Meichenbaum",
+            "C": "Edward C.Tolman",
+            "D": "Aaron Beck"
+          },
+          "answer": "B",
+          "answer_text": "Donald Meichenbaum",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 39,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q040",
+          "stem": "Aşağıdakilerden hangisi, “bu temas'biçiminde bütünleşme söz konusu olup, birey ile çevre arasındaki sınır ortadan kalkar. Bu temas, “ben” ile “ben olmayan” arasındaki sınırı kaybetmek olarak tanımlanmaktadır.” İfadesinin kavramsal karşılığıdır?",
+          "options": {
+            "A": "İç içe geçme",
+            "B": "İçe alma",
+            "C": "Duyarsızlaşma",
+            "D": "Yansıtma"
+          },
+          "answer": "A",
+          "answer_text": "İç içe geçme",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 40,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q041",
+          "stem": "Aşağıdakilerden hangisi feminist kuramlarından değildir?",
+          "options": {
+            "A": "Varoluşçu",
+            "B": "Liberal",
+            "C": "Sosyal feminist",
+            "D": "Ekofeminizm"
+          },
+          "answer": "C",
+          "answer_text": "Sosyal feminist",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 41,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q042",
+          "stem": "Aşağıdakilerden hangisi homeostasisin (dinamik denge) özellikleri arasında değildir?",
+          "options": {
+            "A": "homeostasis sonuçlanan süreçler bireyin doğrudan ya da bilinçli kontrolü altındadır.",
+            "B": ".Homeostatik.durum.dinamik.ve-dengeleyici bir süreçtir.",
+            "C": "Bu durumdan sapmalar dengesiz veya düzensizleştirme sürecinin kanıtı olarak görülür.",
+            "D": "homeostasis sabit optimum durum veya denge kavramının varlığı üzerine yapılanır."
+          },
+          "answer": "A",
+          "answer_text": "homeostasis sonuçlanan süreçler bireyin doğrudan ya da bilinçli kontrolü altındadır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 42,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p39-q043",
+          "stem": "Hangisi insanların sosyal bir varlık olarak içerisinde yer aldığı toplum sistemlerinden biri değildir?",
+          "options": {
+            "A": "Mahkemeler",
+            "B": "Baro",
+            "C": "Okullar",
+            "D": "Hastaneler"
+          },
+          "answer": "B",
+          "answer_text": "Baro",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 39,
+          "source_no": 43,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p40-q045",
+          "stem": "Aşağıdakilerden hangisi Varoluşçu yaklaşımın Dasein tarzlarından değildir?",
+          "options": {
+            "A": "Mithwelt",
+            "B": "Eingenwelth",
+            "C": "Umwelt",
+            "D": "Einwelt"
+          },
+          "answer": "D",
+          "answer_text": "Einwelt",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 40,
+          "source_no": 45,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p41-q076",
+          "stem": "Aşağıdakilerden hangisi Psikanalitik Kuram'ın temel varsayımlarından birisi değildir?",
+          "options": {
+            "A": "Güçlendirme Modeli",
+            "B": "Ego (Benlik) — Savunma mekanizmaları",
+            "C": "Yapısal Model: İd, ego, süperego",
+            "D": "Psikoseksüel Gelişim Dönemleri",
+            "E": "Topografik Model: Bilinç, bilinçaltı ve bilinçdışı"
+          },
+          "answer": "A",
+          "answer_text": "Güçlendirme Modeli",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 41,
+          "source_no": 76,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p42-q079",
+          "stem": "Aşağıdakilerden hangisi Ekolojik Yaklaşımı davraniş bilimleri Alanında kullanmaya başlamıştır?",
+          "options": {
+            "A": "Carel Germain",
+            "B": "Laura Epstein",
+            "C": "Roger Barker",
+            "D": "William J. Reid",
+            "E": "Martin Buber"
+          },
+          "answer": "C",
+          "answer_text": "Roger Barker",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 42,
+          "source_no": 79,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p42-q080",
+          "stem": "Aşağıdakilerden hangisi Görev Merkezli Yaklaşım?ın sorunu inceleme ve belirleme aşamalarından birisi değildir?",
+          "options": {
+            "A": "Müracaatçı sorununun çözümünü yalnız başına yapmalı ve dışarıdan herhangi bir destek almamalıdır.",
+            "B": "Müracaatçrile-sosyal-hizmetuzmanının; ortak karar vererek çözülebilecek'sorunları belirlemeleri ve müracaatçının bunu kabul etmesi gerekir.",
+            "C": "Müracaatçı ile birlikte uzman, çözülmesi mümkün olan ya da olmayan sorunları tekrar tekrar gözden geçirmelidir.",
+            "D": "Müracaatçı için ana sorunun ne olduğu noktasında ortak bir görüş sağlanmalıdır.",
+            "E": "Müracaatçınin öncelikle çözülmesini istediği sorunlar dikkate alinmalı ve müracaatçının farkında olmadığı diğer sorunlarına yönelik farkındalıkları atırılmalıdır."
+          },
+          "answer": "A",
+          "answer_text": "Müracaatçı sorununun çözümünü yalnız başına yapmalı ve dışarıdan herhangi bir destek almamalıdır.",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 42,
+          "source_no": 80,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p42-q082",
+          "stem": "Aşağıdakilerden hangisi yapisalciligin temel ilkelerinden değildir?",
+          "options": {
+            "A": "Toplumun ideolojik yapısı",
+            "B": "Anti-tarihselcilik (tarihsel nedensizlik)",
+            "C": "Bağlanmama",
+            "D": "Değişmezlik",
+            "E": "Anti-hümanizm ve öznelsizlik"
+          },
+          "answer": "A",
+          "answer_text": "Toplumun ideolojik yapısı",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 42,
+          "source_no": 82,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p42-q083",
+          "stem": "Aşağıdakilerden hangisi, “kişinin temas engeli yaşaması ve kendisinde var olan, ancak kabul etmek istemediği davranış, düşünce ve duyguları başka insanlara yöneltmesidir.” ifadesinin kavramsal karşılığıdır?",
+          "options": {
+            "A": ".Farkındalık.",
+            "B": "İçe alma",
+            "C": "Tamamlanmamış işler",
+            "D": "Yansıtma"
+          },
+          "answer": "D",
+          "answer_text": "Yansıtma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 42,
+          "source_no": 83,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p42-q084",
+          "stem": "Aşağıdakilerden hangisi Gestalt Yaklasum nm temel-bakış açısıdır?",
+          "options": {
+            "A": "Temas",
+            "B": "Yansıtma",
+            "C": "Farkındalık",
+            "D": "Fenomenoloji"
+          },
+          "answer": "D",
+          "answer_text": "Fenomenoloji",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 42,
+          "source_no": 84,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p43-q087",
+          "stem": "Aşağıdakilerden hangisi WDEP(İYDP) Sisteminin özelliklerinden biri değildir?",
+          "options": {
+            "A": "Yapma",
+            "B": "İstekler",
+            "C": "Değerlendirme",
+            "D": "Danışma",
+            "E": "Planlama"
+          },
+          "answer": "D",
+          "answer_text": "Danışma",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 43,
+          "source_no": 87,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p43-q089",
+          "stem": "Aşağıdakilerden hangisi Gestalt yaklaşımının temas biçimlerinden biri değildir?",
+          "options": {
+            "A": "Duyarsızlaşma",
+            "B": "Kendini seyretme",
+            "C": "Saptırma",
+            "D": "Fenomenoloji"
+          },
+          "answer": "D",
+          "answer_text": "Fenomenoloji",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 43,
+          "source_no": 89,
+          "answer_provenance": "source_answer_line_ocr_checked"
+        },
+        {
+          "id": "sosyal-43p-p43-q090",
+          "stem": "“Çocuğun haz kaynağı ağız ve çevresidir” aşağıdaki psikoseksüel gelişim aşamalarından hangisinin özelliğidir?",
+          "options": {
+            "A": "Gizil dönem",
+            "B": "an(a)ldénem",
+            "C": "Oral dönem",
+            "D": "Fallik dönem",
+            "E": "Gen(i)tal dönem"
+          },
+          "answer": "C",
+          "answer_text": "Oral dönem",
+          "source_file": "AUZEF SOSYAL HİZMET KURAMLARI VİZE+FİNAL+BÜTÜNLEME.pdf",
+          "source_page": 43,
+          "source_no": 90,
+          "answer_provenance": "source_answer_line_ocr_checked"
         }
       ]
     }
