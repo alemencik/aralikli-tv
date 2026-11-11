@@ -462,21 +462,21 @@ class MainActivity : Activity() {
         answerFlashes.clear()
     }
 
-    /** Orange pulsing lock, inspired by a quiz-show answer reveal. */
+    /** Steady amber selection with a subtle halo while the show suspense runs. */
     private fun pulseLockedOption(button: Button) {
         selectionPulse?.cancel()
-        val blink = ObjectAnimator.ofFloat(button, View.ALPHA, 1f, 0.77f).apply {
-            duration = 580L
+        val blink = ObjectAnimator.ofFloat(button, View.ALPHA, 1f, 0.93f).apply {
+            duration = 680L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
         }
-        val growX = ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.012f).apply {
-            duration = 580L
+        val growX = ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.008f).apply {
+            duration = 680L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
         }
-        val growY = ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.012f).apply {
-            duration = 580L
+        val growY = ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.008f).apply {
+            duration = 680L
             repeatCount = ValueAnimator.INFINITE
             repeatMode = ValueAnimator.REVERSE
         }

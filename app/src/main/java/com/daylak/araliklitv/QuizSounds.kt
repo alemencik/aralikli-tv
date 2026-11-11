@@ -12,6 +12,7 @@ class QuizSounds(context: Context) {
     private val assets = LocalShowAssets(context)
     private val handler = Handler(Looper.getMainLooper())
     private var media: MediaPlayer? = null
+    private var suspenseMedia: MediaPlayer? = null
     private var tones: ToneGenerator? = try {
         ToneGenerator(AudioManager.STREAM_MUSIC, 65)
     } catch (_: RuntimeException) { null }
@@ -22,11 +23,37 @@ class QuizSounds(context: Context) {
     fun stopTension() {
         tensionTicks.forEach { handler.removeCallbacks(it) }
         tensionTicks.clear()
+        suspenseMedia?.run {
+            try { if (isPlaying) stop() } catch (_: Exception) {}
+            release()
+        }
+        suspenseMedia = null
     }
 
-    /** Short original suspense ticks, without copying any TV production's audio. */
+    /**
+     * User-provided show suspense MP3 has priority; it loops until the answer
+     * is revealed. If absent, use the independent built-in tension cue.
+     */
     fun tension(waitMs: Long) {
         stopTension()
+        val file = assets.soundFile("milyoner_suspense.mp3")
+        if (file != null) {
+            var player: MediaPlayer? = null
+            try {
+                player = MediaPlayer().apply {
+                    setDataSource(file.absolutePath)
+                    isLooping = true
+                    setVolume(0.73f, 0.73f)
+                    prepare()
+                }
+                suspenseMedia = player
+                player.start()
+                return
+            } catch (_: Exception) {
+                player?.release()
+                suspenseMedia = null
+            }
+        }
         val ticks = ((waitMs - 500L) / 750L).toInt().coerceIn(0, 7)
         for (i in 0 until ticks) {
             val task = Runnable {
