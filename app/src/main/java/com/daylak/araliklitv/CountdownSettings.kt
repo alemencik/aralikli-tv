@@ -1,12 +1,12 @@
 package com.daylak.araliklitv
 
 /**
- * Default is twenty seconds. A timeout is recorded separately from a wrong
+ * Default is fifty seconds. A timeout is recorded separately from a wrong
  * answer; it triggers an early repetition and automatically advances the quiz.
  */
 object CountdownSettings {
-    const val DEFAULT_SECONDS = 20
-    val choices = listOf(0, 20, 30, 60, 90)
+    const val DEFAULT_SECONDS = 50
+    val choices = listOf(0, 50)
     fun next(current: Int): Int {
         val index = choices.indexOf(current)
         return choices[(if (index < 0) 0 else index + 1) % choices.size]

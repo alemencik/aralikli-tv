@@ -91,8 +91,9 @@ class MainActivity : Activity() {
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
             originalThemeEnabled = prefs.getBoolean("original_theme_enabled", true)
-            timerSeconds = prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS)
-                .takeIf { it in CountdownSettings.choices } ?: CountdownSettings.DEFAULT_SECONDS
+            // Preserve an explicit "off" setting; migrate previous 20/30/60/90s to 50s.
+            timerSeconds = if (prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS) == 0)
+                0 else CountdownSettings.DEFAULT_SECONDS
         } catch (e: Exception) {
             error = "Soru bankası okunamadı: ${e.message ?: "bilinmeyen hata"}"
         }
@@ -100,7 +101,13 @@ class MainActivity : Activity() {
         checkUpdates(false)
     }
 
-    private fun px(dp: Int): Int = (resources.displayMetrics.density * dp).toInt()
+    private val uiScale: Float by lazy {
+        val metrics = resources.displayMetrics
+        TvLayout.scale(metrics.widthPixels / metrics.density, metrics.heightPixels / metrics.density)
+    }
+    private fun px(dp: Int): Int =
+        (resources.displayMetrics.density * dp * uiScale).toInt().coerceAtLeast(1)
+    private fun scaledSp(sp: Float): Float = sp * uiScale
     private fun shape(color: Int, outline: Int): GradientDrawable =
         GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
             intArrayOf(color, Color.rgb(9, 17, 61))).apply {
@@ -125,7 +132,8 @@ class MainActivity : Activity() {
         if (timerSeconds == 0) return
         timerWarningPlayed = false
         val label = TextView(this).apply {
-            textSize = 22f
+            textSize = scaledSp(20f)
+            includeFontPadding = false
             setTextColor(ink)
             setPadding(0, px(4), 0, px(8))
         }
@@ -138,7 +146,7 @@ class MainActivity : Activity() {
         }
         box.addView(bar, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT, px(10)
-        ).apply { bottomMargin = px(16) })
+        ).apply { bottomMargin = px(8) })
         timerLabel = label
         timerBar = bar
         timerRemainingMs = timerSeconds * 1000L
@@ -179,7 +187,10 @@ class MainActivity : Activity() {
         autoAdvanceTask = null
         stopCountdown()
         val content = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL; setPadding(px(46), px(34), px(46), px(40))
+            orientation = LinearLayout.VERTICAL
+            val tight = screen == "study" || screen == "timeout"
+            setPadding(px(32), px(if(tight) 12 else 20),
+                px(32), px(if(tight) 12 else 20))
         }
         val view = ScrollView(this).apply {
             background = if (originalThemeEnabled) localShowAssets.stageBackground()
@@ -192,27 +203,34 @@ class MainActivity : Activity() {
     }
     private fun heading(box: LinearLayout, text: String, size: Float = 32f) {
         box.addView(TextView(this).apply {
-            this.text = text; setTextColor(ink); textSize = size
+            this.text = text; setTextColor(ink); textSize = scaledSp(size)
+            includeFontPadding = false
             setShadowLayer(8f, 0f, 0f, Color.rgb(25, 75, 170))
-            setPadding(0,0,0,px(15))
+            setPadding(0,0,0,px(if (screen=="study") 6 else 10))
         })
     }
     private fun info(box: LinearLayout, text: String, size: Float = 20f) {
         box.addView(TextView(this).apply {
-            this.text = text; setTextColor(muted); textSize = size
-            setPadding(0,0,0,px(20))
+            this.text = text; setTextColor(muted); textSize = scaledSp(size)
+            includeFontPadding = false
+            setPadding(0,0,0,px(if (screen=="study") 5 else 10))
         })
     }
     private fun action(box: LinearLayout, caption: String, click: () -> Unit): Button {
         val b = Button(this).apply {
-            text = caption; isAllCaps = false; textSize = 21f
+            text = caption; isAllCaps = false
+            textSize = scaledSp(if (screen=="study") 19f else 20f)
+            includeFontPadding = false
+            minHeight = 0
+            minimumHeight = px(39)
             setTextColor(ColorStateList.valueOf(Color.WHITE))
             background = buttonBg()
-            setPadding(px(22),px(11),px(22),px(11))
+            setPadding(px(14),px(if (screen=="study") 6 else 9),
+                px(14),px(if (screen=="study") 6 else 9))
             setOnClickListener { click() }
         }
         val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT)
-        params.bottomMargin = px(12)
+        params.bottomMargin = px(if (screen=="study") 6 else 8)
         box.addView(b, params)
         return b
     }
@@ -303,8 +321,8 @@ class MainActivity : Activity() {
         val box=panel()
         heading(box,"${currentDeck?.title ?: "Günlük Tekrar"}",26f)
         val p=progress[question.id]
-        info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  ${question.sourceFile.orEmpty()} / s.${question.sourcePage}",16f)
-        heading(box,question.stem,27f)
+        info(box,"${if (p==null) "Yeni soru" else "Tekrar"}  •  Sayfa ${question.sourcePage}",16f)
+        heading(box,question.stem,25f)
         startCountdown(box)
         val first = optionButtons(box, question)
         action(box,"Derslere Dön") { renderLessons() }

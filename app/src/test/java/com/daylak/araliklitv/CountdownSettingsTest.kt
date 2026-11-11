@@ -5,16 +5,13 @@ import org.junit.Test
 
 class CountdownSettingsTest {
     @Test fun cyclesThroughOptionalCountdownDurations() {
-        assertEquals(20, CountdownSettings.next(0))
-        assertEquals(30, CountdownSettings.next(20))
-        assertEquals(60, CountdownSettings.next(30))
-        assertEquals(90, CountdownSettings.next(60))
-        assertEquals(0, CountdownSettings.next(90))
+        assertEquals(50, CountdownSettings.next(0))
+        assertEquals(0, CountdownSettings.next(50))
     }
 
-    @Test fun defaultIsTwentySeconds() {
-        assertEquals(20, CountdownSettings.DEFAULT_SECONDS)
-        assertEquals("20 saniye", CountdownSettings.label(CountdownSettings.DEFAULT_SECONDS))
+    @Test fun defaultIsFiftySeconds() {
+        assertEquals(50, CountdownSettings.DEFAULT_SECONDS)
+        assertEquals("50 saniye", CountdownSettings.label(CountdownSettings.DEFAULT_SECONDS))
     }
     @Test fun usesMonotonicRemainingTimeAndClampsAtZero() {
         assertEquals(30_000L, CountdownSettings.remainingMillis(100_000L,70_000L))
