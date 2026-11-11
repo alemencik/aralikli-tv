@@ -88,6 +88,9 @@ class MainActivity : Activity() {
     private var updateInstalling = false
     private var availableUpdate: UpdateRelease? = null
     private var updateMessage: String? = null
+    private var soundDownloading = false
+    private var showSoundMessage: String? = null
+    private var showSoundAutoAttempted = false
 
     private val background = Color.rgb(13, 22, 35)
     private val ink = Color.rgb(241, 245, 249)
@@ -111,6 +114,11 @@ class MainActivity : Activity() {
         }
         renderHome()
         checkUpdates(false)
+        // One automatic attempt following this update; retry manually if site is blocked.
+        if (soundEnabled && !prefs.getBoolean("show_sound_auto_attempt_v0310", false)) {
+            prefs.edit().putBoolean("show_sound_auto_attempt_v0310", true).apply()
+            downloadShowSounds()
+        }
     }
 
     private val uiScale: Float by lazy {
@@ -390,6 +398,12 @@ class MainActivity : Activity() {
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
             renderHome()
         }
+        val localSoundCount = try { ShowSoundDownloader(this).installedCount() } catch (_: Exception) { 0 }
+        if (!soundDownloading && localSoundCount < 3) {
+            action(box, "Yarışma seslerini yükle ($localSoundCount/3)") { downloadShowSounds() }
+        }
+        if (soundDownloading) info(box, "Üç yarışma sesi indiriliyor...", 16f)
+        showSoundMessage?.let { info(box, it, 16f) }
         if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
         updateMessage?.let { info(box, it, 18f) }
         availableUpdate?.let { release ->
@@ -761,6 +775,31 @@ class MainActivity : Activity() {
         firstFocus(action(box,"Ana Menü") { renderHome() })
     }
 
+
+    private fun downloadShowSounds() {
+        if (soundDownloading) return
+        soundDownloading = true
+        showSoundMessage = "Yarışma sesleri indiriliyor..."
+        if (screen == "home") renderHome()
+        Thread {
+            var message: String
+            try {
+                val result = ShowSoundDownloader(this).installMissing()
+                message = if (result.failed.isEmpty()) {
+                    "Yarışma sesleri hazır: ${result.installed}/3"
+                } else {
+                    "Sesler: ${result.installed}/3. İndirilemeyenler: ${result.failed.joinToString("; ")}"
+                }
+            } catch (e: Exception) {
+                message = "Sesler indirilemedi: ${e.message ?: "bağlantı hatası"}"
+            }
+            runOnUiThread {
+                soundDownloading = false
+                showSoundMessage = message
+                if (screen == "home") renderHome()
+            }
+        }.start()
+    }
 
     private fun checkUpdates(manual: Boolean) {
         if (updateChecking) return
