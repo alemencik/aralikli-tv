@@ -42,13 +42,14 @@ class ShowSoundDownloader(private val context: Context) {
             File(folder, name.targetName).let { it.isFile && it.length() > 1024L }
         }
 
-    fun installMissing(): ShowSoundDownloadResult {
+    fun installSelected(): ShowSoundDownloadResult {
         folder.mkdirs()
         var downloaded = 0
         val failed = mutableListOf<String>()
         ShowSoundSources.links.forEach { sound ->
             val destination = File(folder, sound.targetName)
-            if (destination.isFile && destination.length() > 1024L) return@forEach
+            // Replace earlier demo cues only after the new MP3 is verified.
+            // On failure, preserve the old audio file.
             val temporary = File(folder, ".${sound.targetName}.download")
             var conn: HttpURLConnection? = null
             try {

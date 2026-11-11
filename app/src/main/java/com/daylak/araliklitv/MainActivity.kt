@@ -90,7 +90,6 @@ class MainActivity : Activity() {
     private var updateMessage: String? = null
     private var soundDownloading = false
     private var showSoundMessage: String? = null
-    private var showSoundAutoAttempted = false
 
     private val background = Color.rgb(13, 22, 35)
     private val ink = Color.rgb(241, 245, 249)
@@ -115,8 +114,8 @@ class MainActivity : Activity() {
         renderHome()
         checkUpdates(false)
         // One automatic attempt following this update; retry manually if site is blocked.
-        if (soundEnabled && !prefs.getBoolean("show_sound_auto_attempt_v0310", false)) {
-            prefs.edit().putBoolean("show_sound_auto_attempt_v0310", true).apply()
+        if (soundEnabled && !prefs.getBoolean("show_sound_auto_attempt_v0311", false)) {
+            prefs.edit().putBoolean("show_sound_auto_attempt_v0311", true).apply()
             downloadShowSounds()
         }
     }
@@ -398,9 +397,8 @@ class MainActivity : Activity() {
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
             renderHome()
         }
-        val localSoundCount = try { ShowSoundDownloader(this).installedCount() } catch (_: Exception) { 0 }
-        if (!soundDownloading && localSoundCount < 3) {
-            action(box, "Yarışma seslerini yükle ($localSoundCount/3)") { downloadShowSounds() }
+        if (!soundDownloading && !prefs.getBoolean("selected_show_sounds_ready", false)) {
+            action(box, "Yarışma seslerini indir / yeniden dene") { downloadShowSounds() }
         }
         if (soundDownloading) info(box, "Üç yarışma sesi indiriliyor...", 16f)
         showSoundMessage?.let { info(box, it, 16f) }
@@ -784,11 +782,12 @@ class MainActivity : Activity() {
         Thread {
             var message: String
             try {
-                val result = ShowSoundDownloader(this).installMissing()
+                val result = ShowSoundDownloader(this).installSelected()
+                prefs.edit().putBoolean("selected_show_sounds_ready", result.failed.isEmpty()).apply()
                 message = if (result.failed.isEmpty()) {
-                    "Yarışma sesleri hazır: ${result.installed}/3"
+                    "Seçtiğin üç ses indirildi ve etkinleştirildi."
                 } else {
-                    "Sesler: ${result.installed}/3. İndirilemeyenler: ${result.failed.joinToString("; ")}"
+                    "Yeni seslerden ${result.downloaded}/3 yüklendi. Hatalar: ${result.failed.joinToString("; ")}"
                 }
             } catch (e: Exception) {
                 message = "Sesler indirilemedi: ${e.message ?: "bağlantı hatası"}"
