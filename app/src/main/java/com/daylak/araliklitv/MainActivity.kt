@@ -116,6 +116,13 @@ class MainActivity : Activity() {
             cornerRadius = px(18).toFloat()
             setStroke(px(3), outline)
         }
+    /** Violet question card distinguishes the prompt from navy-blue options. */
+    private fun questionBg(): GradientDrawable =
+        GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT,
+            intArrayOf(Color.rgb(43, 25, 81), Color.rgb(25, 15, 60))).apply {
+            cornerRadius = px(16).toFloat()
+            setStroke(px(3), Color.rgb(221, 177, 85))
+        }
     private fun buttonBg(): StateListDrawable = StateListDrawable().apply {
         addState(intArrayOf(android.R.attr.state_focused),
             shape(Color.rgb(33,83,165), Color.rgb(255,211,103)))
@@ -246,7 +253,7 @@ class MainActivity : Activity() {
             setLineSpacing(px(3).toFloat(), 1.05f)
             setPadding(px(20), px(16), px(20), px(16))
             minHeight = (resources.displayMetrics.heightPixels * 0.18f).toInt()
-            background = shape(Color.rgb(9, 24, 66), Color.rgb(38, 155, 247))
+            background = questionBg()
         }
         body.addView(questionCard, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
@@ -543,7 +550,7 @@ class MainActivity : Activity() {
             setLineSpacing(px(2).toFloat(), 1.03f)
             minHeight = (h * 0.14f).toInt()
             setPadding(px(20), px(12), px(20), px(12))
-            background = shape(Color.rgb(9, 24, 66), Color.rgb(38, 155, 247))
+            background = questionBg()
         }
         body.addView(questionCard, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT,
