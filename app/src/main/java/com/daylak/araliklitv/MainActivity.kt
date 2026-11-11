@@ -3,6 +3,7 @@ package com.daylak.araliklitv
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -13,6 +14,7 @@ import android.text.style.RelativeSizeSpan
 import android.text.style.ForegroundColorSpan
 import android.view.KeyEvent
 import android.view.View
+import android.view.ViewTreeObserver
 import android.view.Gravity
 import android.graphics.Typeface
 import android.graphics.Color
@@ -46,15 +48,14 @@ class MainActivity : Activity() {
         get() = soundEngine ?: QuizSounds(this).also { soundEngine = it }
     private var soundEnabled = true
     private var questionVoiceEnabled = true
-    private var takeawayEnabled = true
+    private var questionRoot: View? = null
+    private var questionPromptGeneration = 0
     private var takeawayVoiceEnabled = true
     private var studySpeech: StudySpeech? = null
-    private var takeawayCard: TextView? = null
-    private var studyViewport: ScrollView? = null
     private var manualFeedbackAdvance = false
     private var takeawayLine: StudyLine? = null
-    private val englishExplanations by lazy {
-        assets.open("english_explanations.json").bufferedReader(Charsets.UTF_8).use {
+    private val lessonExplanations by lazy {
+        assets.open("lesson_explanations.json").bufferedReader(Charsets.UTF_8).use {
             JSONObject(it.readText())
         }
     }
@@ -115,15 +116,15 @@ class MainActivity : Activity() {
     private var availableUpdate: UpdateRelease? = null
     private var updateMessage: String? = null
 
-    private val paper = Color.rgb(246, 246, 243)
-    private val surface = Color.WHITE
-    private val ink = Color.rgb(28, 28, 30)
-    private val muted = Color.rgb(89, 89, 94)
-    private val hairline = Color.rgb(204, 204, 207)
-    private val focusFill = Color.rgb(230, 231, 233)
-    private val pulseInk = Color.rgb(132, 81, 10)
-    private val correctInk = Color.rgb(37, 96, 61)
-    private val wrongInk = Color.rgb(144, 49, 56)
+    private val paper = Color.rgb(32, 31, 30)
+    private val surface = Color.rgb(43, 42, 40)
+    private val ink = Color.rgb(228, 224, 216)
+    private val muted = Color.rgb(178, 172, 161)
+    private val hairline = Color.rgb(93, 88, 81)
+    private val focusFill = Color.rgb(62, 59, 54)
+    private val pulseInk = Color.rgb(214, 168, 98)
+    private val correctInk = Color.rgb(143, 184, 153)
+    private val wrongInk = Color.rgb(218, 153, 153)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -134,7 +135,6 @@ class MainActivity : Activity() {
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
             questionVoiceEnabled = prefs.getBoolean("question_voice", true)
-            takeawayEnabled = prefs.getBoolean("takeaway_visible", true)
             takeawayVoiceEnabled = prefs.getBoolean("takeaway_voice", true)
             // Preserve an explicit "off" setting; migrate previous 20/30/60/90s to 50s.
             timerSeconds = if (prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS) == 0)
@@ -302,7 +302,6 @@ class MainActivity : Activity() {
             gravity = Gravity.CENTER_VERTICAL
             setPadding(px(4), px(3), px(4), px(3))
         }
-        studyViewport = viewport
         viewport.addView(body)
         outer.addView(viewport, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
@@ -337,25 +336,45 @@ class MainActivity : Activity() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         ).apply { bottomMargin = px(18) })
         val first = studyOptionButtons(body, question)
-        val card = TextView(this).apply {
-            visibility = View.GONE
-            setTextColor(ink)
-            textSize = scaledSp(23f)
-            setPadding(px(22), px(16), px(22), px(16))
-            background = shape(surface, hairline)
-        }
-        body.addView(card, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
-        ).apply { topMargin = px(6) })
-        takeawayCard = card
         startCountdown(timerRow)
         first?.requestFocus()
-        playStudyPrompt(question)
+        questionRoot = outer
+        speakAfterQuestionFrame(question)
     }
 
     private fun speak(line: StudyLine) {
         val speech = studySpeech ?: StudySpeech(this).also { studySpeech = it }
         speech.speak(line)
+    }
+
+    private fun speakAfterQuestionFrame(question: Question) {
+        if (!questionVoiceEnabled) return
+        val root = questionRoot ?: return
+        val generation = ++questionPromptGeneration
+        val start = Runnable {
+            if (generation == questionPromptGeneration && root === questionRoot &&
+                root.isAttachedToWindow && screen == "study" && !inFeedback &&
+                currentQuestion?.id == question.id) {
+                playStudyPrompt(question)
+            }
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && root.isHardwareAccelerated) {
+            root.viewTreeObserver.registerFrameCommitCallback(start)
+        } else {
+            root.viewTreeObserver.addOnDrawListener(object : ViewTreeObserver.OnDrawListener {
+                private var posted = false
+
+                override fun onDraw() {
+                    if (posted) return
+                    posted = true
+                    root.postOnAnimation {
+                        root.viewTreeObserver.removeOnDrawListener(this)
+                        start.run()
+                    }
+                }
+            })
+        }
+        root.invalidate()
     }
 
     private fun playStudyPrompt(question: Question) {
@@ -374,9 +393,9 @@ class MainActivity : Activity() {
         decks.any { it.id == "ingilizce1" && question in it.questions }
 
     private fun panel(): LinearLayout {
+        questionRoot = null
+        questionPromptGeneration++
         studySpeech?.stop()
-        studyViewport = null
-        takeawayCard = null
         stopAnswerCountdown()
         soundEngine?.release()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
@@ -436,13 +455,8 @@ class MainActivity : Activity() {
     private fun renderHome(focusSettings: Boolean = false) {
         screen = "home"; currentQuestion = null; inFeedback = false; feedbackCanAdvance = false
         val box = panel()
-        heading(box, "Kim KPSS Kazanmak İster?", 40f)
-        val all = questions(null)
-        val due = Scheduler.dueCount(all, progress, System.currentTimeMillis(), turn)
-        info(box, "${all.count { it.isScorable }} soru  •  $due zamanı gelen tekrar")
         error?.let { info(box, it) }
-        val settings = MenuTile("Ayarlar", if (availableUpdate != null) "Güncelleme var" else "",
-            android.R.drawable.ic_menu_preferences) { renderSettings() }
+        val settings = MenuTile("Ayarlar", icon = android.R.drawable.ic_menu_preferences) { renderSettings() }
         menuGrid(box, listOf(
             MenuTile("Ders Seç", icon = android.R.drawable.ic_menu_agenda) { renderLessons() },
             MenuTile("Günlük Tekrar", icon = android.R.drawable.ic_popup_sync) {
@@ -451,14 +465,17 @@ class MainActivity : Activity() {
             },
             MenuTile("Ders Videoları", icon = android.R.drawable.ic_media_play) { renderVideos() },
             settings
-        ), if (focusSettings) settings.title else null, columns = 2)
+        ), if (focusSettings) settings.title else null, columns = 2, fillViewport = true)
     }
 
-    private fun tileRow(box: LinearLayout): LinearLayout = LinearLayout(this).also { row ->
-        box.addView(row, LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
-        ).apply { topMargin = px(12) })
-    }
+    private fun tileRow(box: LinearLayout, fillViewport: Boolean): LinearLayout =
+        LinearLayout(this).also { row ->
+            box.addView(row, LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                if (fillViewport) 0 else LinearLayout.LayoutParams.WRAP_CONTENT,
+                if (fillViewport) 1f else 0f
+            ).apply { if (!fillViewport) topMargin = px(12) })
+        }
 
     private data class MenuTile(
         val title: String, val detail: String = "", val icon: Int = android.R.drawable.ic_menu_agenda,
@@ -483,12 +500,16 @@ class MainActivity : Activity() {
     }
 
     private fun menuGrid(
-        box: LinearLayout, tiles: List<MenuTile>, focusTitle: String? = null, columns: Int = 3
+        box: LinearLayout,
+        tiles: List<MenuTile>,
+        focusTitle: String? = null,
+        columns: Int = 3,
+        fillViewport: Boolean = false
     ) {
         var first: Button? = null
         var restored: Button? = null
         tiles.chunked(columns).forEach { entries ->
-            val row = tileRow(box)
+            val row = tileRow(box, fillViewport)
             entries.forEach { tile ->
                 val button = Button(this).apply {
                     isAllCaps = false
@@ -513,7 +534,11 @@ class MainActivity : Activity() {
                     }
                     setOnClickListener { tile.select() }
                 }
-                row.addView(button, LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f).apply { marginEnd = px(10) })
+                row.addView(button, LinearLayout.LayoutParams(
+                    0,
+                    if (fillViewport) LinearLayout.LayoutParams.MATCH_PARENT else LinearLayout.LayoutParams.WRAP_CONTENT,
+                    1f
+                ).apply { if (!fillViewport) marginEnd = px(10) })
                 if (first == null) first = button
                 if (tile.title == focusTitle) restored = button
             }
@@ -540,8 +565,7 @@ class MainActivity : Activity() {
             }
         val tiles = buildList {
             add(toggle("Soru seslendirmesi", "question_voice", questionVoiceEnabled) { questionVoiceEnabled = it })
-            add(toggle("Hap bilgiyi göster", "takeaway_visible", takeawayEnabled) { takeawayEnabled = it })
-            add(toggle("Hap bilgiyi seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it })
+            add(toggle("Cevap açıklamasını seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it })
             add(toggle("Ses efektleri", "sound_enabled", soundEnabled) { soundEnabled = it })
             add(MenuTile("Geri sayım", CountdownSettings.label(timerSeconds)) {
                 timerSeconds = CountdownSettings.next(timerSeconds)
@@ -592,8 +616,8 @@ class MainActivity : Activity() {
     }
 
     private fun resultShape(highlight: AnswerHighlight): GradientDrawable = when (highlight) {
-        AnswerHighlight.CORRECT -> shape(Color.rgb(235, 244, 237), correctInk, 2)
-        AnswerHighlight.WRONG -> shape(Color.rgb(249, 238, 238), wrongInk, 2)
+        AnswerHighlight.CORRECT -> shape(Color.rgb(41, 54, 45), correctInk, 2)
+        AnswerHighlight.WRONG -> shape(Color.rgb(56, 42, 43), wrongInk, 2)
         AnswerHighlight.NORMAL -> shape(surface, hairline)
     }
 
@@ -613,9 +637,6 @@ class MainActivity : Activity() {
                     AnswerHighlight.NORMAL -> ""
                 }
                 setTextColor(if (highlight == AnswerHighlight.CORRECT) correctInk else wrongInk)
-                alpha = 1f
-                scaleX = 1f
-                scaleY = 1f
                 visibility = if (highlight == AnswerHighlight.NORMAL) View.GONE else View.VISIBLE
             }
         }
@@ -623,27 +644,14 @@ class MainActivity : Activity() {
         if (soundEnabled && selected != null) {
             if (correct) sounds.correct() else sounds.wrong()
         }
-        val answer = q.answer?.let(q.options::get)
-        val english = isEnglish(q)
-        val line = if (english) {
-            englishExplanations.optString(q.id).takeIf(String::isNotBlank)?.let { StudyLine(it) }
-        } else {
-            answer?.let { StudyText.takeaway(q.stem, it, false) }
-        }
-        val showTakeaway = takeawayEnabled && !english && line != null
+        val line = lessonExplanations.optString(q.id).takeIf(String::isNotBlank)?.let { StudyLine(it) }
         takeawayLine = line
-        if (showTakeaway && line != null) {
-            takeawayCard?.apply {
-                text = "Hap bilgi\n${line.text}"
-                visibility = View.VISIBLE
-            }
-        }
         if (line != null && takeawayVoiceEnabled) speak(line)
         if (correct) {
             showSimpleRatings(q)
         } else {
             feedbackCanAdvance = true
-            manualFeedbackAdvance = line != null && (showTakeaway || takeawayVoiceEnabled)
+            manualFeedbackAdvance = line != null && takeawayVoiceEnabled
             if (manualFeedbackAdvance) {
                 studyFooter?.let { footer ->
                     footer.visibility = View.VISIBLE
@@ -656,13 +664,6 @@ class MainActivity : Activity() {
                 }
                 autoAdvanceTask = next
                 timerHandler.postDelayed(next, 2300L)
-            }
-        }
-        if (showTakeaway) {
-            studyViewport?.let { viewport ->
-                viewport.post {
-                    if (currentQuestion?.id == q.id) viewport.smoothScrollTo(0, viewport.getChildAt(0).height)
-                }
             }
         }
     }
@@ -702,11 +703,10 @@ class MainActivity : Activity() {
             })
             return button
         }
-        val first = addRating("Salladım", Rating.GUESSED)
+        addRating("Salladım", Rating.GUESSED)
         // EASY places a known question into the day-based repetition schedule,
         // but never deletes it from the bank.
-        addRating("Biliyordum", Rating.EASY)
-        first.requestFocus()
+        addRating("Biliyordum", Rating.EASY).requestFocus()
     }
 
     private fun selectAnswer(question: Question, letter: String) {
@@ -728,19 +728,13 @@ class MainActivity : Activity() {
                 isSelected = false
                 background = buttonBg()
             }
-            answerMarkers[active.choice]?.visibility = View.GONE
             active.select(letter, now)
         }
         answerCountdown = countdown
-        selectionOutline = shape(Color.rgb(253, 249, 239), pulseInk, 2)
+        selectionOutline = shape(Color.rgb(52, 44, 33), pulseInk, 2)
         studyButtons[letter]?.apply {
             isSelected = true
             background = selectionOutline
-        }
-        answerMarkers[letter]?.apply {
-            text = "♥"
-            setTextColor(pulseInk)
-            visibility = View.VISIBLE
         }
         timerHandler.removeCallbacks(answerCountdownTick)
         answerCountdownTick.run()
@@ -751,14 +745,9 @@ class MainActivity : Activity() {
         val first = (1f - kotlin.math.abs(phase - 90L) / 90f).coerceAtLeast(0f)
         val second = (1f - kotlin.math.abs(phase - 260L) / 78f).coerceAtLeast(0f) * 0.7f
         val pulse = maxOf(first, second)
-        val edge = Color.rgb((158 + 60 * pulse).toInt(), (113 + 42 * pulse).toInt(), 44)
+        val edge = Color.rgb((154 + 60 * pulse).toInt(), (113 + 55 * pulse).toInt(), (64 + 34 * pulse).toInt())
         selectionOutline?.setStroke(px(2) + (px(3) * pulse).toInt(), edge)
-        selectionOutline?.setColor(Color.rgb(253, (249 - 9 * pulse).toInt(), (239 - 22 * pulse).toInt()))
-        answerMarkers[countdown.choice]?.apply {
-            scaleX = 1f + 0.15f * pulse
-            scaleY = scaleX
-            alpha = 0.72f + 0.28f * pulse
-        }
+        selectionOutline?.setColor(Color.rgb((52 + 13 * pulse).toInt(), (44 + 8 * pulse).toInt(), (33 + 3 * pulse).toInt()))
     }
 
     private fun lockAnswerCountdown() {
@@ -949,6 +938,7 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
+        questionPromptGeneration++
         studySpeech?.stop()
         soundEngine?.release()
         if (answerCountdown != null) {
@@ -970,7 +960,7 @@ class MainActivity : Activity() {
     override fun onResume() {
         super.onResume()
         if (screen == "study" && !inFeedback) {
-            currentQuestion?.let(::playStudyPrompt)
+            currentQuestion?.let(::speakAfterQuestionFrame)
         } else if (takeawayVoiceEnabled && (screen == "feedback" || screen == "timeout")) {
             takeawayLine?.let(::speak)
         }
