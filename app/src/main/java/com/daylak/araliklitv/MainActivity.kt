@@ -358,7 +358,7 @@ class MainActivity : Activity() {
         heading(box, "KİM KPSS KAZANMAK İSTER?")
         val all = questions(null)
         val now = System.currentTimeMillis()
-        info(box,"${all.count { it.isScorable }} doğrulanmış soru  •  ${Scheduler.dueCount(all,progress,now,turn)} zamanı gelen tekrar")
+        info(box,"${all.count { it.isScorable }} kaynak cevaplı soru  •  ${Scheduler.dueCount(all,progress,now,turn)} zamanı gelen tekrar")
         error?.let { info(box,it) }
         val primary = action(box,"Ders Seç") { renderLessons() }
         action(box,"Günlük Tekrar (Tüm Dersler)") {
@@ -399,7 +399,7 @@ class MainActivity : Activity() {
             action(box,"Güncellemeleri Kontrol Et") { checkUpdates(true) }
         }
         if (updateInstalling) info(box, "APK indiriliyor ve doğrulanıyor...", 18f)
-        info(box,"Doğrulanmamış cevap anahtarı olan sorular puanlanmaz.",16f)
+        info(box,"Yalnızca kaynakta cevabı belirtilmiş sorular puanlanır. Akademik doğruluk ayrı incelenir.",16f)
         firstFocus(primary)
     }
 

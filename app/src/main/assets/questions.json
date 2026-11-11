@@ -1872,7 +1872,136 @@
     {
       "id": "ataturk1",
       "title": "Atatürk İlkeleri ve İnkılap Tarihi I",
-      "questions": []
+      "questions": [
+        {
+          "id": "ataturk1-g7203-001",
+          "stem": "Teşvik-i Sanayi Geçici Kanunu kaç yılında kabul edilmiştir?",
+          "options": {
+            "A": "1910",
+            "B": "1912",
+            "C": "1914",
+            "D": "1913",
+            "E": "1908"
+          },
+          "answer": "D",
+          "answer_text": "1913",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 1
+        },
+        {
+          "id": "ataturk1-g7203-002",
+          "stem": "1915 yılında çıkarılan Sevk ve İskân Kanunu’nun en temel amacı aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Müslüman-Hristiyan çatışması çıkarmak",
+            "B": "Savaş bölgelerinde askerî güçlerle herhangi bir şekilde karşı karşıya gelenleri ve gelme ihtimali olanları bölgelerinden uzaklaştırmak",
+            "C": "Sadece gitmek isteyenlerin ülkeden ayrılmasını sağlamak",
+            "D": "Ermeni komitelerinin yasal hâle gelmesini sağlamak",
+            "E": "Türkler dışında herkesi ülkeden göndermek"
+          },
+          "answer": "B",
+          "answer_text": "Savaş bölgelerinde askerî güçlerle herhangi bir şekilde karşı karşıya gelenleri ve gelme ihtimali olanları bölgelerinden uzaklaştırmak",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 2
+        },
+        {
+          "id": "ataturk1-g7203-004",
+          "stem": "Büyük Taarruz’dan sonra Yunan ordusu hangi tarihte Güney Marmara’yı tahliye etmiştir?",
+          "options": {
+            "A": "11 Ekim 1922",
+            "B": "9 Eylül 1922",
+            "C": "30 Ağustos 1922",
+            "D": "19 Eylül 1922",
+            "E": "4 Ekim 1922"
+          },
+          "answer": "D",
+          "answer_text": "19 Eylül 1922",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 4
+        },
+        {
+          "id": "ataturk1-g7203-005",
+          "stem": "1921 Teşkilat-ı Esasiye Kanunu’nun 7. maddesi TBMM’nin görevleri ile ilgilidir. Kanunun 7. maddesine göre aşağıdakilerden hangisi TBMM’nin görevleri arasında yer almaz?",
+          "options": {
+            "A": "Anlaşmalar imzalanması",
+            "B": "Milletvekillerinin yargılanması",
+            "C": "Kanun yapımı, değiştirilmesi veya kaldırılması",
+            "D": "Dinî hükümlerin uygulanması",
+            "E": "Vatan savunması"
+          },
+          "answer": "B",
+          "answer_text": "Milletvekillerinin yargılanması",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 5
+        },
+        {
+          "id": "ataturk1-g7203-006",
+          "stem": "Aşağıdakilerden hangisi 1921 Teşkilat-ı Esasiye Kanunu’nun özelliklerinden biri değildir?",
+          "options": {
+            "A": "Meclis başkanı aynı zamanda hükümetin de doğal başkanıdır.",
+            "B": "TBMM’nin süresi 2 yıldır.",
+            "C": "TBMM toplantıları ekim başında davetsiz olarak başlar.",
+            "D": "Hâkimiyet kayıtsız şartsız milletindir.",
+            "E": "Güçler ayrılığı ilkesi esastır."
+          },
+          "answer": "E",
+          "answer_text": "Güçler ayrılığı ilkesi esastır.",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 6
+        },
+        {
+          "id": "ataturk1-g7203-007",
+          "stem": "Türk-Sovyet görüşmeleri için Moskova’ya giden Türk heyetindeki ünlü iki kişi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Yusuf Kemal Bey - Kazım Karabekir",
+            "B": "Bekir Sami Bey - İsmet Paşa",
+            "C": "Bekir Sami Bey - Kazım Karabekir",
+            "D": "Yusuf Kemal Bey - Halil Paşa",
+            "E": "Bekir Sami Bey - Yusuf Kemal Bey"
+          },
+          "answer": "E",
+          "answer_text": "Bekir Sami Bey - Yusuf Kemal Bey",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 1,
+          "source_no": 7
+        },
+        {
+          "id": "ataturk1-g7203-014",
+          "stem": "II. Londra Konferansı’nda “Şimdi sözü Türkiye’nin gerçek temsilcisine bırakıyorum.” diyen kişi aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Ali Rıza Paşa",
+            "B": "Ahmet Tevfik Paşa",
+            "C": "İsmet Paşa",
+            "D": "Salih Paşa",
+            "E": "Damad Ferid Paşa"
+          },
+          "answer": "B",
+          "answer_text": "Ahmet Tevfik Paşa",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 14
+        },
+        {
+          "id": "ataturk1-g7203-020",
+          "stem": "Millî Mücadele sırasında Fransızlarla imzalanan anlaşma aşağıdakilerden hangisidir?",
+          "options": {
+            "A": "Gümrü",
+            "B": "Moskova",
+            "C": "Sevr",
+            "D": "Ankara",
+            "E": "Kars"
+          },
+          "answer": "D",
+          "answer_text": "Ankara",
+          "source_file": "02-ataturk-I.pdf",
+          "source_page": 2,
+          "source_no": 20
+        }
+      ]
     },
     {
       "id": "ataturk2",
@@ -6263,7 +6392,312 @@
     {
       "id": "sosyal",
       "title": "Sosyal Hizmet Kuramları",
-      "questions": []
+      "questions": [
+        {
+          "id": "sosyal-vize2022-001",
+          "stem": "Aşağıdakilerden hangisi ekolojik yaklaşımın ortaya çıkmasında etkili olmamıştır?",
+          "options": {
+            "A": "1960'larda ekolojik yaklaşımın etkisinin azaldığı ölçüde medikal tedavinin daha fazla genel kabul görmeye başlaması",
+            "B": "İç faktörler kadar çevresel faktörlerin de önemli olduğu görüşünün benimsenmeye başlanması",
+            "C": "İnsanın da canlı bir organizma olarak çevresiyle etkileşim içerisinde olduğu, çevresiyle karşılıklı uyumlu ilişki içerisinde olmasının önemine işaret etmesine “çevresi içinde birey” yaklaşımını gündeme getirmesi",
+            "D": "Psikanalitik Yaklaşım'ın bireyin sorunlarını çözmede yetersiz olduğunun kabul görmeye başlaması",
+            "E": "Bireyin sorunlarının sadece kendisinden ve iç etkenlerden kaynaklı olarak ele alınmasının çözümde yetersiz olduğu görüşünün yaygın hâle gelmesi"
+          },
+          "answer": "A",
+          "answer_text": "1960'larda ekolojik yaklaşımın etkisinin azaldığı ölçüde medikal tedavinin daha fazla genel kabul görmeye başlaması",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 1
+        },
+        {
+          "id": "sosyal-vize2022-002",
+          "stem": "Aşağıdakilerden hangisi insanların sosyal bir varlık olarak içerisinde yer aldığı doğal sistemlerden biri değildir?",
+          "options": {
+            "A": "Arkadaşlık",
+            "B": "İş yerinde statü",
+            "C": "Komşuluk",
+            "D": "İş arkadaşlığı",
+            "E": "Aile"
+          },
+          "answer": "B",
+          "answer_text": "İş yerinde statü",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 2
+        },
+        {
+          "id": "sosyal-vize2022-003",
+          "stem": "Varoluşçu yaklaşım, aşağıdaki yaklaşım ya da yaklaşımlardan hangisine tepki olarak ortaya çıkmıştır?",
+          "options": {
+            "A": "Ekolojik yaklaşım ve sistem kuramı",
+            "B": "Radikal davranışçı yaklaşım ve deterministik görüş",
+            "C": "Psikanalitik görüş",
+            "D": "Birey merkezli yaklaşım",
+            "E": "Radikal davranışçı yaklaşım"
+          },
+          "answer": "B",
+          "answer_text": "Radikal davranışçı yaklaşım ve deterministik görüş",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 3
+        },
+        {
+          "id": "sosyal-vize2022-004",
+          "stem": "Aşağıdakilerden hangisi güçlendirme yaklaşımında müracaatçının güçlü yönlerinin ortaya çıkarılmasında, yaşamına ilişkin yedi unsurun değerlendirilmesi kapsamında yer almaz?",
+          "options": {
+            "A": "Finansal / $ durumu",
+            "B": "Mesleki / Eğitsel durumu",
+            "C": "Sosyal destekleri",
+            "D": "Siyasi durumu",
+            "E": "Maneviyat durumu"
+          },
+          "answer": "D",
+          "answer_text": "Siyasi durumu",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 4
+        },
+        {
+          "id": "sosyal-vize2022-006",
+          "stem": "Aşağıdakilerden hangisi “Bireyin, karşılaştığı sorunların üstesinden gelebilmek ve iyilik hâlini sürdürebilmek için çaba sarf etmesi” tanımlamasını kapsamaktadır?",
+          "options": {
+            "A": "Uyum dengesi",
+            "B": "Enerji",
+            "C": "Arayüz",
+            "D": "İşlemler",
+            "E": "Başa çıkma"
+          },
+          "answer": "E",
+          "answer_text": "Başa çıkma",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 6
+        },
+        {
+          "id": "sosyal-vize2022-007",
+          "stem": "Aşağıdakilerden hangisi kapalı sisteme bir örnektir?",
+          "options": {
+            "A": "Aile",
+            "B": "Cezaevleri",
+            "C": "Eğitim kurumları",
+            "D": "Hastaneler",
+            "E": "Komşuluk"
+          },
+          "answer": "B",
+          "answer_text": "Cezaevleri",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 7
+        },
+        {
+          "id": "sosyal-vize2022-008",
+          "stem": "Aşağıdakilerden hangisi görev merkezli yaklaşımın müdahale süresini kapsar?",
+          "options": {
+            "A": "7-10 ay, 8-14 görüşme",
+            "B": "3-4 ay, 6-8 görüşme",
+            "C": "4-7 ay, 4-9 görüşme",
+            "D": "3-8 ay, 6-10 görüşme",
+            "E": "2-4 ay, 6-12 görüşme"
+          },
+          "answer": "E",
+          "answer_text": "2-4 ay, 6-12 görüşme",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 8
+        },
+        {
+          "id": "sosyal-vize2022-009",
+          "stem": "Aşağıdakilerden hangisi güçlendirme yaklaşımında kullanılan kavramlardan biri değildir?",
+          "options": {
+            "A": "İletişim ve işbirliği",
+            "B": "Umut",
+            "C": "Müracaatçıya inanmak",
+            "D": "Çıktı",
+            "E": "Güçlendirme"
+          },
+          "answer": "D",
+          "answer_text": "Çıktı",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 1,
+          "source_no": 9
+        },
+        {
+          "id": "sosyal-vize2022-010",
+          "stem": "Aşağıdakilerden hangisi “kişinin içinde bulunduğu gelişmişlik düzeyi sorun oluşturacak bir süreçte ise, kişi daha önce bulunduğu ve güvende olduğu bir döneme yönelim eğilimi içerisinde olabilir” tanımını kapsamaktadır?",
+          "options": {
+            "A": "Düş kurma",
+            "B": "Yalıtma",
+            "C": "Saplanma",
+            "D": "Yüceltme",
+            "E": "Gerileme"
+          },
+          "answer": "E",
+          "answer_text": "Gerileme",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 10
+        },
+        {
+          "id": "sosyal-vize2022-011",
+          "stem": "Değer verdiğimiz ve önemsediğimiz insanlarla birlikte olmak için duyulan arzu ve kişiye duyulan özlem sonucu hissedilen hoş gerilim duygusu, varoluşçu yaklaşımın aşağıdaki kavramlarından hangisinin tanımlayıcı özelliğidir?",
+          "options": {
+            "A": "Eros",
+            "B": "Filia",
+            "C": "Cinsellik",
+            "D": "Agape",
+            "E": "Kaygı"
+          },
+          "answer": "A",
+          "answer_text": "Eros",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 11
+        },
+        {
+          "id": "sosyal-vize2022-012",
+          "stem": "Aşağıdakilerden hangisi psikanalitik kuramın kurucusu ya da kurucularıdır?",
+          "options": {
+            "A": "Pavlov",
+            "B": "Skinner ve Wolpe",
+            "C": "Sigmund Freud",
+            "D": "Aaron T. Beck",
+            "E": "Albert Ellis"
+          },
+          "answer": "C",
+          "answer_text": "Sigmund Freud",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 12
+        },
+        {
+          "id": "sosyal-vize2022-013",
+          "stem": "Aşağıdakilerden hangisi transaksiyonel analiz türlerindendir?",
+          "options": {
+            "A": "Tamamlayıcı-Açık-Kapalı",
+            "B": "Gizli-Tamamlayıcı-Açık",
+            "C": "Açık-Kapalı-Gizli",
+            "D": "Tamamlayıcı-Kapalı-Gizli",
+            "E": "Açık-Kapalı-Gizil"
+          },
+          "answer": "D",
+          "answer_text": "Tamamlayıcı-Kapalı-Gizli",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 13
+        },
+        {
+          "id": "sosyal-vize2022-014",
+          "stem": "Aşağıdakilerden hangisi ekolojik yaklaşımın anahtar kavramlarından biri değildir?",
+          "options": {
+            "A": "Çıktı",
+            "B": "İşlemler",
+            "C": "Arayüz",
+            "D": "Uyum dengesi",
+            "E": "Sosyal çevre"
+          },
+          "answer": "A",
+          "answer_text": "Çıktı",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 14
+        },
+        {
+          "id": "sosyal-vize2022-015",
+          "stem": "Aşağıdakilerden hangisi güçlendirme sürecinde sosyal hizmet uzmanının görevleri arasında yer almaz?",
+          "options": {
+            "A": "Müracaatçılar hakkında neyin doğru ya da yanlış olduğuna karar vermek.",
+            "B": "İnsanların güçlerine, umutlarına, kaynaklarına ve yeteneklerine güvenmek.",
+            "C": "Müracaatçıların farkındalık düzeylerini artırarak mevcut kaynakları kullanmalarını sağlamak.",
+            "D": "Müracaatçılara yönelik olumsuz damgaları ortadan kaldırmak için çalışmak.",
+            "E": "Müracaatçıların olumsuz düşünce kalıplarını değiştirmelerine yardımcı olarak, yaşamlarına müdahale etmelerini sağlamak."
+          },
+          "answer": "A",
+          "answer_text": "Müracaatçılar hakkında neyin doğru ya da yanlış olduğuna karar vermek.",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 15
+        },
+        {
+          "id": "sosyal-vize2022-016",
+          "stem": "Transaksiyonel analize göre aşağıdaki kavramlardan hangisi zamanı yapılandırmada kullanılmaz?",
+          "options": {
+            "A": "Geri çekilme",
+            "B": "Psikolojik oyunlar",
+            "C": "Sosyal oyunlar",
+            "D": "Vakit geçirme",
+            "E": "Törenler"
+          },
+          "answer": "C",
+          "answer_text": "Sosyal oyunlar",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 16
+        },
+        {
+          "id": "sosyal-vize2022-017",
+          "stem": "Aşağıdakilerden hangisi “genel sistem teorisi”nin kurucusudur?",
+          "options": {
+            "A": "Frederick S. Perls",
+            "B": "Ludwig Von Bertalanffy",
+            "C": "Max Wertheimer",
+            "D": "Wolfgang Köhler",
+            "E": "Kurt Koffka"
+          },
+          "answer": "B",
+          "answer_text": "Ludwig Von Bertalanffy",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 17
+        },
+        {
+          "id": "sosyal-vize2022-018",
+          "stem": "Aşağıdakilerden hangisi görev merkezli yaklaşımın temel özellikleri arasında yer almaz?",
+          "options": {
+            "A": "Deneysel yönelim",
+            "B": "Bağlamlar vurgusu",
+            "C": "Müracaatçıların belirlemediği sorunlara odaklanma",
+            "D": "Kısa süreli planlama",
+            "E": "Bütünleştirici yapı"
+          },
+          "answer": "C",
+          "answer_text": "Müracaatçıların belirlemediği sorunlara odaklanma",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 18
+        },
+        {
+          "id": "sosyal-vize2022-019",
+          "stem": "Transaksiyonel analize göre insanın kişiliği kaç dönemden oluşur?",
+          "options": {
+            "A": "5",
+            "B": "4",
+            "C": "2",
+            "D": "1",
+            "E": "3"
+          },
+          "answer": "E",
+          "answer_text": "3",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 2,
+          "source_no": 19
+        },
+        {
+          "id": "sosyal-vize2022-020",
+          "stem": "Aşağıdakilerden hangisi psikanalitik kuramın psikoseksüel gelişim dönemleri arasında yer almaz?",
+          "options": {
+            "A": "Oral dönem",
+            "B": "Fallik - Ödipal dönem",
+            "C": "Bilinçli dönem",
+            "D": "Gizil (Latent) dönem",
+            "E": "Anal dönem"
+          },
+          "answer": "C",
+          "answer_text": "Bilinçli dönem",
+          "source_file": "09-sosyal-vize2022.pdf",
+          "source_page": 3,
+          "source_no": 20
+        }
+      ]
     }
   ]
 }
