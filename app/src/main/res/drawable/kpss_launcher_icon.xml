@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="192dp" android:height="192dp"
-    android:viewportWidth="192" android:viewportHeight="192">
-    <!-- Navy badge and subtle electric-blue outline. -->
-    <path android:fillColor="#0A1035"
-        android:pathData="M36,6 C15,6 6,15 6,36 L6,156 C6,177 15,186 36,186 L156,186 C177,186 186,177 186,156 L186,36 C186,15 177,6 156,6 Z"/>
-    <path android:fillColor="#00000000" android:strokeColor="#42BCFF"
-        android:strokeWidth="3"
-        android:pathData="M36,9 C17,9 9,17 9,36 L9,156 C9,175 17,183 36,183 L156,183 C175,183 183,175 183,156 L183,36 C183,17 175,9 156,9 Z"/>
-    <path android:fillColor="#00000000" android:strokeColor="#D5A24C"
-        android:strokeWidth="3"
-        android:pathData="M96,28 A69,69 0,1 1,95.9 28 Z"/>
-    <!-- Graduation cap. -->
-    <path android:fillColor="#F7C668"
-        android:pathData="M96,29 L135,46 96,63 57,46 Z"/>
-    <path android:fillColor="#AA702A"
-        android:pathData="M65,51 L96,65 127,51 127,67 96,80 65,67 Z"/>
-    <path android:fillColor="#FFE19E"
-        android:strokeColor="#FFE19E" android:strokeWidth="2"
-        android:pathData="M135,46 L135,72"/>
-    <path android:fillColor="#FFE19E"
-        android:pathData="M131,71 a4,4 0,1 0,8 0 a4,4 0,1 0,-8 0"/>
-    <!-- Four bold white letters KPSS. -->
-    <path android:fillColor="#00000000" android:strokeColor="#F3F5FF"
-        android:strokeWidth="6" android:strokeLineCap="round" android:strokeLineJoin="round"
-        android:pathData="M48,91 L48,119 M49,105 L62,91 M49,105 L63,119
-                          M73,119 L73,91 L86,91 C102,91 102,105 86,105 L74,105
-                          M117,94 C100,87 101,102 116,104 C131,107 126,122 107,117
-                          M151,94 C134,87 135,102 150,104 C165,107 160,122 141,117"/>
-    <!-- Open book at the bottom. -->
-    <path android:fillColor="#E9EFFF"
-        android:pathData="M47,140 L87,135 96,141 105,135 145,140 145,162 105,159 96,165 87,159 47,162 Z"/>
-    <path android:fillColor="#D5A24C" android:strokeColor="#D5A24C"
-        android:strokeWidth="2" android:pathData="M96,141 L96,165"/>
-    <path android:fillColor="#00000000" android:strokeColor="#4B66A8"
-        android:strokeWidth="1.5"
-        android:pathData="M55,147 L85,143 M55,153 L85,150 M107,143 L137,147 M107,150 L137,153"/>
-</vector>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/kpss_launcher_photo"
+    android:gravity="fill"
+    android:filter="true" />

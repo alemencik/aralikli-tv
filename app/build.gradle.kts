@@ -32,8 +32,8 @@ android {
         applicationId = "com.daylak.araliklitv"
         minSdk = 23
         targetSdk = 35
-        versionCode = 31
-        versionName = "0.3.18"
+        versionCode = 32
+        versionName = "0.3.19"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
