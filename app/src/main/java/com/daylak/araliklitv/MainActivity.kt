@@ -45,6 +45,14 @@ class MainActivity : Activity() {
     private val sounds: QuizSounds
         get() = soundEngine ?: QuizSounds(this).also { soundEngine = it }
     private var soundEnabled = true
+    private var questionVoiceEnabled = true
+    private var takeawayEnabled = true
+    private var takeawayVoiceEnabled = true
+    private var studySpeech: StudySpeech? = null
+    private var takeawayCard: TextView? = null
+    private var studyViewport: ScrollView? = null
+    private var manualFeedbackAdvance = false
+    private var takeawayLine: StudyLine? = null
     private val localShowAssets by lazy { LocalShowAssets(this) }
     private var originalThemeEnabled = true
     private var timerSeconds = CountdownSettings.DEFAULT_SECONDS
@@ -129,6 +137,9 @@ class MainActivity : Activity() {
             decks = QuestionLoader.load(json)
             loadProgress()
             soundEnabled = prefs.getBoolean("sound_enabled", true)
+            questionVoiceEnabled = prefs.getBoolean("question_voice", true)
+            takeawayEnabled = prefs.getBoolean("takeaway_visible", true)
+            takeawayVoiceEnabled = prefs.getBoolean("takeaway_voice", true)
             originalThemeEnabled = prefs.getBoolean("original_theme_enabled", true)
             // Preserve an explicit "off" setting; migrate previous 20/30/60/90s to 50s.
             timerSeconds = if (prefs.getInt("timer_seconds", CountdownSettings.DEFAULT_SECONDS) == 0)
@@ -273,6 +284,9 @@ class MainActivity : Activity() {
      * the whole content scrolls rather than clipping answer text.
      */
     private fun renderStudyQuestion(question: Question) {
+        studySpeech?.stop()
+        manualFeedbackAdvance = false
+        takeawayLine = null
         clearOptionAnimations()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
@@ -306,6 +320,7 @@ class MainActivity : Activity() {
             gravity = Gravity.CENTER_VERTICAL
             setPadding(px(4), px(3), px(4), px(3))
         }
+        studyViewport = viewport
         viewport.addView(body)
         outer.addView(viewport, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
@@ -340,12 +355,39 @@ class MainActivity : Activity() {
             LinearLayout.LayoutParams.WRAP_CONTENT
         ).apply { bottomMargin = px(18) })
         val first = studyOptionButtons(body, question)
+        val card = TextView(this).apply {
+            visibility = View.GONE
+            setTextColor(Color.WHITE)
+            textSize = scaledSp(23f)
+            setPadding(px(22), px(16), px(22), px(16))
+            background = shape(Color.rgb(9, 70, 82), Color.rgb(87, 215, 203))
+        }
+        body.addView(card, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { topMargin = px(6) })
+        takeawayCard = card
         startCountdown(timerRow)
         first?.requestFocus()
-        if (soundEnabled) sounds.startQuestionMusic()
+        playStudyPrompt(question)
     }
 
-    private fun panel(): LinearLayout {
+    private fun speak(line: StudyLine) {
+        val speech = studySpeech ?: StudySpeech(this).also { studySpeech = it }
+        speech.speak(line)
+    }
+
+    private fun playStudyPrompt(question: Question) {
+        if (soundEnabled) sounds.startQuestionMusic(quiet = questionVoiceEnabled)
+        if (questionVoiceEnabled) speak(StudyText.question(question.stem, isEnglish(question)))
+    }
+
+    private fun isEnglish(question: Question): Boolean =
+        decks.any { it.id == "ingilizce1" && question in it.questions }
+
+    private fun panel(useStage: Boolean = true): LinearLayout {
+        studySpeech?.stop()
+        studyViewport = null
+        takeawayCard = null
         stopAnswerCountdown()
         soundEngine?.stopBackground()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
@@ -358,8 +400,12 @@ class MainActivity : Activity() {
                 px(32), px(if(tight) 12 else 20))
         }
         val view = ScrollView(this).apply {
-            background = if (originalThemeEnabled) localShowAssets.stageBackground()
-                else StageDrawable()
+            background = if (useStage) {
+                if (originalThemeEnabled) localShowAssets.stageBackground() else StageDrawable()
+            } else {
+                GradientDrawable(GradientDrawable.Orientation.TL_BR,
+                    intArrayOf(Color.rgb(14, 24, 43), Color.rgb(6, 11, 24)))
+            }
             isFillViewport = true
             addView(content)
         }
@@ -403,20 +449,94 @@ class MainActivity : Activity() {
     private fun questions(deck: Deck?): List<Question> =
         deck?.questions ?: decks.flatMap { it.questions }
 
-    private fun renderHome() {
-        screen = "home"; currentQuestion = null; inFeedback=false; feedbackCanAdvance=false
-        val box = panel()
-        heading(box, "KİM KPSS KAZANMAK İSTER?")
+    private fun renderHome(focusSettings: Boolean = false) {
+        screen = "home"; currentQuestion = null; inFeedback = false; feedbackCanAdvance = false
+        val box = panel(useStage = false)
+        heading(box, "Kim KPSS Kazanmak İster?", 40f)
         val all = questions(null)
-        val now = System.currentTimeMillis()
-        info(box,"${all.count { it.isScorable }} kaynak cevaplı soru  •  ${Scheduler.dueCount(all,progress,now,turn)} zamanı gelen tekrar")
-        error?.let { info(box,it) }
-        val primary = action(box,"Ders Seç") { renderLessons() }
-        action(box,"Günlük Tekrar (Tüm Dersler)") {
-            currentDeck = null; nextQuestion()
+        val due = Scheduler.dueCount(all, progress, System.currentTimeMillis(), turn)
+        info(box, "${all.count { it.isScorable }} soru  •  $due zamanı gelen tekrar")
+        error?.let { info(box, it) }
+        val top = tileRow(box)
+        val primary = homeTile(top, "Ders Seç", android.R.drawable.ic_menu_agenda, 0xff184d9e.toInt()) {
+            renderLessons()
         }
-        action(box,"İstatistikler") { renderStats() }
-        action(box,"Ders Videoları") { renderVideos() }
+        val daily = homeTile(top, "Günlük Tekrar", android.R.drawable.ic_popup_sync, 0xff10645c.toInt()) {
+            currentDeck = null
+            nextQuestion()
+        }
+        val videos = homeTile(top, "Ders Videoları", android.R.drawable.ic_media_play, 0xff62408e.toInt()) {
+            renderVideos()
+        }
+        val bottom = tileRow(box)
+        val stats = homeTile(bottom, "İstatistikler", android.R.drawable.ic_menu_sort_by_size, 0xff79512f.toInt()) {
+            renderStats()
+        }
+        val settingsLabel = if (availableUpdate != null) "Ayarlar · Güncelleme var" else "Ayarlar"
+        val settings = homeTile(bottom, settingsLabel, android.R.drawable.ic_menu_preferences, 0xff344964.toInt()) {
+            renderSettings()
+        }
+        primary.nextFocusDownId = stats.id
+        daily.nextFocusDownId = stats.id
+        videos.nextFocusDownId = settings.id
+        stats.nextFocusUpId = primary.id
+        settings.nextFocusUpId = videos.id
+        firstFocus(if (focusSettings) settings else primary)
+    }
+
+    private fun tileRow(box: LinearLayout): LinearLayout = LinearLayout(this).also { row ->
+        box.addView(row, LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT
+        ).apply { topMargin = px(12) })
+    }
+
+    private fun homeTile(
+        row: LinearLayout, caption: String, icon: Int, color: Int, click: () -> Unit
+    ): Button = Button(this).apply {
+        id = View.generateViewId()
+        text = caption
+        isAllCaps = false
+        textSize = scaledSp(24f)
+        typeface = Typeface.DEFAULT_BOLD
+        gravity = Gravity.CENTER
+        setTextColor(Color.WHITE)
+        setPadding(px(12), px(24), px(12), px(20))
+        compoundDrawablePadding = px(14)
+        val image = getDrawable(icon)?.mutate()?.apply {
+            setTint(Color.WHITE)
+            setBounds(0, 0, px(41), px(41))
+        }
+        setCompoundDrawables(null, image, null, null)
+        background = StateListDrawable().apply {
+            addState(intArrayOf(android.R.attr.state_pressed), shape(color, Color.WHITE))
+            addState(intArrayOf(android.R.attr.state_focused), shape(color, Color.rgb(123, 234, 255)))
+            addState(intArrayOf(), shape(color, Color.rgb(57, 77, 112)))
+        }
+        setOnClickListener { click() }
+        row.addView(this, LinearLayout.LayoutParams(0, px(130), 1f).apply {
+            marginEnd = px(10)
+        })
+    }
+
+    private fun renderSettings() {
+        screen = "settings"
+        val box = panel(useStage = false)
+        heading(box, "Ayarlar")
+        fun toggle(label: String, key: String, enabled: Boolean, apply: (Boolean) -> Unit): Button {
+            return action(box, "$label: ${if (enabled) "Açık" else "Kapalı"}") {
+                val newValue = !enabled
+                apply(newValue)
+                prefs.edit().putBoolean(key, newValue).apply()
+                renderSettings()
+                window.decorView.findViewWithTag<Button>(key)?.requestFocus()
+            }.apply { tag = key }
+        }
+        val first = toggle("Soru seslendirmesi", "question_voice", questionVoiceEnabled) {
+            questionVoiceEnabled = it
+        }
+        toggle("Hap bilgiyi göster", "takeaway_visible", takeawayEnabled) { takeawayEnabled = it }
+        toggle("Hap bilgiyi seslendir", "takeaway_voice", takeawayVoiceEnabled) { takeawayVoiceEnabled = it }
+        info(box, "Seslendirme TV’de yüklü Türkçe ve İngilizce sesleri kullanır.", 16f)
         val showImageReady = localShowAssets.hasStage()
         action(box,"Yarışma arka planı: " + when {
             !showImageReady -> "Özel görsel bekleniyor"
@@ -425,7 +545,7 @@ class MainActivity : Activity() {
         }) {
             originalThemeEnabled = !originalThemeEnabled
             prefs.edit().putBoolean("original_theme_enabled", originalThemeEnabled).apply()
-            renderHome()
+            renderSettings()
         }
         if (!showImageReady) {
             info(box,"Kendi sahne fotoğrafını TV'ye milyoner_stage.jpg adıyla aktar. " +
@@ -434,12 +554,12 @@ class MainActivity : Activity() {
         action(box,"Geri sayım: ${CountdownSettings.label(timerSeconds)}") {
             timerSeconds = CountdownSettings.next(timerSeconds)
             prefs.edit().putInt("timer_seconds",timerSeconds).apply()
-            renderHome()
+            renderSettings()
         }
         action(box,if(soundEnabled) "Ses efektleri: AÇIK" else "Ses efektleri: KAPALI") {
             soundEnabled = !soundEnabled
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
-            renderHome()
+            renderSettings()
         }
         if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
         updateMessage?.let { info(box, it, 18f) }
@@ -450,8 +570,8 @@ class MainActivity : Activity() {
             action(box,"Güncellemeleri Kontrol Et") { checkUpdates(true) }
         }
         if (updateInstalling) info(box, "APK indiriliyor ve doğrulanıyor...", 18f)
-        info(box,"Yalnızca kaynakta cevabı belirtilmiş sorular puanlanır. Akademik doğruluk ayrı incelenir.",16f)
-        firstFocus(primary)
+        action(box, "Ana Menü") { renderHome(focusSettings = true) }
+        firstFocus(first)
     }
 
     private fun renderLessons() {
@@ -557,17 +677,41 @@ class MainActivity : Activity() {
         if (soundEnabled) {
             if (correct) sounds.correct() else sounds.wrong()
         }
+        val answer = q.answer?.let(q.options::get)
+        val line = answer?.let { StudyText.takeaway(q.stem, it, isEnglish(q)) }
+        takeawayLine = line
+        if (line != null && takeawayEnabled) {
+            takeawayCard?.apply {
+                text = "Hap bilgi\n${line.text}"
+                visibility = View.VISIBLE
+            }
+        }
+        if (line != null && takeawayVoiceEnabled) speak(line)
         if (correct) {
             showSimpleRatings(q)
         } else {
-            // Wrong or timed-out questions are already placed in the early-repeat queue.
             feedbackCanAdvance = true
-            val next = Runnable {
-                if (currentQuestion?.id == q.id &&
-                    (screen == "feedback" || screen == "timeout")) nextQuestion()
+            manualFeedbackAdvance = line != null && (takeawayEnabled || takeawayVoiceEnabled)
+            if (manualFeedbackAdvance) {
+                studyFooter?.let { footer ->
+                    footer.visibility = View.VISIBLE
+                    firstFocus(action(footer, "Sonraki Soru") { nextQuestion() })
+                }
+            } else {
+                val next = Runnable {
+                    if (currentQuestion?.id == q.id &&
+                        (screen == "feedback" || screen == "timeout")) nextQuestion()
+                }
+                autoAdvanceTask = next
+                timerHandler.postDelayed(next, 2300L)
             }
-            autoAdvanceTask = next
-            timerHandler.postDelayed(next, 2300L)
+        }
+        if (line != null && takeawayEnabled) {
+            studyViewport?.let { viewport ->
+                viewport.post {
+                    if (currentQuestion?.id == q.id) viewport.smoothScrollTo(0, viewport.getChildAt(0).height)
+                }
+            }
         }
     }
 
@@ -625,6 +769,7 @@ class MainActivity : Activity() {
             feedbackCanAdvance = false
             timerLabel?.visibility = View.INVISIBLE
             stopCountdown()
+            studySpeech?.stop()
             soundEngine?.stopBackground()
             if (soundEnabled) sounds.tension()
             AnswerCountdown(letter, SystemClock.elapsedRealtime())
@@ -684,6 +829,7 @@ class MainActivity : Activity() {
         timerRunning = false
         timerHandler.removeCallbacks(timerTick)
         timerLabel?.visibility = View.INVISIBLE
+        studySpeech?.stop()
         soundEngine?.stopBackground()
         studyButtons.values.forEach { it.isEnabled = false; it.isFocusable = false }
         register(q, Rating.AGAIN, timedOut = true)
@@ -811,7 +957,7 @@ class MainActivity : Activity() {
         if (updateChecking) return
         updateChecking = true
         if (manual) updateMessage = "GitHub sürümleri kontrol ediliyor..."
-        if (screen == "home") renderHome()
+        if (screen == "settings") renderSettings()
         Thread {
             var found: UpdateRelease? = null
             var problem: String? = null
@@ -828,7 +974,8 @@ class MainActivity : Activity() {
                     manual -> "Uygulama güncel."
                     else -> null
                 }
-                if (screen == "home") renderHome()
+                if (screen == "settings") renderSettings()
+                else if (screen == "home" && found != null) renderHome()
             }
         }.start()
     }
@@ -837,7 +984,7 @@ class MainActivity : Activity() {
         if (updateInstalling) return
         updateInstalling = true
         updateMessage = "APK indiriliyor..."
-        renderHome()
+        renderSettings()
         Thread {
             var apk: java.io.File? = null
             var problem: String? = null
@@ -855,12 +1002,13 @@ class MainActivity : Activity() {
                         updateMessage = "Kurulum başlatılamadı: ${e.message}"
                     }
                 } else updateMessage = "Güncelleme başarısız: $problem"
-                if (screen == "home") renderHome()
+                if (screen == "settings") renderSettings()
             }
         }.start()
     }
 
     override fun onPause() {
+        studySpeech?.stop()
         answerFlashes.forEach { it.cancel() }
         answerFlashes.clear()
         soundEngine?.release()
@@ -882,8 +1030,10 @@ class MainActivity : Activity() {
 
     override fun onResume() {
         super.onResume()
-        if (screen == "study" && !inFeedback && soundEnabled) {
-            sounds.startQuestionMusic()
+        if (screen == "study" && !inFeedback) {
+            currentQuestion?.let(::playStudyPrompt)
+        } else if (takeawayVoiceEnabled && (screen == "feedback" || screen == "timeout")) {
+            takeawayLine?.let(::speak)
         }
         val pausedAt = answerCountdownPausedAt
         val countdown = answerCountdown
@@ -894,7 +1044,7 @@ class MainActivity : Activity() {
             answerCountdownPausedAt = null
             answerCountdownTick.run()
         } else if ((screen == "feedback" || screen == "timeout") &&
-            inFeedback && feedbackCanAdvance) {
+            inFeedback && feedbackCanAdvance && !manualFeedbackAdvance) {
             currentQuestion?.let { q ->
                 autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
                 val next = Runnable {
@@ -918,6 +1068,7 @@ class MainActivity : Activity() {
         stopAnswerCountdown()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         soundEngine?.release()
+        studySpeech?.close()
         super.onDestroy()
     }
 
@@ -965,6 +1116,7 @@ class MainActivity : Activity() {
                 if (deck == null) renderVideos() else renderVideoCourse(deck)
             }
             "video-course" -> renderVideos()
+            "settings" -> renderHome(focusSettings = true)
             "lessons", "stats", "videos" -> renderHome()
             else -> super.onBackPressed()
         }
