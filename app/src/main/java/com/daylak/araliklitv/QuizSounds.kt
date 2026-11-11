@@ -18,6 +18,25 @@ class QuizSounds(context: Context) {
     private val secondTone = Runnable {
         try { tones?.startTone(ToneGenerator.TONE_PROP_ACK, 175) } catch (_: RuntimeException) {}
     }
+    private val tensionTicks = mutableListOf<Runnable>()
+    fun stopTension() {
+        tensionTicks.forEach { handler.removeCallbacks(it) }
+        tensionTicks.clear()
+    }
+
+    /** Short original suspense ticks, without copying any TV production's audio. */
+    fun tension(waitMs: Long) {
+        stopTension()
+        val ticks = ((waitMs - 500L) / 750L).toInt().coerceIn(0, 7)
+        for (i in 0 until ticks) {
+            val task = Runnable {
+                try { tones?.startTone(ToneGenerator.TONE_PROP_PROMPT, 90) }
+                catch (_: RuntimeException) {}
+            }
+            tensionTicks.add(task)
+            handler.postDelayed(task, 520L + i * 750L)
+        }
+    }
 
     private fun playLocal(name: String): Boolean {
         val file = assets.soundFile(name) ?: return false
@@ -50,12 +69,14 @@ class QuizSounds(context: Context) {
         catch (_: RuntimeException) {}
     }
     fun correct() {
+        stopTension()
         handler.removeCallbacks(secondTone)
         if (playLocal("milyoner_correct.mp3")) return
         try { tones?.startTone(ToneGenerator.TONE_PROP_BEEP, 130) } catch (_: RuntimeException) {}
         handler.postDelayed(secondTone, 180L)
     }
     fun wrong() {
+        stopTension()
         handler.removeCallbacks(secondTone)
         if (playLocal("milyoner_wrong.mp3")) return
         try { tones?.startTone(ToneGenerator.TONE_PROP_NACK, 260) } catch (_: RuntimeException) {}
@@ -67,6 +88,7 @@ class QuizSounds(context: Context) {
         catch (_: RuntimeException) {}
     }
     fun release() {
+        stopTension()
         handler.removeCallbacks(secondTone)
         media?.release()
         media = null

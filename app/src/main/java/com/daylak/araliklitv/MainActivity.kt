@@ -1,6 +1,9 @@
 package com.daylak.araliklitv
 
 import android.app.Activity
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -54,6 +57,8 @@ class MainActivity : Activity() {
     private var studyFooter: LinearLayout? = null
     private var pendingSelection: String? = null
     private var pendingReveal = false
+    private var selectionPulse: AnimatorSet? = null
+    private val answerFlashes = mutableListOf<AnimatorSet>()
     private val timerTick = object : Runnable {
         override fun run() {
             if (!timerRunning || screen != "study" || inFeedback) return
@@ -219,6 +224,7 @@ class MainActivity : Activity() {
      * the whole content scrolls rather than clipping answer text.
      */
     private fun renderStudyQuestion(question: Question) {
+        clearOptionAnimations()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
@@ -449,6 +455,61 @@ class MainActivity : Activity() {
         }
     }
 
+    private fun clearOptionAnimations() {
+        selectionPulse?.cancel()
+        selectionPulse = null
+        answerFlashes.forEach { it.cancel() }
+        answerFlashes.clear()
+    }
+
+    /** Orange pulsing lock, inspired by a quiz-show answer reveal. */
+    private fun pulseLockedOption(button: Button) {
+        selectionPulse?.cancel()
+        val blink = ObjectAnimator.ofFloat(button, View.ALPHA, 1f, 0.77f).apply {
+            duration = 580L
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+        }
+        val growX = ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.012f).apply {
+            duration = 580L
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+        }
+        val growY = ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.012f).apply {
+            duration = 580L
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+        }
+        selectionPulse = AnimatorSet().apply {
+            playTogether(blink, growX, growY)
+            start()
+        }
+    }
+
+    /** Two bright color pulses, ending on the correct final color. */
+    private fun flashRevealedOption(button: Button) {
+        val flash = ObjectAnimator.ofFloat(button, View.ALPHA, 1f, 0.52f, 1f).apply {
+            duration = 520L
+            repeatCount = 1
+            repeatMode = ValueAnimator.RESTART
+        }
+        val growX = ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.014f, 1f).apply {
+            duration = 520L
+            repeatCount = 1
+            repeatMode = ValueAnimator.RESTART
+        }
+        val growY = ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.014f, 1f).apply {
+            duration = 520L
+            repeatCount = 1
+            repeatMode = ValueAnimator.RESTART
+        }
+        val animation = AnimatorSet().apply {
+            playTogether(flash, growX, growY)
+            start()
+        }
+        answerFlashes.add(animation)
+    }
+
     /**
      * User selection stays gold before the correct option turns green.
      * Wrong selections turn red, while all other options keep their blue style.
@@ -458,13 +519,17 @@ class MainActivity : Activity() {
         if (q.id != currentQuestion?.id || (screen != "feedback" && screen != "timeout")) return
         pendingReveal = false
         pendingSelection = null
+        selectionPulse?.cancel()
+        selectionPulse = null
+        if (soundEnabled) sounds.stopTension()
         studyButtons.forEach { (letter, button) ->
-            val h = AnswerFeedback.highlight(letter, q.answer, selected)
-            button.background = resultShape(h)
-            if (h != AnswerHighlight.NORMAL) {
-                button.alpha = 0.48f
-                button.animate().alpha(1f).setDuration(400L).start()
-            }
+            button.animate().cancel()
+            button.scaleX = 1f
+            button.scaleY = 1f
+            val highlight = AnswerFeedback.highlight(letter, q.answer, selected)
+            button.background = resultShape(highlight)
+            button.alpha = if (highlight == AnswerHighlight.NORMAL) 0.68f else 1f
+            if (highlight != AnswerHighlight.NORMAL) flashRevealedOption(button)
         }
         val correct = selected != null && selected == q.answer
         if (soundEnabled) {
@@ -538,13 +603,22 @@ class MainActivity : Activity() {
         studyButtons.values.forEach {
             it.isEnabled = false
             it.isFocusable = false
-            it.animate().scaleX(1f).scaleY(1f).setDuration(100L).start()
+            it.animate().cancel()
+            it.scaleX = 1f
+            it.scaleY = 1f
+            it.alpha = 0.72f
         }
-        studyButtons[selected]?.background = shape(
-            Color.rgb(117, 76, 14), Color.rgb(255, 222, 101)
-        )
-        if (soundEnabled) sounds.press()
-        // Each answer stays selected for a random 3–5 seconds before reveal.
+        studyButtons[selected]?.let { locked ->
+            locked.alpha = 1f
+            locked.background = shape(Color.rgb(149, 87, 15), Color.rgb(255, 221, 78))
+            pulseLockedOption(locked)
+        }
+        val suspenseMs = RevealDelay.millis()
+        if (soundEnabled) {
+            sounds.press()
+            sounds.tension(suspenseMs)
+        }
+        // Selection stays orange and pulses for a random 3–5 seconds.
         pendingSelection = selected
         pendingReveal = true
         val reveal = Runnable {
@@ -553,7 +627,7 @@ class MainActivity : Activity() {
             revealAnswer(q, selected)
         }
         autoAdvanceTask = reveal
-        timerHandler.postDelayed(reveal, RevealDelay.millis())
+        timerHandler.postDelayed(reveal, suspenseMs)
     }
 
     private fun showTimeout(q: Question) {
@@ -687,6 +761,11 @@ class MainActivity : Activity() {
     }
 
     override fun onPause() {
+        selectionPulse?.cancel()
+        selectionPulse = null
+        answerFlashes.forEach { it.cancel() }
+        answerFlashes.clear()
+        soundEngine?.stopTension()
         // Only the countdown is paused; an already chosen answer must still
         // reveal when the user returns from another Android TV app.
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
@@ -730,6 +809,7 @@ class MainActivity : Activity() {
     }
 
     override fun onDestroy() {
+        clearOptionAnimations()
         stopCountdown()
         soundEngine?.release()
         super.onDestroy()
