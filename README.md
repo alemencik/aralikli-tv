@@ -7,7 +7,7 @@ Kumandayla çıkmış soruları çözmek için Kotlin ile geliştirilmiş, **çe
 - **Tahmin ettim / Zorlandım / Biliyordum / Çok kolaydı** değerlendirmeleri.
 - Tahmin ve yanlış cevapların erken tekrarı, sonrasında gün bazlı tekrar aralıkları.
 - Mavi-mor neon **özgün yarışma stüdyosu arka planı**. Herhangi bir yarışma programının orijinal grafik/müzik görüntüsü kullanılmaz.
-- Doğru/yanlış için kısa cihaz sesleri, başarı animasyonu ve ses açma/kapatma.
+- Çevrimdışı özgün soru ambiyansı, cevap bekleme ve doğru/yanlış sesleri, başarı animasyonu ve ses açma/kapatma.
 - **Video Dersler** menüsü: AUZEF resmi materyalleri, AKSİS ve doğrulanmış Anadolu Üniversitesi Atatürk İlkeleri II dersi bağlantısı. TV tarayıcısı/YouTube kurulu değilse açılmayabilir.
 - Uygulama açılışında GitHub Releases üzerinden yeni sürüm denetimi; kullanıcının onayıyla APK indirme ve Android kurulum ekranına geçme. İndirilen dosya **SHA-256** ile doğrulanır.
 

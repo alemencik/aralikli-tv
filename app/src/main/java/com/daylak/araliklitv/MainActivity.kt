@@ -88,8 +88,6 @@ class MainActivity : Activity() {
     private var updateInstalling = false
     private var availableUpdate: UpdateRelease? = null
     private var updateMessage: String? = null
-    private var soundDownloading = false
-    private var showSoundMessage: String? = null
 
     private val background = Color.rgb(13, 22, 35)
     private val ink = Color.rgb(241, 245, 249)
@@ -113,11 +111,6 @@ class MainActivity : Activity() {
         }
         renderHome()
         checkUpdates(false)
-        // One automatic attempt following this update; retry manually if site is blocked.
-        if (soundEnabled && !prefs.getBoolean("show_sound_auto_attempt_v0311", false)) {
-            prefs.edit().putBoolean("show_sound_auto_attempt_v0311", true).apply()
-            downloadShowSounds()
-        }
     }
 
     private val uiScale: Float by lazy {
@@ -236,7 +229,7 @@ class MainActivity : Activity() {
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
-        soundEngine?.stopQuestionMusic()
+        soundEngine?.stopBackground()
         pendingSelection = null
         pendingReveal = false
         studyFooter = null
@@ -302,11 +295,11 @@ class MainActivity : Activity() {
         val first = studyOptionButtons(body, question)
         startCountdown(timerRow)
         first?.requestFocus()
-        if (soundEnabled) sounds.startQuestionMusic(turn)
+        if (soundEnabled) sounds.startQuestionMusic()
     }
 
     private fun panel(): LinearLayout {
-        soundEngine?.stopQuestionMusic()
+        soundEngine?.stopBackground()
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
         autoAdvanceTask = null
         stopCountdown()
@@ -400,11 +393,6 @@ class MainActivity : Activity() {
             prefs.edit().putBoolean("sound_enabled", soundEnabled).apply()
             renderHome()
         }
-        if (!soundDownloading && !prefs.getBoolean("selected_show_sounds_ready", false)) {
-            action(box, "Yarışma seslerini indir / yeniden dene") { downloadShowSounds() }
-        }
-        if (soundDownloading) info(box, "Üç yarışma sesi indiriliyor...", 16f)
-        showSoundMessage?.let { info(box, it, 16f) }
         if (updateChecking) info(box, "Yeni sürüm kontrol ediliyor...", 18f)
         updateMessage?.let { info(box, it, 18f) }
         availableUpdate?.let { release ->
@@ -537,7 +525,7 @@ class MainActivity : Activity() {
         pendingSelection = null
         selectionPulse?.cancel()
         selectionPulse = null
-        if (soundEnabled) sounds.stopTension()
+        soundEngine?.stopBackground()
         studyButtons.forEach { (letter, button) ->
             button.animate().cancel()
             button.scaleX = 1f
@@ -630,10 +618,10 @@ class MainActivity : Activity() {
             pulseLockedOption(locked)
         }
         val suspenseMs = RevealDelay.millis()
-        soundEngine?.stopQuestionMusic()
+        soundEngine?.stopBackground()
         if (soundEnabled) {
             sounds.press()
-            sounds.tension(suspenseMs)
+            sounds.tension()
         }
         // Selection stays orange and pulses for a random 3–5 seconds.
         pendingSelection = selected
@@ -655,7 +643,7 @@ class MainActivity : Activity() {
         timerRunning = false
         timerHandler.removeCallbacks(timerTick)
         timerLabel?.visibility = View.INVISIBLE
-        soundEngine?.stopQuestionMusic()
+        soundEngine?.stopBackground()
         studyButtons.values.forEach { it.isEnabled = false; it.isFocusable = false }
         register(q, Rating.AGAIN, timedOut = true)
         revealAnswer(q, null)
@@ -778,33 +766,6 @@ class MainActivity : Activity() {
         firstFocus(action(box,"Ana Menü") { renderHome() })
     }
 
-
-    private fun downloadShowSounds() {
-        if (soundDownloading) return
-        soundDownloading = true
-        showSoundMessage = "Yarışma sesleri indiriliyor..."
-        if (screen == "home") renderHome()
-        Thread {
-            var message: String
-            try {
-                val result = ShowSoundDownloader(this).installSelected()
-                prefs.edit().putBoolean("selected_show_sounds_ready", result.failed.isEmpty()).apply()
-                message = if (result.failed.isEmpty()) {
-                    "Seçtiğin üç ses indirildi ve etkinleştirildi."
-                } else {
-                    "Yeni seslerden ${result.downloaded}/3 yüklendi. Hatalar: ${result.failed.joinToString("; ")}"
-                }
-            } catch (e: Exception) {
-                message = "Sesler indirilemedi: ${e.message ?: "bağlantı hatası"}"
-            }
-            runOnUiThread {
-                soundDownloading = false
-                showSoundMessage = message
-                if (screen == "home") renderHome()
-            }
-        }.start()
-    }
-
     private fun checkUpdates(manual: Boolean) {
         if (updateChecking) return
         updateChecking = true
@@ -863,8 +824,7 @@ class MainActivity : Activity() {
         selectionPulse = null
         answerFlashes.forEach { it.cancel() }
         answerFlashes.clear()
-        soundEngine?.stopTension()
-        soundEngine?.stopQuestionMusic()
+        soundEngine?.release()
         // Only the countdown is paused; an already chosen answer must still
         // reveal when the user returns from another Android TV app.
         autoAdvanceTask?.let { timerHandler.removeCallbacks(it) }
@@ -882,7 +842,7 @@ class MainActivity : Activity() {
     override fun onResume() {
         super.onResume()
         if (screen == "study" && !inFeedback && soundEnabled) {
-            sounds.startQuestionMusic(turn)
+            sounds.startQuestionMusic()
         }
         if (screen == "feedback" && pendingReveal) {
             val q = currentQuestion
